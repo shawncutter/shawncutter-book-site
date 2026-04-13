@@ -2629,7 +2629,16 @@
         async function loadBacklogData() {
             try {
                 const res = await fetch('../LexDocs/_backlog.json');
-                backlogData = await res.json();
+                const raw = await res.json();
+                // Normalize: JSON uses "backlog" key, UI expects "items"
+                const items = (raw.items || raw.backlog || []).map(item => ({
+                    ...item,
+                    // Normalize status: JSON uses planned/completed, UI uses todo/done
+                    status: item.status === 'planned' ? 'todo'
+                          : item.status === 'completed' ? 'done'
+                          : item.status || 'todo'
+                }));
+                backlogData = { metadata: raw.metadata || {}, items };
                 renderBacklog();
                 updateBacklogStats();
             } catch (e) {
@@ -3204,6 +3213,10 @@
             elementsToHide.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) el.style.display = 'none';
+            });
+            // Hide nav links for edit-only sections
+            document.querySelectorAll('[data-section="story-editor"]').forEach(el => {
+                el.closest('li')?.remove();
             });
         }
     </script>
