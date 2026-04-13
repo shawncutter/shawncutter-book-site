@@ -1,0 +1,3211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Writer Dashboard - Shawn Cutter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .arc-forged { background: #f59e0b; }
+        .arc-fractured { background: #ef4444; }
+        .arc-forging { background: #3b82f6; }
+        .arc-foundry { background: #10b981; }
+        .text-forged { color: #f59e0b; }
+        .text-fractured { color: #ef4444; }
+        .text-forging { color: #3b82f6; }
+        .text-foundry { color: #10b981; }
+        .border-forged { border-color: #f59e0b; }
+        .border-fractured { border-color: #ef4444; }
+        .border-forging { border-color: #3b82f6; }
+        .border-foundry { border-color: #10b981; }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #374151;
+            z-index: 0;
+        }
+        .timeline-event {
+            position: relative;
+            z-index: 1;
+        }
+        .nav-active { background: #1f2937; border-left: 3px solid #3b82f6; }
+        /* Year range slider */
+        .timeline-year-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 4px;
+            background: #374151;
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+        .timeline-year-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #3b82f6;
+            cursor: pointer;
+            border: 2px solid #1e40af;
+        }
+        .timeline-year-slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #3b82f6;
+            cursor: pointer;
+            border: 2px solid #1e40af;
+        }
+        /* Story chip on timeline */
+        .story-chip-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            transform: rotate(45deg);
+            border: 2px solid #1f2937;
+        }
+        .story-chip-card {
+            cursor: pointer;
+            transition: background-color 0.15s;
+        }
+        .story-chip-card:hover {
+            filter: brightness(1.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed left-0 top-0 h-full w-64 bg-gray-800 p-4 border-r border-gray-700">
+        <div class="mb-8">
+            <h1 class="text-xl font-bold">Book Writer</h1>
+            <p class="text-gray-400 text-sm">Shawn Cutter</p>
+        </div>
+        <ul class="space-y-2">
+            <li>
+                <a href="#dashboard" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link nav-active" data-section="dashboard">
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="#timeline" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="timeline">
+                    Timeline
+                </a>
+            </li>
+            <li>
+                <a href="#stories" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="stories">
+                    Stories
+                </a>
+            </li>
+            <li>
+                <a href="#arcs" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="arcs">
+                    Arc Status
+                </a>
+            </li>
+            <li>
+                <a href="#topics" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="topics">
+                    Topics & Themes
+                </a>
+            </li>
+            <li>
+                <a href="#backlog" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="backlog">
+                    Backlog
+                </a>
+            </li>
+            <li>
+                <a href="#facts" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="facts">
+                    Facts & Q's
+                </a>
+            </li>
+            <li>
+                <a href="#book-tree" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="book-tree">
+                    Book Tree
+                </a>
+            </li>
+            <li>
+                <a href="#story-editor" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="story-editor">
+                    Story Editor
+                </a>
+            </li>
+        </ul>
+        <div class="absolute bottom-4 left-4 right-4">
+            <p class="text-xs text-gray-500">~105K words | 88 pieces</p>
+            <p class="text-xs text-gray-500">4 arcs | 35 events</p>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-64 p-8">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section">
+            <h2 class="text-3xl font-bold mb-8">Dashboard</h2>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-4 gap-6 mb-8">
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <p class="text-gray-400 text-sm">Total Words</p>
+                    <p class="text-3xl font-bold" id="stat-words">~105K</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <p class="text-gray-400 text-sm">Pieces</p>
+                    <p class="text-3xl font-bold" id="stat-pieces">88</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <p class="text-gray-400 text-sm">Timeline Events</p>
+                    <p class="text-3xl font-bold" id="event-count">35</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <p class="text-gray-400 text-sm">Years Covered</p>
+                    <p class="text-3xl font-bold" id="stat-years">44</p>
+                </div>
+            </div>
+
+            <!-- Arc Progress -->
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 mb-8">
+                <h3 class="text-xl font-bold mb-4">Arc Progress</h3>
+                <div class="space-y-4" id="arc-progress-container">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-forged font-medium">FORGED</span>
+                            <span class="text-gray-400" id="arc-forged-label">~24K / 30K words</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="arc-forged h-3 rounded-full" id="arc-forged-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-fractured font-medium">FRACTURED</span>
+                            <span class="text-gray-400" id="arc-fractured-label">~18K / 30K words</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="arc-fractured h-3 rounded-full" id="arc-fractured-bar" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-forging font-medium">FORGING</span>
+                            <span class="text-gray-400" id="arc-forging-label">~22K / 30K words</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="arc-forging h-3 rounded-full" id="arc-forging-bar" style="width: 73%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-foundry font-medium">FOUNDRY</span>
+                            <span class="text-gray-400" id="arc-foundry-label">~12K / 30K words</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-3">
+                            <div class="arc-foundry h-3 rounded-full" id="arc-foundry-bar" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <h4 class="font-bold mb-2">Next Steps</h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>Fill FRACTURED faith exit scene</li>
+                        <li>Add 3 more FOUNDRY teaching moments</li>
+                        <li>Draft systems-thinking interludes</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <h4 class="font-bold mb-2">Timeline Gaps</h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>1994-1995 (ages 14-15)</li>
+                        <li>2001-2002 (ages 21-22)</li>
+                        <li>2011-2014 (ages 31-34)</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <h4 class="font-bold mb-2">Ready to Expand</h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>40 Surgeries Journey (5 pieces)</li>
+                        <li>Chuck Cutter Stories (4 pieces)</li>
+                        <li>Fielding to Exit (4 pieces)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="section hidden">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Timeline</h2>
+                <button id="btn-add-event" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700 text-sm">+ Add Event</button>
+            </div>
+            <div class="flex gap-4 mb-6">
+                <button class="arc-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-arc="all">All</button>
+                <button class="arc-filter px-4 py-2 rounded hover:bg-gray-600 border-2 border-forged text-forged" data-arc="forged">Forged</button>
+                <button class="arc-filter px-4 py-2 rounded hover:bg-gray-600 border-2 border-fractured text-fractured" data-arc="fractured">Fractured</button>
+                <button class="arc-filter px-4 py-2 rounded hover:bg-gray-600 border-2 border-forging text-forging" data-arc="forging">Forging</button>
+                <button class="arc-filter px-4 py-2 rounded hover:bg-gray-600 border-2 border-foundry text-foundry" data-arc="foundry">Foundry</button>
+            </div>
+
+            <!-- Year range slider panel -->
+            <div class="bg-gray-800 rounded-lg p-4 mb-6 border border-gray-700">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm text-gray-400">Year Range</span>
+                    <span id="timeline-year-display" class="text-sm font-semibold text-blue-400">-- – --</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span id="timeline-year-min-label" class="text-xs text-gray-500 w-10 text-right"></span>
+                    <div class="flex-1 flex items-center gap-2">
+                        <input type="range" id="timeline-year-start" class="timeline-year-slider flex-1">
+                        <input type="range" id="timeline-year-end" class="timeline-year-slider flex-1">
+                    </div>
+                    <span id="timeline-year-max-label" class="text-xs text-gray-500 w-10"></span>
+                </div>
+                <div class="flex justify-end mt-2">
+                    <button id="timeline-year-reset" class="text-xs text-blue-500 hover:text-blue-400">Reset</button>
+                </div>
+            </div>
+
+            <div id="timeline-container" class="relative" style="min-height: 400px;">
+                <!-- Timeline events and story chips rendered here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Timeline Event Modal -->
+        <div id="timeline-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-gray-800 rounded-lg p-6 w-full max-w-md border border-gray-700">
+                <h3 class="text-xl font-bold mb-4" id="timeline-modal-title">Add Timeline Event</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Date</label>
+                        <input type="text" id="event-date" class="w-full bg-gray-700 rounded px-3 py-2" placeholder="YYYY or YYYY-MM-DD">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Title</label>
+                        <input type="text" id="event-title" class="w-full bg-gray-700 rounded px-3 py-2" placeholder="Event title...">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Arc</label>
+                        <select id="event-arc" class="w-full bg-gray-700 rounded px-3 py-2">
+                            <option value="forged">Forged</option>
+                            <option value="fractured">Fractured</option>
+                            <option value="forging">Forging</option>
+                            <option value="foundry">Foundry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Category</label>
+                        <select id="event-category" class="w-full bg-gray-700 rounded px-3 py-2">
+                            <option value="personal">Personal</option>
+                            <option value="farm">Farm</option>
+                            <option value="medical">Medical</option>
+                            <option value="education">Education</option>
+                            <option value="career">Career</option>
+                            <option value="startup">Startup</option>
+                            <option value="reflection">Reflection</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Linked Stories (comma separated filenames)</label>
+                        <input type="text" id="event-stories" class="w-full bg-gray-700 rounded px-3 py-2" placeholder="bk1-story.md, bk-another.md">
+                    </div>
+                </div>
+                <div class="flex justify-end gap-3 mt-6">
+                    <button id="timeline-modal-cancel" class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Cancel</button>
+                    <button id="timeline-modal-save" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stories Section -->
+        <section id="stories" class="section hidden">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Stories</h2>
+                <div class="flex gap-3">
+                    <button id="btn-rescan" class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600 text-sm">Rescan</button>
+                    <button id="btn-new-story" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700 text-sm">+ New Story</button>
+                </div>
+            </div>
+            <!-- Search and Filters -->
+            <div class="flex gap-4 mb-6">
+                <input type="text" id="story-search" placeholder="Search by title, theme, or keyword..." class="flex-1 bg-gray-800 border border-gray-700 rounded px-4 py-2 text-sm focus:outline-none focus:border-blue-500">
+                <select id="arc-select" class="bg-gray-800 border border-gray-700 rounded px-4 py-2 text-sm">
+                    <option value="all">All Arcs</option>
+                    <option value="forged">Forged</option>
+                    <option value="fractured">Fractured</option>
+                    <option value="forging">Forging</option>
+                    <option value="foundry">Foundry</option>
+                </select>
+            </div>
+            <div class="flex gap-4 mb-6">
+                <button class="status-filter px-4 py-2 bg-blue-600 rounded" data-status="all">All (88)</button>
+                <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="published">Published</button>
+                <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="ready">Ready</button>
+                <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="draft">Draft</button>
+                <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="idea">Idea</button>
+            </div>
+            <div id="stories-container" class="grid gap-4">
+                <!-- Stories will be inserted here -->
+            </div>
+        </section>
+
+        <!-- New Story Modal -->
+        <div id="new-story-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-gray-800 rounded-lg p-6 w-full max-w-md border border-gray-700">
+                <h3 class="text-xl font-bold mb-4">Create New Story</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Title</label>
+                        <input type="text" id="new-title" class="w-full bg-gray-700 rounded px-3 py-2" placeholder="Story title...">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Arc</label>
+                        <select id="new-arc" class="w-full bg-gray-700 rounded px-3 py-2">
+                            <option value="forged">Forged</option>
+                            <option value="fractured">Fractured</option>
+                            <option value="forging">Forging</option>
+                            <option value="foundry">Foundry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Initial Content (optional)</label>
+                        <textarea id="new-content" class="w-full bg-gray-700 rounded px-3 py-2 h-24" placeholder="Start with a memory, moment, or idea..."></textarea>
+                    </div>
+                </div>
+                <div class="flex justify-end gap-3 mt-6">
+                    <button id="modal-cancel" class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Cancel</button>
+                    <button id="modal-create" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700">Create</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arcs Section -->
+        <section id="arcs" class="section hidden">
+            <h2 class="text-3xl font-bold mb-8">Arc Status</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Forged -->
+                <div class="bg-gray-800 rounded-lg p-6 border-l-4 border-forged">
+                    <h3 class="text-xl font-bold text-forged mb-2">FORGED</h3>
+                    <p class="text-gray-400 italic mb-4">"What does brutality + love look like on a dairy farm?"</p>
+                    <p class="text-sm text-gray-400 mb-2">Tone: Cinematic, sensory, claustrophobic</p>
+                    <div class="mt-4">
+                        <p class="text-sm font-medium mb-2">Key Scenes:</p>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Rock-picking / ice cube incident</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Genesis concert wrestling win</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 95-ft silo climb</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Farm chores and work ethic</li>
+                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> First day of farm ownership</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Fractured -->
+                <div class="bg-gray-800 rounded-lg p-6 border-l-4 border-fractured">
+                    <h3 class="text-xl font-bold text-fractured mb-2">FRACTURED</h3>
+                    <p class="text-gray-400 italic mb-4">"How do you rebuild when faith, body, & identity crack?"</p>
+                    <p class="text-sm text-gray-400 mb-2">Tone: Philosophical, darker introspection</p>
+                    <div class="mt-4">
+                        <p class="text-sm font-medium mb-2">Key Scenes:</p>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> The accident (1990-10-29)</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> First steps after hospital</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 40 surgeries journey</li>
+                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Faith exit moment</li>
+                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Depression depths</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Forging -->
+                <div class="bg-gray-800 rounded-lg p-6 border-l-4 border-forging">
+                    <h3 class="text-xl font-bold text-forging mb-2">FORGING</h3>
+                    <p class="text-gray-400 italic mb-4">"How do you weaponize trauma into companies & pilots' wings?"</p>
+                    <p class="text-sm text-gray-400 mb-2">Tone: Strategic, Feynman-style explainer</p>
+                    <div class="mt-4">
+                        <p class="text-sm font-medium mb-2">Key Scenes:</p>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Fielding Systems founding</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Night we moved oilfield to cloud</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Quorum acquisition</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> First flight with Dad</li>
+                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Term sheet signing day</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Foundry -->
+                <div class="bg-gray-800 rounded-lg p-6 border-l-4 border-foundry">
+                    <h3 class="text-xl font-bold text-foundry mb-2">FOUNDRY</h3>
+                    <p class="text-gray-400 italic mb-4">"What legacy melts pain into service?"</p>
+                    <p class="text-sm text-gray-400 mb-2">Tone: Uplifting, mentor-to-reader</p>
+                    <div class="mt-4">
+                        <p class="text-sm font-medium mb-2">Key Scenes:</p>
+                        <ul class="text-sm text-gray-400 space-y-1">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> EnergiAcres vision</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> This Starts Here manifesto</li>
+                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Teaching Gia about risk</li>
+                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Systems-thinking interludes</li>
+                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Mentor moments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editor Section -->
+        <section id="editor" class="section hidden">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <button id="back-to-stories" class="text-gray-400 hover:text-white mb-2">&larr; Back to Stories</button>
+                    <h2 class="text-3xl font-bold" id="editor-title">Story Title</h2>
+                </div>
+                <div class="flex gap-4">
+                    <button id="btn-save" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">Save</button>
+                    <button id="btn-medium-export" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700">Export for Medium</button>
+                    <button id="btn-delete-story" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700">Delete Story</button>
+                </div>
+            </div>
+
+            <!-- Metadata Panel -->
+            <div class="bg-gray-800 rounded-lg p-4 border border-gray-700 mb-6">
+                <div class="grid grid-cols-5 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">Status</label>
+                        <select id="meta-status" class="w-full bg-gray-700 rounded px-3 py-2 text-sm">
+                            <option value="idea">Idea</option>
+                            <option value="draft">Draft</option>
+                            <option value="ready">Ready</option>
+                            <option value="published">Published</option>
+                            <option value="expanded">Expanded</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">Arc</label>
+                        <select id="meta-arc" class="w-full bg-gray-700 rounded px-3 py-2 text-sm">
+                            <option value="forged">Forged</option>
+                            <option value="fractured">Fractured</option>
+                            <option value="forging">Forging</option>
+                            <option value="foundry">Foundry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">Event Date</label>
+                        <input type="text" id="meta-date-event" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">Medium URL</label>
+                        <input type="text" id="meta-medium-url" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="https://medium.com/...">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">Word Count</label>
+                        <span id="meta-word-count" class="block bg-gray-700 rounded px-3 py-2 text-sm text-gray-300">0</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <label class="block text-xs text-gray-400 mb-1">Themes (comma separated)</label>
+                    <input type="text" id="meta-themes" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="resilience, father, farm">
+                </div>
+            </div>
+
+            <!-- Editor Area -->
+            <div class="grid grid-cols-2 gap-6" style="height: calc(100vh - 350px);">
+                <!-- Raw Editor -->
+                <div class="flex flex-col">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Markdown</span>
+                        <span class="text-xs text-gray-500" id="editor-filename">filename.md</span>
+                    </div>
+                    <textarea id="story-editor" class="flex-1 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none focus:outline-none focus:border-blue-500" placeholder="Start writing..."></textarea>
+                </div>
+                <!-- Preview -->
+                <div class="flex flex-col">
+                    <span class="text-sm text-gray-400 mb-2">Preview</span>
+                    <div id="story-preview" class="flex-1 bg-gray-800 border border-gray-700 rounded-lg p-4 overflow-y-auto prose prose-invert prose-sm max-w-none">
+                        <p class="text-gray-500">Preview will appear here...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Save Status -->
+            <div id="save-status" class="fixed bottom-4 right-4 px-4 py-2 rounded bg-gray-800 border border-gray-700 text-sm hidden">
+                Saved
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section id="topics" class="section hidden">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Themes & Topics</h2>
+                <input type="text" id="topics-search" placeholder="Search themes, people..." class="bg-gray-700 text-gray-100 rounded px-4 py-2 text-sm w-64">
+            </div>
+
+            <!-- Themes by Arc - Hero Section -->
+            <div class="mb-10 bg-gradient-to-r from-gray-800 via-gray-750 to-gray-800 rounded-lg p-8 border border-gray-700">
+                <h3 class="text-2xl font-bold mb-6">Themes by Arc</h3>
+                <div class="grid grid-cols-4 gap-6">
+                    <!-- Forged Arc -->
+                    <div class="bg-gray-900/50 rounded-lg p-4 border-l-4 border-yellow-500">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl">🌾</span>
+                            <h4 class="text-sm font-bold text-yellow-400">Forged (Farm)</h4>
+                        </div>
+                        <div id="themes-forged" class="space-y-2"></div>
+                    </div>
+                    <!-- Fractured Arc -->
+                    <div class="bg-gray-900/50 rounded-lg p-4 border-l-4 border-red-500">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl">💔</span>
+                            <h4 class="text-sm font-bold text-red-400">Fractured (Recovery)</h4>
+                        </div>
+                        <div id="themes-fractured" class="space-y-2"></div>
+                    </div>
+                    <!-- Forging Arc -->
+                    <div class="bg-gray-900/50 rounded-lg p-4 border-l-4 border-blue-500">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl">⚙️</span>
+                            <h4 class="text-sm font-bold text-blue-400">Forging (Career)</h4>
+                        </div>
+                        <div id="themes-forging" class="space-y-2"></div>
+                    </div>
+                    <!-- Foundry Arc -->
+                    <div class="bg-gray-900/50 rounded-lg p-4 border-l-4 border-green-500">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl">🔥</span>
+                            <h4 class="text-sm font-bold text-green-400">Foundry (Legacy)</h4>
+                        </div>
+                        <div id="themes-foundry" class="space-y-2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Themes Grid -->
+            <div class="mb-10">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2xl font-bold">All Themes</h3>
+                    <div class="flex gap-2">
+                        <select id="theme-filter-arc" class="bg-gray-800 border border-gray-700 rounded px-3 py-2 text-sm">
+                            <option value="">All Arcs</option>
+                            <option value="forged">Forged</option>
+                            <option value="fractured">Fractured</option>
+                            <option value="forging">Forging</option>
+                            <option value="foundry">Foundry</option>
+                        </select>
+                        <select id="theme-sort" class="bg-gray-800 border border-gray-700 rounded px-3 py-2 text-sm">
+                            <option value="name">Sort by Name</option>
+                            <option value="stories">Most Stories</option>
+                            <option value="featured">Featured First</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="all-themes-container" class="grid grid-cols-4 gap-5">
+                    <!-- Theme cards will be inserted here -->
+                </div>
+            </div>
+
+            <!-- People by Arc -->
+            <div class="mb-10">
+                <h3 class="text-2xl font-bold mb-6">Key People & Relationships</h3>
+                <div class="grid grid-cols-4 gap-5">
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-yellow-900/5 rounded-lg p-6 border-l-4 border-yellow-500 hover:border-yellow-400 transition">
+                        <h4 class="text-sm font-bold text-yellow-400 mb-4 flex items-center gap-2">🌾 <span>Forged</span></h4>
+                        <div id="people-forged" class="space-y-2 text-sm"></div>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-900/20 to-red-900/5 rounded-lg p-6 border-l-4 border-red-500 hover:border-red-400 transition">
+                        <h4 class="text-sm font-bold text-red-400 mb-4 flex items-center gap-2">💔 <span>Fractured</span></h4>
+                        <div id="people-fractured" class="space-y-2 text-sm"></div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-900/20 to-blue-900/5 rounded-lg p-6 border-l-4 border-blue-500 hover:border-blue-400 transition">
+                        <h4 class="text-sm font-bold text-blue-400 mb-4 flex items-center gap-2">⚙️ <span>Forging</span></h4>
+                        <div id="people-forging" class="space-y-2 text-sm"></div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-900/20 to-green-900/5 rounded-lg p-6 border-l-4 border-green-500 hover:border-green-400 transition">
+                        <h4 class="text-sm font-bold text-green-400 mb-4 flex items-center gap-2">🔥 <span>Foundry</span></h4>
+                        <div id="people-foundry" class="space-y-2 text-sm"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expansion Clusters -->
+            <div class="mb-10">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold mb-2">Expansion Clusters</h3>
+                    <p class="text-gray-400 text-sm">Groups of related stories that could become book chapters:</p>
+                </div>
+                <div id="clusters-container" class="grid grid-cols-2 gap-5">
+                    <!-- Clusters will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Theme Network Graph -->
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                <h3 class="text-xl font-bold mb-4">Theme Connections</h3>
+                <p class="text-gray-400 text-sm mb-4">How themes relate across your stories</p>
+                <div id="network-graph" style="height: 500px; width: 100%;"></div>
+            </div>
+        </section>
+
+        <!-- Expansion Modal -->
+        <div id="expansion-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-gray-800 rounded-lg p-6 w-full max-w-4xl border border-gray-700 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold" id="expansion-title">Cluster Title</h3>
+                        <p class="text-gray-400 text-sm" id="expansion-suggested">Suggested chapter name</p>
+                    </div>
+                    <button id="expansion-close" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+                </div>
+                <div class="mb-4">
+                    <p class="text-sm text-gray-400 mb-2">Stories in this cluster:</p>
+                    <div id="expansion-stories" class="space-y-2">
+                        <!-- Stories will be inserted here -->
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 pt-4">
+                    <h4 class="font-bold mb-2">Compare & Combine</h4>
+                    <p class="text-sm text-gray-400 mb-4">Select stories to view side-by-side for expansion</p>
+                    <div id="expansion-compare" class="grid grid-cols-2 gap-4" style="display: none;">
+                        <div class="bg-gray-900 rounded p-4 overflow-y-auto" style="max-height: 400px;">
+                            <h5 class="text-sm font-bold mb-2" id="compare-title-1">Story 1</h5>
+                            <div id="compare-content-1" class="prose prose-invert prose-sm max-w-none"></div>
+                        </div>
+                        <div class="bg-gray-900 rounded p-4 overflow-y-auto" style="max-height: 400px;">
+                            <h5 class="text-sm font-bold mb-2" id="compare-title-2">Story 2</h5>
+                            <div id="compare-content-2" class="prose prose-invert prose-sm max-w-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compare View Section -->
+        <section id="compare" class="section hidden">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <button id="back-from-compare" class="text-gray-400 hover:text-white mb-2">&larr; Back</button>
+                    <h2 class="text-3xl font-bold">Compare Stories</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6" style="height: calc(100vh - 200px);">
+                <div class="flex flex-col">
+                    <div class="mb-2">
+                        <label class="block text-sm text-gray-400 mb-1">Filter by status:</label>
+                        <select id="compare-status-1" class="w-full bg-gray-800 border border-gray-700 rounded px-3 py-1 mb-2 text-sm">
+                            <option value="">All Status</option>
+                            <option value="draft">Draft</option>
+                            <option value="ready">Ready</option>
+                            <option value="published">Published</option>
+                            <option value="expanded">Expanded</option>
+                            <option value="idea">Idea</option>
+                        </select>
+                    </div>
+                    <select id="compare-select-1" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 mb-2">
+                        <option value="">Select first story...</option>
+                    </select>
+                    <div id="compare-meta-1" class="grid grid-cols-2 gap-2 mb-2 text-xs hidden">
+                        <div class="bg-gray-900 p-2 rounded"><span class="text-gray-400">Arc:</span> <span id="compare-arc-1">-</span></div>
+                        <div class="bg-gray-900 p-2 rounded"><span class="text-gray-400">Words:</span> <span id="compare-words-1">-</span></div>
+                        <div class="bg-gray-900 p-2 rounded"><span class="text-gray-400">Status:</span> <span id="compare-status-badge-1">-</span></div>
+                        <div class="bg-gray-900 p-2 rounded"><span class="text-gray-400">Feedback:</span> <span id="compare-feedback-1">-</span></div>
+                    </div>
+                    <div id="compare-view-1" class="flex-1 bg-gray-800 border border-gray-700 rounded-lg p-4 overflow-y-auto prose prose-invert prose-sm max-w-none">
+                        <p class="text-gray-500">Select a story to view...</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="mb-2">
+                        <label class="block text-sm text-gray-400 mb-1">Filter by status:</label>
+                        <select id="compare-status-2" class="w-full bg-gray-800 border border-gray-700 rounded px-3 py-1 mb-2 text-sm">
+                            <option value="">All Status</option>
+                            <option value="draft">Draft</option>
+                            <option value="ready">Ready</option>
+                            <option value="published">Published</option>
+                            <option value="expanded">Expanded</option>
+                            <option value="idea">Idea</option>
+                        </select>
+                    </div>
+                    <select id="compare-select-2" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 mb-2">
+                        <option value="">Select second story...</option>
+                    </select>
+                    <div id="compare-meta-2" class="grid grid-cols-2 gap-2 mb-2 text-xs hidden">
+                        <div class="bg-gray-900 p-2 rounded"><span class="text-gray-400">Arc:</span> <span id="compare-arc-2">-</span></div>
+                        <div class="bg-gray-900 p-2 rounded"><span class="text-gray-400">Words:</span> <span id="compare-words-2">-</span></div>
+                        <div class="bg-gray-900 p-2 rounded"><span class="text-gray-400">Status:</span> <span id="compare-status-badge-2">-</span></div>
+                        <div class="bg-gray-900 p-2 rounded"><span class="text-gray-400">Feedback:</span> <span id="compare-feedback-2">-</span></div>
+                    </div>
+                    <div id="compare-view-2" class="flex-1 bg-gray-800 border border-gray-700 rounded-lg p-4 overflow-y-auto prose prose-invert prose-sm max-w-none">
+                        <p class="text-gray-500">Select a story to view...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backlog Section -->
+        <section id="backlog" class="section hidden">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold">Product Backlog</h2>
+                <div class="flex gap-2">
+                    <button id="btn-add-backlog" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">+ Add Item</button>
+                    <select id="backlog-priority-filter" class="bg-gray-800 border border-gray-700 rounded px-4 py-2">
+                        <option value="all">All Priorities</option>
+                        <option value="P3">P3 - Publishing</option>
+                        <option value="P4">P4 - Writing</option>
+                        <option value="P5">P5 - Organization</option>
+                        <option value="P6">P6 - Analytics</option>
+                        <option value="P7">P7 - Collaboration</option>
+                        <option value="P8">P8 - Infrastructure</option>
+                        <option value="P9">P9 - Platform</option>
+                        <option value="quick">Quick Wins</option>
+                    </select>
+                    <select id="backlog-status-filter" class="bg-gray-800 border border-gray-700 rounded px-4 py-2">
+                        <option value="all">All Status</option>
+                        <option value="todo">To Do</option>
+                        <option value="in_progress">In Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Backlog Stats -->
+            <div class="grid grid-cols-4 gap-4 mb-6">
+                <div class="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                    <p class="text-gray-400 text-sm">Total Items</p>
+                    <p class="text-2xl font-bold" id="backlog-total">0</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                    <p class="text-gray-400 text-sm">To Do</p>
+                    <p class="text-2xl font-bold text-yellow-500" id="backlog-todo">0</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                    <p class="text-gray-400 text-sm">In Progress</p>
+                    <p class="text-2xl font-bold text-blue-500" id="backlog-in-progress">0</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                    <p class="text-gray-400 text-sm">Done</p>
+                    <p class="text-2xl font-bold text-green-500" id="backlog-done">0</p>
+                </div>
+            </div>
+
+            <!-- Backlog Items -->
+            <div id="backlog-items" class="space-y-2">
+                <!-- Items will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Facts & Questions Section -->
+        <section id="facts" class="section hidden">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold">Facts & Open Questions</h2>
+                <button id="refresh-facts-btn" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded flex items-center gap-2">
+                    <span>↺</span> Refresh from Files
+                </button>
+            </div>
+
+            <div id="facts-content" class="grid grid-cols-2 gap-6 hidden">
+                <!-- Content will be rendered here -->
+            </div>
+
+            <div id="facts-loading" class="text-center py-12 text-gray-400">
+                <p class="mb-4">Data not loaded yet</p>
+                <p class="text-sm">Click "Refresh from Files" to load questions and facts</p>
+            </div>
+        </section>
+
+        <!-- Book Tree Section -->
+        <section id="book-tree" class="section hidden">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold">Book Tree</h2>
+                <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer hover:text-gray-300">
+                    <input type="checkbox" id="tree-hide-empty">
+                    <span>Hide empty folders</span>
+                </label>
+            </div>
+            <div id="book-tree-container" class="space-y-4 text-sm">
+                <!-- rendered by renderBookTree() -->
+            </div>
+        </section>
+
+        <!-- Story Editor Section -->
+        <section id="story-editor" class="section hidden">
+            <h2 class="text-3xl font-bold mb-8">Story Editor</h2>
+
+            <div class="mb-4">
+                <label for="story-selector" class="block text-sm font-semibold mb-2">Select Story</label>
+                <select id="story-selector" class="w-full bg-gray-700 text-gray-100 rounded px-3 py-2">
+                    <option value="">Choose a story...</option>
+                </select>
+            </div>
+
+            <div class="grid grid-cols-3 gap-6">
+                <!-- Story Content -->
+                <div class="col-span-2">
+                    <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                        <div id="story-content" class="prose prose-invert max-w-none">
+                            <!-- Story markdown will render here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Panel -->
+                <div class="col-span-1">
+                    <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 sticky top-8">
+                        <h3 class="text-xl font-bold mb-4">Feedback Panel</h3>
+
+                        <!-- Feedback Form -->
+                        <div class="mb-6 pb-6 border-b border-gray-700">
+                            <label class="block text-sm font-semibold mb-2">Add Feedback</label>
+
+                            <!-- Feedback Type Selection -->
+                            <select id="feedback-type" class="w-full bg-gray-700 text-gray-100 rounded px-3 py-2 mb-3 text-sm">
+                                <option value="">Select type...</option>
+                                <option value="voice_rewrite">🎯 Voice Rewrite</option>
+                                <option value="grammar">✍️ Grammar</option>
+                                <option value="add_detail">💭 Add Detail</option>
+                                <option value="unclear">❓ Unclear</option>
+                                <option value="carina_note">👋 Carina's Note</option>
+                                <option value="approved">✅ Approved</option>
+                            </select>
+
+                            <!-- Author Selection -->
+                            <select id="feedback-author" class="w-full bg-gray-700 text-gray-100 rounded px-3 py-2 mb-3 text-sm">
+                                <option value="shawn">Shawn</option>
+                                <option value="carina">Carina</option>
+                            </select>
+
+                            <!-- Feedback Comment -->
+                            <textarea id="feedback-content" placeholder="Add comment..." class="w-full bg-gray-700 text-gray-100 rounded px-3 py-2 mb-3 text-sm h-20"></textarea>
+
+                            <!-- Paragraph Selector -->
+                            <select id="feedback-paragraph" class="w-full bg-gray-700 text-gray-100 rounded px-3 py-2 mb-3 text-sm">
+                                <option value="">Select paragraph...</option>
+                            </select>
+
+                            <button id="add-feedback-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded text-sm">
+                                Add Feedback
+                            </button>
+                        </div>
+
+                        <!-- Feedback List -->
+                        <div id="feedback-list" class="space-y-3">
+                            <!-- Feedback items render here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add/Edit Backlog Modal -->
+        <div id="backlog-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-gray-800 rounded-lg p-6 w-full max-w-lg border border-gray-700">
+                <h3 class="text-xl font-bold mb-4" id="backlog-modal-title">Add Backlog Item</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Title</label>
+                        <input type="text" id="backlog-item-title" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2" placeholder="Feature or task description">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Priority</label>
+                            <select id="backlog-item-priority" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2">
+                                <option value="P3">P3 - Publishing & Export</option>
+                                <option value="P4">P4 - Writing Experience</option>
+                                <option value="P5">P5 - Organization</option>
+                                <option value="P6">P6 - Analytics</option>
+                                <option value="P7">P7 - Collaboration</option>
+                                <option value="P8">P8 - Infrastructure</option>
+                                <option value="P9">P9 - Platform Expansion</option>
+                                <option value="quick">Quick Win</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Status</label>
+                            <select id="backlog-item-status" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2">
+                                <option value="todo">To Do</option>
+                                <option value="in_progress">In Progress</option>
+                                <option value="done">Done</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Category</label>
+                        <input type="text" id="backlog-item-category" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2" placeholder="e.g., Medium Integration, Editor, Search">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-1">Description (optional)</label>
+                        <textarea id="backlog-item-description" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 h-20" placeholder="Additional details..."></textarea>
+                    </div>
+                </div>
+                <div class="flex justify-end gap-2 mt-6">
+                    <button id="backlog-modal-cancel" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Cancel</button>
+                    <button id="backlog-modal-delete" class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded hidden">Delete</button>
+                    <button id="backlog-modal-save" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded">Save</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Arc color configuration (single source of truth)
+        const ARC_COLORS = {
+            forged: '#f59e0b',
+            fractured: '#ef4444',
+            forging: '#3b82f6',
+            foundry: '#10b981'
+        };
+
+        // Detect if running on static GitHub Pages (read-only mode)
+        const IS_STATIC = window.location.hostname !== 'localhost' &&
+                          window.location.hostname !== '127.0.0.1';
+
+        // Load data
+        let timelineData = null;
+        let topicsData = null;
+        let indexData = null;
+        let allStories = [];
+        let currentStatusFilter = 'all';
+        let currentArcFilter = 'all';
+        let currentSearchTerm = '';
+        let currentTimelineArcFilter = 'all';
+        let timelineYearStart = null;
+        let timelineYearEnd = null;
+        let themeChartInstance = null; // Store Chart.js instance to prevent recreation issues
+
+        async function loadData() {
+            try {
+                const timelineRes = await fetch('../LexDocs/_timeline.json');
+                timelineData = await timelineRes.json();
+
+                const topicsRes = await fetch('../LexDocs/_topics.json');
+                topicsData = await topicsRes.json();
+
+                const indexRes = await fetch('../LexDocs/_index.json');
+                indexData = await indexRes.json();
+
+                updateDashboardStats();
+
+                renderTimeline();
+                initTimelineSlider();
+
+                renderStories();
+
+                populateStorySelector();
+
+                renderTopics();
+            } catch (e) {
+                console.error('Error loading data:', e);
+                // Use embedded data as fallback
+                useEmbeddedData();
+            }
+        }
+
+        function updateDashboardStats() {
+            if (!indexData) return;
+            const meta = indexData.metadata;
+
+            // Update main dashboard stats
+            document.getElementById('stat-words').textContent = `~${Math.round(meta.total_words / 1000)}K`;
+            document.getElementById('stat-pieces').textContent = meta.total_pieces;
+            if (timelineData && timelineData.events) {
+                document.getElementById('event-count').textContent = timelineData.events.length;
+                // Calculate years covered
+                const years = timelineData.events.map(e => parseInt(e.date.split('-')[0]));
+                const yearsCovered = Math.max(...years) - Math.min(...years);
+                document.getElementById('stat-years').textContent = yearsCovered;
+            }
+
+            // Update nav stats
+            document.querySelector('nav .absolute.bottom-4 p:first-child').textContent =
+                `~${Math.round(meta.total_words / 1000)}K words | ${meta.total_pieces} pieces`;
+            if (timelineData && timelineData.events) {
+                document.querySelector('nav .absolute.bottom-4 p:last-child').textContent =
+                    `4 arcs | ${timelineData.events.length} events`;
+            }
+
+            // Update arc progress bars based on arc_counts
+            const arcCounts = meta.arc_counts || {};
+            const TARGET_WORDS = 30000; // Target words per arc
+
+            // Calculate word counts per arc from stories
+            const arcWords = { forged: 0, fractured: 0, forging: 0, foundry: 0 };
+            if (indexData.stories) {
+                indexData.stories.forEach(story => {
+                    if (story.arc && arcWords[story.arc] !== undefined) {
+                        arcWords[story.arc] += story.word_count || 0;
+                    }
+                });
+            }
+
+            // Update each arc progress bar
+            ['forged', 'fractured', 'forging', 'foundry'].forEach(arc => {
+                const words = arcWords[arc];
+                const pct = Math.min(100, Math.round((words / TARGET_WORDS) * 100));
+                const bar = document.getElementById(`arc-${arc}-bar`);
+                const label = document.getElementById(`arc-${arc}-label`);
+                if (bar) bar.style.width = `${pct}%`;
+                if (label) label.textContent = `~${Math.round(words / 1000)}K / 30K words`;
+            });
+        }
+
+        function useEmbeddedData() {
+            // Embedded timeline data
+            timelineData = {
+                events: [
+                    { date: "1980", age: 0, title: "Birth", arc: "forged", stories: [] },
+                    { date: "1985", age: 5, title: "First rock-picking with siblings (ice cube incident)", arc: "forged", stories: ["bk-short-stories.md"] },
+                    { date: "1987", age: 7, title: "First camping out in front yard", arc: "forged", stories: [] },
+                    { date: "1988", age: 8, title: "Genesis concert - wrestling win vs Chad Wright", arc: "forged", stories: ["bk-short-stories.md"] },
+                    { date: "1990-10-29", age: 10, title: "Hit by car - life-changing accident", arc: "fractured", stories: ["bk1-rolling-ohio-hills.md"] },
+                    { date: "1991", age: 11, title: "Parents buy the farm - start raising cattle", arc: "forged", stories: [] },
+                    { date: "1991", age: 11, title: "Dad forces climb of 95-ft silo", arc: "forged", stories: ["bk-short-stories.md"] },
+                    { date: "1992", age: 12, title: "First steps after hospital - fell after 1.5 steps", arc: "fractured", stories: [] },
+                    { date: "1997", age: 17, title: "ATV crash - broke both arm bones", arc: "fractured", stories: ["bk1-rolling-ohio-hills.md"] },
+                    { date: "1998", age: 18, title: "Turned 18 - cigarettes, tattoo, piercings", arc: "fractured", stories: ["bk-short-stories.md"] },
+                    { date: "1999", age: 19, title: "College at Miami University begins", arc: "forging", stories: [] },
+                    { date: "2003", age: 23, title: "Graduates Miami University", arc: "forging", stories: [] },
+                    { date: "2006", age: 26, title: "Marries college sweetheart", arc: "forging", stories: [] },
+                    { date: "2009", age: 29, title: "Founds Fielding Systems", arc: "forging", stories: ["bk1-the-night-we-moved-the-oilfield-to-the-cloud.md"] },
+                    { date: "2010", age: 30, title: "Dad passes away suddenly", arc: "fractured", stories: ["bk-dad-121122.md"] },
+                    { date: "2010", age: 30, title: "First child (Gia) born", arc: "forging", stories: [] },
+                    { date: "2015", age: 35, title: "Fielding acquired by Quorum", arc: "forging", stories: [] },
+                    { date: "2021", age: 41, title: "Gets pilot license", arc: "forging", stories: ["bk-short-stories.md"] },
+                    { date: "2022", age: 42, title: "Founds EnergiAcres", arc: "foundry", stories: ["bk1-this-starts-here-a-genx-technologist-energ.md"] },
+                    { date: "2024", age: 44, title: "Terrasow development", arc: "foundry", stories: [] }
+                ]
+            };
+
+            topicsData = {
+                themes: {
+                    resilience: 12, father: 10, farm: 9, startup: 8,
+                    accident: 6, "systems-thinking": 5, depression: 4, faith: 3
+                },
+                people: {
+                    "Chuck Cutter": 12, "CJ": 6, "Mom": 5, "Gia": 4
+                },
+                clusters: [
+                    { name: "The 40 Surgeries Journey", pieces: 5, suggested_chapter: "Forty Cuts" },
+                    { name: "Chuck Cutter Stories", pieces: 4, suggested_chapter: "The Rule of Charles Cutter" },
+                    { name: "Fielding to Quorum", pieces: 4, suggested_chapter: "Bootstrap to Exit" },
+                    { name: "EnergiAcres Vision", pieces: 5, suggested_chapter: "The Foundry" },
+                    { name: "Farm Life Vignettes", pieces: 4, suggested_chapter: "Forged in Soil" }
+                ]
+            };
+
+            renderTimeline();
+            initTimelineSlider();
+            renderStories();
+            renderTopics();
+        }
+
+        // Timeline utilities: date parsing and item merging
+        function parseDateToYear(dateStr) {
+            if (!dateStr) return null;
+            const s = String(dateStr).trim();
+            const clean = s.replace(/^~/, '');
+            const match = clean.match(/(\d{4})/);
+            return match ? parseInt(match[1]) : null;
+        }
+
+        function parseDateToSortKey(dateStr) {
+            if (!dateStr) return 0;
+            const s = String(dateStr).replace(/^~/, '').trim();
+            const iso = Date.parse(s);
+            if (!isNaN(iso)) return iso;
+            const ymMatch = s.match(/^(\d{4})-(\d{2})$/);
+            if (ymMatch) return Date.parse(`${ymMatch[1]}-${ymMatch[2]}-01`);
+            const rangeMatch = s.match(/^(\d{4})-\d{4}$/);
+            if (rangeMatch) return Date.parse(`${rangeMatch[1]}-01-01`);
+            const yearMatch = s.match(/^(\d{4})$/);
+            if (yearMatch) return Date.parse(`${yearMatch[1]}-01-01`);
+            return 0;
+        }
+
+        function buildTimelineItems() {
+            const items = [];
+
+            if (timelineData && timelineData.events) {
+                timelineData.events.forEach(event => {
+                    items.push({
+                        kind: 'event',
+                        sortKey: parseDateToSortKey(event.date),
+                        year: parseDateToYear(event.date),
+                        arc: event.arc || 'forged',
+                        date: event.date,
+                        age: event.age,
+                        title: event.title,
+                        description: event.description || '',
+                        related_stories: event.related_stories || [],
+                        category: event.category || ''
+                    });
+                });
+            }
+
+            if (indexData && indexData.stories) {
+                indexData.stories.forEach(story => {
+                    if (!story.date_event) return;
+                    const year = parseDateToYear(story.date_event);
+                    if (!year) return;
+                    items.push({
+                        kind: 'story',
+                        sortKey: parseDateToSortKey(story.date_event),
+                        year: year,
+                        arc: story.arc || 'forged',
+                        date: story.date_event,
+                        title: story.title,
+                        file: story.file,
+                        word_count: story.word_count || 0,
+                        status: story.status || 'draft',
+                        storyObj: story
+                    });
+                });
+            }
+
+            items.sort((a, b) => a.sortKey - b.sortKey);
+            return items;
+        }
+
+        function renderTimeline() {
+            const container = document.getElementById('timeline-container');
+            if (!container) return;
+            if (!timelineData && !indexData) return;
+
+            const allItems = buildTimelineItems();
+
+            // Apply year range filter
+            const start = timelineYearStart;
+            const end = timelineYearEnd;
+            const filteredItems = allItems.filter(item => {
+                if (start !== null && item.year < start) return false;
+                if (end !== null && item.year > end) return false;
+                if (currentTimelineArcFilter !== 'all' && item.arc !== currentTimelineArcFilter) return false;
+                return true;
+            });
+
+            if (filteredItems.length === 0) {
+                container.innerHTML = '<p class="text-center text-gray-500 py-16">No events or stories in this range.</p>';
+                return;
+            }
+
+            let html = '<div class="timeline-line"></div>';
+
+            let eventIndex = 0;
+
+            filteredItems.forEach(item => {
+                if (item.kind === 'event') {
+                    html += renderTimelineEvent(item, eventIndex);
+                    eventIndex++;
+                } else {
+                    html += renderStoryChip(item);
+                }
+            });
+
+            container.innerHTML = html;
+
+            // Attach click handlers to story chips
+            document.querySelectorAll('.timeline-story-clickable').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    const storyFile = chip.dataset.storyFile;
+                    const storyObj = indexData.stories.find(s => s.file === storyFile);
+                    if (storyObj) {
+                        openStory(storyObj);
+                    }
+                });
+            });
+
+            const eventCount = filteredItems.filter(i => i.kind === 'event').length;
+            const eventCountEl = document.getElementById('event-count');
+            if (eventCountEl) eventCountEl.textContent = eventCount;
+        }
+
+        function renderTimelineEvent(event, index) {
+            const isLeft = index % 2 === 0;
+            const arcColor = ARC_COLORS[event.arc] || '#999';
+            const textClass = `text-${event.arc}`;
+            const relatedCount = event.related_stories.length;
+
+            return `
+                <div class="relative flex ${isLeft ? 'justify-start' : 'justify-end'} mb-8 timeline-event" data-arc="${event.arc}">
+                    <div class="w-5/12 ${isLeft ? 'pr-8 text-right' : 'pl-8 text-left'}">
+                        <div class="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                            <div class="flex ${isLeft ? 'justify-end' : 'justify-start'} items-center gap-2 mb-2">
+                                <span class="text-gray-400 text-sm">${event.date}</span>
+                                ${event.age != null ? `<span class="text-gray-500 text-sm">(age ${event.age})</span>` : ''}
+                            </div>
+                            <h4 class="font-medium ${textClass}">${event.title}</h4>
+                            ${relatedCount > 0
+                                ? `<p class="text-xs text-gray-500 mt-2">${relatedCount} linked stor${relatedCount > 1 ? 'ies' : 'y'}</p>`
+                                : ''}
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-gray-900"
+                         style="background-color: ${arcColor};"></div>
+                </div>
+            `;
+        }
+
+        function renderStoryChip(story) {
+            const arcColor = ARC_COLORS[story.arc] || '#999';
+            const arcBg = arcColor + '18';
+
+            return `
+                <div class="relative flex justify-center mb-3 timeline-story-chip timeline-story-clickable" data-arc="${story.arc}" data-story-file="${story.file}" style="cursor: pointer;">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 story-chip-dot"
+                         style="background-color: ${arcColor}; top: 50%; margin-top: -5px;"></div>
+
+                    <div class="ml-[calc(50%+14px)] max-w-xs story-chip-card rounded px-3 py-2 border text-left"
+                         style="background-color: ${arcBg}; border-color: ${arcColor}40;">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-semibold truncate" style="color: ${arcColor}; max-width: 180px;">${story.title}</span>
+                            <span class="text-xs text-gray-500 whitespace-nowrap">${story.date}</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-0.5">
+                            <span class="text-xs text-gray-500">${story.word_count.toLocaleString()} words</span>
+                            <span class="text-xs px-1 rounded" style="background-color: ${arcColor}30; color: ${arcColor};">${story.status}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function initTimelineSlider() {
+            const allItems = buildTimelineItems();
+            if (allItems.length === 0) return;
+
+            const years = allItems.map(i => i.year).filter(y => y !== null);
+            const minYear = Math.min(...years);
+            const maxYear = Math.max(...years);
+
+            const startSlider = document.getElementById('timeline-year-start');
+            const endSlider = document.getElementById('timeline-year-end');
+            if (!startSlider || !endSlider) return;
+
+            startSlider.min = minYear;
+            startSlider.max = maxYear;
+            startSlider.value = minYear;
+
+            endSlider.min = minYear;
+            endSlider.max = maxYear;
+            endSlider.value = maxYear;
+
+            document.getElementById('timeline-year-min-label').textContent = minYear;
+            document.getElementById('timeline-year-max-label').textContent = maxYear;
+
+            timelineYearStart = minYear;
+            timelineYearEnd = maxYear;
+
+            updateYearDisplay();
+        }
+
+        function updateYearDisplay() {
+            const startSlider = document.getElementById('timeline-year-start');
+            const endSlider = document.getElementById('timeline-year-end');
+            if (!startSlider || !endSlider) return;
+            document.getElementById('timeline-year-display').textContent =
+                `${startSlider.value} – ${endSlider.value}`;
+        }
+
+        function renderStories() {
+            // Use real index data if available
+            const stories = indexData ? indexData.stories : [
+                { title: "This Starts Here: A Gen-X Technologist", arc: "foundry", status: "published", file: "bk1-this-starts-here-a-genx-technologist-energ.md", word_count: 1200 },
+                { title: "Rolling Ohio Hills", arc: "fractured", status: "draft", file: "bk1-rolling-ohio-hills.md", word_count: 800 }
+            ];
+
+            // Store for filtering
+            allStories = stories;
+
+            // Update status filter counts
+            const statusCounts = { all: stories.length };
+            stories.forEach(s => {
+                statusCounts[s.status] = (statusCounts[s.status] || 0) + 1;
+            });
+            document.querySelectorAll('.status-filter').forEach(btn => {
+                const status = btn.dataset.status;
+                if (statusCounts[status] !== undefined) {
+                    btn.textContent = `${status.charAt(0).toUpperCase() + status.slice(1)} (${statusCounts[status]})`;
+                }
+            });
+
+            // Use filtering function to display
+            filterAndDisplayStories();
+        }
+
+        function populateStorySelector() {
+            const stories = (indexData && indexData.stories) ? indexData.stories : [];
+            const storySelector = document.getElementById('story-selector');
+
+            // Clear existing options (keep the placeholder)
+            storySelector.innerHTML = '<option value="">Choose a story...</option>';
+
+            // Add story options
+            stories.forEach(story => {
+                const option = document.createElement('option');
+                option.value = story.file;
+                option.textContent = story.title;
+                storySelector.appendChild(option);
+            });
+        }
+
+        // Use ARC_COLORS constant (defined at top of script)
+        const arcColors = ARC_COLORS;
+
+        function renderTopics() {
+            if (!topicsData) return;
+
+            const themes = topicsData.themes || {};
+            const people = topicsData.people || {};
+            const clusters = topicsData.clusters || {};
+
+            // Render themes organized by arc (quick reference at top)
+            ['forged', 'fractured', 'forging', 'foundry'].forEach(arc => {
+                const arcThemes = Object.entries(themes).filter(([name, data]) =>
+                    data.arc_focus && (data.arc_focus.includes(arc) || data.arc_focus.includes('all'))
+                );
+                const container = document.getElementById(`themes-${arc}`);
+                const arcColor = arcColors[arc];
+                const arcLabel = arc.charAt(0).toUpperCase() + arc.slice(1);
+
+                let html = `<h4 class="text-sm font-bold mb-2" style="color: ${arcColor}">🎯 ${arcLabel}</h4>`;
+                arcThemes.forEach(([name, data]) => {
+                    const count = data.stories ? data.stories.length : 0;
+                    html += `<div class="text-xs bg-gray-700 rounded px-2 py-1 cursor-pointer hover:bg-gray-600" onclick="filterByTheme('${name}')">${name} (${count})</div>`;
+                });
+                container.innerHTML = html || `<p class="text-xs text-gray-500">None yet</p>`;
+            });
+
+            // Render all themes as cards with enhanced visuals
+            const allThemesContainer = document.getElementById('all-themes-container');
+            let themesHtml = '';
+            const themeEntries = Object.entries(themes);
+
+            themeEntries.forEach(([name, data]) => {
+                const count = data.stories ? data.stories.length : 0;
+                const arcFocus = data.arc_focus ? (data.arc_focus.includes('all') ? 'all' : data.arc_focus[0]) : 'forged';
+                const color = arcColors[arcFocus] || arcColors.forged;
+                const bgColor = color + '20'; // 20% opacity
+                const related = data.related_themes ? data.related_themes.slice(0, 2).join(', ') : '';
+
+                // Calculate "importance" - featured if in multiple arcs or has stories
+                const isFeatured = (data.arc_focus && data.arc_focus.length > 1) || count > 0;
+                const maxStories = Math.max(...themeEntries.map(([,t]) => t.stories ? t.stories.length : 0), 1);
+                const storyPercent = Math.min((count / maxStories) * 100, 100);
+
+                themesHtml += `
+                    <div class="group relative bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-gray-600/20 hover:scale-105 border border-gray-700 hover:border-gray-600" onclick="filterByTheme('${name}')">
+                        <!-- Background gradient bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1" style="background-color: ${color}; opacity: 0.6;"></div>
+
+                        <!-- Content -->
+                        <div class="p-5">
+                            <!-- Header -->
+                            <div class="flex items-start justify-between mb-3">
+                                <h4 class="font-bold text-lg flex-1" style="color: ${color}">${name}</h4>
+                                <span class="text-xs px-2 py-1 rounded" style="background-color: ${bgColor}; color: ${color}; font-weight: bold;">${count}</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-xs text-gray-400 mb-3 leading-relaxed h-10 overflow-hidden">${data.description || 'No description'}</p>
+
+                            <!-- Arc badges -->
+                            <div class="flex gap-1 flex-wrap mb-3">
+                                ${arcFocus === 'all'
+                                    ? '<span class="text-xs px-2 py-1 rounded bg-gray-700 text-gray-300">All Arcs</span>'
+                                    : data.arc_focus.map(arc => {
+                                        const arcColor = arcColors[arc];
+                                        return `<span class="text-xs px-2 py-1 rounded" style="background-color: ${arcColor}20; color: ${arcColor};">${arc}</span>`;
+                                    }).join('')
+                                }
+                            </div>
+
+                            <!-- Story count progress bar -->
+                            <div class="mb-3">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-xs text-gray-500">Stories</span>
+                                    <span class="text-xs text-gray-400">${count} piece${count !== 1 ? 's' : ''}</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full rounded-full transition-all duration-300" style="width: ${storyPercent}%; background-color: ${color};"></div>
+                                </div>
+                            </div>
+
+                            <!-- Related themes -->
+                            ${related ? `<p class="text-xs text-gray-500 truncate">Related: <span class="text-gray-400">${related}</span></p>` : '<p class="text-xs text-gray-600 italic">No related themes</p>'}
+
+                            <!-- Featured badge -->
+                            ${isFeatured && count > 0 ? `<div class="absolute top-2 right-2 text-xl opacity-0 group-hover:opacity-100 transition-opacity">⭐</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+            allThemesContainer.innerHTML = themesHtml;
+
+            // Setup theme filter and sort
+            const themeFilterArc = document.getElementById('theme-filter-arc');
+            const themeSort = document.getElementById('theme-sort');
+
+            if (themeFilterArc) {
+                themeFilterArc.addEventListener('change', () => {
+                    const arcFilter = themeFilterArc.value;
+                    const cards = document.querySelectorAll('#all-themes-container > div');
+                    cards.forEach(card => {
+                        if (!arcFilter) {
+                            card.style.display = '';
+                        } else {
+                            const badgeText = card.textContent;
+                            card.style.display = (badgeText.includes(arcFilter) || badgeText.includes('All Arcs')) ? '' : 'none';
+                        }
+                    });
+                });
+            }
+
+            if (themeSort) {
+                themeSort.addEventListener('change', () => {
+                    // Could add sorting logic here in future
+                });
+            }
+
+            // Render people by arc
+            ['forged', 'fractured', 'forging', 'foundry'].forEach(arc => {
+                const arcPeople = Object.entries(people).filter(([name, data]) =>
+                    data.arc_focus && (data.arc_focus.includes(arc) || data.arc_focus.includes('all'))
+                );
+                const container = document.getElementById(`people-${arc}`);
+
+                let html = '';
+                arcPeople.forEach(([name, data]) => {
+                    const count = data.stories ? data.stories.length : 0;
+                    html += `<div class="bg-gray-700 rounded px-2 py-1 cursor-pointer hover:bg-gray-600 text-xs">${data.name} <span class="text-gray-400">(${count})</span></div>`;
+                });
+                container.innerHTML = html || `<p class="text-xs text-gray-500 italic">None</p>`;
+            });
+
+            // Render clusters
+            renderClusters();
+
+            // Setup search
+            const searchInput = document.getElementById('topics-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase();
+                    const cards = document.querySelectorAll('#all-themes-container > div');
+                    cards.forEach(card => {
+                        const text = card.textContent.toLowerCase();
+                        card.style.display = text.includes(term) ? '' : 'none';
+                    });
+                });
+            }
+        }
+
+        function filterByTheme(themeName) {
+            // Filter stories to show only those with this theme
+            const stories = allStories || [];
+            const filtered = stories.filter(s => (s.themes || []).includes(themeName));
+            displayStoriesResult(filtered, `Stories with theme: ${themeName}`);
+        }
+
+        function displayStoriesResult(stories, title) {
+            const container = document.getElementById('stories-list');
+            let html = `<div class="mb-4"><h3 class="text-lg font-bold">${title}</h3><p class="text-gray-400">${stories.length} stories</p></div>`;
+            stories.forEach(story => {
+                const arcColor = arcColors[story.arc] || '#999';
+                html += `
+                    <div class="bg-gray-700 rounded-lg p-4 mb-2 cursor-pointer hover:bg-gray-600" onclick="openStory({...${JSON.stringify(story).replace(/"/g, '&quot;')}})">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold">${story.title}</h4>
+                                <p class="text-xs text-gray-400">${story.word_count} words</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 rounded" style="background-color: ${arcColor}20; color: ${arcColor}">${story.arc}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        // Navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const section = e.target.dataset.section;
+
+                // Hide all sections
+                document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+
+                // Show target section
+                document.getElementById(section).classList.remove('hidden');
+
+                // Update nav styling
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('nav-active'));
+                e.target.classList.add('nav-active');
+            });
+        });
+
+        // Arc filter for timeline — update to use state var + re-render
+        document.querySelectorAll('.arc-filter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentTimelineArcFilter = btn.dataset.arc;
+                renderTimeline();
+            });
+        });
+
+        // Year range sliders
+        const startSlider = document.getElementById('timeline-year-start');
+        const endSlider = document.getElementById('timeline-year-end');
+
+        if (startSlider && endSlider) {
+            startSlider.addEventListener('input', () => {
+                if (parseInt(startSlider.value) > parseInt(endSlider.value)) {
+                    startSlider.value = endSlider.value;
+                }
+                timelineYearStart = parseInt(startSlider.value);
+                updateYearDisplay();
+                renderTimeline();
+            });
+
+            endSlider.addEventListener('input', () => {
+                if (parseInt(endSlider.value) < parseInt(startSlider.value)) {
+                    endSlider.value = startSlider.value;
+                }
+                timelineYearEnd = parseInt(endSlider.value);
+                updateYearDisplay();
+                renderTimeline();
+            });
+
+            document.getElementById('timeline-year-reset').addEventListener('click', () => {
+                const allItems = buildTimelineItems();
+                const years = allItems.map(i => i.year).filter(Boolean);
+                startSlider.value = Math.min(...years);
+                endSlider.value = Math.max(...years);
+                timelineYearStart = parseInt(startSlider.value);
+                timelineYearEnd = parseInt(endSlider.value);
+                updateYearDisplay();
+                renderTimeline();
+            });
+        }
+
+        // Current story being edited
+        let currentStory = null;
+
+        // Open story in editor
+        async function openStory(story) {
+            currentStory = story;
+
+            // Hide all sections, show editor
+            document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+            document.getElementById('editor').classList.remove('hidden');
+
+            // Update nav
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('nav-active'));
+
+            // Set metadata
+            document.getElementById('editor-title').textContent = story.title;
+            document.getElementById('editor-filename').textContent = story.file;
+            document.getElementById('meta-status').value = story.status || 'draft';
+            document.getElementById('meta-arc').value = story.arc || 'forged';
+            document.getElementById('meta-date-event').value = story.date_event || '';
+            document.getElementById('meta-medium-url').value = story.medium_url || '';
+            document.getElementById('meta-themes').value = (story.themes || []).join(', ');
+
+            // Load file content
+            try {
+                const res = await fetch(`/LexDocs/${story.file}`);
+                if (res.ok) {
+                    const content = await res.text();
+                    document.getElementById('story-editor').value = content;
+                    updatePreview(content);
+                    updateWordCount(content);
+                } else {
+                    document.getElementById('story-editor').value = '# ' + story.title + '\n\nStart writing...';
+                }
+            } catch (e) {
+                console.error('Error loading story:', e);
+                document.getElementById('story-editor').value = '# ' + story.title + '\n\nStart writing...';
+            }
+        }
+
+        // Update preview
+        function updatePreview(content) {
+            // Remove frontmatter
+            let cleanContent = content.replace(/^---[\s\S]*?---\n*/, '');
+
+            // Simple markdown to HTML conversion
+            let html = cleanContent
+                // Headers
+                .replace(/^### (.*$)/gm, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gm, '<h2>$1</h2>')
+                .replace(/^# (.*$)/gm, '<h1>$1</h1>')
+                // Bold and italic
+                .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                // Links
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-400">$1</a>')
+                // Blockquotes
+                .replace(/^> (.*$)/gm, '<blockquote class="border-l-4 border-gray-600 pl-4 italic text-gray-400">$1</blockquote>')
+                // Horizontal rules
+                .replace(/^---$/gm, '<hr class="border-gray-600 my-4">')
+                .replace(/^\* \* \*$/gm, '<hr class="border-gray-600 my-4">')
+                // Lists
+                .replace(/^- (.*$)/gm, '<li>$1</li>')
+                // Paragraphs
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\n/g, '<br>');
+
+            html = '<p>' + html + '</p>';
+
+            document.getElementById('story-preview').innerHTML = html;
+        }
+
+        // Update word count
+        function updateWordCount(content) {
+            const cleanContent = content.replace(/^---[\s\S]*?---/, '');
+            const words = cleanContent.split(/\s+/).filter(w => w.length > 0).length;
+            document.getElementById('meta-word-count').textContent = words.toLocaleString();
+        }
+
+        // Save story
+        async function saveStory() {
+            if (!currentStory) return;
+
+            const content = document.getElementById('story-editor').value;
+            const metadata = {
+                title: currentStory.title,
+                arc: document.getElementById('meta-arc').value,
+                status: document.getElementById('meta-status').value,
+                date_event: document.getElementById('meta-date-event').value,
+                medium_url: document.getElementById('meta-medium-url').value,
+                themes: document.getElementById('meta-themes').value.split(',').map(t => t.trim()).filter(t => t)
+            };
+
+            // Build frontmatter
+            let frontmatter = '---\n';
+            frontmatter += `title: "${metadata.title}"\n`;
+            frontmatter += `arc: ${metadata.arc}\n`;
+            frontmatter += `status: ${metadata.status}\n`;
+            if (metadata.date_event) frontmatter += `date_event: "${metadata.date_event}"\n`;
+            if (metadata.medium_url) frontmatter += `medium_url: "${metadata.medium_url}"\n`;
+            if (metadata.themes.length) frontmatter += `themes: [${metadata.themes.join(', ')}]\n`;
+            frontmatter += `date_written: "${new Date().toISOString().split('T')[0]}"\n`;
+            frontmatter += '---\n\n';
+
+            // Remove existing frontmatter and prepend new
+            let newContent = content.replace(/^---[\s\S]*?---\n*/, '');
+            newContent = frontmatter + newContent;
+
+            // Save via API
+            try {
+                const res = await fetch(`/api/save`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        file: currentStory.file,
+                        content: newContent
+                    })
+                });
+
+                if (res.ok) {
+                    showSaveStatus('Saved!', 'green');
+                } else {
+                    // Fallback: download file
+                    downloadFile(currentStory.file, newContent);
+                    showSaveStatus('Downloaded (save manually)', 'yellow');
+                }
+            } catch (e) {
+                // Fallback: download file
+                downloadFile(currentStory.file, newContent);
+                showSaveStatus('Downloaded (save manually)', 'yellow');
+            }
+        }
+
+        // Download file as fallback
+        function downloadFile(filename, content) {
+            const blob = new Blob([content], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Export for Medium (clean markdown)
+        function exportForMedium() {
+            const content = document.getElementById('story-editor').value;
+            // Remove frontmatter
+            let cleanContent = content.replace(/^---[\s\S]*?---\n*/, '');
+            // Add footer
+            cleanContent += '\n\n---\n\n*This is part of my series documenting the journey from farm to tech to sustainable energy. Follow along at [@shawncutter](https://medium.com/@shawncutter).*';
+
+            downloadFile(currentStory.file.replace('.md', '-medium.md'), cleanContent);
+            showSaveStatus('Exported for Medium', 'green');
+        }
+
+        // Delete story
+        async function deleteStory() {
+            if (!currentStory) return;
+            if (!confirm(`Delete "${currentStory.title}"? This cannot be undone.`)) return;
+
+            try {
+                const res = await fetch(`/api/delete`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        file: currentStory.file
+                    })
+                });
+
+                if (res.ok) {
+                    showSaveStatus('Story deleted!', 'green');
+                    setTimeout(() => {
+                        hasUnsavedChanges = false;
+                        document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+                        document.getElementById('stories').classList.remove('hidden');
+                        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('nav-active'));
+                        document.querySelector('[data-section="stories"]').classList.add('nav-active');
+                        loadData(); // Refresh story list
+                    }, 1000);
+                } else {
+                    showSaveStatus('Error deleting story', 'red');
+                }
+            } catch (e) {
+                showSaveStatus('Error deleting story', 'red');
+            }
+        }
+
+        // Show save status
+        function showSaveStatus(message, color) {
+            const status = document.getElementById('save-status');
+            status.textContent = message;
+            status.className = `fixed bottom-4 right-4 px-4 py-2 rounded text-sm border`;
+            if (color === 'green') {
+                status.classList.add('bg-green-900', 'border-green-700', 'text-green-300');
+            } else if (color === 'yellow') {
+                status.classList.add('bg-yellow-900', 'border-yellow-700', 'text-yellow-300');
+            }
+            status.classList.remove('hidden');
+            setTimeout(() => status.classList.add('hidden'), 3000);
+        }
+
+        // Track unsaved changes
+        let hasUnsavedChanges = false;
+        let originalContent = '';
+
+        // Consolidated editor input handler (handles preview, word count, unsaved changes, and auto-save)
+        document.getElementById('story-editor').addEventListener('input', (e) => {
+            updatePreview(e.target.value);
+            updateWordCount(e.target.value);
+            hasUnsavedChanges = e.target.value !== originalContent;
+            updateSaveIndicator();
+            startAutoSave(); // Trigger auto-save timer
+        });
+
+        document.getElementById('btn-save').addEventListener('click', saveStory);
+        document.getElementById('btn-medium-export').addEventListener('click', exportForMedium);
+        document.getElementById('btn-delete-story').addEventListener('click', deleteStory);
+
+        document.getElementById('back-to-stories').addEventListener('click', () => {
+            if (hasUnsavedChanges && !confirm('You have unsaved changes. Leave anyway?')) {
+                return;
+            }
+            hasUnsavedChanges = false;
+            document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+            document.getElementById('stories').classList.remove('hidden');
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('nav-active'));
+            document.querySelector('[data-section="stories"]').classList.add('nav-active');
+        });
+
+        function updateSaveIndicator() {
+            const btn = document.getElementById('btn-save');
+            if (hasUnsavedChanges) {
+                btn.textContent = 'Save *';
+                btn.classList.add('ring-2', 'ring-yellow-500');
+            } else {
+                btn.textContent = 'Save';
+                btn.classList.remove('ring-2', 'ring-yellow-500');
+            }
+        }
+
+        // Override openStory to track original content
+        const originalOpenStory = openStory;
+        openStory = async function(story) {
+            await originalOpenStory(story);
+            originalContent = document.getElementById('story-editor').value;
+            hasUnsavedChanges = false;
+            updateSaveIndicator();
+        };
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Cmd+S or Ctrl+S to save
+            if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+                e.preventDefault();
+                if (currentStory && !document.getElementById('editor').classList.contains('hidden')) {
+                    saveStory().then(() => {
+                        originalContent = document.getElementById('story-editor').value;
+                        hasUnsavedChanges = false;
+                        updateSaveIndicator();
+                    });
+                }
+            }
+            // Escape to close modal
+            if (e.key === 'Escape') {
+                document.getElementById('new-story-modal').classList.add('hidden');
+                document.getElementById('new-story-modal').classList.remove('flex');
+            }
+        });
+
+        // Warn before leaving with unsaved changes
+        window.addEventListener('beforeunload', (e) => {
+            if (hasUnsavedChanges) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+
+        // New Story Modal
+        document.getElementById('btn-new-story').addEventListener('click', () => {
+            document.getElementById('new-story-modal').classList.remove('hidden');
+            document.getElementById('new-story-modal').classList.add('flex');
+            document.getElementById('new-title').focus();
+        });
+
+        document.getElementById('modal-cancel').addEventListener('click', () => {
+            document.getElementById('new-story-modal').classList.add('hidden');
+            document.getElementById('new-story-modal').classList.remove('flex');
+        });
+
+        document.getElementById('modal-create').addEventListener('click', async () => {
+            const title = document.getElementById('new-title').value.trim();
+            const arc = document.getElementById('new-arc').value;
+            const content = document.getElementById('new-content').value.trim();
+
+            if (!title) {
+                alert('Please enter a title');
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/create', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ title, arc, content })
+                });
+
+                const data = await res.json();
+                if (data.success) {
+                    showSaveStatus(`Created: ${data.file}`, 'green');
+                    document.getElementById('new-story-modal').classList.add('hidden');
+                    document.getElementById('new-story-modal').classList.remove('flex');
+                    // Clear form
+                    document.getElementById('new-title').value = '';
+                    document.getElementById('new-content').value = '';
+                    // Rescan and reload
+                    await rescanStories();
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (e) {
+                alert('Error creating story: ' + e.message);
+            }
+        });
+
+        // Rescan button
+        document.getElementById('btn-rescan').addEventListener('click', rescanStories);
+
+        async function rescanStories() {
+            const btn = document.getElementById('btn-rescan');
+            btn.textContent = 'Scanning...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('/api/rescan', { method: 'POST' });
+                if (res.ok) {
+                    showSaveStatus('Stories rescanned!', 'green');
+                    await loadData();
+                } else {
+                    showSaveStatus('Rescan failed', 'yellow');
+                }
+            } catch (e) {
+                showSaveStatus('Rescan failed: ' + e.message, 'yellow');
+            }
+
+            btn.textContent = 'Rescan';
+            btn.disabled = false;
+        }
+
+        // Search and filter stories
+        // Variables declared at top of script: allStories, currentStatusFilter, currentArcFilter, currentSearchTerm
+
+        function filterAndDisplayStories() {
+            let filtered = allStories;
+
+            // Filter by status
+            if (currentStatusFilter !== 'all') {
+                filtered = filtered.filter(s => s.status === currentStatusFilter);
+            }
+
+            // Filter by arc
+            if (currentArcFilter !== 'all') {
+                filtered = filtered.filter(s => s.arc === currentArcFilter);
+            }
+
+            // Filter by search term
+            if (currentSearchTerm) {
+                const term = currentSearchTerm.toLowerCase();
+                filtered = filtered.filter(s =>
+                    s.title.toLowerCase().includes(term) ||
+                    s.file.toLowerCase().includes(term) ||
+                    (s.excerpt || '').toLowerCase().includes(term) ||
+                    (s.themes || []).some(t => t.toLowerCase().includes(term))
+                );
+            }
+
+            displayFilteredStories(filtered);
+        }
+
+        function displayFilteredStories(stories) {
+            const container = document.getElementById('stories-container');
+            let html = '';
+
+            if (stories.length === 0) {
+                html = '<p class="text-gray-500">No stories match your filters.</p>';
+            } else {
+                stories.forEach((story, idx) => {
+                    const originalIdx = allStories.indexOf(story);
+                    const borderClass = `border-${story.arc}`;
+                    const wordCount = story.word_count ? `${Math.round(story.word_count / 100) / 10}K words` : '';
+                    const themes = (story.themes || []).slice(0, 3).join(', ');
+                    html += `
+                        <div class="bg-gray-800 rounded-lg p-4 border-l-4 ${borderClass} story-item cursor-pointer hover:bg-gray-750 transition-colors" data-status="${story.status}" data-arc="${story.arc}" data-idx="${originalIdx}">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-medium">${story.title}</h4>
+                                    <p class="text-sm text-gray-400">${story.file}</p>
+                                    ${wordCount ? `<p class="text-xs text-gray-500 mt-1">${wordCount}</p>` : ''}
+                                    ${themes ? `<p class="text-xs text-gray-600 mt-1">${themes}</p>` : ''}
+                                </div>
+                                <div class="flex gap-2">
+                                    ${story.feedback_count > 0 ? `<span class="ml-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold">${story.feedback_count} feedback</span>` : ''}
+                                    <span class="px-2 py-1 text-xs rounded ${story.status === 'published' ? 'bg-green-900 text-green-300' : story.status === 'ready' ? 'bg-blue-900 text-blue-300' : 'bg-gray-700 text-gray-300'}">${story.status}</span>
+                                    <span class="px-2 py-1 text-xs rounded text-${story.arc} border border-${story.arc}">${story.arc}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            container.innerHTML = html;
+
+            // Re-attach click handlers
+            document.querySelectorAll('.story-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const idx = parseInt(item.dataset.idx);
+                    openStory(allStories[idx]);
+                });
+            });
+        }
+
+        // Search input handler
+        document.getElementById('story-search').addEventListener('input', (e) => {
+            currentSearchTerm = e.target.value;
+            filterAndDisplayStories();
+        });
+
+        // Arc select handler
+        document.getElementById('arc-select').addEventListener('change', (e) => {
+            currentArcFilter = e.target.value;
+            filterAndDisplayStories();
+        });
+
+        // Update status filter click handlers
+        document.querySelectorAll('.status-filter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentStatusFilter = btn.dataset.status;
+                // Update button styles
+                document.querySelectorAll('.status-filter').forEach(b => {
+                    b.classList.remove('bg-blue-600');
+                    b.classList.add('bg-gray-700');
+                });
+                btn.classList.remove('bg-gray-700');
+                btn.classList.add('bg-blue-600');
+                filterAndDisplayStories();
+            });
+        });
+
+        // Load data on page load
+        loadData();
+
+        // ========================================
+        // P2 FEATURES
+        // ========================================
+
+        // Auto-save functionality
+        let autoSaveTimer = null;
+        const AUTO_SAVE_DELAY = 30000; // 30 seconds
+
+        function startAutoSave() {
+            if (autoSaveTimer) clearTimeout(autoSaveTimer);
+            autoSaveTimer = setTimeout(async () => {
+                if (hasUnsavedChanges && currentStory) {
+                    await saveStory();
+                    originalContent = document.getElementById('story-editor').value;
+                    hasUnsavedChanges = false;
+                    updateSaveIndicator();
+                    showSaveStatus('Auto-saved', 'green');
+                }
+            }, AUTO_SAVE_DELAY);
+        }
+
+        // Note: Auto-save is triggered via the consolidated input handler below
+
+        // Network Graph Visualization
+        // topicsData is already declared at top of script
+
+        async function loadTopicsData() {
+            try {
+                const res = await fetch('../LexDocs/_topics.json');
+                topicsData = await res.json();
+                renderTopics();  // Renders theme chart, clusters, and people
+                renderNetworkGraph();
+            } catch (e) {
+                console.error('Error loading topics:', e);
+            }
+        }
+
+        function renderNetworkGraph() {
+            if (!topicsData) return;
+
+            const container = document.getElementById('network-graph');
+
+            // Get width - use fallback if container is hidden (clientWidth = 0)
+            let width = container.clientWidth;
+            if (width === 0) {
+                // Container might be hidden, use parent or default width
+                width = container.parentElement?.clientWidth || 800;
+            }
+            if (width === 0) width = 800; // Final fallback
+
+            const height = 400;
+
+            // Clear existing content
+            container.innerHTML = '';
+
+            // Build nodes and links
+            const nodes = [];
+            const links = [];
+            const nodeMap = {};
+
+            // Add theme nodes
+            Object.entries(topicsData.themes || {}).forEach(([theme, data]) => {
+                const id = `theme-${theme}`;
+                const count = data.stories ? data.stories.length : 0;
+                nodeMap[id] = { id, name: theme, type: 'theme', count };
+                nodes.push(nodeMap[id]);
+            });
+
+            // Add people nodes
+            Object.entries(topicsData.people || {}).forEach(([person, data]) => {
+                const id = `person-${person}`;
+                const count = data.stories ? data.stories.length : 0;
+                nodeMap[id] = { id, name: data.name || person, type: 'person', count };
+                nodes.push(nodeMap[id]);
+            });
+
+            // Add story nodes (limited to avoid clutter)
+            const storySet = new Set();
+            Object.values(topicsData.themes || {}).forEach(themeData => {
+                const stories = themeData.stories || [];
+                stories.slice(0, 3).forEach(s => storySet.add(s));
+            });
+
+            storySet.forEach(story => {
+                const id = `story-${story}`;
+                const shortName = story.replace(/^bk1?-/, '').replace('.md', '').substring(0, 20);
+                nodeMap[id] = { id, name: shortName, type: 'story', fullName: story };
+                nodes.push(nodeMap[id]);
+            });
+
+            // Create links between themes and stories
+            Object.entries(topicsData.themes || {}).forEach(([theme, themeData]) => {
+                const stories = themeData.stories || [];
+                stories.slice(0, 3).forEach(story => {
+                    const storyId = `story-${story}`;
+                    if (nodeMap[storyId]) {
+                        links.push({ source: `theme-${theme}`, target: storyId });
+                    }
+                });
+            });
+
+            // Create links between people and stories
+            Object.entries(topicsData.people || {}).forEach(([person, personData]) => {
+                const stories = personData.stories || [];
+                stories.forEach(story => {
+                    const storyId = `story-${story}`;
+                    if (nodeMap[storyId]) {
+                        links.push({ source: `person-${person}`, target: storyId });
+                    }
+                });
+            });
+
+            // Create SVG
+            const svg = d3.select('#network-graph')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+
+            // Create simulation
+            const simulation = d3.forceSimulation(nodes)
+                .force('link', d3.forceLink(links).id(d => d.id).distance(80))
+                .force('charge', d3.forceManyBody().strength(-200))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(30));
+
+            // Draw links
+            const link = svg.append('g')
+                .selectAll('line')
+                .data(links)
+                .enter().append('line')
+                .attr('stroke', '#4b5563')
+                .attr('stroke-opacity', 0.6)
+                .attr('stroke-width', 1);
+
+            // Draw nodes
+            const node = svg.append('g')
+                .selectAll('circle')
+                .data(nodes)
+                .enter().append('circle')
+                .attr('r', d => d.type === 'theme' ? 12 : d.type === 'person' ? 10 : 6)
+                .attr('fill', d => d.type === 'theme' ? '#3b82f6' : d.type === 'person' ? '#a855f7' : '#22c55e')
+                .attr('stroke', '#1f2937')
+                .attr('stroke-width', 2)
+                .style('cursor', 'pointer')
+                .call(d3.drag()
+                    .on('start', dragstarted)
+                    .on('drag', dragged)
+                    .on('end', dragended));
+
+            // Add labels
+            const label = svg.append('g')
+                .selectAll('text')
+                .data(nodes)
+                .enter().append('text')
+                .text(d => d.name)
+                .attr('font-size', d => d.type === 'story' ? '8px' : '10px')
+                .attr('fill', '#9ca3af')
+                .attr('text-anchor', 'middle')
+                .attr('dy', d => d.type === 'theme' ? 25 : 20);
+
+            // Add tooltips
+            node.append('title')
+                .text(d => d.fullName || d.name);
+
+            simulation.on('tick', () => {
+                link
+                    .attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y);
+
+                node
+                    .attr('cx', d => d.x = Math.max(20, Math.min(width - 20, d.x)))
+                    .attr('cy', d => d.y = Math.max(20, Math.min(height - 20, d.y)));
+
+                label
+                    .attr('x', d => d.x)
+                    .attr('y', d => d.y);
+            });
+
+            function dragstarted(event) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                event.subject.fx = event.subject.x;
+                event.subject.fy = event.subject.y;
+            }
+
+            function dragged(event) {
+                event.subject.fx = event.x;
+                event.subject.fy = event.y;
+            }
+
+            function dragended(event) {
+                if (!event.active) simulation.alphaTarget(0);
+                event.subject.fx = null;
+                event.subject.fy = null;
+            }
+        }
+
+        // Render expansion clusters with click-to-expand
+        function renderClusters() {
+            if (!topicsData || !topicsData.clusters) return;
+
+            const container = document.getElementById('clusters-container');
+            let html = '';
+            const clusterKeys = Object.keys(topicsData.clusters);
+
+            clusterKeys.forEach((key, idx) => {
+                const cluster = topicsData.clusters[key];
+                const storyCount = cluster.stories ? cluster.stories.length : 0;
+                const colors = ['from-purple-900/30 to-blue-900/30', 'from-blue-900/30 to-green-900/30',
+                               'from-green-900/30 to-yellow-900/30', 'from-pink-900/30 to-red-900/30',
+                               'from-yellow-900/30 to-orange-900/30', 'from-red-900/30 to-pink-900/30'];
+                const colorClass = colors[idx % colors.length];
+                const borderColors = ['border-purple-500', 'border-blue-500', 'border-green-500',
+                                     'border-pink-500', 'border-yellow-500', 'border-red-500'];
+                const borderColor = borderColors[idx % borderColors.length];
+
+                html += `
+                    <div class="group relative bg-gradient-to-br ${colorClass} rounded-lg p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-gray-600/20 hover:scale-105 border-l-4 ${borderColor} overflow-hidden cluster-card" data-key="${key}">
+                        <!-- Accent corner -->
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-white/5 rounded-full -mr-10 -mt-10 group-hover:bg-white/10 transition"></div>
+
+                        <div class="relative z-10">
+                            <!-- Title and status -->
+                            <div class="flex items-start justify-between mb-3">
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-lg text-gray-100 mb-1">${cluster.title}</h4>
+                                    <p class="text-xs text-gray-400">Chapter candidate</p>
+                                </div>
+                                <span class="text-2xl font-bold text-gray-400 opacity-20 group-hover:opacity-40 transition">${idx + 1}</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-sm text-gray-300 mb-4 leading-relaxed">${cluster.description}</p>
+
+                            <!-- Story count -->
+                            <div class="flex items-center justify-between mb-4 p-3 bg-black/30 rounded">
+                                <span class="text-sm font-semibold text-gray-300">Stories in cluster</span>
+                                <span class="text-2xl font-bold text-white">${storyCount}</span>
+                            </div>
+
+                            <!-- Expansion hint -->
+                            <p class="text-xs text-gray-400 italic mb-4">💡 ${cluster.potential_expansion}</p>
+
+                            <!-- CTA -->
+                            <button class="w-full py-2 px-3 rounded bg-white/10 text-white text-sm font-medium hover:bg-white/20 transition">
+                                Explore & Combine →
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+
+            // Add click handlers
+            document.querySelectorAll('.cluster-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const key = card.dataset.key;
+                    openExpansionModal(topicsData.clusters[key], key);
+                });
+            });
+        }
+
+        // Expansion Modal
+        let currentCluster = null;
+        let selectedStories = [];
+
+        function openExpansionModal(cluster, clusterKey) {
+            currentCluster = cluster;
+            selectedStories = [];
+
+            document.getElementById('expansion-title').textContent = cluster.title;
+            document.getElementById('expansion-suggested').textContent = cluster.potential_expansion;
+
+            let storiesHtml = '';
+            const stories = cluster.stories || [];
+            if (stories.length === 0) {
+                storiesHtml = '<p class="text-sm text-gray-400 italic">No stories in this cluster yet</p>';
+            } else {
+                stories.forEach((file, idx) => {
+                    const story = allStories.find(s => s.file === file);
+                    const title = story ? story.title : file;
+                    storiesHtml += `
+                        <div class="flex items-center gap-2 p-2 bg-gray-900 rounded">
+                            <input type="checkbox" class="expansion-story-check" data-file="${file}" data-idx="${idx}">
+                            <span class="flex-1">${title}</span>
+                            <button class="text-xs text-blue-400 hover:text-blue-300 view-story-btn" data-file="${file}">View</button>
+                        </div>
+                    `;
+                });
+            }
+
+            document.getElementById('expansion-stories').innerHTML = storiesHtml;
+            document.getElementById('expansion-compare').style.display = 'none';
+
+            // Add checkbox handlers
+            document.querySelectorAll('.expansion-story-check').forEach(check => {
+                check.addEventListener('change', updateCompareView);
+            });
+
+            // Add view button handlers
+            document.querySelectorAll('.view-story-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    e.stopPropagation();
+                    const file = btn.dataset.file;
+                    const story = allStories.find(s => s.file === file);
+                    if (story) {
+                        document.getElementById('expansion-modal').classList.add('hidden');
+                        document.getElementById('expansion-modal').classList.remove('flex');
+                        await openStory(story);
+                    }
+                });
+            });
+
+            document.getElementById('expansion-modal').classList.remove('hidden');
+            document.getElementById('expansion-modal').classList.add('flex');
+        }
+
+        async function updateCompareView() {
+            const checked = document.querySelectorAll('.expansion-story-check:checked');
+            selectedStories = Array.from(checked).map(c => c.dataset.file);
+
+            if (selectedStories.length >= 2) {
+                document.getElementById('expansion-compare').style.display = 'grid';
+
+                // Load first two selected stories
+                for (let i = 0; i < 2; i++) {
+                    const file = selectedStories[i];
+                    const story = allStories.find(s => s.file === file);
+                    document.getElementById(`compare-title-${i + 1}`).textContent = story ? story.title : file;
+
+                    try {
+                        const res = await fetch(`../LexDocs/${file}`);
+                        if (res.ok) {
+                            let content = await res.text();
+                            content = content.replace(/^---[\s\S]*?---\n*/, '');
+                            document.getElementById(`compare-content-${i + 1}`).innerHTML = simpleMarkdown(content);
+                        }
+                    } catch (e) {
+                        document.getElementById(`compare-content-${i + 1}`).innerHTML = '<p class="text-red-400">Error loading</p>';
+                    }
+                }
+            } else {
+                document.getElementById('expansion-compare').style.display = 'none';
+            }
+        }
+
+        function simpleMarkdown(content) {
+            return content
+                .replace(/^### (.*$)/gm, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gm, '<h2>$1</h2>')
+                .replace(/^# (.*$)/gm, '<h1>$1</h1>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\n/g, '<br>');
+        }
+
+        document.getElementById('expansion-close').addEventListener('click', () => {
+            document.getElementById('expansion-modal').classList.add('hidden');
+            document.getElementById('expansion-modal').classList.remove('flex');
+        });
+
+        // Timeline Add/Edit
+        // timelineData is already declared at top of script
+        let editingEventIdx = null;
+
+        // loadTimelineData is handled by main loadData function
+
+        document.getElementById('btn-add-event').addEventListener('click', () => {
+            editingEventIdx = null;
+            document.getElementById('timeline-modal-title').textContent = 'Add Timeline Event';
+            document.getElementById('event-date').value = '';
+            document.getElementById('event-title').value = '';
+            document.getElementById('event-arc').value = 'forged';
+            document.getElementById('event-category').value = 'personal';
+            document.getElementById('event-stories').value = '';
+
+            document.getElementById('timeline-modal').classList.remove('hidden');
+            document.getElementById('timeline-modal').classList.add('flex');
+        });
+
+        document.getElementById('timeline-modal-cancel').addEventListener('click', () => {
+            document.getElementById('timeline-modal').classList.add('hidden');
+            document.getElementById('timeline-modal').classList.remove('flex');
+        });
+
+        document.getElementById('timeline-modal-save').addEventListener('click', async () => {
+            const date = document.getElementById('event-date').value.trim();
+            const title = document.getElementById('event-title').value.trim();
+            const arc = document.getElementById('event-arc').value;
+            const category = document.getElementById('event-category').value;
+            const storiesStr = document.getElementById('event-stories').value.trim();
+            const stories = storiesStr ? storiesStr.split(',').map(s => s.trim()) : [];
+
+            if (!date || !title) {
+                alert('Please enter date and title');
+                return;
+            }
+
+            // Calculate age from date
+            const birthYear = timelineData?.metadata?.birth_year || 1980;
+            const eventYear = parseInt(date.split('-')[0]);
+            const age = eventYear - birthYear;
+
+            const newEvent = { date, age, title, arc, category, stories };
+
+            try {
+                const res = await fetch('/api/timeline', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ event: newEvent, index: editingEventIdx })
+                });
+
+                if (res.ok) {
+                    showSaveStatus('Timeline updated!', 'green');
+                    document.getElementById('timeline-modal').classList.add('hidden');
+                    document.getElementById('timeline-modal').classList.remove('flex');
+                    await loadData();
+                } else {
+                    showSaveStatus('Note: Timeline API not yet implemented - event saved locally', 'yellow');
+                    // Add to local data for display
+                    if (timelineData && timelineData.events) {
+                        timelineData.events.push(newEvent);
+                        timelineData.events.sort((a, b) => a.date.localeCompare(b.date));
+                    }
+                    document.getElementById('timeline-modal').classList.add('hidden');
+                    document.getElementById('timeline-modal').classList.remove('flex');
+                }
+            } catch (e) {
+                showSaveStatus('Timeline saved locally only', 'yellow');
+                document.getElementById('timeline-modal').classList.add('hidden');
+                document.getElementById('timeline-modal').classList.remove('flex');
+            }
+        });
+
+        // Compare View Section
+        document.getElementById('back-from-compare').addEventListener('click', () => {
+            document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+            document.getElementById('stories').classList.remove('hidden');
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('nav-active'));
+            document.querySelector('[data-section="stories"]').classList.add('nav-active');
+        });
+
+        function populateCompareSelect(selectId, statusFilter = '') {
+            const select = document.getElementById(selectId);
+            const arcOrder = ['forged', 'fractured', 'forging', 'foundry'];
+            const arcLabels = {
+                forged: '🌾 Forged (Farm)',
+                fractured: '💔 Fractured (Recovery)',
+                forging: '⚙️ Forging (Career)',
+                foundry: '🔥 Foundry (Legacy)'
+            };
+
+            // Group stories by arc
+            const storyByArc = {};
+            arcOrder.forEach(arc => {
+                storyByArc[arc] = [];
+            });
+
+            allStories.forEach(story => {
+                if (statusFilter && story.status !== statusFilter) return;
+                if (storyByArc[story.arc]) {
+                    storyByArc[story.arc].push(story);
+                }
+            });
+
+            // Build options with optgroups
+            let options = '<option value="">Select a story...</option>';
+            arcOrder.forEach(arc => {
+                const stories = storyByArc[arc];
+                if (stories.length > 0) {
+                    options += `<optgroup label="${arcLabels[arc]} (${stories.length})">`;
+                    stories.forEach(story => {
+                        options += `<option value="${story.file}">${story.title}</option>`;
+                    });
+                    options += '</optgroup>';
+                }
+            });
+
+            select.innerHTML = options;
+        }
+
+        // Initial population
+        function populateCompareSelects() {
+            populateCompareSelect('compare-select-1', '');
+            populateCompareSelect('compare-select-2', '');
+        }
+
+        // Status filter listeners
+        document.getElementById('compare-status-1').addEventListener('change', (e) => {
+            populateCompareSelect('compare-select-1', e.target.value);
+            document.getElementById('compare-select-1').value = '';
+            document.getElementById('compare-view-1').innerHTML = '<p class="text-gray-500">Select a story to view...</p>';
+        });
+
+        document.getElementById('compare-status-2').addEventListener('change', (e) => {
+            populateCompareSelect('compare-select-2', e.target.value);
+            document.getElementById('compare-select-2').value = '';
+            document.getElementById('compare-view-2').innerHTML = '<p class="text-gray-500">Select a story to view...</p>';
+        });
+
+        async function loadCompareStory(selectId, viewId) {
+            const file = document.getElementById(selectId).value;
+            const view = document.getElementById(viewId);
+            const metaId = viewId.replace('-view-', '-meta-');
+            const storyNum = selectId.endsWith('1') ? '1' : '2';
+
+            if (!file) {
+                view.innerHTML = '<p class="text-gray-500">Select a story to view...</p>';
+                document.getElementById(metaId).classList.add('hidden');
+                return;
+            }
+
+            try {
+                const res = await fetch(`../LexDocs/${file}`);
+                if (res.ok) {
+                    let content = await res.text();
+                    content = content.replace(/^---[\s\S]*?---\n*/, '');
+                    view.innerHTML = '<p>' + simpleMarkdown(content) + '</p>';
+
+                    // Show metadata for this story
+                    const story = allStories.find(s => s.file === file);
+                    if (story) {
+                        document.getElementById(`compare-arc-${storyNum}`).textContent = story.arc;
+                        document.getElementById(`compare-words-${storyNum}`).textContent = story.word_count.toLocaleString();
+                        document.getElementById(`compare-status-badge-${storyNum}`).textContent = story.status;
+                        document.getElementById(`compare-feedback-${storyNum}`).textContent = story.feedback_count || 0;
+                        document.getElementById(metaId).classList.remove('hidden');
+                    }
+                }
+            } catch (e) {
+                view.innerHTML = '<p class="text-red-400">Error loading story</p>';
+                document.getElementById(metaId).classList.add('hidden');
+            }
+        }
+
+        document.getElementById('compare-select-1').addEventListener('change', () => {
+            loadCompareStory('compare-select-1', 'compare-view-1');
+        });
+
+        document.getElementById('compare-select-2').addEventListener('change', () => {
+            loadCompareStory('compare-select-2', 'compare-view-2');
+        });
+
+        // Add Compare nav link
+        const compareNavItem = document.createElement('li');
+        compareNavItem.innerHTML = '<a href="#compare" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="compare">Compare</a>';
+        document.querySelector('nav ul').appendChild(compareNavItem);
+
+        // Re-attach nav handlers for new Compare section
+        document.querySelector('[data-section="compare"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+            document.getElementById('compare').classList.remove('hidden');
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('nav-active'));
+            e.target.classList.add('nav-active');
+            populateCompareSelects();
+        });
+
+        // Render visualizations when Topics section is shown (needs visible container for sizing)
+        document.querySelector('[data-section="topics"]').addEventListener('click', () => {
+            // Delay to ensure section is visible and has dimensions before rendering
+            setTimeout(() => {
+                if (topicsData) {
+                    renderNetworkGraph();
+                    // Resize Chart.js chart now that container is visible
+                    if (themeChartInstance) {
+                        themeChartInstance.resize();
+                    }
+                } else {
+                    loadTopicsData();
+                }
+            }, 150);
+        });
+
+        // Note: Timeline data is loaded by main loadData() function, no separate call needed
+
+        // ========================================
+        // BACKLOG FUNCTIONALITY
+        // ========================================
+
+        let backlogData = null;
+        let editingBacklogId = null;
+        let currentPriorityFilter = 'all';
+        let currentBacklogStatusFilter = 'all';
+
+        async function loadBacklogData() {
+            try {
+                const res = await fetch('../LexDocs/_backlog.json');
+                backlogData = await res.json();
+                renderBacklog();
+                updateBacklogStats();
+            } catch (e) {
+                console.error('Error loading backlog:', e);
+                backlogData = { metadata: {}, items: [] };
+                renderBacklog();
+            }
+        }
+
+        function updateBacklogStats() {
+            if (!backlogData) return;
+            const items = backlogData.items;
+            document.getElementById('backlog-total').textContent = items.length;
+            document.getElementById('backlog-todo').textContent = items.filter(i => i.status === 'todo').length;
+            document.getElementById('backlog-in-progress').textContent = items.filter(i => i.status === 'in_progress').length;
+            document.getElementById('backlog-done').textContent = items.filter(i => i.status === 'done').length;
+        }
+
+        function renderBacklog() {
+            if (!backlogData) return;
+            const container = document.getElementById('backlog-items');
+
+            // Filter items
+            let items = backlogData.items.filter(item => {
+                const priorityMatch = currentPriorityFilter === 'all' || item.priority === currentPriorityFilter;
+                const statusMatch = currentBacklogStatusFilter === 'all' || item.status === currentBacklogStatusFilter;
+                return priorityMatch && statusMatch;
+            });
+
+            // Sort by priority then status
+            const priorityOrder = { 'P3': 1, 'P4': 2, 'P5': 3, 'P6': 4, 'P7': 5, 'P8': 6, 'P9': 7, 'quick': 8 };
+            const statusOrder = { 'in_progress': 1, 'todo': 2, 'done': 3 };
+            items.sort((a, b) => {
+                const pDiff = (priorityOrder[a.priority] || 99) - (priorityOrder[b.priority] || 99);
+                if (pDiff !== 0) return pDiff;
+                return (statusOrder[a.status] || 99) - (statusOrder[b.status] || 99);
+            });
+
+            if (items.length === 0) {
+                container.innerHTML = '<p class="text-gray-500 text-center py-8">No items match the current filters</p>';
+                return;
+            }
+
+            let html = '';
+            let currentPriority = '';
+
+            items.forEach(item => {
+                // Priority header
+                if (item.priority !== currentPriority) {
+                    currentPriority = item.priority;
+                    const priorityLabels = {
+                        'P3': 'P3 - Publishing & Export',
+                        'P4': 'P4 - Writing Experience',
+                        'P5': 'P5 - Organization',
+                        'P6': 'P6 - Analytics',
+                        'P7': 'P7 - Collaboration',
+                        'P8': 'P8 - Infrastructure',
+                        'P9': 'P9 - Platform Expansion',
+                        'quick': 'Quick Wins'
+                    };
+                    html += `<h3 class="text-lg font-bold mt-6 mb-2 text-gray-300">${priorityLabels[currentPriority] || currentPriority}</h3>`;
+                }
+
+                // Status colors
+                const statusColors = {
+                    'todo': 'bg-yellow-900 border-yellow-700 text-yellow-300',
+                    'in_progress': 'bg-blue-900 border-blue-700 text-blue-300',
+                    'done': 'bg-green-900 border-green-700 text-green-300'
+                };
+                const statusLabels = { 'todo': 'To Do', 'in_progress': 'In Progress', 'done': 'Done' };
+
+                html += `
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center gap-4 hover:border-gray-600 cursor-pointer backlog-item" data-id="${item.id}">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="${item.status === 'done' ? 'line-through text-gray-500' : ''}">${item.title}</span>
+                                <span class="text-xs px-2 py-0.5 rounded ${statusColors[item.status]} border">${statusLabels[item.status]}</span>
+                            </div>
+                            ${item.category ? `<span class="text-xs text-gray-500">${item.category}</span>` : ''}
+                            ${item.description ? `<p class="text-sm text-gray-400 mt-1">${item.description}</p>` : ''}
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="backlog-status-btn px-2 py-1 text-xs rounded bg-gray-700 hover:bg-gray-600" data-id="${item.id}" data-action="cycle">
+                                ⟳
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+
+            // Click to edit
+            container.querySelectorAll('.backlog-item').forEach(el => {
+                el.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('backlog-status-btn')) return;
+                    const id = parseInt(el.dataset.id);
+                    openBacklogModal(id);
+                });
+            });
+
+            // Quick status cycle
+            container.querySelectorAll('.backlog-status-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    e.stopPropagation();
+                    const id = parseInt(btn.dataset.id);
+                    const item = backlogData.items.find(i => i.id === id);
+                    if (!item) return;
+
+                    // Cycle: todo -> in_progress -> done -> todo
+                    const cycle = { 'todo': 'in_progress', 'in_progress': 'done', 'done': 'todo' };
+                    const newStatus = cycle[item.status] || 'todo';
+
+                    await updateBacklogItem(id, { status: newStatus });
+                });
+            });
+        }
+
+        function openBacklogModal(id = null) {
+            editingBacklogId = id;
+            const modal = document.getElementById('backlog-modal');
+            const deleteBtn = document.getElementById('backlog-modal-delete');
+
+            if (id) {
+                const item = backlogData.items.find(i => i.id === id);
+                if (!item) return;
+
+                document.getElementById('backlog-modal-title').textContent = 'Edit Backlog Item';
+                document.getElementById('backlog-item-title').value = item.title || '';
+                document.getElementById('backlog-item-priority').value = item.priority || 'P4';
+                document.getElementById('backlog-item-status').value = item.status || 'todo';
+                document.getElementById('backlog-item-category').value = item.category || '';
+                document.getElementById('backlog-item-description').value = item.description || '';
+                deleteBtn.classList.remove('hidden');
+            } else {
+                document.getElementById('backlog-modal-title').textContent = 'Add Backlog Item';
+                document.getElementById('backlog-item-title').value = '';
+                document.getElementById('backlog-item-priority').value = 'P4';
+                document.getElementById('backlog-item-status').value = 'todo';
+                document.getElementById('backlog-item-category').value = '';
+                document.getElementById('backlog-item-description').value = '';
+                deleteBtn.classList.add('hidden');
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.getElementById('backlog-item-title').focus();
+        }
+
+        function closeBacklogModal() {
+            const modal = document.getElementById('backlog-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            editingBacklogId = null;
+        }
+
+        async function saveBacklogItem() {
+            const title = document.getElementById('backlog-item-title').value.trim();
+            if (!title) {
+                alert('Please enter a title');
+                return;
+            }
+
+            const item = {
+                title,
+                priority: document.getElementById('backlog-item-priority').value,
+                status: document.getElementById('backlog-item-status').value,
+                category: document.getElementById('backlog-item-category').value.trim(),
+                description: document.getElementById('backlog-item-description').value.trim()
+            };
+
+            try {
+                const action = editingBacklogId ? 'update' : 'add';
+                const res = await fetch('/api/backlog', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action, item, id: editingBacklogId })
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    backlogData = data.backlog;
+                    renderBacklog();
+                    updateBacklogStats();
+                    closeBacklogModal();
+                    showSaveStatus(editingBacklogId ? 'Item updated!' : 'Item added!', 'green');
+                } else {
+                    showSaveStatus('Failed to save', 'yellow');
+                }
+            } catch (e) {
+                showSaveStatus('Error: ' + e.message, 'yellow');
+            }
+        }
+
+        async function updateBacklogItem(id, updates) {
+            try {
+                const res = await fetch('/api/backlog', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'update', item: updates, id })
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    backlogData = data.backlog;
+                    renderBacklog();
+                    updateBacklogStats();
+                }
+            } catch (e) {
+                console.error('Error updating backlog item:', e);
+            }
+        }
+
+        async function deleteBacklogItem() {
+            if (!editingBacklogId) return;
+            if (!confirm('Delete this item?')) return;
+
+            try {
+                const res = await fetch('/api/backlog', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'delete', id: editingBacklogId })
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    backlogData = data.backlog;
+                    renderBacklog();
+                    updateBacklogStats();
+                    closeBacklogModal();
+                    showSaveStatus('Item deleted', 'green');
+                }
+            } catch (e) {
+                showSaveStatus('Error: ' + e.message, 'yellow');
+            }
+        }
+
+        // Backlog event listeners
+        document.getElementById('btn-add-backlog').addEventListener('click', () => openBacklogModal());
+        document.getElementById('backlog-modal-cancel').addEventListener('click', closeBacklogModal);
+        document.getElementById('backlog-modal-save').addEventListener('click', saveBacklogItem);
+        document.getElementById('backlog-modal-delete').addEventListener('click', deleteBacklogItem);
+
+        document.getElementById('backlog-priority-filter').addEventListener('change', (e) => {
+            currentPriorityFilter = e.target.value;
+            renderBacklog();
+        });
+
+        document.getElementById('backlog-status-filter').addEventListener('change', (e) => {
+            currentBacklogStatusFilter = e.target.value;
+            renderBacklog();
+        });
+
+        // Load backlog when section is shown
+        document.querySelector('[data-section="backlog"]').addEventListener('click', () => {
+            if (!backlogData) {
+                loadBacklogData();
+            }
+        });
+
+        // Story selector — load content + feedback panel
+        document.getElementById('story-selector').addEventListener('change', async (e) => {
+            const storyFile = e.target.value;
+            if (!storyFile) return;
+
+            // Render story content into the viewer
+            const contentEl = document.getElementById('story-content');
+            contentEl.innerHTML = '<p class="text-gray-500">Loading...</p>';
+            try {
+                const res = await fetch(`/LexDocs/${storyFile}`);
+                if (res.ok) {
+                    const markdown = await res.text();
+                    // Strip frontmatter then render as simple HTML
+                    const clean = markdown.replace(/^---[\s\S]*?---\n*/, '');
+                    contentEl.innerHTML = clean
+                        .split('\n\n')
+                        .map(para => {
+                            if (para.startsWith('# ')) return `<h1 class="text-2xl font-bold mb-4">${para.slice(2)}</h1>`;
+                            if (para.startsWith('## ')) return `<h2 class="text-xl font-bold mb-3">${para.slice(3)}</h2>`;
+                            if (para.startsWith('### ')) return `<h3 class="text-lg font-bold mb-2">${para.slice(4)}</h3>`;
+                            return `<p class="mb-4 leading-relaxed">${para.replace(/\n/g, '<br>')}</p>`;
+                        })
+                        .join('');
+                } else {
+                    contentEl.innerHTML = '<p class="text-red-400">Story file not found.</p>';
+                }
+            } catch (err) {
+                contentEl.innerHTML = '<p class="text-red-400">Failed to load story.</p>';
+            }
+
+            // Initialize feedback panel
+            feedbackUI.init(storyFile);
+        });
+
+        // Facts & Questions section
+        let factsData = null;
+
+        async function loadFactsAndQuestions() {
+            const btn = document.getElementById('refresh-facts-btn');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="animate-spin">⟳</span> Loading...';
+
+            try {
+                const url = IS_STATIC ? '../LexDocs/_facts.json' : '/api/facts-and-questions';
+                const res = await fetch(url);
+                if (!res.ok) throw new Error('Failed to load facts');
+
+                factsData = await res.json();
+                renderFactsSection();
+
+                document.getElementById('facts-loading').classList.add('hidden');
+                document.getElementById('facts-content').classList.remove('hidden');
+            } catch (e) {
+                console.error('Error loading facts:', e);
+                alert('Error loading facts and questions: ' + e.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span>↺</span> Refresh from Files';
+            }
+        }
+
+        function renderFactsSection() {
+            if (!factsData) return;
+
+            const container = document.getElementById('facts-content');
+            container.innerHTML = `
+                <div id="open-questions-panel" class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Open Questions</h3>
+                    ${renderOpenQuestions()}
+                </div>
+                <div id="facts-log-panel" class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Facts Timeline</h3>
+                    ${renderFactsLog()}
+                </div>
+            `;
+        }
+
+        function renderOpenQuestions() {
+            const arcs = ['forged', 'fractured', 'forging', 'foundry'];
+            const arcNames = { forged: 'Forged', fractured: 'Fractured', forging: 'Forging', foundry: 'Foundry' };
+
+            return arcs.map(arc => {
+                const questions = factsData.open_questions[arc] || [];
+                const count = factsData.counts[arc] || 0;
+                const color = ARC_COLORS[arc];
+
+                return `
+                    <div class="bg-gray-800 rounded-lg p-4" style="border-left: 4px solid ${color}">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-bold text-lg" style="color: ${color}">${arcNames[arc]} Arc</h4>
+                            <span class="bg-gray-700 px-2 py-1 rounded text-sm">${count} open</span>
+                        </div>
+                        <div class="space-y-2 max-h-96 overflow-y-auto">
+                            ${questions.length === 0 ? '<p class="text-gray-400 text-sm">No open questions</p>' : ''}
+                            ${questions.map(q => `
+                                <div class="bg-gray-900 rounded p-2 text-sm border-l-2 border-gray-600">
+                                    <p class="text-gray-400 text-xs mb-1">${q.group || 'General'}</p>
+                                    <p class="text-gray-100">${q.text}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderFactsLog() {
+            const sessions = factsData.facts_log || [];
+
+            return sessions.map((session, idx) => `
+                <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+                    <button class="w-full px-4 py-3 flex justify-between items-center hover:bg-gray-700 transition facts-session-toggle" data-session="${idx}">
+                        <div class="text-left">
+                            <p class="font-bold text-sm">${session.session}</p>
+                            <p class="text-gray-400 text-xs">${session.date}</p>
+                        </div>
+                        <span class="text-gray-400">▸</span>
+                    </button>
+                    <div class="facts-session-body hidden px-4 py-3 bg-gray-900 border-t border-gray-700 max-h-96 overflow-y-auto space-y-2" data-session="${idx}">
+                        ${session.facts.map(fact => `
+                            <p class="text-sm text-gray-200"><strong>${fact.split(':')[0]}:</strong> ${fact.split(':').slice(1).join(':').trim()}</p>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Facts section event listeners
+        document.getElementById('refresh-facts-btn').addEventListener('click', loadFactsAndQuestions);
+
+        document.querySelector('[data-section="facts"]').addEventListener('click', () => {
+            if (!factsData) {
+                loadFactsAndQuestions();
+            }
+        });
+
+        // Handle facts session toggles (delegated)
+        document.getElementById('facts-content').addEventListener('click', (e) => {
+            const toggle = e.target.closest('.facts-session-toggle');
+            if (!toggle) return;
+
+            const sessionIdx = toggle.dataset.session;
+            const body = document.querySelector(`.facts-session-body[data-session="${sessionIdx}"]`);
+            if (body) {
+                body.classList.toggle('hidden');
+                toggle.querySelector('span').textContent = body.classList.contains('hidden') ? '▸' : '▾';
+            }
+        });
+
+        // Book Tree section
+        function renderBookTree() {
+            if (!indexData || !indexData.stories) return;
+
+            const arcs = ['forged', 'fractured', 'forging', 'foundry'];
+            const arcNames = { forged: 'Forged', fractured: 'Fractured', forging: 'Forging', foundry: 'Foundry' };
+            const statusOrder = ['ready', 'draft', 'idea', 'published', 'expanded'];
+            const hideEmpty = document.getElementById('tree-hide-empty')?.checked || false;
+
+            // Find max word count for bar scaling
+            const maxWords = Math.max(...indexData.stories.map(s => s.word_count || 0), 1);
+
+            // Group stories by arc, then by status
+            const tree = {};
+            arcs.forEach(arc => {
+                tree[arc] = {};
+                statusOrder.forEach(status => tree[arc][status] = []);
+            });
+
+            indexData.stories.forEach(story => {
+                const arc = story.arc || 'unknown';
+                if (!tree[arc]) tree[arc] = {};
+
+                // Extract status from file path: 'arc/status/file.md' or 'arc/file.md' (status = file's status field)
+                const pathParts = story.file.split('/');
+                const status = story.status || 'draft';
+
+                if (!tree[arc][status]) tree[arc][status] = [];
+                tree[arc][status].push(story);
+            });
+
+            // Sort stories within each status folder by title
+            Object.values(tree).forEach(arcStories => {
+                Object.values(arcStories).forEach(statusStories => {
+                    statusStories.sort((a, b) => a.title.localeCompare(b.title));
+                });
+            });
+
+            // Render the tree
+            let html = '';
+            arcs.forEach(arc => {
+                const arcColor = ARC_COLORS[arc];
+                const arcStories = tree[arc];
+                const arcCount = Object.values(arcStories).flat().length;
+
+                html += `
+                    <div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <div class="arc-header cursor-pointer p-3 flex justify-between items-center hover:bg-gray-700 transition" data-arc="${arc}">
+                            <div style="display: flex; gap: 12px; align-items: center; flex: 1;">
+                                <span style="color: ${arcColor}; font-weight: bold;">▸</span>
+                                <h3 style="color: ${arcColor}; font-weight: bold; font-size: 1.1em;">${arcNames[arc]}</h3>
+                            </div>
+                            <span class="bg-gray-700 px-2 py-1 rounded text-xs">${arcCount} stories</span>
+                        </div>
+                        <div class="arc-body" data-arc="${arc}">
+                `;
+
+                // Render status folders
+                statusOrder.forEach(status => {
+                    const stories = arcStories[status] || [];
+                    if (hideEmpty && stories.length === 0) return;
+
+                    html += `
+                        <div class="bg-gray-900 border-t border-gray-700">
+                            <div class="status-header cursor-pointer p-2 px-4 flex items-center gap-2 hover:bg-gray-800 transition" data-status="${status}">
+                                <span class="text-gray-500 text-sm">▸</span>
+                                <span class="text-gray-400 text-sm font-medium">${status}/</span>
+                                <span class="text-gray-600 text-xs">(${stories.length})</span>
+                            </div>
+                            <div class="status-body space-y-1" data-status="${status}">
+                    `;
+
+                    stories.forEach(story => {
+                        const pct = Math.round((story.word_count / maxWords) * 100);
+                        const wordStr = story.word_count > 1000 ?
+                            (story.word_count / 1000).toFixed(1) + 'K' :
+                            story.word_count;
+
+                        html += `
+                            <div class="p-2 px-4 hover:bg-gray-800 transition cursor-pointer story-row" data-file="${story.file}">
+                                <div class="flex gap-2 items-center">
+                                    <span class="text-gray-300 flex-1 truncate">${story.title}</span>
+                                    <span class="text-gray-500 text-xs">${wordStr}</span>
+                                </div>
+                                <div class="mt-1 bg-gray-700 rounded h-2 overflow-hidden">
+                                    <div style="width: ${pct}%; height: 100%; background-color: ${arcColor}; opacity: 0.7;"></div>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            const container = document.getElementById('book-tree-container');
+            container.innerHTML = html;
+
+            // Add event listeners for arc headers
+            document.querySelectorAll('.arc-header').forEach(header => {
+                header.addEventListener('click', (e) => {
+                    const arc = header.dataset.arc;
+                    const body = document.querySelector(`.arc-body[data-arc="${arc}"]`);
+                    const icon = header.querySelector('span:first-child');
+                    body.classList.toggle('hidden');
+                    icon.textContent = body.classList.contains('hidden') ? '▹' : '▸';
+                });
+            });
+
+            // Add event listeners for status headers
+            document.querySelectorAll('.status-header').forEach(header => {
+                header.addEventListener('click', (e) => {
+                    const status = header.dataset.status;
+                    const bodies = document.querySelectorAll(`.status-body[data-status="${status}"]`);
+                    const icon = header.querySelector('span:first-child');
+                    bodies.forEach(body => body.classList.toggle('hidden'));
+                    icon.textContent = bodies[0]?.classList.contains('hidden') ? '▹' : '▸';
+                });
+            });
+
+            // Add event listeners for story rows (open in editor)
+            document.querySelectorAll('.story-row').forEach(row => {
+                row.addEventListener('click', (e) => {
+                    const file = row.dataset.file;
+                    // Navigate to editor section and load the story
+                    document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+                    document.getElementById('story-editor').classList.remove('hidden');
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('nav-active'));
+                    document.querySelector('[data-section="story-editor"]').classList.add('nav-active');
+
+                    // Load story content
+                    document.getElementById('story-selector').value = file;
+                    document.getElementById('story-selector').dispatchEvent(new Event('change'));
+                });
+            });
+        }
+
+        // Book tree event listener
+        document.getElementById('tree-hide-empty').addEventListener('change', renderBookTree);
+        document.querySelector('[data-section="book-tree"]').addEventListener('click', () => {
+            if (indexData) renderBookTree();
+        });
+
+        // Hide edit-only elements in read-only (static) mode
+        if (IS_STATIC) {
+            const elementsToHide = [
+                'btn-new-story',
+                'btn-rescan',
+                'btn-save',
+                'btn-delete-story',
+                'btn-add-event',
+                'btn-add-backlog',
+                'add-feedback-btn'
+            ];
+            elementsToHide.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

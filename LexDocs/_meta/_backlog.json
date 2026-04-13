@@ -1,0 +1,599 @@
+{
+  "metadata": {
+    "last_updated": "2026-01-06",
+    "version": "2.0",
+    "total_items": 65
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Export to Word (.docx) with proper formatting",
+      "priority": "P0",
+      "category": "Export",
+      "status": "todo",
+      "description": "Generate Word documents with headers, styles, TOC. Use docx.js or pandoc.",
+      "spec": "SPEC-002",
+      "effort": "medium"
+    },
+    {
+      "id": 2,
+      "title": "Export to PDF with chapter layout",
+      "priority": "P0",
+      "category": "Export",
+      "status": "todo",
+      "description": "Generate PDF with table of contents, page numbers, chapter breaks.",
+      "effort": "medium"
+    },
+    {
+      "id": 3,
+      "title": "Full manuscript compile (all arcs)",
+      "priority": "P0",
+      "category": "Export",
+      "status": "todo",
+      "description": "Combine all arcs into single manuscript with proper ordering, title page, TOC.",
+      "effort": "high"
+    },
+    {
+      "id": 4,
+      "title": "Cloud backup (S3/Google Drive)",
+      "priority": "P0",
+      "category": "Backup",
+      "status": "todo",
+      "description": "Auto-backup to cloud storage with configurable schedule. Manual backup button.",
+      "spec": "SPEC-005",
+      "effort": "medium"
+    },
+    {
+      "id": 5,
+      "title": "Split-pane editor (edit left, preview right)",
+      "priority": "P1",
+      "category": "Editor",
+      "status": "todo",
+      "description": "Side-by-side editing with sync scroll. Use CodeMirror/Monaco for syntax highlighting.",
+      "spec": "SPEC-001",
+      "effort": "medium"
+    },
+    {
+      "id": 6,
+      "title": "Markdown formatting toolbar",
+      "priority": "P1",
+      "category": "Editor",
+      "status": "todo",
+      "description": "Toolbar buttons for bold, italic, headers, links, lists, quotes, code.",
+      "effort": "low"
+    },
+    {
+      "id": 7,
+      "title": "Find and replace in document",
+      "priority": "P1",
+      "category": "Editor",
+      "status": "todo",
+      "description": "Cmd+F to find, Cmd+Shift+F to find/replace. Highlight matches.",
+      "effort": "medium"
+    },
+    {
+      "id": 8,
+      "title": "Spell check integration",
+      "priority": "P1",
+      "category": "Editor",
+      "status": "todo",
+      "description": "Red underline for misspellings, right-click to correct. Use browser API or library.",
+      "effort": "medium"
+    },
+    {
+      "id": 9,
+      "title": "Hierarchical chapter/folder structure",
+      "priority": "P1",
+      "category": "Organization",
+      "status": "todo",
+      "description": "Tree view with arcs > chapters > stories. Collapsible sections.",
+      "effort": "high"
+    },
+    {
+      "id": 10,
+      "title": "Drag-and-drop story reordering",
+      "priority": "P1",
+      "category": "Organization",
+      "status": "todo",
+      "description": "Reorder stories within arcs/chapters via drag-and-drop. Persist order to JSON.",
+      "effort": "medium"
+    },
+    {
+      "id": 11,
+      "title": "Version history with snapshots",
+      "priority": "P1",
+      "category": "Organization",
+      "status": "todo",
+      "description": "Auto-save creates snapshots. View/restore previous versions. Diff view.",
+      "spec": "SPEC-003",
+      "effort": "high"
+    },
+    {
+      "id": 12,
+      "title": "Comprehensive keyboard shortcuts",
+      "priority": "P1",
+      "category": "UI",
+      "status": "todo",
+      "description": "Cmd+S save, Cmd+K quick switch, Cmd+N new, Cmd+B/I bold/italic, etc. Help modal.",
+      "spec": "SPEC-004",
+      "effort": "low"
+    },
+    {
+      "id": 13,
+      "title": "Mobile-responsive design",
+      "priority": "P1",
+      "category": "UI",
+      "status": "todo",
+      "description": "Optimize dashboard for mobile/tablet. Collapsible nav, touch-friendly.",
+      "effort": "high"
+    },
+    {
+      "id": 14,
+      "title": "Daily/weekly writing stats tracking",
+      "priority": "P1",
+      "category": "Analytics",
+      "status": "todo",
+      "description": "Track words written per day. Chart progress over time. Store in _stats.json.",
+      "effort": "medium"
+    },
+    {
+      "id": 15,
+      "title": "Comment/annotation system",
+      "priority": "P2",
+      "category": "Editor",
+      "status": "todo",
+      "description": "Add comments to text ranges. Display in margin. Resolve/delete comments.",
+      "effort": "medium"
+    },
+    {
+      "id": 16,
+      "title": "Focus/distraction-free mode",
+      "priority": "P2",
+      "category": "Editor",
+      "status": "todo",
+      "description": "Fullscreen mode hiding nav and chrome. Esc to exit. Optional typewriter scroll.",
+      "effort": "low"
+    },
+    {
+      "id": 17,
+      "title": "Word count goals per story/session",
+      "priority": "P2",
+      "category": "Editor",
+      "status": "todo",
+      "description": "Set target word count. Show progress bar. Optional session goals.",
+      "effort": "low"
+    },
+    {
+      "id": 18,
+      "title": "Export to EPUB",
+      "priority": "P2",
+      "category": "Export",
+      "status": "todo",
+      "description": "Generate EPUB for e-readers. Include metadata, cover, chapters.",
+      "effort": "medium"
+    },
+    {
+      "id": 19,
+      "title": "Medium API direct publishing",
+      "priority": "P2",
+      "category": "Export",
+      "status": "todo",
+      "description": "OAuth flow to authenticate. Publish as draft or public. Store URL in frontmatter.",
+      "effort": "medium"
+    },
+    {
+      "id": 20,
+      "title": "Character/people profile cards",
+      "priority": "P2",
+      "category": "Research",
+      "status": "todo",
+      "description": "Create profiles for recurring people. Link appearances across stories.",
+      "effort": "medium"
+    },
+    {
+      "id": 21,
+      "title": "Inline AI writing suggestions",
+      "priority": "P2",
+      "category": "AI",
+      "status": "todo",
+      "description": "Tab to accept AI continuation. Ctrl+Space to trigger. Use Claude API.",
+      "effort": "high"
+    },
+    {
+      "id": 22,
+      "title": "Auto-tag themes from content",
+      "priority": "P2",
+      "category": "AI",
+      "status": "todo",
+      "description": "Analyze story content to suggest themes. Add to frontmatter on confirm.",
+      "effort": "medium"
+    },
+    {
+      "id": 23,
+      "title": "Light/dark mode toggle",
+      "priority": "P2",
+      "category": "UI",
+      "status": "todo",
+      "description": "Switch between dark and light themes. Save preference to localStorage.",
+      "effort": "low"
+    },
+    {
+      "id": 24,
+      "title": "Quick switcher (Cmd+K)",
+      "priority": "P2",
+      "category": "UI",
+      "status": "todo",
+      "description": "Fuzzy search to jump to any story. Show recent files. Navigate with arrows.",
+      "effort": "low"
+    },
+    {
+      "id": 25,
+      "title": "Generate shareable preview links",
+      "priority": "P2",
+      "category": "Sharing",
+      "status": "todo",
+      "description": "Create public or password-protected preview URL for stories/arcs.",
+      "effort": "medium"
+    },
+    {
+      "id": 26,
+      "title": "Story templates (memoir, reflection, technical)",
+      "priority": "P3",
+      "category": "Organization",
+      "status": "todo",
+      "description": "Pre-built templates with prompts and structure for different story types.",
+      "effort": "low"
+    },
+    {
+      "id": 27,
+      "title": "Image attachment support",
+      "priority": "P3",
+      "category": "Research",
+      "status": "todo",
+      "description": "Upload images to story folder. Insert markdown image syntax.",
+      "effort": "medium"
+    },
+    {
+      "id": 28,
+      "title": "Writing streak tracker",
+      "priority": "P3",
+      "category": "Analytics",
+      "status": "todo",
+      "description": "Track consecutive days with writing. Show streak on dashboard. Celebrate milestones.",
+      "effort": "low"
+    },
+    {
+      "id": 29,
+      "title": "Feedback collection system",
+      "priority": "P3",
+      "category": "Sharing",
+      "status": "todo",
+      "description": "Beta readers can leave comments on shared stories. Review in dashboard.",
+      "effort": "medium"
+    },
+    {
+      "id": 30,
+      "title": "Document merge tool",
+      "priority": "P2",
+      "category": "Organization",
+      "status": "todo",
+      "description": "Select multiple stories to merge into one. Choose order, add transitions.",
+      "effort": "medium"
+    },
+    {
+      "id": 31,
+      "title": "Trash/deleted items recovery",
+      "priority": "P2",
+      "category": "Organization",
+      "status": "todo",
+      "description": "Move deleted stories to trash. View/restore within 30 days. Permanent delete option.",
+      "effort": "medium"
+    },
+    {
+      "id": 32,
+      "title": "Research notes folder",
+      "priority": "P2",
+      "category": "Research",
+      "status": "todo",
+      "description": "Separate section for research notes, reference materials, links.",
+      "effort": "medium"
+    },
+    {
+      "id": 33,
+      "title": "Story-to-story linking (internal refs)",
+      "priority": "P2",
+      "category": "Research",
+      "status": "todo",
+      "description": "[[wiki-style]] links between stories. Backlinks display. Related stories panel.",
+      "effort": "medium"
+    },
+    {
+      "id": 34,
+      "title": "Footnote support",
+      "priority": "P3",
+      "category": "Research",
+      "status": "todo",
+      "description": "Markdown footnote syntax. Render as hover or bottom of page.",
+      "effort": "low"
+    },
+    {
+      "id": 35,
+      "title": "Style consistency checker",
+      "priority": "P2",
+      "category": "AI",
+      "status": "todo",
+      "description": "AI checks for consistent tone, POV, tense across stories in same arc.",
+      "effort": "high"
+    },
+    {
+      "id": 36,
+      "title": "Similar content finder",
+      "priority": "P2",
+      "category": "AI",
+      "status": "todo",
+      "description": "Find stories with overlapping content to merge or deduplicate.",
+      "effort": "medium"
+    },
+    {
+      "id": 37,
+      "title": "Tone/voice analyzer",
+      "priority": "P3",
+      "category": "AI",
+      "status": "todo",
+      "description": "Analyze writing style. Show metrics: formal vs casual, active vs passive.",
+      "effort": "medium"
+    },
+    {
+      "id": 38,
+      "title": "Summarize for Medium generator",
+      "priority": "P2",
+      "category": "AI",
+      "status": "todo",
+      "description": "Generate Medium-optimized summary, title suggestions, and tags.",
+      "effort": "medium"
+    },
+    {
+      "id": 39,
+      "title": "Git-based version control integration",
+      "priority": "P2",
+      "category": "Backup",
+      "status": "todo",
+      "description": "Auto-commit on save. View git history in UI. Push to remote.",
+      "effort": "medium"
+    },
+    {
+      "id": 40,
+      "title": "Export full project backup (zip)",
+      "priority": "P2",
+      "category": "Backup",
+      "status": "todo",
+      "description": "Download entire LexDocs folder as timestamped zip file.",
+      "effort": "low"
+    },
+    {
+      "id": 41,
+      "title": "Progress toward completion goals",
+      "priority": "P1",
+      "category": "Analytics",
+      "status": "todo",
+      "description": "Set target word count or story count per arc. Show % complete.",
+      "effort": "low"
+    },
+    {
+      "id": 42,
+      "title": "Productivity charts over time",
+      "priority": "P2",
+      "category": "Analytics",
+      "status": "todo",
+      "description": "Line/bar charts showing writing volume over weeks/months.",
+      "effort": "medium"
+    },
+    {
+      "id": 43,
+      "title": "Per-arc completion percentage",
+      "priority": "P1",
+      "category": "Analytics",
+      "status": "todo",
+      "description": "Based on status counts, show how close each arc is to complete.",
+      "effort": "low"
+    },
+    {
+      "id": 44,
+      "title": "Full-screen editing mode",
+      "priority": "P2",
+      "category": "UI",
+      "status": "todo",
+      "description": "F11 or button to go fullscreen. Hide browser chrome.",
+      "effort": "low"
+    },
+    {
+      "id": 45,
+      "title": "Font size/family customization",
+      "priority": "P2",
+      "category": "UI",
+      "status": "todo",
+      "description": "Settings to change editor font size and family (mono, serif, sans).",
+      "effort": "low"
+    },
+    {
+      "id": 46,
+      "title": "Password-protected sharing",
+      "priority": "P2",
+      "category": "Sharing",
+      "status": "todo",
+      "description": "Set password on shared links. Require auth to view.",
+      "effort": "medium"
+    },
+    {
+      "id": 47,
+      "title": "Beta reader management",
+      "priority": "P3",
+      "category": "Sharing",
+      "status": "todo",
+      "description": "Invite beta readers by email. Track who has read what.",
+      "effort": "high"
+    },
+    {
+      "id": 48,
+      "title": "Keyboard shortcut help modal",
+      "priority": "quick",
+      "category": "Quick Wins",
+      "status": "todo",
+      "description": "Press ? or Cmd+/ to show all available shortcuts.",
+      "effort": "low"
+    },
+    {
+      "id": 49,
+      "title": "Random story button for review",
+      "priority": "quick",
+      "category": "Quick Wins",
+      "status": "todo",
+      "description": "Pick a random story to read and review. Good for rediscovery.",
+      "effort": "low"
+    },
+    {
+      "id": 50,
+      "title": "Bulk status change",
+      "priority": "quick",
+      "category": "Quick Wins",
+      "status": "todo",
+      "description": "Select multiple stories, change status all at once.",
+      "effort": "low"
+    },
+    {
+      "id": 51,
+      "title": "Recent edits list on dashboard",
+      "priority": "quick",
+      "category": "Quick Wins",
+      "status": "todo",
+      "description": "Show 5 most recently edited stories for quick access.",
+      "effort": "low"
+    },
+    {
+      "id": 52,
+      "title": "Favorite/star stories",
+      "priority": "quick",
+      "category": "Quick Wins",
+      "status": "todo",
+      "description": "Mark stories as favorites. Filter to show only favorites.",
+      "effort": "low"
+    },
+    {
+      "id": 53,
+      "title": "Export to Kindle (MOBI)",
+      "priority": "P3",
+      "category": "Export",
+      "status": "todo",
+      "description": "Generate MOBI format for Kindle. May require external converter.",
+      "effort": "medium"
+    },
+    {
+      "id": 54,
+      "title": "Custom export templates",
+      "priority": "P2",
+      "category": "Export",
+      "status": "todo",
+      "description": "Define custom templates for different export formats/styles.",
+      "effort": "medium"
+    },
+    {
+      "id": 55,
+      "title": "Substack publishing integration",
+      "priority": "P3",
+      "category": "Export",
+      "status": "todo",
+      "description": "Publish directly to Substack newsletter. Similar to Medium flow.",
+      "effort": "medium"
+    },
+    {
+      "id": 56,
+      "title": "Print-ready formatting",
+      "priority": "P2",
+      "category": "Export",
+      "status": "todo",
+      "description": "Export with print margins, page breaks, running headers for physical book.",
+      "effort": "high"
+    },
+    {
+      "id": 57,
+      "title": "Web link clipper",
+      "priority": "P3",
+      "category": "Research",
+      "status": "todo",
+      "description": "Save web pages as reference material. Extract text and metadata.",
+      "effort": "medium"
+    },
+    {
+      "id": 58,
+      "title": "Expand this inline action",
+      "priority": "P2",
+      "category": "AI",
+      "status": "todo",
+      "description": "Select text, click expand to have AI elaborate on that section.",
+      "effort": "medium"
+    },
+    {
+      "id": 59,
+      "title": "Scheduled auto-backups",
+      "priority": "P2",
+      "category": "Backup",
+      "status": "todo",
+      "description": "Configure daily/weekly backup schedule. Run in background.",
+      "effort": "medium"
+    },
+    {
+      "id": 60,
+      "title": "Reading level analysis",
+      "priority": "P3",
+      "category": "Analytics",
+      "status": "todo",
+      "description": "Calculate Flesch-Kincaid score. Show grade level of writing.",
+      "effort": "low"
+    },
+    {
+      "id": 61,
+      "title": "Sentiment analysis by arc",
+      "priority": "P3",
+      "category": "Analytics",
+      "status": "todo",
+      "description": "Analyze emotional tone across arcs. Visualize mood progression.",
+      "effort": "medium"
+    },
+    {
+      "id": 62,
+      "title": "Time tracking per story",
+      "priority": "P3",
+      "category": "Analytics",
+      "status": "todo",
+      "description": "Track time spent editing each story. Show on dashboard.",
+      "effort": "medium"
+    },
+    {
+      "id": 63,
+      "title": "Reading time estimate",
+      "priority": "quick",
+      "category": "Quick Wins",
+      "status": "todo",
+      "description": "Show estimated reading time based on word count (200 wpm).",
+      "effort": "low"
+    },
+    {
+      "id": 64,
+      "title": "Book outline view with nesting",
+      "priority": "P1",
+      "category": "Organization",
+      "status": "todo",
+      "description": "Collapsible tree view showing full book structure.",
+      "effort": "medium"
+    },
+    {
+      "id": 65,
+      "title": "Fix Timeline and Topics visualization bugs",
+      "priority": "P0",
+      "category": "Bugs",
+      "status": "in_progress",
+      "description": "Timeline not rendering events, Topics network graph empty. Debug and fix.",
+      "effort": "low"
+    }
+  ]
+}

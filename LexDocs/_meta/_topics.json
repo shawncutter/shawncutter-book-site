@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "last_updated": "2026-01-04",
+    "total_pieces": 88
+  },
+  "themes": {
+    "resilience": [
+      "bk1-rolling-ohio-hills.md",
+      "bk1-scars-as-data.md",
+      "bk1-the-30-year-echo.md",
+      "bk-chapter-4-the-phoenix-rises-again-and-again.md",
+      "bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
+      "bk-the-power-of-grit-how-farming-taught-me-to-pe.md"
+    ],
+    "father": [
+      "bk-short-stories.md",
+      "bk-dad-121122.md",
+      "bk1-the-30-year-echo.md",
+      "bk1-the-day-i-stopped-recruiting-my-family.md",
+      "bk1-the-quiet-quit-of-legacy.md"
+    ],
+    "accident": [
+      "bk1-rolling-ohio-hills.md",
+      "bk-chapter-2-the-day-the-earth-shook.md",
+      "bk-chapter-3-a-painful-rebirth.md",
+      "bk-short-stories.md"
+    ],
+    "surgeries": [
+      "bk1-scars-as-data.md",
+      "bk-chapter-3-a-painful-rebirth.md",
+      "bk-chapter-4-the-phoenix-rises-again-and-again.md",
+      "bk1-fractured--forging---the-forty-percent-ask.md"
+    ],
+    "farm": [
+      "bk-chapter-1-early-life-.md",
+      "bk1-mud-and-motherboards.md",
+      "bk1-gate-latch-hog-logic.md",
+      "bk1-silo-steps-no-handle.md",
+      "bk-early-life-continued.md",
+      "bk-stories-of-side-hustles.md"
+    ],
+    "systems-thinking": [
+      "bk1-this-starts-here-a-genx-technologist-energ.md",
+      "bk1-boring-wins-winters-plug-it-in-then-sleep.md",
+      "bk1-digital-twin-before-theater-logs-labeled-a.md",
+      "bk1-designing-for-generations.md"
+    ],
+    "startup": [
+      "bk-chapter-55-founding-fielding-systems---from-b.md",
+      "bk-chapter-8-bootstrap-to-exit---a-tale-of-endur.md",
+      "bk1-the-night-we-moved-the-oilfield-to-the-cloud.md",
+      "bk1-motel-whiteboard-mvp.md",
+      "bk1-when-equity-didnt-move-the-needle.md"
+    ],
+    "faith": [
+      "bk-breaking-barriers-my-battle-with-depression-a.md",
+      "bk-chapter-25-wounded-soul.md"
+    ],
+    "depression": [
+      "bk-breaking-barriers-my-battle-with-depression-a.md",
+      "bk1-therapy-loneliness-and-clarity.md",
+      "bk1-the-day-i-couldnt-hide-anymore.md"
+    ],
+    "family": [
+      "bk---family.md",
+      "bk---close-family.md",
+      "bk1-the-day-i-stopped-recruiting-my-family.md",
+      "bk1-counting-shawns.md"
+    ],
+    "technology": [
+      "bk-chapter-5-from-soil-to-silicon.md",
+      "bk-chapter-6-career-progression-and-versatility.md",
+      "bk1-pocket-computers-and-cold-thumbs.md",
+      "bk1-password-cracker-crash.md"
+    ],
+    "energiacres": [
+      "bk1-this-starts-here-a-genx-technologist-energ.md",
+      "bk1-january-heat-compost-steam.md",
+      "bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
+      "bk1-neighbor-dividend-power-food-and-quiet-hou.md",
+      "bk1-why-gasbacked-compute-now.md",
+      "bk1-the-ai-race-is-an-energy-race.md"
+    ],
+    "work-ethic": [
+      "bk-idle-hands-and-constructive-work-lessons-from.md",
+      "bk1-minimums-and-non-negotiables.md",
+      "bk-the-power-of-grit-how-farming-taught-me-to-pe.md"
+    ],
+    "identity": [
+      "bk-psychoanalysis-of-shawn.md",
+      "bk-shawn-cutter-profile.md",
+      "bk1-knuckles--knowing.md"
+    ]
+  },
+  "people": {
+    "Chuck Cutter (Dad)": [
+      "bk-short-stories.md",
+      "bk-dad-121122.md",
+      "bk1-the-30-year-echo.md",
+      "bk-chapter-1-early-life-.md"
+    ],
+    "CJ (brother)": [
+      "bk-short-stories.md",
+      "bk---close-family.md"
+    ],
+    "Mom": [
+      "bk---close-family.md",
+      "bk-short-stories.md"
+    ],
+    "Kristin (sister)": [
+      "bk-short-stories.md",
+      "bk---close-family.md"
+    ],
+    "Josh (brother)": [
+      "bk-short-stories.md"
+    ],
+    "Gia (daughter)": [
+      "bk-short-stories.md"
+    ],
+    "Carina (wife)": [
+      "bk-short-stories.md"
+    ]
+  },
+  "locations": {
+    "West Salem farm": [
+      "bk-chapter-1-early-life-.md",
+      "bk-short-stories.md",
+      "bk1-silo-steps-no-handle.md"
+    ],
+    "hospital": [
+      "bk-chapter-3-a-painful-rebirth.md",
+      "bk1-scars-as-data.md"
+    ],
+    "Miami University": [
+      "bk-shawn-cutter-timeline.md"
+    ],
+    "Florida/Ft Myers": [
+      "bk-short-stories.md"
+    ],
+    "Mansfield": [
+      "bk1-mansfield-proof-of-speed.md",
+      "bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md"
+    ]
+  },
+  "clusters": [
+    {
+      "name": "The 40 Surgeries Journey",
+      "theme": "medical-recovery",
+      "pieces": [
+        "bk1-rolling-ohio-hills.md",
+        "bk-chapter-3-a-painful-rebirth.md",
+        "bk-chapter-4-the-phoenix-rises-again-and-again.md",
+        "bk1-scars-as-data.md",
+        "bk1-the-30-year-echo.md"
+      ],
+      "expansion_candidate": true,
+      "suggested_chapter": "Chapter: Forty Cuts"
+    },
+    {
+      "name": "Chuck Cutter Stories",
+      "theme": "father-relationship",
+      "pieces": [
+        "bk-short-stories.md",
+        "bk-dad-121122.md",
+        "bk1-the-quiet-quit-of-legacy.md"
+      ],
+      "expansion_candidate": true,
+      "suggested_chapter": "Chapter: The Rule of Charles Cutter"
+    },
+    {
+      "name": "Fielding to Quorum",
+      "theme": "startup-journey",
+      "pieces": [
+        "bk-chapter-55-founding-fielding-systems---from-b.md",
+        "bk1-the-night-we-moved-the-oilfield-to-the-cloud.md",
+        "bk-chapter-8-bootstrap-to-exit---a-tale-of-endur.md",
+        "bk-chapter-9-the-deal-and-aftermath---navigating.md"
+      ],
+      "expansion_candidate": true,
+      "suggested_chapter": "Chapter: Bootstrap to Exit"
+    },
+    {
+      "name": "EnergiAcres Vision",
+      "theme": "current-mission",
+      "pieces": [
+        "bk1-this-starts-here-a-genx-technologist-energ.md",
+        "bk1-why-gasbacked-compute-now.md",
+        "bk1-the-ai-race-is-an-energy-race.md",
+        "bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
+        "bk1-neighbor-dividend-power-food-and-quiet-hou.md"
+      ],
+      "expansion_candidate": true,
+      "suggested_chapter": "Chapter: The Foundry"
+    },
+    {
+      "name": "Farm Life Vignettes",
+      "theme": "rural-childhood",
+      "pieces": [
+        "bk-chapter-1-early-life-.md",
+        "bk1-mud-and-motherboards.md",
+        "bk1-gate-latch-hog-logic.md",
+        "bk1-silo-steps-no-handle.md"
+      ],
+      "expansion_candidate": true,
+      "suggested_chapter": "Chapter: Forged in Soil"
+    }
+  ]
+}

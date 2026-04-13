@@ -1,0 +1,1563 @@
+{
+  "metadata": {
+    "last_updated": "2026-01-05",
+    "total_pieces": 87,
+    "total_words": 105103,
+    "arc_counts": {
+      "forged": 28,
+      "fractured": 17,
+      "forging": 25,
+      "foundry": 17,
+      "unknown": 0
+    },
+    "status_counts": {
+      "idea": 0,
+      "draft": 87,
+      "ready": 0,
+      "published": 0,
+      "expanded": 0
+    }
+  },
+  "stories": [
+    {
+      "file": "bk---close-family.md",
+      "title": "BK - Close Family",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "family"
+      ],
+      "word_count": 358,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk---close-work.md",
+      "title": "BK - Close Work",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "technology"
+      ],
+      "word_count": 406,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk---family.md",
+      "title": "BK - Family",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "family"
+      ],
+      "word_count": 345,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-breaking-barriers-my-battle-with-depression-a.md",
+      "title": "BK: Breaking Barriers: My Battle with Depression and Self-Discovery",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "farm",
+        "systems-thinking",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 458,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-1-early-life-.md",
+      "title": "BK: Chapter 1: Early Life",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 5215,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-10-a-technology-driven-agricultural-r.md",
+      "title": "BK: Chapter 10: A Technology-Driven Agricultural Revolution",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 303,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-2-the-day-the-earth-shook.md",
+      "title": "BK: Chapter 2: The Day the Earth Shook",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "technology",
+        "family",
+        "depression",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 3362,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-25-wounded-soul.md",
+      "title": "BK: Chapter 2.5: Wounded Soul",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 689,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-3-a-painful-rebirth.md",
+      "title": "BK: Chapter 3: A Painful Rebirth",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 1696,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1980"
+    },
+    {
+      "file": "bk-chapter-35-family-farm-and-oil-and-gas--inf.md",
+      "title": "Chapter 3.5: Family, Farm and Oil and Gas Influence",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "technology",
+        "family",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 1913,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-4-the-phoenix-rises-again-and-again.md",
+      "title": "BK: Chapter 4: The Phoenix Rises Again and Again",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 2122,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-5-from-soil-to-silicon.md",
+      "title": "BK: Chapter 5: From Soil to Silicon",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "father",
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 1927,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-55-founding-fielding-systems---from-b.md",
+      "title": "BK: Chapter 5.5 Founding Fielding Systems - From Bootstrap to Acquisition",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family"
+      ],
+      "word_count": 404,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "2015"
+    },
+    {
+      "file": "bk-chapter-6-career-progression-and-versatility.md",
+      "title": "Chapter 6: Career Progression and Versatility",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "systems-thinking",
+        "technology",
+        "family"
+      ],
+      "word_count": 385,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-6-evolution-and-growth-at-quorum-soft.md",
+      "title": "BK: Chapter 6: Evolution and Growth at Quorum Software (Enhanced)",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 487,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "2015"
+    },
+    {
+      "file": "bk-chapter-7-innovation-vs-inertia---the-corpor.md",
+      "title": "Chapter 7: Innovation vs. Inertia - The Corporate Juggling Act",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "surgeries",
+        "startup",
+        "technology",
+        "family"
+      ],
+      "word_count": 290,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-7-the-corporate-labyrinth---navigatin.md",
+      "title": "Chapter 7: The Corporate Labyrinth - Navigating Culture, Bureaucracy, and Innovation",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "systems-thinking",
+        "technology",
+        "family",
+        "depression"
+      ],
+      "word_count": 326,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-8-bootstrap-to-exit---a-tale-of-endur.md",
+      "title": "BK: Chapter 8: Bootstrap to Exit - A Tale of Endurance, Triumph, and 3 AM Epiphanies",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "father",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 679,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-chapter-9-the-deal-and-aftermath---navigating.md",
+      "title": "Chapter 9: The Deal and Aftermath - Navigating Treacherous Waters",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "systems-thinking",
+        "startup",
+        "technology",
+        "wrestling"
+      ],
+      "word_count": 237,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "2015"
+    },
+    {
+      "file": "bk-dad-121122.md",
+      "title": "Dad 12/11/22",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "father",
+        "farm",
+        "technology",
+        "family"
+      ],
+      "word_count": 299,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1991"
+    },
+    {
+      "file": "bk-early-life-continued.md",
+      "title": "BK: Early Life Continued",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 1831,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-expanded-comedic-stories.md",
+      "title": "BK: Expanded Comedic Stories",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "father",
+        "farm",
+        "technology",
+        "family"
+      ],
+      "word_count": 937,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-from-farm-to-startup-the-journey-of-building-.md",
+      "title": "BK: From Farm to Startup: The Journey of Building My First Company",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 468,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1985"
+    },
+    {
+      "file": "bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
+      "title": "BK: How 87 Stitches and a Broken Bone Prepared Me for 40 Surgeries and a Comeback",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 1080,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
+      "title": "BK: How to Turn 40 Surgeries into a Factory for Grit",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "surgeries",
+        "systems-thinking",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 602,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-idle-hands-and-constructive-work-lessons-from.md",
+      "title": "Idle Hands and Constructive Work: Lessons from the Farm",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "father",
+        "accident",
+        "farm",
+        "technology"
+      ],
+      "word_count": 462,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-initial-feedback.md",
+      "title": "BK: Initial feedback",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 947,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-memoir-outline-resilience-innovation-and-ov.md",
+      "title": "BK: Memoir Outline: Resilience, Innovation, and Overcoming Adversity",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 4325,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-my-book-.md",
+      "title": "BK: My Book",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 1027,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-prologue-a-life-in-perspective.md",
+      "title": "BK: Prologue: A Life in Perspective",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 3898,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-psychoanalysis-of-shawn.md",
+      "title": "BK: Psychoanalysis of Shawn",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family"
+      ],
+      "word_count": 472,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-roads-less-traveled-overcoming-adversity-and-.md",
+      "title": "BK: Roads Less Traveled: Overcoming Adversity and Pursuing Passions",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 2366,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-shawn-cutter-profile.md",
+      "title": "BK: Shawn Cutter Profile",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 960,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-shawn-cutter-timeline.md",
+      "title": "BK: Shawn Cutter Timeline",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 11505,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1987"
+    },
+    {
+      "file": "bk-short-stories.md",
+      "title": "BK: Short Stories",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "technology",
+        "family",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 14589,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1985"
+    },
+    {
+      "file": "bk-stories-of-side-hustles.md",
+      "title": "BK: Stories of Side Hustles",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 1556,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
+      "title": "BK: The Power of Grit: How Farming Taught Me to Persevere",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology"
+      ],
+      "word_count": 456,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk-the-surgeons-revelation-a-teenagers-shatter.md",
+      "title": "BK: The Surgeon’s Revelation: A Teenager’s Shattered Dream",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "surgeries",
+        "farm",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 895,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-10-to-consider-for-future.md",
+      "title": "10 to consider for future",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 2127,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
+      "title": "A Fall From Grace: The Pumpkin Patch Incident",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "farm",
+        "technology",
+        "family",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 899,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-blackout-on-two-grids.md",
+      "title": "Blackout on Two Grids",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 410,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-boring-wins-winters-plug-it-in-then-sleep.md",
+      "title": "Boring Wins Winters (Plug It In, Then Sleep)",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "systems-thinking",
+        "technology",
+        "faith"
+      ],
+      "word_count": 783,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-counting-shawns.md",
+      "title": "BK1: Counting Shawns",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "technology",
+        "family",
+        "faith"
+      ],
+      "word_count": 1165,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-designing-for-generations.md",
+      "title": "Designing for Generations",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 1450,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-digital-twin-before-theater-logs-labeled-a.md",
+      "title": "Digital Twin Before Theater (Logs, Labeled, and Live)",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "accident",
+        "systems-thinking",
+        "technology",
+        "family"
+      ],
+      "word_count": 436,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-dont-throw-out-the-baby.md",
+      "title": "Don’t throw out the baby",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology"
+      ],
+      "word_count": 345,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-forging---we-priced-it-like-a-well-not-a-web.md",
+      "title": "Forging - We Priced It Like a Well, Not a Website",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "father",
+        "systems-thinking",
+        "startup",
+        "technology"
+      ],
+      "word_count": 508,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-fractured--forging---the-forty-percent-ask.md",
+      "title": "Fractured → Forging - The Forty Percent Ask",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family"
+      ],
+      "word_count": 518,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-gate-latch-hog-logic.md",
+      "title": "Forged - Gate Latch, Hog Logic",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 724,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-january-heat-compost-steam.md",
+      "title": "Foundry - January Heat, Compost Steam",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology"
+      ],
+      "word_count": 539,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-jobs-delta-energy-campus-vs-data-center-alo.md",
+      "title": "Jobs Delta: Energy Campus vs. Data Center Alone",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "surgeries",
+        "systems-thinking",
+        "technology",
+        "family"
+      ],
+      "word_count": 581,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
+      "title": "Jobs Delta: Energy Campus vs. Pure Data Center _The workforce math that actually matters._",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family"
+      ],
+      "word_count": 535,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-knuckles--knowing.md",
+      "title": "Knuckles & Knowing",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 474,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-mansfield-proof-of-speed.md",
+      "title": "Mansfield: Proof of Speed",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "technology",
+        "wrestling"
+      ],
+      "word_count": 506,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-master-question-list-to-refine-all-articles.md",
+      "title": "Master Question List (to refine all articles)",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "accident",
+        "surgeries",
+        "systems-thinking",
+        "technology",
+        "family",
+        "depression",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 627,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-minimums-and-non-negotiables.md",
+      "title": "Minimums and Non-Negotiables",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "accident",
+        "farm",
+        "startup",
+        "technology",
+        "family",
+        "depression"
+      ],
+      "word_count": 540,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-motel-whiteboard-mvp.md",
+      "title": "Motel Whiteboard MVP",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "startup",
+        "technology"
+      ],
+      "word_count": 355,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1990-10-29"
+    },
+    {
+      "file": "bk1-mud-and-motherboards.md",
+      "title": "Mud and Motherboards",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "farm",
+        "systems-thinking",
+        "technology",
+        "family"
+      ],
+      "word_count": 925,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-neighbor-circuit.md",
+      "title": "Neighbor Circuit",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "wrestling"
+      ],
+      "word_count": 396,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-neighbor-dividend-power-food-and-quiet-hou.md",
+      "title": "Neighbor Dividend: Power, Food, and Quiet Hours _Design for the people who live next to you._",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 535,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-pads-we-can-ship-in-six-months-standard-block.md",
+      "title": "Pads We Can Ship in Six Months _Standard blocks, honest timelines._",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "startup",
+        "technology",
+        "family"
+      ],
+      "word_count": 519,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-pads-we-can-ship-in-six-months.md",
+      "title": "Pads We Can Ship in Six Months",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "systems-thinking",
+        "technology"
+      ],
+      "word_count": 621,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-password-cracker-crash.md",
+      "title": "Password Cracker Crash",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology"
+      ],
+      "word_count": 326,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-pocket-computers-and-cold-thumbs.md",
+      "title": "Pocket Computers and Cold Thumbs",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "farm",
+        "startup",
+        "technology",
+        "faith"
+      ],
+      "word_count": 366,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-private-infra-first-build-without-grants.md",
+      "title": "Private Infra First: Build Without Grants",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology"
+      ],
+      "word_count": 675,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1985"
+    },
+    {
+      "file": "bk1-private-infra-first-building-without-grants.md",
+      "title": "Private Infra First: Building Without Grants",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "systems-thinking",
+        "technology"
+      ],
+      "word_count": 671,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1985"
+    },
+    {
+      "file": "bk1-removing-the-blockers-location-location-lo.md",
+      "title": "Removing the Blockers (Location, Location, Location)",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "surgeries",
+        "systems-thinking",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 987,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-rolling-ohio-hills.md",
+      "title": "Rolling Ohio Hills",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "technology",
+        "family",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 852,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1990-10-29"
+    },
+    {
+      "file": "bk1-scars-as-data.md",
+      "title": "Scars as Data",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "accident",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 765,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-senior-skip-day.md",
+      "title": "Senior Skip Day",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology"
+      ],
+      "word_count": 380,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1998"
+    },
+    {
+      "file": "bk1-silo-steps-no-handle.md",
+      "title": "Silo Steps, No Handle",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "father",
+        "farm",
+        "startup",
+        "technology",
+        "wrestling"
+      ],
+      "word_count": 312,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-speed-is-a-system-utilities--workforce-move.md",
+      "title": "Speed Is a System: Utilities + Workforce Move Together",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "technology",
+        "wrestling"
+      ],
+      "word_count": 597,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-the-30-year-echo.md",
+      "title": "The 30-Year Echo",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "faith"
+      ],
+      "word_count": 1056,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "2010-10-29"
+    },
+    {
+      "file": "bk1-the-ai-race-is-an-energy-race.md",
+      "title": "The AI Race Is an Energy Race",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "accident",
+        "systems-thinking",
+        "technology"
+      ],
+      "word_count": 403,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-the-compute-block-pads-at-100200-mw-built-.md",
+      "title": "The Compute Block (Pads at 100–200 MW, Built to Iterate)",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "systems-thinking",
+        "technology"
+      ],
+      "word_count": 357,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-the-day-i-couldnt-hide-anymore.md",
+      "title": "The Day I Couldn't Hide Anymore",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "father",
+        "accident",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 1540,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-the-day-i-stopped-recruiting-my-family.md",
+      "title": "The Day I Stopped Recruiting My Family",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "father",
+        "surgeries",
+        "farm",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 1086,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
+      "title": "The Microgrid Is a Neighborhood (Mansfield Vision)",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "surgeries",
+        "systems-thinking",
+        "technology"
+      ],
+      "word_count": 606,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-the-night-we-moved-the-oilfield-to-the-cloud.md",
+      "title": "The Night We Moved the Oilfield to the Cloud",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "surgeries",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 1254,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "2009"
+    },
+    {
+      "file": "bk1-the-permit-ledger-if-it-isnt-dated-and-owned.md",
+      "title": "The Permit Ledger _If it isn’t dated and owned, it doesn’t exist._",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "farm",
+        "startup",
+        "technology"
+      ],
+      "word_count": 488,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-the-permit-ledger-turning-maybe-into-dates.md",
+      "title": "The Permit Ledger: Turning “Maybe” into Dates",
+      "arc": "forged",
+      "status": "draft",
+      "themes": [
+        "technology"
+      ],
+      "word_count": 657,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-the-quiet-quit-of-legacy.md",
+      "title": "The Quiet Quit of Legacy",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "father",
+        "farm",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 681,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-therapy-loneliness-and-clarity.md",
+      "title": "Therapy, Loneliness, and Clarity",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "depression",
+        "wrestling"
+      ],
+      "word_count": 1151,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-this-starts-here-a-genx-technologist-energ.md",
+      "title": "This Starts Here: A Gen‑X Technologist, Energy‑Farming Nerd, and an AI",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "farm",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "family",
+        "faith",
+        "wrestling"
+      ],
+      "word_count": 915,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "2018"
+    },
+    {
+      "file": "bk1-unbirthday-real-work-mansfield-meeting-rec.md",
+      "title": "Un‑Birthday, Real Work: Mansfield Meeting Recap",
+      "arc": "fractured",
+      "status": "draft",
+      "themes": [
+        "resilience",
+        "accident",
+        "startup",
+        "technology",
+        "family"
+      ],
+      "word_count": 656,
+      "has_frontmatter": true,
+      "modified": "2026-01-05",
+      "date_event": "1980"
+    },
+    {
+      "file": "bk1-when-equity-didnt-move-the-needle.md",
+      "title": "When Equity Didn’t Move the Needle",
+      "arc": "forging",
+      "status": "draft",
+      "themes": [
+        "surgeries",
+        "systems-thinking",
+        "startup",
+        "technology",
+        "wrestling"
+      ],
+      "word_count": 501,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    },
+    {
+      "file": "bk1-why-gasbacked-compute-now.md",
+      "title": "Why Gas‑Backed Compute Now",
+      "arc": "foundry",
+      "status": "draft",
+      "themes": [
+        "farm",
+        "systems-thinking",
+        "technology",
+        "family",
+        "wrestling"
+      ],
+      "word_count": 1026,
+      "has_frontmatter": true,
+      "modified": "2026-01-05"
+    }
+  ]
+}

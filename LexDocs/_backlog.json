@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "last_updated": "2026-04-07",
+    "priority_order": ["P0", "P1", "P2", "P3", "quick"]
+  },
+  "backlog": [
+    {
+      "id": "backlog-001",
+      "title": "Export to Word (.docx)",
+      "priority": "P0",
+      "category": "publishing",
+      "status": "planned",
+      "effort": "medium",
+      "description": "Export story or chapter to Microsoft Word format for editing and print preparation"
+    },
+    {
+      "id": "backlog-002",
+      "title": "Export to PDF",
+      "priority": "P0",
+      "category": "publishing",
+      "status": "planned",
+      "effort": "medium",
+      "description": "Generate PDF documents from stories for sharing and archival"
+    },
+    {
+      "id": "backlog-003",
+      "title": "Cloud backup integration",
+      "priority": "P0",
+      "category": "infrastructure",
+      "status": "planned",
+      "effort": "large",
+      "description": "Automatic backup to cloud storage (S3, Google Drive, etc.) for disaster recovery"
+    },
+    {
+      "id": "backlog-004",
+      "title": "Split-pane editor",
+      "priority": "P1",
+      "category": "editing",
+      "status": "planned",
+      "effort": "large",
+      "description": "Side-by-side view of story content and feedback/metadata"
+    },
+    {
+      "id": "backlog-005",
+      "title": "Keyboard shortcuts",
+      "priority": "P1",
+      "category": "ux",
+      "status": "planned",
+      "effort": "medium",
+      "description": "Common keyboard shortcuts for navigation and editing (Cmd+S save, Cmd+Z undo, etc.)"
+    },
+    {
+      "id": "backlog-006",
+      "title": "Version history / Timeline view",
+      "priority": "P1",
+      "category": "editing",
+      "status": "planned",
+      "effort": "large",
+      "description": "Track changes over time, view diff between versions, restore previous versions"
+    },
+    {
+      "id": "backlog-007",
+      "title": "Drag-drop story reordering",
+      "priority": "P1",
+      "category": "editing",
+      "status": "planned",
+      "effort": "medium",
+      "description": "Reorganize story order within arcs by dragging in dashboard"
+    },
+    {
+      "id": "backlog-008",
+      "title": "Keyboard shortcut help modal",
+      "priority": "quick",
+      "category": "ux",
+      "status": "planned",
+      "effort": "small",
+      "description": "Show available keyboard shortcuts (Cmd+? or ? key)"
+    },
+    {
+      "id": "backlog-009",
+      "title": "Random story button",
+      "priority": "quick",
+      "category": "ux",
+      "status": "planned",
+      "effort": "small",
+      "description": "Quick button to jump to a random story for inspiration or review"
+    },
+    {
+      "id": "backlog-010",
+      "title": "Recent edits on dashboard",
+      "priority": "quick",
+      "category": "dashboard",
+      "status": "planned",
+      "effort": "small",
+      "description": "Show recently edited stories on the main dashboard"
+    },
+    {
+      "id": "backlog-011",
+      "title": "Reading time estimate",
+      "priority": "quick",
+      "category": "dashboard",
+      "status": "planned",
+      "effort": "small",
+      "description": "Display estimated reading time for each story"
+    },
+    {
+      "id": "backlog-012",
+      "title": "Medium integration",
+      "priority": "P2",
+      "category": "publishing",
+      "status": "backlog",
+      "effort": "large",
+      "description": "One-click publish directly to Medium from dashboard"
+    },
+    {
+      "id": "backlog-013",
+      "title": "AI-assisted editing",
+      "priority": "P2",
+      "category": "ai",
+      "status": "backlog",
+      "effort": "large",
+      "description": "Use Claude API for tone suggestions, expansion recommendations, copy editing"
+    },
+    {
+      "id": "backlog-014",
+      "title": "Collaborative editing with real-time sync",
+      "priority": "P2",
+      "category": "collaboration",
+      "status": "backlog",
+      "effort": "large",
+      "description": "Real-time updates when Carina makes changes (websocket-based)"
+    },
+    {
+      "id": "backlog-015",
+      "title": "Dark/Light theme toggle",
+      "priority": "P3",
+      "category": "ux",
+      "status": "backlog",
+      "effort": "small",
+      "description": "Theme selector for user preference"
+    }
+  ]
+}

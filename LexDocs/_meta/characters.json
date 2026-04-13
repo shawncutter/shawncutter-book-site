@@ -1,0 +1,962 @@
+{
+  "metadata": {
+    "last_updated": "2026-03-23",
+    "total_characters": 21,
+    "categories": [
+      "core_family",
+      "extended_family",
+      "professional",
+      "mentors_friends"
+    ],
+    "notes": "Every fact is sourced. \u26a0\ufe0f = unconfirmed/assumed. Refine by correcting facts or adding new voice memo detail.",
+    "photo_system": {
+      "base_path": "LexDocs/_meta/characters/photos/",
+      "instructions": "Drop photos into character folders. Tell Claude 'process photos' to extract physical descriptions.",
+      "extraction_fields": [
+        "height_estimate",
+        "build",
+        "hair",
+        "face",
+        "distinguishing_features",
+        "era_age",
+        "setting_context",
+        "expression_energy",
+        "clothing_style",
+        "writer_details"
+      ],
+      "status": "ACTIVE — 12 characters with photo descriptions extracted (March 27, 2026)"
+    }
+  },
+  "characters": {
+    "shawn_cutter": {
+      "role": "protagonist",
+      "category": "core_family",
+      "full_name": "Shawn Cutter",
+      "nicknames": [],
+      "born": "1979",
+      "age_march_2026": 46,
+      "location_current": "Bechtel family farm, Ohio (March 2026) / Tampa, FL (primary)",
+      "occupation": "AI Engineer, Founder \u2014 EnergiAcres, Phase 2 Labs",
+      "education": "Miami University (Oxford, OH)",
+      "vital_stats": {
+        "birth_year": {
+          "value": "1979",
+          "source": "Session 3 correction",
+          "confidence": "confirmed"
+        },
+        "accident_date": {
+          "value": "October 29, 1990",
+          "source": "Multiple sources",
+          "confidence": "confirmed"
+        },
+        "age_at_accident": {
+          "value": 11,
+          "source": "Calculated: 1990-1979",
+          "confidence": "confirmed"
+        },
+        "total_surgeries": {
+          "value": "40+",
+          "source": "Multiple sources",
+          "confidence": "confirmed"
+        },
+        "married": {
+          "value": "July 8, 2006 (Carina's birthday)",
+          "source": "Session 5",
+          "confidence": "confirmed"
+        },
+        "pilots_license": {
+          "value": "2008, at 41 hours",
+          "source": "Voice memo",
+          "confidence": "confirmed"
+        },
+        "last_flight": {
+          "value": "2011 (after Chuck's death)",
+          "source": "Session 5",
+          "confidence": "confirmed"
+        }
+      },
+      "physical": {
+        "scars": "40+ surgery scars. Self-harm scars on arm from high school. Scar from shattering left arm on 4-wheeler at 16.",
+        "handicap_placard": "Used one in college — Carina initially thought he was faking",
+        "description": "Lean, angular build. Strong jawline. As a teen: tall and wiry, blonde/light hair, clean-cut farm-kid look. By his 40s: shaved/bald head, lean and fit, light stubble, olive-toned skin from Florida sun. Big, wide smile — the kind that takes over his whole face. Favors black t-shirts, backwards caps, chunky glasses. High energy in how he carries himself — leans into photos, leans into conversations. In the graduation photo (late '90s) he's rail-thin in blue cap and gown, towering slightly over Beth. On a boat as a teen: bleached blonde hair, shirtless, lean but not yet filled out. Current era: clean lines, minimal — the black shirt and shaved head read as deliberate, like a man who stopped caring about vanity and started caring about velocity.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/shawn_cutter/",
+        "photos": ["IMG_0026.jpg", "IMG_8567.jpeg", "IMG_9517.jpeg", "scan (108).jpg"]
+      },
+      "personality": {
+        "confirmed_traits": [
+          "ENTJ, Capricorn, Gen X",
+          "Extreme technologist \u2014 cloud, AI, mobile, edge computing",
+          "Systems thinker \u2014 everything is a system to optimize",
+          "Cannot suffer fools \u2014 needs operators who've run companies to the end",
+          "Direct, reflective, Feynman-style explanations",
+          "Studies role models deeply: Jobs, Gates, Musk",
+          "Self-reflection now daily \u2014 'analyzing what I'm feeling and thinking and why'",
+          "Compartmentalizer \u2014 learned to turn emotions off after trauma"
+        ],
+        "self_harm": {
+          "detail": "Cut himself a lot in high school to control pain. Still has visible scars on arm.",
+          "source": "Session 5",
+          "confidence": "confirmed",
+          "sensitivity": "HIGH \u2014 handle with care"
+        },
+        "emotional_wall": {
+          "detail": "Couldn't feel intensity of holding Gia for first time. 'Spent so much time in rational head, not emotional brain.'",
+          "source": "Session 5",
+          "confidence": "confirmed"
+        }
+      },
+      "arc_presence": [
+        "forged",
+        "fractured",
+        "forging",
+        "foundry"
+      ],
+      "key_pieces": [
+        "ALL \u2014 protagonist of every piece"
+      ],
+      "open_questions": [
+        "Physical description \u2014 what does Shawn look like?",
+        "What happened in the 'gap years' 2007-2009 (apartments to Plant City)?",
+        "The full accident story \u2014 morning to helicopter"
+      ]
+    },
+    "chuck_cutter": {
+      "role": "father",
+      "category": "core_family",
+      "full_name": "Charles 'Chuck' Cutter",
+      "nicknames": [
+        "Chuck",
+        "Dad"
+      ],
+      "born": "1956",
+      "died": "November 12, 2010 \u2014 approximately 5:15 AM",
+      "age_at_death": 54,
+      "cause_of_death": "Heart attack. Had stents in leg (blockage exacerbated by motorcycle knee injuries). Combination of blood thinners + medication likely caused death. Doctor dismissed his concerns.",
+      "occupation": "Ran Cutter Oil (oilfield services)",
+      "location": "West Salem / Chester, Ohio",
+      "spouse": "Elizabeth 'Beth' Cutter (n\u00e9e Bechtel)",
+      "children": [
+        "CJ (oldest)",
+        "Shawn (b. 1979)",
+        "Kristin (3yr younger than Shawn)",
+        "Josh (younger)"
+      ],
+      "also": "Shawna \u2014 infidelity. Beth found out.",
+      "personality": {
+        "confirmed_traits": [
+          "Dominant, intense, loudest person in the room",
+          "Hard worker \u2014 expected the same from his boys",
+          "Oilfield operator \u2014 trucks, rigs, field work",
+          "Getting softer as he aged \u2014 'really looking forward to him being a grandpa'",
+          "Not gentle, not soft, but effective"
+        ]
+      },
+      "key_moments": {
+        "the_flight": "Went up in Shawn's Cessna. Super quiet. Full pre-flight. Zero-G's spooked him. Wings after at BBQ place.",
+        "met_gia": "May 2010 \u2014 had about 6 months with her before dying.",
+        "motorcycle_accident": "Knee injuries \u2192 stents \u2192 blood thinners \u2192 death. When this happened is unknown.",
+        "death_scene": "5:15 AM. CJ called Shawn at 3:30 AM. Doctor had dismissed Chuck's concerns about medication.",
+        "funeral": "Shawn spoke, CJ spoke, Butch Rogers (former accountant and pastor) spoke."
+      },
+      "physical": {
+        "description": "Stocky, barrel-chested, thick through the shoulders and arms — a man built by decades of oilfield work. Dark hair, always a full mustache (the signature). Tanned and weathered skin. Gold chain visible at the collar of his white t-shirts. Almost always in a ball cap — the pink 'Cutter Oil Co' cap with the pump jack logo is iconic. White pocket t-shirt with a pack of Marlboros in the breast pocket (visible in the photo holding baby Gia). Hairy chest. Big, thick hands. In the truck photo (dated 7/8/97): behind the wheel of a blue pickup, cap on, mustache, arm resting on the door — completely in his element. On the boat: shirtless, straw hat, phone to his ear, legs sprawled out — king of wherever he was sitting. With cattle: flannel shirt, green cap, standing next to a black Angus — the working version of Chuck. The graduation photo shows him at maybe 5'9\"-5'10\", solid, thick-necked, white short-sleeve shirt. In the close-up with the blonde woman: dark eyes, strong brow, mustache flecked with gray, the Cutter Oil cap, face that says 'I've been in the sun my whole life.' Holding Gia: softened. Ballcap on, white shirt, Marlboros in the pocket — but looking DOWN at this baby with an expression that breaks the whole tough-guy frame. That's the photo that proves he was getting softer.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/chuck_cutter/",
+        "photos": ["010.jpg", "IMG (2).jpg", "IMG_0058.JPG", "scan (171).jpg", "scan (90).jpg"]
+      },
+      "arc_presence": [
+        "forged",
+        "fractured",
+        "forging",
+        "foundry"
+      ],
+      "key_pieces": [
+        "bk1-the-hilltop.md",
+        "bk1-the-van.md",
+        "bk1-the-yard.md",
+        "bk1-the-cold-call.md",
+        "bk1-the-last-flight.md",
+        "bk1-three-thirty-am.md",
+        "bk1-the-quorum-bed.md"
+      ],
+      "the_thread": {
+        "forged": "The ruler. The force. The operating system Shawn absorbed.",
+        "fractured": "The absence during recovery? The expectations during healing? (GAP)",
+        "forging": "The last flight. The death. The 3:30 AM call. The funeral.",
+        "foundry": "The ghost. 'If Chuck could see EnergiAcres.' The softening he never got to finish."
+      },
+      "direct_quotes_from_shawn": [
+        "Chuck was getting softer as he was getting older. I was really looking forward to him being a grandpa.",
+        "I didn't start sounding like Chuck until the kids were maybe 4 or 5.",
+        "You need to listen to the doctors. But you need to make the decision for yourself.",
+        "Chuck died about 5:15 in the morning."
+      ],
+      "open_questions": [
+        "Physical description \u2014 what did Chuck look like?",
+        "What was his laugh like?",
+        "The motorcycle accident \u2014 when, what happened?",
+        "Chuck's parents / upbringing?",
+        "Shawna \u2014 when, how long, how did Beth find out?",
+        "What did Shawn SAY at the funeral?",
+        "Chuck's relationship with CJ vs. Shawn \u2014 differences?"
+      ]
+    },
+    "beth_cutter": {
+      "role": "mother",
+      "category": "core_family",
+      "full_name": "Elizabeth 'Beth' Cutter (n\u00e9e Bechtel)",
+      "nicknames": [
+        "Beth",
+        "Mom"
+      ],
+      "born": "~1958-1959 (age 67 in March 2026)",
+      "age_march_2026": 67,
+      "location": "Bechtel family farm, Ohio",
+      "maiden_family": "Bechtel \u2014 the farm is HER family heritage. Same farm since Ohio was a state.",
+      "spouse": "Charles 'Chuck' Cutter (deceased Nov 12, 2010)",
+      "children": [
+        "CJ (oldest)",
+        "Shawn (b. 1979)",
+        "Kristin (3yr younger than Shawn)",
+        "Josh (younger)"
+      ],
+      "current_status": "Still working the acreage at 67. Blowing off the yard, tending the garden.",
+      "personality": {
+        "confirmed_traits": [
+          "Quiet center of the entire story",
+          "Protector \u2014 shielded boys from Chuck's intensity at times",
+          "Unconditional love \u2014 puts others first to her own detriment",
+          "Eternal love in her heart despite everything Chuck put her through",
+          "Refuses to sell the main Bechtel farm",
+          "Still working at 67 because Cedar Valley plan to retire her failed"
+        ]
+      },
+      "what_she_endured": [
+        "Chuck's intensity and dominance",
+        "Chuck's infidelity (Shawna)",
+        "Shawn's accident (Oct 29, 1990) \u2014 40 surgeries over years",
+        "CJ and Shawn fighting constantly",
+        "Chuck's death (Nov 12, 2010)",
+        "Cedar Valley failure \u2014 the plan to retire her didn't work"
+      ],
+      "critical_fact": "The farm-to-tech-to-farm arc goes through MOM'S lineage, not Chuck's. Bechtel family heritage.",
+      "physical": {
+        "description": "Blonde, wavy/curly hair — long, past her shoulders, with natural volume. At 67, still looks strong and capable. Medium build, not frail — a woman who works outside. In the restaurant photo: white jacket over a tan turtleneck, pouring herself a drink, expression focused and composed — elegant but not fussy. At home outside the house (possibly the farm): blue dress, long blonde wavy hair loose, bracelet on her wrist, warm smile, standing near the car like she's about to go somewhere or just got back from something. The graduation photo (~1997) shows her with shorter, lighter blonde hair, beige/cream outfit, standing next to young Shawn — she comes up to about his shoulder. She carries herself with a quiet steadiness. Nothing flashy. The kind of woman who looks the same at a restaurant as she does in the garden.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/beth_cutter/",
+        "photos": ["IMG_7809.jpeg", "IMG_9222.jpeg"]
+      },
+      "arc_presence": [
+        "forged",
+        "fractured",
+        "forging",
+        "foundry"
+      ],
+      "key_pieces": [
+        "bk1-the-yard.md",
+        "bk1-the-hilltop.md",
+        "bk1-the-bedroom.md"
+      ],
+      "the_thread": {
+        "forged": "The protector. The steady one. Held the house together while Chuck ran the world outside.",
+        "fractured": "Mother of a broken child. 40 surgeries. How did she survive it? (MAJOR GAP)",
+        "forging": "Background \u2014 barely appears. Chuck's death, but Beth's experience of it is unknown.",
+        "foundry": "Still working at 67. Cedar Valley was supposed to retire her. The farm is HER lineage. The whole story comes back to her ground."
+      },
+      "direct_quotes_from_shawn": [
+        "She's amazing. What she had to endure... eternal love in her heart.",
+        "She's done enough \u2014 it's time for the kids to step up.",
+        "She's a protector. She puts others first to her own detriment.",
+        "Get my mom to retirement. Build something sustainable, sell the business and the farm."
+      ],
+      "cutter_rule": "The loudest person in the room gets the stories. The quietest one keeps the room standing.",
+      "open_questions": [
+        "Physical description?",
+        "How did Beth and Chuck meet?",
+        "Beth during the accident \u2014 where was she, who told her?",
+        "Beth during 40 surgeries \u2014 what was that like as a mother?",
+        "Beth's reaction to Shawna?",
+        "Exact birth year?",
+        "Does Beth know about the book?",
+        "Beth's relationship with Carina?",
+        "What does Beth think about EnergiAcres?"
+      ]
+    },
+    "cj_cutter": {
+      "role": "older_brother",
+      "category": "core_family",
+      "full_name": "CJ Cutter",
+      "nicknames": [
+        "CJ"
+      ],
+      "born": "\u26a0\ufe0f Unknown \u2014 older than Shawn, so before 1979",
+      "location": "\u26a0\ufe0f Unknown current location",
+      "current_status": "Blocked Shawn's number ~2017. Still blocked. Now a grandfather.",
+      "personality": {
+        "confirmed_traits": [
+          "Bigger than Shawn (20-25 lbs heavier as kids)",
+          "The oldest sibling",
+          "Now a grandfather",
+          "Relationship with Shawn is currently blocked"
+        ]
+      },
+      "childhood_with_shawn": {
+        "the_fighting": {
+          "detail": "Constant fighting. CJ was 20-25 lbs bigger. Door slamming incident (pinned CJ between wall and door, doorknob hitting side). Pillowcase + empty shampoo bottle = knocked CJ out. Strategy: hit hard enough CJ can't get back up, then run.",
+          "source": "Session 5",
+          "confidence": "confirmed"
+        },
+        "the_good": {
+          "detail": "Built forts together. Worked together on the farm. Shared a bedroom (water beds, TV, model planes).",
+          "source": "Session 5",
+          "confidence": "confirmed"
+        },
+        "the_rock": {
+          "detail": "CJ threw a rock at Shawn ON PURPOSE \u2014 30-32 stitches. Part of '87 stitches before the car accident, half from CJ.'",
+          "source": "Voice memo",
+          "confidence": "confirmed"
+        }
+      },
+      "key_moments": {
+        "the_40_percent_ask": "End of 2009 \u2014 CJ asked for 40% of Fielding Systems. Shawn had written all the code and built everything.",
+        "the_blocking": "~2017 \u2014 CJ blocked Shawn's number. CJ was treating siblings badly, Shawn told him what he thought.",
+        "the_3am_call": "November 12, 2010 \u2014 CJ called Shawn at 3:30 AM to tell him Chuck had a heart attack.",
+        "the_funeral": "CJ spoke at Chuck's funeral.",
+        "the_pipeline_attempt": "Mom brought them together for a pipeline/gas storage deal. But CJ still blocked."
+      },
+      "physical": {
+        "description": "\u26a0\ufe0f No physical description. 20-25 lbs bigger than Shawn as kids.",
+        "photo_extracted": false,
+        "photos_folder": "LexDocs/_meta/characters/photos/cj_cutter/",
+        "photos": []
+      },
+      "arc_presence": [
+        "forged",
+        "fractured",
+        "forging"
+      ],
+      "key_pieces": [
+        "bk1-the-bedroom.md",
+        "bk1-the-forty-percent-ask.md",
+        "bk1-three-thirty-am.md"
+      ],
+      "the_thread": {
+        "forged": "The other half of 'the Cutters outside.' Shared bedroom, forts, fighting, farm work.",
+        "fractured": "Where was CJ during the accident and recovery? (GAP)",
+        "forging": "The 40% ask. The blocking. The 3:30 AM call. The funeral.",
+        "foundry": "\u26a0\ufe0f 'The CJ thread resolves in Foundry' \u2014 does it? Or is it unresolved?"
+      },
+      "open_questions": [
+        "CJ's birth year?",
+        "What does CJ look like?",
+        "Where does CJ live now?",
+        "What happened from CJ's perspective?",
+        "The wrestling tournament \u2014 CJ got 2nd place the day Shawn came back",
+        "Will CJ participate in family recordings? Unlikely but powerful if yes.",
+        "Does the CJ thread resolve or stay open?"
+      ]
+    },
+    "carina_cutter": {
+      "role": "wife",
+      "category": "core_family",
+      "full_name": "Carina Cutter",
+      "nicknames": [
+        "Carina"
+      ],
+      "spelling_note": "CARINA — spelled with a C, not a K",
+      "born": "July 8, 1981",
+      "age_march_2026": 44,
+      "married": "July 8, 2006 — on her birthday. Las Vegas. Elvis package.",
+      "location": "Tampa, FL area",
+      "children": [
+        "Gia (b. 2010)",
+        "Tessa (b. 2012)"
+      ],
+      "physical": {
+        "description": "Long, straight blonde hair — lighter than Beth's, with a warm honey tone. Fair, clear complexion. Slim, tall build. In the bar selfie: cream ribbed sweater, soft smile, hair falling past her shoulders, face lit by warm ambient light — composed and pretty in an effortless way. Full-body in NYC: black dress with gold stitching detail, long blonde hair, slim figure, confident posture — she looks like she belongs in whatever city she's in. Beach photo with one of the girls: denim jacket over white top and pink/mauve shorts, baseball cap, bare feet in the sand at sunset — relaxed, happy, arm around her kid. She reads as someone who puts herself together well but doesn't make it the point.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/carina_cutter/",
+        "photos": ["IMG_2630.jpeg", "IMG_3397.jpeg", "IMG_9545.jpeg"]
+      },
+      "how_they_met": {
+        "detail": "At Miami University (Oxford, OH). She was friends with 'the townies' \u2014 local Oxford, OH-raised students. 'They essentially grew up in a cornfield, much like I did.'",
+        "source": "Voice memo",
+        "confidence": "confirmed"
+      },
+      "the_handicap_placard": {
+        "detail": "When Carina first saw Shawn's handicap placard, she thought he was a jerk parking in a handicap spot. He was actually handicapped. Had a placard and a scooter \u2014 'the scooter guy at college' \u2014 little moped with a weed eater motor.",
+        "source": "Voice memo",
+        "confidence": "confirmed"
+      },
+      "the_elopement": {
+        "detail": "Las Vegas, 2006. Little White Wedding Chapel. Elvis package. Only Chris and Patty came. The dress broke (clasp/seam). Called parents from the limo. Parents hated it. Had a 'reception of swords' at Thanksgiving timeframe later that year.",
+        "source": "Voice memo + Session 5",
+        "confidence": "confirmed"
+      },
+      "therapy": {
+        "detail": "Couples therapy started 2023 \u2014 'we were not in a good place.' Then pivoted to individual therapy for Shawn when it became clear 'this is Shawn's doing \u2014 he's got real trauma issues.' Now 'incrementally better week by week.'",
+        "source": "Session 5",
+        "confidence": "confirmed"
+      },
+      "personality": {
+        "confirmed_traits": [
+          "Married someone with 40 surgeries and a handicap placard",
+          "Endured the startup years (Fielding), the corporate years (Quorum), the hard years (Phase 2 Labs)",
+          "Initiated couples therapy in 2023",
+          "Incrementally better week by week with Shawn"
+        ]
+      },
+      "arc_presence": [
+        "forging",
+        "foundry"
+      ],
+      "key_pieces": [
+        "bk1-the-elopement.md",
+        "bk1-the-quorum-bed.md"
+      ],
+      "the_thread": {
+        "forged": "Not present \u2014 they hadn't met yet.",
+        "fractured": "Not present in current timeline (unless college overlap).",
+        "forging": "The elopement. The Aria bed moment (she was sleeping). The Fielding/Quorum years. Gia's birth (32 hours).",
+        "foundry": "Therapy. 'Incrementally better.' The partner who has to live with the emotional wall."
+      },
+      "direct_quotes_from_shawn": [
+        "Carina married someone with 40 surgeries.",
+        "We were not in a good place. (about 2023)",
+        "Incrementally better week by week."
+      ],
+      "open_questions": [
+        "Physical description?",
+        "What does Carina do professionally?",
+        "Carina's parents \u2014 who are Chris and Patty?",
+        "What was the move to Florida (2005) like for Carina?",
+        "Carina's experience of the emotional wall \u2014 from her side?",
+        "Feb 2022 ('hardest and most painful time') \u2014 Carina's perspective?",
+        "What specifically is 'incrementally better'?"
+      ]
+    },
+    "gia_cutter": {
+      "role": "daughter",
+      "category": "core_family",
+      "full_name": "Gia Cutter",
+      "born": "2010",
+      "age_march_2026": "15-16 (exact birth month unknown)",
+      "location": "Tampa, FL area",
+      "key_facts": {
+        "birth": {
+          "detail": "32 hours of labor. Baby stressed. Almost C-section. Shawn barely held her. Emotional wall — 'I don't think I felt the same intensity that I even feel right now.'",
+          "source": "Session 5",
+          "confidence": "confirmed"
+        },
+        "grandpa_chuck": {
+          "detail": "Chuck met Gia May 2010. Had ~6 months with her before dying Nov 12, 2010.",
+          "source": "Session 5",
+          "confidence": "confirmed"
+        },
+        "the_book": {
+          "detail": "Gia does NOT know about the book. Everyone knows about the accident — 'probably tired of hearing it because it gets used when they want to ride a motorcycle or cross the road.'",
+          "source": "Session 5",
+          "confidence": "confirmed"
+        }
+      },
+      "physical": {
+        "description": "Blonde hair — long, straight to slightly wavy, honey-toned like Carina's. Light freckles across the nose and cheeks. Brown eyes. Bright, full smile. At 15-16 she's growing into her features — in the beanie photo: pink 'Hagen Well Service' beanie, gray graphic hoodie, arms crossed, side braid, warm smile with a hint of mischief. In the close-up portrait: long straight blonde hair, delicate gold necklace, black t-shirt, freckles visible, natural and unaffected — she looks like she got Carina's coloring and Shawn's energy in the eyes. Night photo with Shawn by the waterfront: black graphic hoodie, hair pulled back, standing next to her dad — she's already almost as tall as him. She carries herself with a teenager's mix of confidence and not-yet-knowing.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/gia_cutter/",
+        "photos": ["IMG_3056.jpeg", "IMG_3088.jpeg", "IMG_3361.jpeg"]
+      },
+      "arc_presence": [
+        "forging",
+        "foundry"
+      ],
+      "the_thread": {
+        "forging": "Her birth is the emotional wall moment. The price of all the armor Shawn built.",
+        "foundry": "The legacy question. What is Shawn building FOR her?"
+      },
+      "open_questions": [
+        "Exact birth month?",
+        "What is Gia like now? Personality, interests?",
+        "What does Gia know about the accident's full story?",
+        "When/if to bring her into the book process?",
+        "What does Shawn want her to carry forward?"
+      ]
+    },
+    "tessa_cutter": {
+      "role": "daughter",
+      "category": "core_family",
+      "full_name": "Tessa Cutter",
+      "born": "2012",
+      "age_march_2026": "13-14",
+      "location": "Tampa, FL area",
+      "key_facts": {
+        "note": "Very little confirmed about Tessa individually. Born 2012, two years after Gia."
+      },
+      "physical": {
+        "description": "Darker hair than Gia — brown, pulled back. Braces. Athletic build — looks like she plays sports. Light eyes (possibly green or hazel). In the photo: pink athletic top, hair pulled back in a ponytail, standing outside in the Florida sun, big smile showing braces, small gold hoop earrings. She's younger and more compact than Gia — different energy, more grounded and direct in how she stands. Where Gia has Carina's willowy quality, Tessa reads as sturdier, more physical.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/tessa_cutter/",
+        "photos": ["IMG_1563.jpeg"]
+      },
+      "arc_presence": [
+        "foundry"
+      ],
+      "open_questions": [
+        "What is Tessa like?",
+        "How is Tessa different from Gia?",
+        "Does Tessa know about the book?",
+        "Shawn as a father to Tessa specifically?"
+      ]
+    },
+    "kristin_anthony": {
+      "role": "sister",
+      "category": "extended_family",
+      "full_name": "Kristin Anthony (née Cutter)",
+      "nicknames": [
+        "Kristin"
+      ],
+      "born": "~1982 (3 years younger than Shawn)",
+      "key_facts": {
+        "note": "Shawn's sister, 3 years younger. Married name is Anthony. Very little confirmed detail.",
+        "has_children": "At least one son visible in basketball game photo (young boy in Cleveland Cavaliers jersey)."
+      },
+      "arc_presence": [
+        "forged"
+      ],
+      "open_questions": [
+        "What does Kristin remember about growing up?",
+        "Kristin's relationship with Shawn now?",
+        "Kristin's experience of Chuck, Beth, the farm?",
+        "Would she participate in family recordings?",
+        "Who is in the 'Shawn Lisa and kids' photo from her folder — is Lisa another name or a different person?"
+      ],
+      "physical": {
+        "description": "Long, wavy caramel-brown hair with honey highlights — similar coloring to Beth but darker, warmer. Brown eyes. Bright, wide smile. Olive-toned skin, slightly tanned. Fit, athletic build. In the professional headshot: hair in big loose waves, black top, warm confident expression — she looks polished and put-together. Office selfie with Shawn: gray athletic top with what appears to be an EnergiAcres/company logo, hair pulled back, sunglasses on top of her head, sitting at a desk — she looks like she works WITH Shawn. At a Cleveland Cavaliers game with her son: long brown hair, big smile, arm around the boy in a Cavs jersey. In the kitchen: long straight brown hair, white sweatshirt, holding a jar, laughing — genuinely warm energy. She has Chuck's coloring but Beth's warmth in her face.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/kristin_anthony/",
+        "photos": ["IMG_0168.JPG", "IMG_1545.jpeg", "IMG_6771.jpeg", "IMG_7596.jpeg", "Shawn Lisa and kids.jpeg"]
+      }
+    },
+    "josh_cutter": {
+      "role": "brother",
+      "category": "extended_family",
+      "full_name": "Josh Cutter",
+      "nicknames": [
+        "Josh"
+      ],
+      "born": "⚠️ Unknown — younger than Shawn",
+      "key_facts": {
+        "note": "Younger brother. 'Different household dynamic' — grew up in a different era of Chuck. Very little confirmed.",
+        "works_with_shawn": "Wearing a 'Cutter' branded company t-shirt in kitchen photo — possibly involved in family business or EnergiAcres."
+      },
+      "arc_presence": [],
+      "open_questions": [
+        "Josh's age / birth year?",
+        "What era of Chuck did Josh experience?",
+        "Josh's current relationship with Shawn?",
+        "Would he participate in family recordings?",
+        "Is Josh involved in the business? (Cutter-branded shirt)"
+      ],
+      "physical": {
+        "description": "Stockier than Shawn — more compact, thicker through the chest and shoulders. Short dark brown hair, full beard/stubble. Big, warm smile. He looks more like Chuck's build than Shawn does — the shorter, thicker Cutter frame vs. Shawn's lean angular frame. In the selfie with Shawn: dark hair, dark stubble, wearing a black shirt — he's got a rounder face and heavier build. In the kitchen: standing in front of cherry wood cabinets, black 'Cutter' t-shirt, jeans, phone in both hands, grinning — stocky, strong, comfortable in his own skin. He reads as the physical bridge between Chuck and Shawn.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/josh_cutter/",
+        "photos": ["IMG_0922.jpeg", "IMG_2413.jpeg"]
+      }
+    },
+    "jeff_taynton": {
+      "role": "co-founder_friend",
+      "category": "professional",
+      "full_name": "Jeff Taynton",
+      "nicknames": [
+        "Jeff"
+      ],
+      "spelling_note": "✅ CONFIRMED: Taynton (from photo folder name).",
+      "met_shawn": "At By Design Technologies \u2014 first Florida/Tampa job",
+      "relationship": "Best friend, CTO at Fielding Systems, now at Terrasow with Shawn",
+      "key_facts": {
+        "by_design_technologies": "Where they met. First FL job for Shawn.",
+        "fielding": "CTO. Earned equity. Got life-changing money.",
+        "tool_fans": "Both love Tool (the band). Bonding detail.",
+        "terrasow": "Jeff is NOW at Terrasow with Shawn \u2014 'building the same thing we did for Fielding but for farmers.'",
+        "mike_huff_connection": "Jeff's best friend from school. Jeff brought Mike to Fielding as 4th hire.",
+        "dave_friction": "Jeff was frustrated by Dave McCarty making triple what everyone else made."
+      },
+      "personality": {
+        "confirmed_traits": [
+          "Ride-or-die team member",
+          "Technical (CTO)",
+          "Tool fan",
+          "Still working with Shawn after 15+ years"
+        ]
+      },
+      "arc_presence": [
+        "forging",
+        "foundry"
+      ],
+      "key_pieces": [
+        "bk1-the-garage.md",
+        "bk1-the-dave-problem.md"
+      ],
+      "open_questions": [
+        "What was By Design Technologies?",
+        "The Tool concerts — specific memories?",
+        "Jeff's perspective on the Fielding/Quorum journey?"
+      ],
+      "physical": {
+        "description": "Clean-cut, professional look. Short reddish-brown hair, neatly trimmed. Rectangular dark-framed glasses. Clean-shaven. Wearing a dark blazer over a light blue collared shirt in the headshot — the kind of guy who looks equally comfortable in a boardroom and a garage. Medium build, not heavy. His face reads as precise and attentive — CTO energy. The glasses and grooming suggest someone who values order and clarity.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/jeff_taynton/",
+        "photos": ["IMG_0161.JPG"]
+      }
+    },
+    "mike_huff": {
+      "role": "early_employee",
+      "category": "professional",
+      "full_name": "Mike Huff",
+      "name_correction": "Originally transcribed as 'Mike Hobbs' \u2014 CORRECTED Session 5 to Mike HUFF.",
+      "relationship": "Jeff Taton's best friend from school. 4th hire at Fielding Systems.",
+      "key_facts": {
+        "hiring": "4th hire at Fielding. Jeff brought him in.",
+        "equity": "Earned equity. Got life-changing money (like Jeff).",
+        "current": "\u26a0\ufe0f Where is Mike now? Unknown."
+      },
+      "arc_presence": [
+        "forging"
+      ],
+      "key_pieces": [
+        "bk1-the-garage.md"
+      ],
+      "open_questions": [
+        "Where is Mike now?",
+        "What did Mike do at Fielding specifically?",
+        "Mike's personality — what was he like to work with?"
+      ],
+      "physical": {
+        "description": "Solid, stocky build. Dark hair under a black ball cap. Stubble/light beard. Wraparound sunglasses. Gray long-sleeve t-shirt with dark trim. In the fishing boat photo: he's looking at the camera with a steady, no-nonsense expression — not unfriendly, just focused. Fishing rods behind him. He reads as a practical, hands-on guy. The kind of person Jeff Taton would be best friends with from school — solid, reliable, not flashy.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/mike_huff/",
+        "photos": ["IMG_5017.JPG"]
+      }
+    },
+    "sasha_nelson": {
+      "role": "engineer",
+      "category": "professional",
+      "full_name": "Sasha Nelson",
+      "relationship": "Best engineer Shawn ever worked with. Worked at Quorum on Cognitive Land.",
+      "key_facts": {
+        "cognitive_land": "Built Cognitive Land at Quorum \u2014 'what is now GPT.' AI-first platform ingesting land/lease agreements, learning from user corrections, capturing tacit knowledge. Applied to all forms of contracts. 'Pretty gnarly shit. We were bleeding edge.'",
+        "one_resource": "Quorum only gave Shawn ONE resource for this project. Sasha was it. 'I had to make it count.'",
+        "the_relationship": "'Best engineer, best person I've worked with, smartest, stretched me the most.'",
+        "departure": "Left over frustration with Quorum (not with Shawn).",
+        "the_regret": "Shawn 'really fucked up that relationship' by getting busy with startups. 'Should have spent time researching with Sasha \u2014 we would have found our way.'"
+      },
+      "personality": {
+        "confirmed_traits": [
+          "Brilliant engineer",
+          "Stretched Shawn the most",
+          "Best person he worked with (not just best engineer)",
+          "Left Quorum over frustration with the company"
+        ]
+      },
+      "arc_presence": [
+        "forging"
+      ],
+      "key_pieces": [
+        "To be drafted \u2014 'The One Resource'"
+      ],
+      "the_thread": "Sasha \u2192 Cognitive Land \u2192 proto-GPT \u2192 the AI thread that runs through EnergiAcres. The relationship Shawn lost by spreading too thin is the same lesson that led to 'only enough founder energy for one.'",
+      "open_questions": [
+        "What does Sasha look like?",
+        "The day Cognitive Land first worked \u2014 what happened?",
+        "What specifically made Sasha different from other engineers?",
+        "Where is Sasha now?",
+        "Have they reconnected at all?"
+      ],
+      "physical": {
+        "description": "\u26a0\ufe0f No physical description confirmed.",
+        "photo_extracted": false,
+        "photos_folder": "LexDocs/_meta/characters/photos/sasha_nelson/",
+        "photos": []
+      }
+    },
+    "donny_kerr": {
+      "role": "engineer",
+      "category": "professional",
+      "full_name": "Donny Kerr",
+      "relationship": "Replaced Sasha Nelson at Quorum. Another amazing engineer.",
+      "key_facts": {
+        "note": "'Another amazing engineer.' Quorum 'afforded me to work with great people, great engineers. I still have a lot of those relationships today.'"
+      },
+      "arc_presence": [
+        "forging"
+      ],
+      "open_questions": [
+        "What did Donny work on specifically?",
+        "Where is Donny now?",
+        "How was Donny different from Sasha?",
+        "Does Shawn still have a relationship with Donny?"
+      ],
+      "physical": {
+        "description": "\u26a0\ufe0f No physical description confirmed.",
+        "photo_extracted": false,
+        "photos_folder": "LexDocs/_meta/characters/photos/donny_kerr/",
+        "photos": []
+      }
+    },
+    "dave_mccarty": {
+      "role": "antagonist_colleague",
+      "category": "professional",
+      "full_name": "Dave McCarty",
+      "relationship": "Fielding Systems employee who complicated the Quorum acquisition",
+      "key_facts": {
+        "the_problem": "Making TRIPLE what anyone else was. Given equity. Didn't appreciate it.",
+        "the_acquisition": "Flew to Tampa for diligence. Participated, then 'got weird.' Super suspicious they'd kick him out.",
+        "the_sales": "Great at sales. Shawn learned a lot from him. Asked tons of questions.",
+        "the_lesson": "People who are GIVEN equity don't appreciate it the same way. Shawn made this mistake multiple times before wising up.",
+        "personality_note": "'Was on his period one week out of the month, at least, if not a couple.'"
+      },
+      "arc_presence": [
+        "forging"
+      ],
+      "key_pieces": [
+        "bk1-the-dave-problem.md"
+      ],
+      "the_thread": "Dave represents the 'equity tax' lesson. People who didn't build it don't fight for it the same way. This lesson echoes in 'cannot suffer fools' in Foundry.",
+      "open_questions": [
+        "Where is Dave now?",
+        "What happened to Dave after Quorum acquisition closed?"
+      ],
+      "physical": {
+        "description": "\u26a0\ufe0f No physical description confirmed.",
+        "photo_extracted": false,
+        "photos_folder": "LexDocs/_meta/characters/photos/dave_mccarty/",
+        "photos": []
+      }
+    },
+    "joe_norris": {
+      "role": "acquirer",
+      "category": "professional",
+      "full_name": "Joe Norris",
+      "relationship": "Quorum Software \u2014 the person who called to initiate the acquisition of Fielding",
+      "key_facts": {
+        "the_call": "Called Shawn. Shawn took all phone calls. The qualifying question: 'Does the company have an API?' \u2014 because Fielding got acquired early and they were going to keep building.",
+        "after": "Tyson and Perry flew to Tampa after the initial call."
+      },
+      "arc_presence": [
+        "forging"
+      ],
+      "key_pieces": [
+        "bk1-the-quorum-bed.md"
+      ],
+      "open_questions": [
+        "Who is Joe Norris \u2014 title, role at Quorum?",
+        "Where were you when Joe called?",
+        "What was said after the API question?"
+      ],
+      "physical": {
+        "description": "\u26a0\ufe0f No physical description confirmed.",
+        "photo_extracted": false,
+        "photos_folder": "LexDocs/_meta/characters/photos/joe_norris/",
+        "photos": []
+      }
+    },
+    "andrew_palmer": {
+      "role": "friend_supporter",
+      "category": "mentors_friends",
+      "full_name": "Andrew Palmer",
+      "relationship": "One of Shawn's best friends. Lived about a mile down the road. Families go way back.",
+      "key_facts": {
+        "childhood": "Went to West Salem Elementary (rival school). Dad was neighbors with Shawn's mom. Biggest kid in class \u2014 tall, big. Shawn's 'nerd friend.' Both read a lot. Built caves and forts together.",
+        "sci_fi": "Got Shawn into sci-fi more than anyone. This connects to the Lawnmower Man / singularity thread.",
+        "burning_man": "Took Shawn to his first Burning Man. 'That's the kind of friend he is.'",
+        "therapy_support": "'So happy' Shawn was going to therapy. Said it would help relationships. 'He's absolutely right. Him saying that kept me going.'",
+        "cancer": "In remission. Battled cancer several times and won. Has a little girl he wasn't supposed to have.",
+        "current": "Lost touch a little. 'Definitely got to cultivate that relationship more.'"
+      },
+      "arc_presence": [
+        "forged",
+        "foundry"
+      ],
+      "open_questions": [
+        "What specifically did Andrew say that resonated?",
+        "Is Andrew a founder too? What's his background?"
+      ],
+      "physical": {
+        "description": "Big — exactly as described. Tall, broad-shouldered, heavy build. In the bar photo (younger era): reddish-brown beard, thick brown/auburn hair, wearing a pink button-up shirt, holding a drink — he takes up space in the frame the way 'biggest kid in class' implies. Standing next to a younger Shawn (glasses, plaid shirt, slimmer) the size difference is obvious. He's the kind of big that isn't aggressive — more like a bear. Warm, genuine smile. The nerd friend who happens to be built like a lineman.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/andrew_palmer/",
+        "photos": ["pictures 073.jpg"]
+      }
+    },
+    "butch_rogers": {
+      "role": "family_friend",
+      "category": "mentors_friends",
+      "full_name": "Butch Rogers",
+      "relationship": "Former accountant and pastor. Spoke at Chuck's funeral.",
+      "key_facts": {
+        "funeral": "Third speaker at Chuck's funeral (after Shawn and CJ).",
+        "dual_role": "Both the family's accountant AND a pastor."
+      },
+      "arc_presence": [
+        "forging"
+      ],
+      "open_questions": [
+        "What did Butch say at the funeral?",
+        "How long had Butch known the Cutter family?",
+        "Is Butch still alive / in contact?"
+      ],
+      "physical": {
+        "description": "\u26a0\ufe0f No physical description confirmed.",
+        "photo_extracted": false,
+        "photos_folder": "LexDocs/_meta/characters/photos/butch_rogers/",
+        "photos": []
+      }
+    },
+    "tyson_and_perry": {
+      "role": "acquirers",
+      "category": "professional",
+      "full_name": "Tyson and Perry (last names unknown)",
+      "relationship": "Quorum Software executives who flew to Tampa to meet Shawn during acquisition diligence",
+      "key_facts": {
+        "visit": "Flew to Tampa after Joe Norris's initial call. Part of the acquisition process."
+      },
+      "arc_presence": [
+        "forging"
+      ],
+      "open_questions": [
+        "Full names?",
+        "Their roles at Quorum?",
+        "What happened during the Tampa visit?"
+      ],
+      "physical": {
+        "description": "\u26a0\ufe0f No physical description confirmed.",
+        "photo_extracted": false,
+        "photos_folder": "LexDocs/_meta/characters/photos/tyson_and_perry/",
+        "photos": []
+      }
+    },
+    "chris_and_patty": {
+      "role": "elopement_witnesses",
+      "category": "mentors_friends",
+      "full_name": "Chris and Patty (last name unknown)",
+      "relationship": "Only people at Shawn and Carina's Las Vegas elopement",
+      "key_facts": {
+        "elopement": "The only guests at the wedding. Las Vegas, July 8, 2006."
+      },
+      "arc_presence": [
+        "forging"
+      ],
+      "open_questions": [
+        "Who are Chris and Patty? Friends? Family?",
+        "How do they know Shawn and Carina?",
+        "Last name?"
+      ],
+      "physical": {
+        "description": "\u26a0\ufe0f No physical description confirmed.",
+        "photo_extracted": false,
+        "photos_folder": "LexDocs/_meta/characters/photos/chris_and_patty/",
+        "photos": []
+      }
+    },
+    "drano_boy": {
+      "role": "hospital_roommate",
+      "category": "fractured_era",
+      "full_name": "Unknown \u2014 'the small boy who drank Drano'",
+      "relationship": "Shared a hospital room with Shawn at Akron Children's. Age ~3-10.",
+      "key_facts": {
+        "detail": "Drank Drano. Fucked up his esophagus, had to replace it. 'He was in bad shape.'",
+        "significance": "The most vivid hospital memory. Puts Shawn's suffering in context \u2014 there was always someone worse."
+      },
+      "physical": {
+        "description": "Small boy. Age unknown but young.",
+        "photo_extracted": false,
+        "photos_folder": "",
+        "photos": []
+      },
+      "arc_presence": [
+        "fractured"
+      ]
+    },
+    "augustine_bui": {
+      "role": "friend_collaborator",
+      "category": "mentors_friends",
+      "full_name": "Augustine Bui",
+      "nicknames": ["Augustine"],
+      "relationship": "⚠️ Relationship to Shawn unconfirmed — appears to be a close friend based on selfie together. Multiple photos suggest significant presence in Shawn's current life.",
+      "key_facts": {
+        "note": "NEW CHARACTER — added from photo folder. No voice memo or story material yet. Needs context from Shawn."
+      },
+      "physical": {
+        "description": "Asian American man, appears to be in his 40s-50s. Dark hair graying at the temples. Warm, easy smile. Wears thick-rimmed dark glasses. In the trucker cap photo: 'Sun Valley Outfitters Ketchum Idaho' green trucker cap, neat mustache, navy blue button-up shirt, standing in what looks like a lodge or cabin with taxidermy on the wall — outdoorsy, stylish in a relaxed way. In the desert/festival photo: white t-shirt under a colorful traditional-patterned vest/jacket (possibly Hmong or Southeast Asian heritage clothing), sunglasses with yellow lenses — at what looks like Burning Man or a desert gathering. In the selfie with Shawn: white zip-up jacket, dark hair swept to the side, graying, warm expression — they're clearly comfortable together, both grinning. He reads as someone who matches Shawn's energy — adventurous, eclectic, not afraid of bold choices.",
+        "photo_extracted": true,
+        "photos_folder": "LexDocs/_meta/characters/photos/augustine_bui/",
+        "photos": ["IMG_0716.JPG", "IMG_4324.jpeg", "IMG_8366.jpeg"]
+      },
+      "arc_presence": [],
+      "open_questions": [
+        "How does Shawn know Augustine?",
+        "What arc does Augustine belong to?",
+        "Is the desert photo from Burning Man? (Andrew Palmer connection?)",
+        "What role does Augustine play in Shawn's current life?",
+        "Is Augustine involved in any of the businesses?"
+      ]
+    }
+  },
+  "character_relationships": {
+    "core_tension": "Chuck \u2194 Beth (intensity vs. steadiness). This dynamic shaped everything.",
+    "the_brothers": "CJ \u2194 Shawn \u2014 fighting, forts, the 40% ask, the blocking. Currently unresolved.",
+    "the_marriage": "Shawn \u2194 Carina \u2014 handicap placard meeting, elopement, emotional wall, therapy, incrementally better.",
+    "the_inheritance": "Shawn absorbed Chuck's operating system (intensity, work ethic, oilfield knowledge) but built on Beth's ground (the Bechtel farm).",
+    "the_engineers": "Jeff Taynton → Mike Huff → Sasha Nelson → Donny Kerr. Each represents a phase of Shawn's builder journey.",
+    "the_ghost": "Chuck's absence haunts Forging and Foundry. 'If Chuck could see EnergiAcres.'",
+    "the_wall": "Shawn's emotional disconnection (from accident/trauma) affects every relationship \u2014 Carina, Gia, CJ, even professional ones (Sasha)."
+  },
+  "characters_by_arc": {
+    "forged": [
+      "chuck_cutter",
+      "beth_cutter",
+      "cj_cutter",
+      "kristin_anthony",
+      "josh_cutter"
+    ],
+    "fractured": [
+      "chuck_cutter",
+      "beth_cutter",
+      "cj_cutter"
+    ],
+    "forging": [
+      "carina_cutter",
+      "gia_cutter",
+      "tessa_cutter",
+      "chuck_cutter",
+      "cj_cutter",
+      "jeff_taton",
+      "mike_huff",
+      "dave_mccarty",
+      "joe_norris",
+      "sasha_nelson",
+      "donny_kerr",
+      "butch_rogers",
+      "tyson_and_perry",
+      "chris_and_patty"
+    ],
+    "foundry": [
+      "carina_cutter",
+      "gia_cutter",
+      "tessa_cutter",
+      "beth_cutter",
+      "andrew_palmer",
+      "jeff_taton"
+    ]
+  },
+  "universal_gaps": [
+    "No physical descriptions for ANY character. This is the #1 gap \u2014 readers need to SEE these people.",
+    "Beth's experience of the accident and surgeries is completely missing.",
+    "CJ's interior life is unknown \u2014 we only have Shawn's perspective.",
+    "Carina's professional life is unknown.",
+    "Kristin and Josh are nearly blank.",
+    "Tessa has almost no individual detail.",
+    "No Amish neighbor character (mentioned in Forged questions but unnamed)."
+  ]
+}

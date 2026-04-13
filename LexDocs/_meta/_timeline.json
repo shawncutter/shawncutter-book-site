@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "birth_year": 1979,
+    "last_updated": "2026-03-22"
+  },
+  "events": [
+    {
+      "date": "1979",
+      "age": 0,
+      "title": "Birth",
+      "arc": "forged",
+      "category": "personal",
+      "stories": []
+    },
+    {
+      "date": "1985",
+      "age": 6,
+      "title": "First rock-picking with siblings (ice cube incident)",
+      "arc": "forged",
+      "category": "farm",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "1987",
+      "age": 8,
+      "title": "First camping out in front yard",
+      "arc": "forged",
+      "category": "personal",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "1988",
+      "age": 9,
+      "title": "Genesis concert - 'We Can't Dance' tour (wrestling win vs Chad Wright)",
+      "arc": "forged",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "1990-10-29",
+      "age": 11,
+      "title": "Hit by car - life-changing accident",
+      "arc": "fractured",
+      "category": "medical",
+      "stories": [
+        "bk1-rolling-ohio-hills.md",
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "1991",
+      "age": 12,
+      "title": "Parents buy the farm - start raising cattle",
+      "arc": "forged",
+      "category": "farm",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "1991",
+      "age": 12,
+      "title": "Dad forces climb of 95-ft silo to overcome fear of heights",
+      "arc": "forged",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "1992",
+      "age": 13,
+      "title": "First steps after hospital - fell after 1.5 steps",
+      "arc": "fractured",
+      "category": "medical",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "1993",
+      "age": 14,
+      "title": "Wayne County Fair mischief (manure incidents)",
+      "arc": "forged",
+      "category": "personal",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "1996",
+      "age": 17,
+      "title": "Sophomore year - Blazer ice crash incident",
+      "arc": "forged",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "1997",
+      "age": 18,
+      "title": "Summer of Overton drilling - poison ivy incident",
+      "arc": "forged",
+      "category": "farm",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "1997",
+      "age": 18,
+      "title": "ATV crash - broke both arm bones (shattered)",
+      "arc": "fractured",
+      "category": "medical",
+      "stories": [
+        "bk1-rolling-ohio-hills.md",
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "1998",
+      "age": 19,
+      "title": "Turned 18 - cigarettes, tattoo, ear piercings",
+      "arc": "fractured",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "1998",
+      "age": 19,
+      "title": "Senior skip day alibi - working for Dad",
+      "arc": "forged",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md",
+        "bk1-senior-skip-day.md"
+      ]
+    },
+    {
+      "date": "1999",
+      "age": 20,
+      "title": "College at Miami University begins",
+      "arc": "forging",
+      "category": "education",
+      "stories": []
+    },
+    {
+      "date": "2000",
+      "age": 21,
+      "title": "Grandpa passes - nipple rings revealed at funeral",
+      "arc": "fractured",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "2003",
+      "age": 24,
+      "title": "Graduates Miami University (MIS + Philosophy)",
+      "arc": "forging",
+      "category": "education",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2004",
+      "age": 25,
+      "title": "Joins regional radiology group - software for 17 hospitals",
+      "arc": "forging",
+      "category": "career",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2005",
+      "age": 26,
+      "title": "Director of Technology at Cutter Oil Company",
+      "arc": "forging",
+      "category": "career",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2006",
+      "age": 27,
+      "title": "Marries college sweetheart (Miami Merger)",
+      "arc": "forging",
+      "category": "personal",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2006",
+      "age": 27,
+      "title": "Joins Tallan as Architect",
+      "arc": "forging",
+      "category": "career",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2009",
+      "age": 30,
+      "title": "Founds Fielding Systems - cloud platform for oil & gas",
+      "arc": "forging",
+      "category": "startup",
+      "stories": [
+        "bk1-the-night-we-moved-the-oilfield-to-the-cloud.md"
+      ]
+    },
+    {
+      "date": "2009",
+      "age": 30,
+      "title": "Bahamas trip - Atlantis Resort with family",
+      "arc": "forging",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "2010",
+      "age": 31,
+      "title": "Dad (Chuck Cutter) passes away suddenly",
+      "arc": "fractured",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md",
+        "bk-dad-121122.md"
+      ]
+    },
+    {
+      "date": "2010",
+      "age": 31,
+      "title": "First child (Gia) born",
+      "arc": "forging",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "2010-10-29",
+      "age": 31,
+      "title": "20th anniversary of accident",
+      "arc": "fractured",
+      "category": "reflection",
+      "stories": [
+        "bk-short-stories.md",
+        "bk1-the-30-year-echo.md"
+      ]
+    },
+    {
+      "date": "2015",
+      "age": 36,
+      "title": "Fielding Systems acquired by Quorum Software",
+      "arc": "forging",
+      "category": "startup",
+      "stories": [
+        "bk-chapter-9-the-deal-and-aftermath---navigating.md"
+      ]
+    },
+    {
+      "date": "2015",
+      "age": 36,
+      "title": "VP at Quorum Software - leads SaaS/cloud evolution",
+      "arc": "forging",
+      "category": "career",
+      "stories": [
+        "bk-chapter-6-evolution-and-growth-at-quorum-soft.md"
+      ]
+    },
+    {
+      "date": "2018",
+      "age": 39,
+      "title": "Starts Phase 2 Labs - Family Office Venture Foundry",
+      "arc": "forging",
+      "category": "startup",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2019",
+      "age": 40,
+      "title": "Co-founds M1neral, GreenScreens",
+      "arc": "forging",
+      "category": "startup",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2020",
+      "age": 41,
+      "title": "Founds CV Labs - agMD AI platform for agriculture",
+      "arc": "foundry",
+      "category": "startup",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2020",
+      "age": 41,
+      "title": "Chairman/Co-Founder Cedar Valley Farms",
+      "arc": "foundry",
+      "category": "startup",
+      "stories": [
+        "bk-shawn-cutter-timeline.md"
+      ]
+    },
+    {
+      "date": "2021",
+      "age": 42,
+      "title": "Gets pilot license - Dad was first passenger",
+      "arc": "forging",
+      "category": "personal",
+      "stories": [
+        "bk-short-stories.md"
+      ]
+    },
+    {
+      "date": "2022",
+      "age": 43,
+      "title": "Founds EnergiAcres - life's mission (25% food supply by 2050)",
+      "arc": "foundry",
+      "category": "startup",
+      "stories": [
+        "bk-shawn-cutter-timeline.md",
+        "bk1-this-starts-here-a-genx-technologist-energ.md"
+      ]
+    },
+    {
+      "date": "2024",
+      "age": 45,
+      "title": "Terrasow development - AI-driven agricultural platform",
+      "arc": "foundry",
+      "category": "startup",
+      "stories": [
+        "bk1-this-starts-here-a-genx-technologist-energ.md"
+      ]
+    }
+  ],
+  "categories": {
+    "personal": "Life events, relationships, milestones",
+    "farm": "Farm work, rural life, agriculture",
+    "medical": "Surgeries, recovery, health",
+    "education": "School, college, learning",
+    "career": "Jobs, employment, professional",
+    "startup": "Companies founded, entrepreneurship",
+    "reflection": "Anniversary dates, looking back"
+  }
+}
