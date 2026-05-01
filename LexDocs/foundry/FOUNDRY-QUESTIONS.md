@@ -225,7 +225,7 @@
 | 10 | **Cannot suffer fools** / GreenScreens + CVF | Sessions 5c+6: 7→part-time, handwritten notes, smokehouses vs grocery, "I give up" | ✅ Ready to draft |
 | 11 | **🆕 Government bullshit** (Project Everberry + CVF regulation) | Session 6: ARC rejection, 25% bloat, nonprofits don't know commercial world | ✅ Ready to draft — NEW THREAD |
 | 12 | **🆕 The communication gap** / "All-knowing but not able to communicate" | Session 7: The tech-side cofounder who could see the answer but couldn't get people to act on it. Pattern across Quorum, CVF, GreenScreens. Anger → therapy → learning to translate. | ✅ Ready to draft — CROSS-ARC THREAD |
-| 13 | **🆕 The emotional wall rewrite** ("The Day I Couldn't Hide Anymore") | Session 7: Carina fight, "that is a muscle too," machine-like operating system. Real material to replace fictionalized draft. | ✅ Ready to rewrite — needs one more detail (what Carina said) |
+| 13 | **🆕 The emotional wall rewrite** ("The Day I Couldn't Hide Anymore") | Session 7: Carina fight, "that is a muscle too," machine-like operating system. Real material to replace fictionalized draft. | 🔶 **PARTIAL REWRITE DONE 2026-04-15.** Therapy/Dr. Ellis/garage-son sections replaced with real Session 7 material + voice memo 2026-04-14 counterfactual. Frontmatter `rewrite_status: partial`. Still outstanding: confrontation scene (lines 13–41) is fictionalized — needs voice memo on what specifically Carina said. |
 
 ### Remaining Open Questions
 

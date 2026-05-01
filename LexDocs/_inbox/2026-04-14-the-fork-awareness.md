@@ -34,7 +34,9 @@ fragments:
   - id: counterfactual-regret
     summary: "If I could do it over: coast, fall back in love with coding, not get so into other people's shit"
     status: routed
-    routed_to: foundry/draft/bk1-the-fork-i-almost-missed.md
+    routed_to:
+      - foundry/draft/bk1-the-fork-i-almost-missed.md
+      - foundry/draft/bk1-the-day-i-couldnt-hide-anymore.md
     reserved_for: null
   - id: universe-frame
     summary: "One way or another the universe was going to make me do this. Awareness only bought me the path, not the destination."
@@ -44,7 +46,9 @@ fragments:
   - id: just-starting
     summary: "Just getting started on the whole emotional, personal dimension work. Not finishing. Starting."
     status: routed
-    routed_to: foundry/draft/bk1-the-fork-i-almost-missed.md
+    routed_to:
+      - foundry/draft/bk1-the-fork-i-almost-missed.md
+      - foundry/draft/bk1-the-day-i-couldnt-hide-anymore.md
     reserved_for: null
 ---
 

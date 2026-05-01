@@ -1,7 +1,13 @@
 {
   "metadata": {
-    "last_updated": "2026-04-07",
-    "priority_order": ["P0", "P1", "P2", "P3", "quick"]
+    "last_updated": "2026-04-30",
+    "priority_order": ["P0", "P1", "P2", "P3", "quick"],
+    "active_sprint": 1,
+    "sprint_window": {
+      "1": "2026-04-30 → 2026-05-13",
+      "2": "2026-05-14 → 2026-05-27"
+    },
+    "roadmap_doc": "ROADMAP.md"
   },
   "backlog": [
     {
@@ -11,6 +17,8 @@
       "category": "publishing",
       "status": "planned",
       "effort": "medium",
+      "sprint": 2,
+      "spec": "S2.1",
       "description": "Export story or chapter to Microsoft Word format for editing and print preparation"
     },
     {
@@ -20,6 +28,8 @@
       "category": "publishing",
       "status": "planned",
       "effort": "medium",
+      "sprint": 2,
+      "spec": "S2.2",
       "description": "Generate PDF documents from stories for sharing and archival"
     },
     {
@@ -38,7 +48,9 @@
       "category": "editing",
       "status": "planned",
       "effort": "large",
-      "description": "Side-by-side view of story content and feedback/metadata"
+      "sprint": 1,
+      "spec": "S1.1",
+      "description": "Side-by-side view of story content and feedback/metadata. CodeMirror 6 source pane + marked.js preview pane with resizable splitter."
     },
     {
       "id": "backlog-005",
@@ -47,7 +59,9 @@
       "category": "ux",
       "status": "planned",
       "effort": "medium",
-      "description": "Common keyboard shortcuts for navigation and editing (Cmd+S save, Cmd+Z undo, etc.)"
+      "sprint": 1,
+      "spec": "S1.3",
+      "description": "Common keyboard shortcuts for navigation and editing (Cmd+S save, Cmd+Z undo, etc.). See SPEC-004 in REQUIREMENTS.md for full table."
     },
     {
       "id": "backlog-006",
@@ -74,7 +88,9 @@
       "category": "ux",
       "status": "planned",
       "effort": "small",
-      "description": "Show available keyboard shortcuts (Cmd+? or ? key)"
+      "sprint": 1,
+      "spec": "S1.3",
+      "description": "Show available keyboard shortcuts (Cmd+? or ? key). Bundled with S1.3."
     },
     {
       "id": "backlog-009",
@@ -138,6 +154,72 @@
       "status": "backlog",
       "effort": "small",
       "description": "Theme selector for user preference"
+    },
+    {
+      "id": "backlog-016",
+      "title": "Markdown formatting toolbar",
+      "priority": "P1",
+      "category": "editing",
+      "status": "planned",
+      "effort": "small",
+      "sprint": 1,
+      "spec": "S1.2",
+      "description": "Bold, italic, headings, lists, links, blockquotes — buttons that hook into CodeMirror commands."
+    },
+    {
+      "id": "backlog-017",
+      "title": "Find and replace",
+      "priority": "P1",
+      "category": "editing",
+      "status": "planned",
+      "effort": "medium",
+      "sprint": 1,
+      "spec": "S1.4",
+      "description": "In-doc Cmd+F via @codemirror/search; cross-story Cmd+Shift+F via new GET /api/search endpoint."
+    },
+    {
+      "id": "backlog-018",
+      "title": "Editor extraction (web/editor.js)",
+      "priority": "P1",
+      "category": "tech-debt",
+      "status": "planned",
+      "effort": "medium",
+      "sprint": 1,
+      "spec": "S1.5",
+      "description": "Move editor JS out of web/index.html (currently 3224 lines) into web/editor.js. Goal: drop index.html below 2500 lines."
+    },
+    {
+      "id": "backlog-019",
+      "title": "Full manuscript compile",
+      "priority": "P0",
+      "category": "publishing",
+      "status": "planned",
+      "effort": "medium",
+      "sprint": 2,
+      "spec": "S2.3",
+      "description": "Server-side compiler orders stories by arc → date_event → filename. Foundation for Word and PDF exports. POST /api/compile."
+    },
+    {
+      "id": "backlog-020",
+      "title": "Export templates",
+      "priority": "P2",
+      "category": "publishing",
+      "status": "planned",
+      "effort": "small",
+      "sprint": 2,
+      "spec": "S2.4",
+      "description": "Memoir (book) and Blog (Medium-ready) starter templates. Pluggable via templates/export/ directory. Trim candidate if Sprint 2 runs long."
+    },
+    {
+      "id": "backlog-021",
+      "title": "Export UI menu",
+      "priority": "P0",
+      "category": "publishing",
+      "status": "planned",
+      "effort": "small",
+      "sprint": 2,
+      "spec": "S2.5",
+      "description": "Replace 'Export for Medium' button with Export menu (Word/PDF/Markdown/Medium) and scope picker (Story/Arc/Manuscript). Spinner for long compiles."
     }
   ]
 }
