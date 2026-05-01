@@ -953,6 +953,7 @@
         let topicsData = null;
         let indexData = null;
         let allStories = [];
+        window.allStories = allStories;  // surface for extracted modules (e.g., cross-search.js)
         let currentStatusFilter = 'all';
         let currentArcFilter = 'all';
         let currentSearchTerm = '';
@@ -968,6 +969,7 @@
 
                 const topicsRes = await fetch('../LexDocs/_topics.json');
                 topicsData = await topicsRes.json();
+                window.topicsData = topicsData;
 
                 const indexRes = await fetch('../LexDocs/_index.json');
                 indexData = await indexRes.json();
@@ -1080,6 +1082,7 @@
                     { name: "Farm Life Vignettes", pieces: 4, suggested_chapter: "Forged in Soil" }
                 ]
             };
+            window.topicsData = topicsData;
 
             renderTimeline();
             initTimelineSlider();
@@ -1303,6 +1306,7 @@
 
             // Store for filtering
             allStories = stories;
+            window.allStories = allStories;
 
             // Update status filter counts
             const statusCounts = { all: stories.length };
@@ -1805,6 +1809,7 @@
             try {
                 const res = await fetch('../LexDocs/_topics.json');
                 topicsData = await res.json();
+                window.topicsData = topicsData;
                 renderTopics();  // Renders theme chart, clusters, and people
                 renderNetworkGraph();
             } catch (e) {
@@ -1812,231 +1817,17 @@
             }
         }
 
+        // D3 network graph and cluster cards live in web/topics-graph.js.
+        // These thin wrappers preserve the existing call sites. The module
+        // reads window.topicsData (kept in sync below) and calls
+        // window.openExpansionModal for cluster card clicks.
         function renderNetworkGraph() {
-            if (!topicsData) return;
-
-            const container = document.getElementById('network-graph');
-
-            // Get width - use fallback if container is hidden (clientWidth = 0)
-            let width = container.clientWidth;
-            if (width === 0) {
-                // Container might be hidden, use parent or default width
-                width = container.parentElement?.clientWidth || 800;
-            }
-            if (width === 0) width = 800; // Final fallback
-
-            const height = 400;
-
-            // Clear existing content
-            container.innerHTML = '';
-
-            // Build nodes and links
-            const nodes = [];
-            const links = [];
-            const nodeMap = {};
-
-            // Add theme nodes
-            Object.entries(topicsData.themes || {}).forEach(([theme, data]) => {
-                const id = `theme-${theme}`;
-                const count = data.stories ? data.stories.length : 0;
-                nodeMap[id] = { id, name: theme, type: 'theme', count };
-                nodes.push(nodeMap[id]);
-            });
-
-            // Add people nodes
-            Object.entries(topicsData.people || {}).forEach(([person, data]) => {
-                const id = `person-${person}`;
-                const count = data.stories ? data.stories.length : 0;
-                nodeMap[id] = { id, name: data.name || person, type: 'person', count };
-                nodes.push(nodeMap[id]);
-            });
-
-            // Add story nodes (limited to avoid clutter)
-            const storySet = new Set();
-            Object.values(topicsData.themes || {}).forEach(themeData => {
-                const stories = themeData.stories || [];
-                stories.slice(0, 3).forEach(s => storySet.add(s));
-            });
-
-            storySet.forEach(story => {
-                const id = `story-${story}`;
-                const shortName = story.replace(/^bk1?-/, '').replace('.md', '').substring(0, 20);
-                nodeMap[id] = { id, name: shortName, type: 'story', fullName: story };
-                nodes.push(nodeMap[id]);
-            });
-
-            // Create links between themes and stories
-            Object.entries(topicsData.themes || {}).forEach(([theme, themeData]) => {
-                const stories = themeData.stories || [];
-                stories.slice(0, 3).forEach(story => {
-                    const storyId = `story-${story}`;
-                    if (nodeMap[storyId]) {
-                        links.push({ source: `theme-${theme}`, target: storyId });
-                    }
-                });
-            });
-
-            // Create links between people and stories
-            Object.entries(topicsData.people || {}).forEach(([person, personData]) => {
-                const stories = personData.stories || [];
-                stories.forEach(story => {
-                    const storyId = `story-${story}`;
-                    if (nodeMap[storyId]) {
-                        links.push({ source: `person-${person}`, target: storyId });
-                    }
-                });
-            });
-
-            // Create SVG
-            const svg = d3.select('#network-graph')
-                .append('svg')
-                .attr('width', width)
-                .attr('height', height);
-
-            // Create simulation
-            const simulation = d3.forceSimulation(nodes)
-                .force('link', d3.forceLink(links).id(d => d.id).distance(80))
-                .force('charge', d3.forceManyBody().strength(-200))
-                .force('center', d3.forceCenter(width / 2, height / 2))
-                .force('collision', d3.forceCollide().radius(30));
-
-            // Draw links
-            const link = svg.append('g')
-                .selectAll('line')
-                .data(links)
-                .enter().append('line')
-                .attr('stroke', '#4b5563')
-                .attr('stroke-opacity', 0.6)
-                .attr('stroke-width', 1);
-
-            // Draw nodes
-            const node = svg.append('g')
-                .selectAll('circle')
-                .data(nodes)
-                .enter().append('circle')
-                .attr('r', d => d.type === 'theme' ? 12 : d.type === 'person' ? 10 : 6)
-                .attr('fill', d => d.type === 'theme' ? '#3b82f6' : d.type === 'person' ? '#a855f7' : '#22c55e')
-                .attr('stroke', '#1f2937')
-                .attr('stroke-width', 2)
-                .style('cursor', 'pointer')
-                .call(d3.drag()
-                    .on('start', dragstarted)
-                    .on('drag', dragged)
-                    .on('end', dragended));
-
-            // Add labels
-            const label = svg.append('g')
-                .selectAll('text')
-                .data(nodes)
-                .enter().append('text')
-                .text(d => d.name)
-                .attr('font-size', d => d.type === 'story' ? '8px' : '10px')
-                .attr('fill', '#9ca3af')
-                .attr('text-anchor', 'middle')
-                .attr('dy', d => d.type === 'theme' ? 25 : 20);
-
-            // Add tooltips
-            node.append('title')
-                .text(d => d.fullName || d.name);
-
-            simulation.on('tick', () => {
-                link
-                    .attr('x1', d => d.source.x)
-                    .attr('y1', d => d.source.y)
-                    .attr('x2', d => d.target.x)
-                    .attr('y2', d => d.target.y);
-
-                node
-                    .attr('cx', d => d.x = Math.max(20, Math.min(width - 20, d.x)))
-                    .attr('cy', d => d.y = Math.max(20, Math.min(height - 20, d.y)));
-
-                label
-                    .attr('x', d => d.x)
-                    .attr('y', d => d.y);
-            });
-
-            function dragstarted(event) {
-                if (!event.active) simulation.alphaTarget(0.3).restart();
-                event.subject.fx = event.subject.x;
-                event.subject.fy = event.subject.y;
-            }
-
-            function dragged(event) {
-                event.subject.fx = event.x;
-                event.subject.fy = event.y;
-            }
-
-            function dragended(event) {
-                if (!event.active) simulation.alphaTarget(0);
-                event.subject.fx = null;
-                event.subject.fy = null;
-            }
+            window.topicsData = topicsData;
+            if (window.topicsGraph) window.topicsGraph.renderNetworkGraph();
         }
-
-        // Render expansion clusters with click-to-expand
         function renderClusters() {
-            if (!topicsData || !topicsData.clusters) return;
-
-            const container = document.getElementById('clusters-container');
-            let html = '';
-            const clusterKeys = Object.keys(topicsData.clusters);
-
-            clusterKeys.forEach((key, idx) => {
-                const cluster = topicsData.clusters[key];
-                const storyCount = cluster.stories ? cluster.stories.length : 0;
-                const colors = ['from-purple-900/30 to-blue-900/30', 'from-blue-900/30 to-green-900/30',
-                               'from-green-900/30 to-yellow-900/30', 'from-pink-900/30 to-red-900/30',
-                               'from-yellow-900/30 to-orange-900/30', 'from-red-900/30 to-pink-900/30'];
-                const colorClass = colors[idx % colors.length];
-                const borderColors = ['border-purple-500', 'border-blue-500', 'border-green-500',
-                                     'border-pink-500', 'border-yellow-500', 'border-red-500'];
-                const borderColor = borderColors[idx % borderColors.length];
-
-                html += `
-                    <div class="group relative bg-gradient-to-br ${colorClass} rounded-lg p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-gray-600/20 hover:scale-105 border-l-4 ${borderColor} overflow-hidden cluster-card" data-key="${key}">
-                        <!-- Accent corner -->
-                        <div class="absolute top-0 right-0 w-20 h-20 bg-white/5 rounded-full -mr-10 -mt-10 group-hover:bg-white/10 transition"></div>
-
-                        <div class="relative z-10">
-                            <!-- Title and status -->
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex-1">
-                                    <h4 class="font-bold text-lg text-gray-100 mb-1">${cluster.title}</h4>
-                                    <p class="text-xs text-gray-400">Chapter candidate</p>
-                                </div>
-                                <span class="text-2xl font-bold text-gray-400 opacity-20 group-hover:opacity-40 transition">${idx + 1}</span>
-                            </div>
-
-                            <!-- Description -->
-                            <p class="text-sm text-gray-300 mb-4 leading-relaxed">${cluster.description}</p>
-
-                            <!-- Story count -->
-                            <div class="flex items-center justify-between mb-4 p-3 bg-black/30 rounded">
-                                <span class="text-sm font-semibold text-gray-300">Stories in cluster</span>
-                                <span class="text-2xl font-bold text-white">${storyCount}</span>
-                            </div>
-
-                            <!-- Expansion hint -->
-                            <p class="text-xs text-gray-400 italic mb-4">💡 ${cluster.potential_expansion}</p>
-
-                            <!-- CTA -->
-                            <button class="w-full py-2 px-3 rounded bg-white/10 text-white text-sm font-medium hover:bg-white/20 transition">
-                                Explore & Combine →
-                            </button>
-                        </div>
-                    </div>
-                `;
-            });
-
-            container.innerHTML = html;
-
-            // Add click handlers
-            document.querySelectorAll('.cluster-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const key = card.dataset.key;
-                    openExpansionModal(topicsData.clusters[key], key);
-                });
-            });
+            window.topicsData = topicsData;
+            if (window.topicsGraph) window.topicsGraph.renderClusters();
         }
 
         // Expansion Modal
@@ -2093,6 +1884,9 @@
             document.getElementById('expansion-modal').classList.remove('hidden');
             document.getElementById('expansion-modal').classList.add('flex');
         }
+
+        // Expose for web/topics-graph.js (cluster card clicks invoke it).
+        window.openExpansionModal = openExpansionModal;
 
         async function updateCompareView() {
             const checked = document.querySelectorAll('.expansion-story-check:checked');
@@ -2354,287 +2148,7 @@
 
         // Note: Timeline data is loaded by main loadData() function, no separate call needed
 
-        // ========================================
-        // BACKLOG FUNCTIONALITY
-        // ========================================
-
-        let backlogData = null;
-        let editingBacklogId = null;
-        let currentPriorityFilter = 'all';
-        let currentBacklogStatusFilter = 'all';
-
-        async function loadBacklogData() {
-            try {
-                const res = await fetch('../LexDocs/_backlog.json');
-                const raw = await res.json();
-                // Normalize: JSON uses "backlog" key, UI expects "items"
-                const items = (raw.items || raw.backlog || []).map(item => ({
-                    ...item,
-                    // Normalize status: JSON uses planned/completed, UI uses todo/done
-                    status: item.status === 'planned' ? 'todo'
-                          : item.status === 'completed' ? 'done'
-                          : item.status || 'todo'
-                }));
-                backlogData = { metadata: raw.metadata || {}, items };
-                renderBacklog();
-                updateBacklogStats();
-            } catch (e) {
-                console.error('Error loading backlog:', e);
-                backlogData = { metadata: {}, items: [] };
-                renderBacklog();
-            }
-        }
-
-        function updateBacklogStats() {
-            if (!backlogData) return;
-            const items = backlogData.items;
-            document.getElementById('backlog-total').textContent = items.length;
-            document.getElementById('backlog-todo').textContent = items.filter(i => i.status === 'todo').length;
-            document.getElementById('backlog-in-progress').textContent = items.filter(i => i.status === 'in_progress').length;
-            document.getElementById('backlog-done').textContent = items.filter(i => i.status === 'done').length;
-        }
-
-        function renderBacklog() {
-            if (!backlogData) return;
-            const container = document.getElementById('backlog-items');
-
-            // Filter items
-            let items = backlogData.items.filter(item => {
-                const priorityMatch = currentPriorityFilter === 'all' || item.priority === currentPriorityFilter;
-                const statusMatch = currentBacklogStatusFilter === 'all' || item.status === currentBacklogStatusFilter;
-                return priorityMatch && statusMatch;
-            });
-
-            // Sort by priority then status
-            const priorityOrder = { 'P3': 1, 'P4': 2, 'P5': 3, 'P6': 4, 'P7': 5, 'P8': 6, 'P9': 7, 'quick': 8 };
-            const statusOrder = { 'in_progress': 1, 'todo': 2, 'done': 3 };
-            items.sort((a, b) => {
-                const pDiff = (priorityOrder[a.priority] || 99) - (priorityOrder[b.priority] || 99);
-                if (pDiff !== 0) return pDiff;
-                return (statusOrder[a.status] || 99) - (statusOrder[b.status] || 99);
-            });
-
-            if (items.length === 0) {
-                container.innerHTML = '<p class="text-gray-500 text-center py-8">No items match the current filters</p>';
-                return;
-            }
-
-            let html = '';
-            let currentPriority = '';
-
-            items.forEach(item => {
-                // Priority header
-                if (item.priority !== currentPriority) {
-                    currentPriority = item.priority;
-                    const priorityLabels = {
-                        'P3': 'P3 - Publishing & Export',
-                        'P4': 'P4 - Writing Experience',
-                        'P5': 'P5 - Organization',
-                        'P6': 'P6 - Analytics',
-                        'P7': 'P7 - Collaboration',
-                        'P8': 'P8 - Infrastructure',
-                        'P9': 'P9 - Platform Expansion',
-                        'quick': 'Quick Wins'
-                    };
-                    html += `<h3 class="text-lg font-bold mt-6 mb-2 text-gray-300">${priorityLabels[currentPriority] || currentPriority}</h3>`;
-                }
-
-                // Status colors
-                const statusColors = {
-                    'todo': 'bg-yellow-900 border-yellow-700 text-yellow-300',
-                    'in_progress': 'bg-blue-900 border-blue-700 text-blue-300',
-                    'done': 'bg-green-900 border-green-700 text-green-300'
-                };
-                const statusLabels = { 'todo': 'To Do', 'in_progress': 'In Progress', 'done': 'Done' };
-
-                html += `
-                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center gap-4 hover:border-gray-600 cursor-pointer backlog-item" data-id="${item.id}">
-                        <div class="flex-1">
-                            <div class="flex items-center gap-2">
-                                <span class="${item.status === 'done' ? 'line-through text-gray-500' : ''}">${item.title}</span>
-                                <span class="text-xs px-2 py-0.5 rounded ${statusColors[item.status]} border">${statusLabels[item.status]}</span>
-                            </div>
-                            ${item.category ? `<span class="text-xs text-gray-500">${item.category}</span>` : ''}
-                            ${item.description ? `<p class="text-sm text-gray-400 mt-1">${item.description}</p>` : ''}
-                        </div>
-                        <div class="flex gap-2">
-                            <button class="backlog-status-btn px-2 py-1 text-xs rounded bg-gray-700 hover:bg-gray-600" data-id="${item.id}" data-action="cycle">
-                                ⟳
-                            </button>
-                        </div>
-                    </div>
-                `;
-            });
-
-            container.innerHTML = html;
-
-            // Click to edit
-            container.querySelectorAll('.backlog-item').forEach(el => {
-                el.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('backlog-status-btn')) return;
-                    const id = parseInt(el.dataset.id);
-                    openBacklogModal(id);
-                });
-            });
-
-            // Quick status cycle
-            container.querySelectorAll('.backlog-status-btn').forEach(btn => {
-                btn.addEventListener('click', async (e) => {
-                    e.stopPropagation();
-                    const id = parseInt(btn.dataset.id);
-                    const item = backlogData.items.find(i => i.id === id);
-                    if (!item) return;
-
-                    // Cycle: todo -> in_progress -> done -> todo
-                    const cycle = { 'todo': 'in_progress', 'in_progress': 'done', 'done': 'todo' };
-                    const newStatus = cycle[item.status] || 'todo';
-
-                    await updateBacklogItem(id, { status: newStatus });
-                });
-            });
-        }
-
-        function openBacklogModal(id = null) {
-            editingBacklogId = id;
-            const modal = document.getElementById('backlog-modal');
-            const deleteBtn = document.getElementById('backlog-modal-delete');
-
-            if (id) {
-                const item = backlogData.items.find(i => i.id === id);
-                if (!item) return;
-
-                document.getElementById('backlog-modal-title').textContent = 'Edit Backlog Item';
-                document.getElementById('backlog-item-title').value = item.title || '';
-                document.getElementById('backlog-item-priority').value = item.priority || 'P4';
-                document.getElementById('backlog-item-status').value = item.status || 'todo';
-                document.getElementById('backlog-item-category').value = item.category || '';
-                document.getElementById('backlog-item-description').value = item.description || '';
-                deleteBtn.classList.remove('hidden');
-            } else {
-                document.getElementById('backlog-modal-title').textContent = 'Add Backlog Item';
-                document.getElementById('backlog-item-title').value = '';
-                document.getElementById('backlog-item-priority').value = 'P4';
-                document.getElementById('backlog-item-status').value = 'todo';
-                document.getElementById('backlog-item-category').value = '';
-                document.getElementById('backlog-item-description').value = '';
-                deleteBtn.classList.add('hidden');
-            }
-
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.getElementById('backlog-item-title').focus();
-        }
-
-        function closeBacklogModal() {
-            const modal = document.getElementById('backlog-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            editingBacklogId = null;
-        }
-
-        async function saveBacklogItem() {
-            const title = document.getElementById('backlog-item-title').value.trim();
-            if (!title) {
-                alert('Please enter a title');
-                return;
-            }
-
-            const item = {
-                title,
-                priority: document.getElementById('backlog-item-priority').value,
-                status: document.getElementById('backlog-item-status').value,
-                category: document.getElementById('backlog-item-category').value.trim(),
-                description: document.getElementById('backlog-item-description').value.trim()
-            };
-
-            try {
-                const action = editingBacklogId ? 'update' : 'add';
-                const res = await fetch('/api/backlog', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action, item, id: editingBacklogId })
-                });
-
-                if (res.ok) {
-                    const data = await res.json();
-                    backlogData = data.backlog;
-                    renderBacklog();
-                    updateBacklogStats();
-                    closeBacklogModal();
-                    showSaveStatus(editingBacklogId ? 'Item updated!' : 'Item added!', 'green');
-                } else {
-                    showSaveStatus('Failed to save', 'yellow');
-                }
-            } catch (e) {
-                showSaveStatus('Error: ' + e.message, 'yellow');
-            }
-        }
-
-        async function updateBacklogItem(id, updates) {
-            try {
-                const res = await fetch('/api/backlog', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action: 'update', item: updates, id })
-                });
-
-                if (res.ok) {
-                    const data = await res.json();
-                    backlogData = data.backlog;
-                    renderBacklog();
-                    updateBacklogStats();
-                }
-            } catch (e) {
-                console.error('Error updating backlog item:', e);
-            }
-        }
-
-        async function deleteBacklogItem() {
-            if (!editingBacklogId) return;
-            if (!confirm('Delete this item?')) return;
-
-            try {
-                const res = await fetch('/api/backlog', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action: 'delete', id: editingBacklogId })
-                });
-
-                if (res.ok) {
-                    const data = await res.json();
-                    backlogData = data.backlog;
-                    renderBacklog();
-                    updateBacklogStats();
-                    closeBacklogModal();
-                    showSaveStatus('Item deleted', 'green');
-                }
-            } catch (e) {
-                showSaveStatus('Error: ' + e.message, 'yellow');
-            }
-        }
-
-        // Backlog event listeners
-        document.getElementById('btn-add-backlog').addEventListener('click', () => openBacklogModal());
-        document.getElementById('backlog-modal-cancel').addEventListener('click', closeBacklogModal);
-        document.getElementById('backlog-modal-save').addEventListener('click', saveBacklogItem);
-        document.getElementById('backlog-modal-delete').addEventListener('click', deleteBacklogItem);
-
-        document.getElementById('backlog-priority-filter').addEventListener('change', (e) => {
-            currentPriorityFilter = e.target.value;
-            renderBacklog();
-        });
-
-        document.getElementById('backlog-status-filter').addEventListener('change', (e) => {
-            currentBacklogStatusFilter = e.target.value;
-            renderBacklog();
-        });
-
-        // Load backlog when section is shown
-        document.querySelector('[data-section="backlog"]').addEventListener('click', () => {
-            if (!backlogData) {
-                loadBacklogData();
-            }
-        });
+        // Backlog UI lives in web/backlog.js (loaded at end of <body>).
 
         // Story selector — load content + feedback panel
         document.getElementById('story-selector').addEventListener('change', async (e) => {
@@ -2961,173 +2475,18 @@
         if (window.shortcutsAPI && typeof window.shortcutsAPI.init === 'function') {
             window.shortcutsAPI.init();
         }
-
-        // ============================================================
-        // S1.4 — Cross-story search panel (Cmd+Shift+F)
-        // ============================================================
-        (function setupCrossSearch() {
-            const isStatic = window.location.hostname !== 'localhost' &&
-                             window.location.hostname !== '127.0.0.1';
-
-            // Build modal lazily
-            let modal = null;
-            let inputEl = null;
-            let resultsEl = null;
-            let countEl = null;
-            let debounceTimer = null;
-
-            function buildModal() {
-                if (modal) return modal;
-                const el = document.createElement('div');
-                el.id = 'cross-search-modal';
-                el.className = 'fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-start justify-center pt-20';
-                el.innerHTML = `
-                    <div class="bg-gray-800 border border-gray-700 rounded-lg w-full max-w-3xl max-h-[70vh] flex flex-col mx-4 shadow-xl">
-                        <div class="p-4 border-b border-gray-700 flex items-center gap-3">
-                            <span class="text-gray-400">🔎</span>
-                            <input id="cross-search-input" type="text"
-                                placeholder="Search across all stories…"
-                                class="flex-1 bg-gray-900 border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-500" />
-                            <span id="cross-search-count" class="text-xs text-gray-500"></span>
-                            <button id="cross-search-close" class="text-gray-400 hover:text-white text-xl px-2" aria-label="Close">&times;</button>
-                        </div>
-                        <div id="cross-search-results" class="overflow-y-auto p-2 flex-1">
-                            <div class="text-sm text-gray-500 p-4">Type to search across ${isStatic ? 'all stories (static mode — limited)' : 'all stories'}…</div>
-                        </div>
-                    </div>
-                `;
-                document.body.appendChild(el);
-
-                inputEl = el.querySelector('#cross-search-input');
-                resultsEl = el.querySelector('#cross-search-results');
-                countEl = el.querySelector('#cross-search-count');
-
-                el.querySelector('#cross-search-close').addEventListener('click', close);
-                el.addEventListener('click', (e) => { if (e.target === el) close(); });
-                inputEl.addEventListener('input', () => {
-                    clearTimeout(debounceTimer);
-                    debounceTimer = setTimeout(runSearch, 250);
-                });
-
-                modal = el;
-                return el;
-            }
-
-            async function runSearch() {
-                const q = inputEl.value.trim();
-                if (!q) {
-                    resultsEl.innerHTML = '<div class="text-sm text-gray-500 p-4">Type to search…</div>';
-                    countEl.textContent = '';
-                    return;
-                }
-                if (isStatic) {
-                    // Static deploy doesn't have /api/search; degrade to in-doc only
-                    resultsEl.innerHTML = '<div class="text-sm text-yellow-500 p-4">Cross-story search unavailable in static/deployed mode. Use Cmd+F to search within the current story.</div>';
-                    countEl.textContent = '';
-                    return;
-                }
-                resultsEl.innerHTML = '<div class="text-sm text-gray-500 p-4">Searching…</div>';
-                try {
-                    const res = await fetch(`/api/search?q=${encodeURIComponent(q)}&limit=100`);
-                    if (!res.ok) {
-                        resultsEl.innerHTML = `<div class="text-sm text-red-400 p-4">Search failed (${res.status})</div>`;
-                        return;
-                    }
-                    const data = await res.json();
-                    renderResults(data, q);
-                } catch (e) {
-                    resultsEl.innerHTML = `<div class="text-sm text-red-400 p-4">${e.message}</div>`;
-                }
-            }
-
-            function renderResults(data, q) {
-                countEl.textContent = `${data.count} match${data.count === 1 ? '' : 'es'}`;
-                if (!data.results.length) {
-                    resultsEl.innerHTML = '<div class="text-sm text-gray-500 p-4">No matches.</div>';
-                    return;
-                }
-                const needle = q.toLowerCase();
-                const html = data.results.map(r => {
-                    const idx = r.snippet.toLowerCase().indexOf(needle);
-                    let snippet = r.snippet;
-                    if (idx >= 0) {
-                        const before = r.snippet.slice(0, idx);
-                        const match = r.snippet.slice(idx, idx + q.length);
-                        const after = r.snippet.slice(idx + q.length);
-                        snippet = `${escapeHtml(before)}<mark class="bg-yellow-600 text-black px-0.5 rounded">${escapeHtml(match)}</mark>${escapeHtml(after)}`;
-                    } else {
-                        snippet = escapeHtml(r.snippet);
-                    }
-                    return `
-                        <div class="cross-search-result px-3 py-2 hover:bg-gray-700 rounded cursor-pointer"
-                             data-file="${escapeAttr(r.file)}" data-line="${r.line}">
-                            <div class="text-sm font-semibold text-white">${escapeHtml(r.title)}</div>
-                            <div class="text-xs text-gray-500 mb-1">${escapeHtml(r.file)}:${r.line}</div>
-                            <div class="text-sm text-gray-300 font-mono">${snippet}</div>
-                        </div>
-                    `;
-                }).join('');
-                resultsEl.innerHTML = html;
-                resultsEl.querySelectorAll('.cross-search-result').forEach(node => {
-                    node.addEventListener('click', () => {
-                        const file = node.dataset.file;
-                        const story = (window.STORIES || []).find(s => s.file === file)
-                            || { file, title: file.split('/').pop(), arc: 'forged' };
-                        close();
-                        if (window.editorAPI && window.editorAPI.openStory) {
-                            window.editorAPI.openStory(story);
-                        }
-                    });
-                });
-            }
-
-            function escapeHtml(s) {
-                return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c]));
-            }
-            function escapeAttr(s) { return escapeHtml(s); }
-
-            function open() {
-                buildModal();
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                inputEl.focus();
-                inputEl.select();
-            }
-            function close() {
-                if (!modal) return;
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }
-            function isOpen() { return !!modal && !modal.classList.contains('hidden'); }
-
-            window.crossSearchAPI = { open, close, isOpen };
-        })();
-
-        // S1.4 — wire the find shortcuts now that both APIs exist
-        (function wireFindShortcuts() {
-            const isMac = navigator.platform.toUpperCase().includes('MAC');
-            document.addEventListener('keydown', (e) => {
-                const mod = isMac ? e.metaKey : e.ctrlKey;
-                if (!mod) return;
-                // Cmd+Shift+F: cross-story search
-                if (e.shiftKey && (e.key === 'F' || e.key === 'f')) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    if (window.crossSearchAPI) window.crossSearchAPI.open();
-                    return;
-                }
-                // Cmd+F: in-doc search (only when editor is the active context)
-                if (!e.shiftKey && (e.key === 'f' || e.key === 'F')) {
-                    const editorOpen = document.getElementById('editor') &&
-                                       !document.getElementById('editor').classList.contains('hidden');
-                    if (editorOpen && window.editorAPI && window.editorAPI.openSearch) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        window.editorAPI.openSearch();
-                    }
-                }
-            }, true);
-        })();
     </script>
+
+    <!-- S1.4 — Cross-story search panel + Cmd+F/Cmd+Shift+F shortcuts.
+         Loaded after the inline bootstrap so it sees window.editorAPI. -->
+    <script src="cross-search.js"></script>
+
+    <!-- Backlog UI (extracted in Wave B-4). Depends on window.showSaveStatus
+         which the inline script above exposes on window. -->
+    <script src="backlog.js"></script>
+
+    <!-- D3 network graph + cluster cards (extracted in Wave B-4). Reads
+         window.topicsData; calls window.openExpansionModal on cluster click. -->
+    <script src="topics-graph.js"></script>
 </body>
 </html>
