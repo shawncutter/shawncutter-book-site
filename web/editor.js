@@ -944,7 +944,8 @@ function focusEditor() { if (state.view) state.view.focus(); }
 
 function wireUI() {
     document.getElementById('btn-save')?.addEventListener('click', saveStory);
-    document.getElementById('btn-medium-export')?.addEventListener('click', exportForMedium);
+    // Medium export wiring moved to web/export-menu.js (S2.5);
+    // editorAPI.exportForMedium() remains exposed for the menu's "Medium" button.
     document.getElementById('btn-delete-story')?.addEventListener('click', deleteStory);
     document.getElementById('back-to-stories')?.addEventListener('click', backToStories);
 
