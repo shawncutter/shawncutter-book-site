@@ -824,6 +824,12 @@ async function saveStory() {
         });
         if (res.ok) {
             showStatus('Saved!', 'green');
+            // Surface frontmatter linter warnings as a yellow toast
+            const data = await res.json().catch(() => ({}));
+            if (data.warnings && data.warnings.length > 0) {
+                const preview = data.warnings.slice(0, 2).join(' | ');
+                showStatus(`⚠ ${preview}`, 'yellow');
+            }
         } else {
             downloadFile(state.currentStory.file, newContent);
             showStatus('Downloaded (save manually)', 'yellow');

@@ -89,10 +89,72 @@
         }
     }
 
+    function buildOntologyHint(q) {
+        // Sprint O5.3 — check if query matches a known theme or person slug.
+        // Degrades silently if window.storySearch or window.topicsData are absent.
+        const td = window.topicsData;
+        const ss = window.storySearch;
+        if (!td || !ss) return null;
+
+        const qLower = q.toLowerCase().trim();
+
+        // Check themes
+        const themes = td.themes || {};
+        const matchedTheme = Object.keys(themes).find(k => k.toLowerCase() === qLower);
+        if (matchedTheme) {
+            return { type: 'theme', key: matchedTheme, label: matchedTheme };
+        }
+
+        // Check people (by key and by name)
+        const people = td.people || {};
+        let matchedPerson = null;
+        for (const [key, val] of Object.entries(people)) {
+            if (key.toLowerCase() === qLower) { matchedPerson = { key, name: (val && val.name) ? val.name : key }; break; }
+            if (val && val.name && val.name.toLowerCase() === qLower) { matchedPerson = { key, name: val.name }; break; }
+        }
+        if (matchedPerson) {
+            return { type: 'person', key: matchedPerson.key, label: matchedPerson.name };
+        }
+
+        return null;
+    }
+
+    function renderOntologyHint(hint, q) {
+        if (!hint) return;
+        // Inject a chip before results
+        const chip = document.createElement('div');
+        chip.className = 'flex items-center gap-2 px-3 py-2 bg-blue-900 bg-opacity-40 border border-blue-700 rounded mx-2 mb-2 mt-1';
+        const labelText = hint.type === 'theme'
+            ? `"${escapeHtml(hint.label)}" is a theme`
+            : `"${escapeHtml(hint.label)}" is a person`;
+        chip.innerHTML = `
+            <span class="text-blue-300 text-sm">🏷 ${labelText} —</span>
+            <button class="ontology-hint-btn text-blue-400 hover:text-blue-200 text-sm underline">Browse ${escapeHtml(hint.label)} stories →</button>
+        `;
+        chip.querySelector('.ontology-hint-btn').addEventListener('click', () => {
+            close();
+            const ss = window.storySearch;
+            if (!ss) return;
+            if (hint.type === 'theme') {
+                ss.setState({ themes: [hint.key] });
+            } else {
+                ss.setState({ people: [hint.key] });
+            }
+            ss.applyFilters();
+            // Navigate to Stories section
+            const storiesLink = document.querySelector('[data-section="stories"]');
+            if (storiesLink) storiesLink.click();
+        });
+        resultsEl.insertBefore(chip, resultsEl.firstChild);
+    }
+
     function renderResults(data, q) {
         countEl.textContent = `${data.count} match${data.count === 1 ? '' : 'es'}`;
         if (!data.results.length) {
             resultsEl.innerHTML = '<div class="text-sm text-gray-500 p-4">No matches.</div>';
+            // Still show ontology hint even with no text results
+            const hint = buildOntologyHint(q);
+            if (hint) renderOntologyHint(hint, q);
             return;
         }
         const needle = q.toLowerCase();
@@ -117,6 +179,9 @@
             `;
         }).join('');
         resultsEl.innerHTML = html;
+        // Sprint O5.3 — ontology hint
+        const hint = buildOntologyHint(q);
+        if (hint) renderOntologyHint(hint, q);
         resultsEl.querySelectorAll('.cross-search-result').forEach(node => {
             node.addEventListener('click', () => {
                 const file = node.dataset.file;

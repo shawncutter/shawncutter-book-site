@@ -124,6 +124,11 @@
                 </a>
             </li>
             <li>
+                <a href="#inbox" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="inbox">
+                    Inbox
+                </a>
+            </li>
+            <li>
                 <a href="#book-tree" class="block px-4 py-2 rounded hover:bg-gray-700 nav-link" data-section="book-tree">
                     Book Tree
                 </a>
@@ -210,7 +215,7 @@
             </div>
 
             <!-- Quick Actions — live derivations from data (Sprint O, O1.1-O1.3) -->
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-3 gap-6 mb-6">
                 <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
                     <h4 class="font-bold mb-2">Next Steps</h4>
                     <ul class="text-sm text-gray-400 space-y-1" id="next-steps-list">
@@ -229,6 +234,14 @@
                         <li class="text-gray-500 text-sm italic">Loading…</li>
                     </ul>
                 </div>
+            </div>
+
+            <!-- Open Questions widget (Sprint O6.1) — full-width 4th card -->
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 col-span-3" id="open-questions-card">
+                <h4 class="font-bold mb-3">Open Questions</h4>
+                <ul class="space-y-1" id="open-questions-list">
+                    <li class="text-gray-500 text-sm italic">Loading…</li>
+                </ul>
             </div>
         </section>
 
@@ -326,7 +339,7 @@
                 </div>
             </div>
             <!-- Search and Filters -->
-            <div class="flex gap-4 mb-6">
+            <div class="flex gap-4 mb-3">
                 <input type="text" id="story-search" placeholder="Search by title, theme, or keyword..." class="flex-1 bg-gray-800 border border-gray-700 rounded px-4 py-2 text-sm focus:outline-none focus:border-blue-500">
                 <select id="arc-select" class="bg-gray-800 border border-gray-700 rounded px-4 py-2 text-sm">
                     <option value="all">All Arcs</option>
@@ -335,7 +348,83 @@
                     <option value="forging">Forging</option>
                     <option value="foundry">Foundry</option>
                 </select>
+                <!-- Facet panel toggle -->
+                <button id="facet-toggle-btn" class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600 text-sm whitespace-nowrap">
+                    ⚙ Filters
+                </button>
+                <button id="facet-clear-btn" class="hidden px-4 py-2 bg-gray-600 rounded hover:bg-gray-500 text-sm whitespace-nowrap">
+                    Clear all
+                </button>
             </div>
+
+            <!-- Collapsible Facet Panel (Sprint O5.1) -->
+            <div id="facet-panel" class="hidden mb-4 bg-gray-800 border border-gray-700 rounded-lg p-4 space-y-4">
+                <!-- Arcs -->
+                <div>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider block mb-2">Arcs</span>
+                    <div class="flex flex-wrap gap-2" id="facet-arcs">
+                        <button class="facet-arc-btn px-3 py-1 text-sm rounded border border-gray-600 hover:border-yellow-500 text-gray-300" data-arc="forged">Forged</button>
+                        <button class="facet-arc-btn px-3 py-1 text-sm rounded border border-gray-600 hover:border-red-500 text-gray-300" data-arc="fractured">Fractured</button>
+                        <button class="facet-arc-btn px-3 py-1 text-sm rounded border border-gray-600 hover:border-blue-500 text-gray-300" data-arc="forging">Forging</button>
+                        <button class="facet-arc-btn px-3 py-1 text-sm rounded border border-gray-600 hover:border-green-500 text-gray-300" data-arc="foundry">Foundry</button>
+                    </div>
+                </div>
+
+                <!-- Themes searchable multi-select -->
+                <div>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider block mb-2">Themes</span>
+                    <div class="relative">
+                        <input type="text" id="facet-theme-search" placeholder="Search themes…" class="w-full bg-gray-700 border border-gray-600 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-blue-500 mb-1">
+                        <div id="facet-themes-list" class="max-h-40 overflow-y-auto space-y-1 bg-gray-750 rounded border border-gray-700 p-2" style="background:#1f2937">
+                            <!-- Populated by JS from window.topicsData -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- People searchable multi-select -->
+                <div>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider block mb-2">People</span>
+                    <div class="relative">
+                        <input type="text" id="facet-people-search" placeholder="Search people…" class="w-full bg-gray-700 border border-gray-600 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-blue-500 mb-1">
+                        <div id="facet-people-list" class="max-h-40 overflow-y-auto space-y-1 rounded border border-gray-700 p-2" style="background:#1f2937">
+                            <!-- Populated by JS from window.topicsData -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Word Count slider -->
+                <div id="facet-wordcount-row">
+                    <span class="text-xs text-gray-400 uppercase tracking-wider block mb-2">Word Count</span>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-gray-400 w-12 text-right" id="facet-wmin-label">0</span>
+                        <input type="range" id="facet-wmin" min="0" max="15000" step="100" value="0" class="flex-1 timeline-year-slider">
+                        <span class="text-xs text-gray-400">–</span>
+                        <input type="range" id="facet-wmax" min="0" max="15000" step="100" value="15000" class="flex-1 timeline-year-slider">
+                        <span class="text-xs text-gray-400 w-16" id="facet-wmax-label">15K+</span>
+                    </div>
+                </div>
+
+                <!-- Year slider -->
+                <div>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider block mb-2">Year (date_event)</span>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-gray-400 w-10 text-right" id="facet-ymin-label">1979</span>
+                        <input type="range" id="facet-ymin" min="1979" max="2026" step="1" value="1979" class="flex-1 timeline-year-slider">
+                        <span class="text-xs text-gray-400">–</span>
+                        <input type="range" id="facet-ymax" min="1979" max="2026" step="1" value="2026" class="flex-1 timeline-year-slider">
+                        <span class="text-xs text-gray-400 w-10" id="facet-ymax-label">2026</span>
+                    </div>
+                </div>
+
+                <!-- Has feedback toggle -->
+                <div class="flex items-center gap-3">
+                    <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-300">
+                        <input type="checkbox" id="facet-has-feedback" class="w-4 h-4 accent-blue-500">
+                        Has pending feedback
+                    </label>
+                </div>
+            </div>
+
             <div class="flex gap-4 mb-6">
                 <button class="status-filter px-4 py-2 bg-blue-600 rounded" data-status="all" id="stories-filter-all">All</button>
                 <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="published">Published</button>
@@ -344,6 +433,9 @@
                 <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="expanded">Expanded</button>
                 <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="idea">Idea</button>
             </div>
+            <!-- Ready-to-promote strip (Sprint O6.2) — shown when drafts > 1500w exist -->
+            <div id="promotion-strip" class="mb-4 hidden"></div>
+
             <div id="stories-container" class="grid gap-4">
                 <!-- Stories will be inserted here -->
             </div>
@@ -692,6 +784,87 @@
             </div>
         </div>
 
+        <!-- Theme Editor Drawer (Sprint O3 Task 2) -->
+        <!-- Slide-in from the right side of the viewport. Controlled by curation-widget.js. -->
+        <div id="thed-backdrop" class="fixed inset-0 bg-black/40 z-40 hidden" aria-hidden="true"></div>
+        <div id="theme-editor-drawer"
+            class="fixed top-0 right-0 h-full w-80 bg-gray-800 border-l border-gray-700 z-50
+                   transform translate-x-full transition-transform duration-300 ease-in-out
+                   flex flex-col shadow-2xl"
+            aria-hidden="true"
+            role="dialog"
+            aria-label="Theme editor">
+            <!-- Header -->
+            <div class="flex items-center justify-between px-5 py-4 border-b border-gray-700 bg-gray-900/50">
+                <div>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Editing theme</p>
+                    <h3 id="thed-name" class="text-lg font-bold text-white"></h3>
+                </div>
+                <button id="thed-close-btn" class="text-gray-400 hover:text-white text-2xl leading-none" aria-label="Close editor">&times;</button>
+            </div>
+
+            <!-- Form body -->
+            <div class="flex-1 overflow-y-auto px-5 py-5 space-y-5">
+                <!-- Description -->
+                <div>
+                    <label for="thed-description" class="block text-sm font-medium text-gray-300 mb-1">Description</label>
+                    <textarea id="thed-description" rows="4"
+                        class="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm text-gray-100
+                               placeholder-gray-500 focus:outline-none focus:border-blue-500 resize-none"
+                        placeholder="What does this theme represent in the memoir?"></textarea>
+                </div>
+
+                <!-- Arc focus checkboxes -->
+                <div>
+                    <p class="block text-sm font-medium text-gray-300 mb-2">Arc Focus</p>
+                    <div class="grid grid-cols-2 gap-2">
+                        <label class="flex items-center gap-2 text-sm cursor-pointer">
+                            <input type="checkbox" id="thed-arc-forged" class="rounded border-gray-600 bg-gray-700 text-yellow-500">
+                            <span class="text-yellow-400">Forged</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm cursor-pointer">
+                            <input type="checkbox" id="thed-arc-fractured" class="rounded border-gray-600 bg-gray-700 text-red-500">
+                            <span class="text-red-400">Fractured</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm cursor-pointer">
+                            <input type="checkbox" id="thed-arc-forging" class="rounded border-gray-600 bg-gray-700 text-blue-500">
+                            <span class="text-blue-400">Forging</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm cursor-pointer">
+                            <input type="checkbox" id="thed-arc-foundry" class="rounded border-gray-600 bg-gray-700 text-green-500">
+                            <span class="text-green-400">Foundry</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Related themes -->
+                <div>
+                    <label for="thed-related" class="block text-sm font-medium text-gray-300 mb-1">Related Themes</label>
+                    <input type="text" id="thed-related"
+                        class="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm text-gray-100
+                               placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                        placeholder="resilience, father, identity">
+                    <p class="text-xs text-gray-500 mt-1">Comma-separated theme names</p>
+                </div>
+
+                <!-- Status message -->
+                <p id="thed-status" class="text-xs text-green-400 hidden"></p>
+            </div>
+
+            <!-- Footer actions -->
+            <div class="flex gap-3 px-5 py-4 border-t border-gray-700 bg-gray-900/50">
+                <button id="thed-save-btn"
+                    class="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded
+                           transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    Save
+                </button>
+                <button id="thed-cancel-btn"
+                    class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm rounded transition-colors">
+                    Cancel
+                </button>
+            </div>
+        </div>
+
         <!-- Compare View Section -->
         <section id="compare" class="section hidden">
             <div class="flex justify-between items-center mb-6">
@@ -822,6 +995,15 @@
             <div id="facts-loading" class="text-center py-12 text-gray-400">
                 <p class="mb-4">Data not loaded yet</p>
                 <p class="text-sm">Click "Refresh from Files" to load questions and facts</p>
+            </div>
+        </section>
+
+        <!-- Inbox Section (Sprint O6.3) — voice memo routing status -->
+        <section id="inbox" class="section hidden">
+            <h2 class="text-3xl font-bold mb-2">Inbox</h2>
+            <p class="text-sm text-gray-500 mb-6">Voice memos routed to story files. Fragments show routing status.</p>
+            <div id="inbox-container">
+                <p class="text-gray-500 italic text-sm">Loading inbox…</p>
             </div>
         </section>
 
@@ -960,6 +1142,11 @@
 
     <!-- Wave B-2: keyboard shortcuts + help modal (S1.3) -->
     <script src="shortcuts.js"></script>
+
+    <!-- Sprint O5.1 — Faceted story explorer. Loaded before inline script so
+         window.storySearch is available when filterAndDisplayStories() runs. -->
+    <script src="story-search.js"></script>
+
     <script>
         // Arc color configuration (single source of truth)
         const ARC_COLORS = {
@@ -1011,6 +1198,12 @@
                 if (window.dashboardRecommender) window.dashboardRecommender.renderAll();
 
                 renderTopics();
+                if (window.curationWidget) window.curationWidget.render();
+
+                // Sprint O5.1: populate facet panel lists once data is ready
+                if (typeof window._facetPanelOnDataReady === 'function') {
+                    window._facetPanelOnDataReady();
+                }
             } catch (e) {
                 console.error('Error loading data:', e);
                 // Use embedded data as fallback
@@ -1115,6 +1308,7 @@
             initTimelineSlider();
             renderStories();
             renderTopics();
+            if (window.curationWidget) window.curationWidget.render();
         }
 
         // Timeline utilities: date parsing and item merging
@@ -1542,6 +1736,11 @@
             displayStoriesResult(filtered, `Stories with theme: ${themeName}`);
         }
 
+        // Expose on window so curation-widget.js can call it via delegation
+        window.filterByTheme = filterByTheme;
+        // Expose renderTopics so curation-widget.js can trigger a re-render after save
+        window.renderTopics = renderTopics;
+
         function displayStoriesResult(stories, title) {
             const container = document.getElementById('stories-list');
             let html = `<div class="mb-4"><h3 class="text-lg font-bold">${title}</h3><p class="text-gray-400">${stories.length} stories</p></div>`;
@@ -1741,19 +1940,41 @@
         // Variables declared at top of script: allStories, currentStatusFilter, currentArcFilter, currentSearchTerm
 
         function filterAndDisplayStories() {
+            // If storySearch module is loaded, merge legacy filter state into it
+            // and delegate. The legacy arc/status/text controls remain functional.
+            if (window.storySearch) {
+                // Sync legacy controls into facet state
+                const legacyPartial = {};
+                if (currentSearchTerm !== undefined) legacyPartial.text = currentSearchTerm;
+                // arc-select drives arcs[] in storySearch (single-select compat)
+                if (currentArcFilter && currentArcFilter !== 'all') {
+                    legacyPartial.arcs = [currentArcFilter];
+                } else if (currentArcFilter === 'all') {
+                    // Only clear arcs if none were set by facet panel
+                    const existing = window.storySearch.getState().arcs;
+                    if (existing.length === 0) legacyPartial.arcs = [];
+                }
+                // status filter drives statuses[]
+                if (currentStatusFilter && currentStatusFilter !== 'all') {
+                    legacyPartial.statuses = [currentStatusFilter];
+                } else if (currentStatusFilter === 'all') {
+                    const existing = window.storySearch.getState().statuses;
+                    if (existing.length === 0) legacyPartial.statuses = [];
+                }
+                window.storySearch.setState(legacyPartial);
+                window.storySearch.applyFilters();
+                return;
+            }
+
+            // Fallback: original filtering (used before storySearch loads)
             let filtered = allStories;
 
-            // Filter by status
             if (currentStatusFilter !== 'all') {
                 filtered = filtered.filter(s => s.status === currentStatusFilter);
             }
-
-            // Filter by arc
             if (currentArcFilter !== 'all') {
                 filtered = filtered.filter(s => s.arc === currentArcFilter);
             }
-
-            // Filter by search term
             if (currentSearchTerm) {
                 const term = currentSearchTerm.toLowerCase();
                 filtered = filtered.filter(s =>
@@ -1837,6 +2058,349 @@
             });
         });
 
+        // =====================================================
+        // Sprint O5.1 — Facet panel wiring
+        // =====================================================
+
+        (function initFacetPanel() {
+            const LS_KEY = 'facet-panel-open';
+
+            const toggleBtn   = document.getElementById('facet-toggle-btn');
+            const clearBtn    = document.getElementById('facet-clear-btn');
+            const panel       = document.getElementById('facet-panel');
+            const themeSearch = document.getElementById('facet-theme-search');
+            const peopleSearch = document.getElementById('facet-people-search');
+            const themesList  = document.getElementById('facet-themes-list');
+            const peopleList  = document.getElementById('facet-people-list');
+            const wminRange   = document.getElementById('facet-wmin');
+            const wmaxRange   = document.getElementById('facet-wmax');
+            const yminRange   = document.getElementById('facet-ymin');
+            const ymaxRange   = document.getElementById('facet-ymax');
+            const wminLabel   = document.getElementById('facet-wmin-label');
+            const wmaxLabel   = document.getElementById('facet-wmax-label');
+            const yminLabel   = document.getElementById('facet-ymin-label');
+            const ymaxLabel   = document.getElementById('facet-ymax-label');
+            const feedbackChk = document.getElementById('facet-has-feedback');
+
+            if (!toggleBtn || !panel) return;  // guard if DOM missing
+
+            // ---- panel open/close ----
+
+            function isPanelOpen() {
+                return !panel.classList.contains('hidden');
+            }
+
+            function setPanelOpen(open) {
+                if (open) {
+                    panel.classList.remove('hidden');
+                } else {
+                    panel.classList.add('hidden');
+                }
+                try { localStorage.setItem(LS_KEY, open ? '1' : '0'); } catch(_) {}
+                updateToggleLabel();
+            }
+
+            // Restore persisted state
+            try {
+                if (localStorage.getItem(LS_KEY) === '1') setPanelOpen(true);
+            } catch(_) {}
+
+            toggleBtn.addEventListener('click', () => setPanelOpen(!isPanelOpen()));
+
+            // ---- active filter count + toggle label ----
+
+            function countActiveFilters(state) {
+                if (!window.storySearch) return 0;
+                let n = 0;
+                if (state.arcs.length) n++;
+                if (state.themes.length) n++;
+                if (state.people.length) n++;
+                if (state.wordCountMin > 0 || state.wordCountMax !== Infinity) n++;
+                if (state.yearMin !== null || state.yearMax !== null) n++;
+                if (state.hasFeedback) n++;
+                return n;
+            }
+
+            function updateToggleLabel() {
+                if (!window.storySearch) return;
+                const n = countActiveFilters(window.storySearch.getState());
+                const open = isPanelOpen();
+                toggleBtn.textContent = n > 0
+                    ? `⚙ Filters (${n}) ${open ? '▲' : '▾'}`
+                    : `⚙ Filters ${open ? '▲' : '▾'}`;
+                if (n > 0) {
+                    clearBtn.classList.remove('hidden');
+                } else {
+                    clearBtn.classList.add('hidden');
+                }
+            }
+
+            // ---- clear all ----
+
+            clearBtn.addEventListener('click', () => {
+                if (!window.storySearch) return;
+                window.storySearch.reset();
+                syncPanelFromState();
+                window.storySearch.applyFilters();
+                updateToggleLabel();
+            });
+
+            // ---- arc chips ----
+
+            document.querySelectorAll('.facet-arc-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (!window.storySearch) return;
+                    const arc = btn.dataset.arc;
+                    const state = window.storySearch.getState();
+                    const arcs = state.arcs.includes(arc)
+                        ? state.arcs.filter(a => a !== arc)
+                        : [...state.arcs, arc];
+                    window.storySearch.setState({ arcs });
+                    window.storySearch.applyFilters();
+                    updateArcChips(arcs);
+                    updateToggleLabel();
+                });
+            });
+
+            function updateArcChips(selectedArcs) {
+                const ARC_BORDER = {
+                    forged: 'border-yellow-500 text-yellow-400',
+                    fractured: 'border-red-500 text-red-400',
+                    forging: 'border-blue-500 text-blue-400',
+                    foundry: 'border-green-500 text-green-400',
+                };
+                document.querySelectorAll('.facet-arc-btn').forEach(btn => {
+                    const arc = btn.dataset.arc;
+                    const active = selectedArcs.includes(arc);
+                    btn.className = active
+                        ? `facet-arc-btn px-3 py-1 text-sm rounded border ${ARC_BORDER[arc] || 'border-blue-500 text-blue-400'} bg-gray-700`
+                        : 'facet-arc-btn px-3 py-1 text-sm rounded border border-gray-600 hover:border-gray-400 text-gray-300';
+                });
+            }
+
+            // ---- themes list ----
+
+            function buildCheckList(container, items, selected, onChange) {
+                container.innerHTML = '';
+                if (!items.length) {
+                    container.innerHTML = '<p class="text-xs text-gray-500 p-1">None available</p>';
+                    return;
+                }
+                items.forEach(({ key, label, count }) => {
+                    const checked = selected.includes(key);
+                    const row = document.createElement('label');
+                    row.className = 'flex items-center gap-2 cursor-pointer px-1 py-0.5 rounded hover:bg-gray-700 text-sm';
+                    row.innerHTML = `
+                        <input type="checkbox" class="w-3.5 h-3.5 accent-blue-500" value="${escapeForAttr(key)}" ${checked ? 'checked' : ''}>
+                        <span class="flex-1 text-gray-300">${escapeHtmlLocal(label)}</span>
+                        ${count !== undefined ? `<span class="text-xs text-gray-500">${count}</span>` : ''}
+                    `;
+                    row.querySelector('input').addEventListener('change', (e) => {
+                        onChange(key, e.target.checked);
+                    });
+                    container.appendChild(row);
+                });
+            }
+
+            function escapeHtmlLocal(s) {
+                return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+                    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c]));
+            }
+
+            function escapeForAttr(s) { return escapeHtmlLocal(s); }
+
+            function getThemeItems(filterText) {
+                const td = window.topicsData;
+                if (!td || !td.themes) return [];
+                const filter = (filterText || '').toLowerCase();
+                return Object.entries(td.themes)
+                    .map(([key, val]) => ({
+                        key,
+                        label: key,
+                        count: Array.isArray(val.stories) ? val.stories.length
+                             : (typeof val === 'object' && val !== null ? (val.count || 0) : 0),
+                    }))
+                    .filter(item => !filter || item.label.toLowerCase().includes(filter))
+                    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+            }
+
+            function getPeopleItems(filterText) {
+                const td = window.topicsData;
+                if (!td || !td.people) return [];
+                const filter = (filterText || '').toLowerCase();
+                return Object.entries(td.people)
+                    .map(([key, val]) => ({
+                        key,
+                        label: (val && val.name) ? val.name : key,
+                        count: Array.isArray(val && val.stories) ? val.stories.length : 0,
+                    }))
+                    .filter(item => !filter || item.label.toLowerCase().includes(filter) || item.key.toLowerCase().includes(filter))
+                    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+            }
+
+            function renderThemesList() {
+                if (!window.storySearch) return;
+                const state = window.storySearch.getState();
+                const items = getThemeItems(themeSearch ? themeSearch.value : '');
+                buildCheckList(themesList, items, state.themes, (key, checked) => {
+                    const s = window.storySearch.getState();
+                    const themes = checked
+                        ? [...s.themes, key]
+                        : s.themes.filter(t => t !== key);
+                    window.storySearch.setState({ themes });
+                    window.storySearch.applyFilters();
+                    updateToggleLabel();
+                });
+            }
+
+            function renderPeopleList() {
+                if (!window.storySearch) return;
+                const state = window.storySearch.getState();
+                const items = getPeopleItems(peopleSearch ? peopleSearch.value : '');
+                buildCheckList(peopleList, items, state.people, (key, checked) => {
+                    const s = window.storySearch.getState();
+                    const people = checked
+                        ? [...s.people, key]
+                        : s.people.filter(p => p !== key);
+                    window.storySearch.setState({ people });
+                    window.storySearch.applyFilters();
+                    updateToggleLabel();
+                });
+            }
+
+            if (themeSearch) {
+                themeSearch.addEventListener('input', renderThemesList);
+            }
+            if (peopleSearch) {
+                peopleSearch.addEventListener('input', renderPeopleList);
+            }
+
+            // ---- word count sliders ----
+
+            function formatWordLabel(v) {
+                if (v >= 15000) return '15K+';
+                if (v >= 1000) return `${(v / 1000).toFixed(1)}K`;
+                return String(v);
+            }
+
+            if (wminRange && wmaxRange) {
+                wminRange.addEventListener('input', () => {
+                    let min = parseInt(wminRange.value, 10);
+                    let max = parseInt(wmaxRange.value, 10);
+                    if (min > max) { wminRange.value = max; min = max; }
+                    wminLabel.textContent = formatWordLabel(min);
+                    if (!window.storySearch) return;
+                    window.storySearch.setState({
+                        wordCountMin: min,
+                        wordCountMax: max >= 15000 ? Infinity : max,
+                    });
+                    window.storySearch.applyFilters();
+                    updateToggleLabel();
+                });
+                wmaxRange.addEventListener('input', () => {
+                    let min = parseInt(wminRange.value, 10);
+                    let max = parseInt(wmaxRange.value, 10);
+                    if (max < min) { wmaxRange.value = min; max = min; }
+                    wmaxLabel.textContent = max >= 15000 ? '15K+' : formatWordLabel(max);
+                    if (!window.storySearch) return;
+                    window.storySearch.setState({
+                        wordCountMin: min,
+                        wordCountMax: max >= 15000 ? Infinity : max,
+                    });
+                    window.storySearch.applyFilters();
+                    updateToggleLabel();
+                });
+            }
+
+            // ---- year sliders ----
+
+            if (yminRange && ymaxRange) {
+                function updateYearSliders() {
+                    let ymin = parseInt(yminRange.value, 10);
+                    let ymax = parseInt(ymaxRange.value, 10);
+                    if (ymin > ymax) { yminRange.value = ymax; ymin = ymax; }
+                    yminLabel.textContent = String(ymin);
+                    ymaxLabel.textContent = String(ymax);
+                    if (!window.storySearch) return;
+                    const atMin = ymin <= 1979;
+                    const atMax = ymax >= 2026;
+                    window.storySearch.setState({
+                        yearMin: atMin ? null : ymin,
+                        yearMax: atMax ? null : ymax,
+                    });
+                    window.storySearch.applyFilters();
+                    updateToggleLabel();
+                }
+                yminRange.addEventListener('input', updateYearSliders);
+                ymaxRange.addEventListener('input', updateYearSliders);
+            }
+
+            // ---- has feedback ----
+
+            if (feedbackChk) {
+                feedbackChk.addEventListener('change', () => {
+                    if (!window.storySearch) return;
+                    window.storySearch.setState({ hasFeedback: feedbackChk.checked });
+                    window.storySearch.applyFilters();
+                    updateToggleLabel();
+                });
+            }
+
+            // ---- sync panel UI from storySearch state (for URL-load / reset) ----
+
+            function syncPanelFromState() {
+                if (!window.storySearch) return;
+                const state = window.storySearch.getState();
+
+                // arc chips
+                updateArcChips(state.arcs);
+
+                // theme/people lists
+                renderThemesList();
+                renderPeopleList();
+
+                // word count sliders
+                if (wminRange && wmaxRange) {
+                    wminRange.value = state.wordCountMin;
+                    wmaxRange.value = state.wordCountMax === Infinity ? 15000 : state.wordCountMax;
+                    wminLabel.textContent = formatWordLabel(state.wordCountMin);
+                    wmaxLabel.textContent = state.wordCountMax === Infinity ? '15K+' : formatWordLabel(state.wordCountMax);
+                }
+
+                // year sliders
+                if (yminRange && ymaxRange) {
+                    yminRange.value = state.yearMin !== null ? state.yearMin : 1979;
+                    ymaxRange.value = state.yearMax !== null ? state.yearMax : 2026;
+                    yminLabel.textContent = String(state.yearMin !== null ? state.yearMin : 1979);
+                    ymaxLabel.textContent = String(state.yearMax !== null ? state.yearMax : 2026);
+                }
+
+                // has feedback
+                if (feedbackChk) feedbackChk.checked = state.hasFeedback;
+
+                updateToggleLabel();
+            }
+
+            // ---- also hook into renderStories() completion to populate lists ----
+            // We can't override the function easily, so we expose a public callback.
+
+            // Register callback on storySearch (populated after topicsData loads)
+            if (window.storySearch) {
+                window.storySearch._onPanelUpdate(syncPanelFromState);
+            }
+
+            // Rebuild lists whenever topicsData becomes available
+            const _origLoadData = window.loadData;
+            // Populate lists once data is loaded (called from renderTopics / loadData)
+            function onDataReady() {
+                syncPanelFromState();
+                updateToggleLabel();
+            }
+
+            // Expose so loadData completion can call it
+            window._facetPanelOnDataReady = onDataReady;
+        })();
+
         // Load data on page load
         loadData();
 
@@ -1856,6 +2420,7 @@
                 topicsData = await res.json();
                 window.topicsData = topicsData;
                 renderTopics();  // Renders theme chart, clusters, and people
+                if (window.curationWidget) window.curationWidget.render();
                 renderNetworkGraph();
             } catch (e) {
                 console.error('Error loading topics:', e);
@@ -2487,6 +3052,189 @@
             });
         }
 
+        // -----------------------------------------------------------------------
+        // Inbox section (Sprint O6.3)
+        // -----------------------------------------------------------------------
+        let inboxLoaded = false;
+
+        // Minimal YAML-ish frontmatter extractor for fragment arrays.
+        // Parses only what we need from inbox .md files.
+        function parseInboxFrontmatter(text) {
+            const fmMatch = text.match(/^---\n([\s\S]*?)\n---/);
+            if (!fmMatch) return null;
+            const raw = fmMatch[1];
+
+            // Pull top-level scalar fields
+            function scalar(key) {
+                const m = raw.match(new RegExp(`^${key}:\\s*"?([^"\\n]+)"?`, 'm'));
+                return m ? m[1].trim() : null;
+            }
+
+            // Parse the fragments array manually (simple line-by-line state machine)
+            const fragments = [];
+            const lines = raw.split('\n');
+            let inFragments = false;
+            let current = null;
+            let inRoutedTo = false;
+            let routedToList = [];
+
+            for (const line of lines) {
+                if (/^fragments:\s*$/.test(line)) { inFragments = true; continue; }
+                if (!inFragments) continue;
+                // New fragment entry
+                if (/^  - id:/.test(line)) {
+                    if (current) {
+                        current.routed_to = routedToList.length === 1 ? routedToList[0] : routedToList;
+                        fragments.push(current);
+                    }
+                    current = { id: line.replace(/^  - id:\s*/, '').trim(), status: null, summary: null, routed_to: null };
+                    inRoutedTo = false;
+                    routedToList = [];
+                    continue;
+                }
+                if (!current) continue;
+                const summaryM = line.match(/^    summary:\s*"?(.+?)"?\s*$/);
+                if (summaryM) { current.summary = summaryM[1]; continue; }
+                const statusM = line.match(/^    status:\s*(\S+)/);
+                if (statusM) { current.status = statusM[1]; continue; }
+                // routed_to can be scalar or list
+                if (/^    routed_to:\s*$/.test(line)) { inRoutedTo = true; continue; }
+                const rtScalar = line.match(/^    routed_to:\s*(.+)$/);
+                if (rtScalar) { routedToList = [rtScalar[1].trim()]; continue; }
+                if (inRoutedTo && /^      -/.test(line)) {
+                    routedToList.push(line.replace(/^      -\s*/, '').trim());
+                }
+            }
+            if (current) {
+                current.routed_to = routedToList.length === 1 ? routedToList[0]
+                    : routedToList.length > 1 ? routedToList : current.routed_to;
+                fragments.push(current);
+            }
+
+            return {
+                captured: scalar('captured'),
+                source: scalar('source'),
+                session: scalar('session'),
+                status: scalar('status'),
+                fragments,
+            };
+        }
+
+        function renderFragmentList(fragments) {
+            return fragments.map(frag => {
+                const badge = frag.status === 'routed'
+                    ? '<span class="text-xs px-1.5 py-0.5 rounded bg-green-900 text-green-300 border border-green-700 mr-2">routed</span>'
+                    : '<span class="text-xs px-1.5 py-0.5 rounded bg-yellow-900 text-yellow-300 border border-yellow-700 mr-2">open</span>';
+                const summary = frag.summary || frag.id;
+                const targets = Array.isArray(frag.routed_to)
+                    ? frag.routed_to
+                    : frag.routed_to ? [frag.routed_to] : [];
+                const targetHtml = targets.length
+                    ? `<div class="text-xs text-gray-500 ml-14 mt-0.5">${targets.map(t => `<span class="mr-2">${t.replace(/^.*\//, '')}</span>`).join('')}</div>`
+                    : '';
+                return `
+                    <div class="py-1.5 border-b border-gray-700 last:border-0">
+                        <div class="flex items-start">
+                            <span class="shrink-0 mt-0.5">${badge}</span>
+                            <span class="text-sm text-gray-200 flex-1">${summary}</span>
+                        </div>
+                        ${targetHtml}
+                    </div>`;
+            }).join('');
+        }
+
+        async function loadInbox() {
+            if (inboxLoaded) return;
+            const container = document.getElementById('inbox-container');
+            if (!container) return;
+
+            // Graceful degradation in static mode
+            if (IS_STATIC) {
+                container.innerHTML = '<p class="text-gray-500 italic text-sm">Inbox not available in read-only mode.</p>';
+                inboxLoaded = true;
+                return;
+            }
+
+            try {
+                const listRes = await fetch('/api/inbox');
+                const { files } = await listRes.json();
+
+                if (!files || files.length === 0) {
+                    container.innerHTML = '<p class="text-gray-500 italic text-sm">No inbox memos found.</p>';
+                    inboxLoaded = true;
+                    return;
+                }
+
+                // Fetch each file in parallel and parse
+                const memos = await Promise.all(files.map(async (fname) => {
+                    try {
+                        const r = await fetch(`/LexDocs/_inbox/${fname}`);
+                        if (!r.ok) return null;
+                        const text = await r.text();
+                        const meta = parseInboxFrontmatter(text);
+                        return { fname, meta };
+                    } catch { return null; }
+                }));
+
+                const valid = memos.filter(Boolean);
+                if (!valid.length) {
+                    container.innerHTML = '<p class="text-gray-500 italic text-sm">No parseable inbox memos.</p>';
+                    inboxLoaded = true;
+                    return;
+                }
+
+                container.innerHTML = valid.map(({ fname, meta }) => {
+                    const fmStr = meta ? JSON.stringify(meta.fragments) : null;
+                    const routedCount = meta ? meta.fragments.filter(f => f.status === 'routed').length : 0;
+                    const openCount = meta ? meta.fragments.filter(f => f.status !== 'routed').length : 0;
+                    const badgeLine = meta
+                        ? `<span class="text-xs text-green-400 mr-2">${routedCount} routed</span>`
+                          + (openCount > 0 ? `<span class="text-xs text-yellow-400">${openCount} open</span>` : '')
+                        : '';
+
+                    const fragmentsHtml = meta && meta.fragments.length
+                        ? `<div class="mt-2 pl-2 border-l-2 border-gray-700">${renderFragmentList(meta.fragments)}</div>`
+                        : '';
+
+                    return `
+                        <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden mb-4">
+                            <div class="px-4 py-3 border-b border-gray-700 flex items-center justify-between cursor-pointer inbox-toggle">
+                                <div>
+                                    <span class="font-mono text-sm text-gray-300">${fname}</span>
+                                    ${meta && meta.captured ? `<span class="text-xs text-gray-500 ml-3">${meta.captured}</span>` : ''}
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    ${badgeLine}
+                                    <span class="text-gray-500 text-xs inbox-chevron">▼</span>
+                                </div>
+                            </div>
+                            <div class="inbox-body px-4 py-2">
+                                ${fragmentsHtml}
+                            </div>
+                        </div>`;
+                }).join('');
+
+                // Toggle collapse
+                container.querySelectorAll('.inbox-toggle').forEach(toggle => {
+                    toggle.addEventListener('click', () => {
+                        const body = toggle.nextElementSibling;
+                        const chevron = toggle.querySelector('.inbox-chevron');
+                        if (!body) return;
+                        body.classList.toggle('hidden');
+                        chevron.textContent = body.classList.contains('hidden') ? '▼' : '▲';
+                    });
+                });
+
+                inboxLoaded = true;
+            } catch (e) {
+                container.innerHTML = `<p class="text-red-400 text-sm">Error loading inbox: ${e.message}</p>`;
+            }
+        }
+
+        document.querySelector('[data-section="inbox"]').addEventListener('click', () => {
+            loadInbox();
+        });
+
         // Book tree event listener
         document.getElementById('tree-hide-empty').addEventListener('change', renderBookTree);
         document.querySelector('[data-section="book-tree"]').addEventListener('click', () => {
@@ -2543,5 +3291,10 @@
     <!-- Export menu (S2.5). Word/PDF/Markdown/Medium × story/arc/manuscript.
          Uses window.editorAPI.currentStory for scope context. -->
     <script src="export-menu.js"></script>
+
+    <!-- Curation widget + theme editor drawer (Sprint O3).
+         Reads window.topicsData.validation; saves via /api/topics.
+         Must load after the inline script so renderTopics/filterByTheme are on window. -->
+    <script src="curation-widget.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 title: "Forged - Gate Latch, Hog Logic"
 arc: forged
 status: draft
+date_event: "1987"
 date_written: "2026-01-04"
 themes: [resilience, surgeries, farm, systems-thinking, startup, technology, family, wrestling]
 ---
