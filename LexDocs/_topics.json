@@ -961,6 +961,467 @@
       ],
       "auto_added": false
     },
+    "childhood": {
+      "description": "Early years, formative experiences, innocence",
+      "color": "#f59e0b",
+      "arc_focus": [
+        "forged"
+      ],
+      "related_themes": [
+        "origin",
+        "farm",
+        "father"
+      ],
+      "stories": [
+        "bk1-welcome-test.md",
+        "forged/draft/bk1-the-bedroom.md"
+      ],
+      "auto_added": false
+    },
+    "brothers": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/draft/bk1-the-bedroom.md"
+      ],
+      "auto_added": false
+    },
+    "identity": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/draft/bk1-the-bedroom.md",
+        "fractured/draft/bk1-the-delay.md",
+        "fractured/ready/bk1-150-credit-hours.md"
+      ],
+      "auto_added": false
+    },
+    "imagination": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/draft/bk1-the-bedroom.md"
+      ],
+      "auto_added": false
+    },
+    "home": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/draft/bk1-the-bedroom.md"
+      ],
+      "auto_added": false
+    },
+    "mother": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/draft/bk1-the-yard.md"
+      ],
+      "auto_added": false
+    },
+    "love": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/draft/bk1-the-yard.md",
+        "forging/ready/bk1-the-elopement.md"
+      ],
+      "auto_added": false
+    },
+    "gratitude": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/draft/bk1-the-yard.md"
+      ],
+      "auto_added": false
+    },
+    "thrill": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/ready/bk1-chuck-at-175.md"
+      ],
+      "auto_added": false
+    },
+    "risk": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/ready/bk1-chuck-at-175.md"
+      ],
+      "auto_added": false
+    },
+    "Chuck": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/ready/bk1-chuck-at-175.md",
+        "forging/ready/bk1-the-last-flight.md"
+      ],
+      "auto_added": false
+    },
+    "motorcycles": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/ready/bk1-chuck-at-175.md"
+      ],
+      "auto_added": false
+    },
+    "accidents": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/ready/bk1-chuck-at-175.md"
+      ],
+      "auto_added": false
+    },
+    "shame": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forged/ready/bk1-the-van.md"
+      ],
+      "auto_added": false
+    },
+    "time": {
+      "description": "Time as villain, speed obsession, efficiency, lost moments",
+      "color": "#6366f1",
+      "arc_focus": [
+        "all"
+      ],
+      "related_themes": [
+        "urgency",
+        "mortality",
+        "speed"
+      ],
+      "stories": [
+        "fractured/draft/bk1-the-delay.md"
+      ],
+      "auto_added": false
+    },
+    "speed": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/draft/bk1-the-delay.md"
+      ],
+      "auto_added": false
+    },
+    "surgery": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/draft/bk1-the-delay.md"
+      ],
+      "auto_added": false
+    },
+    "efficiency": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/draft/bk1-the-delay.md"
+      ],
+      "auto_added": false
+    },
+    "wooster": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/draft/bk1-the-delay.md"
+      ],
+      "auto_added": false
+    },
+    "education": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/ready/bk1-150-credit-hours.md"
+      ],
+      "auto_added": false
+    },
+    "philosophy": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/ready/bk1-150-credit-hours.md"
+      ],
+      "auto_added": false
+    },
+    "Miami": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/ready/bk1-150-credit-hours.md"
+      ],
+      "auto_added": false
+    },
+    "recovery": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/ready/bk1-150-credit-hours.md"
+      ],
+      "auto_added": false
+    },
+    "nerd": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "fractured/ready/bk1-150-credit-hours.md"
+      ],
+      "auto_added": false
+    },
+    "sales": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-cold-call.md"
+      ],
+      "auto_added": false
+    },
+    "Fielding": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-cold-call.md",
+        "forging/ready/bk1-the-dave-problem.md",
+        "forging/ready/bk1-the-forty-percent-ask.md",
+        "forging/ready/bk1-the-garage.md",
+        "forging/ready/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "oilfield": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-cold-call.md"
+      ],
+      "auto_added": false
+    },
+    "acquisition": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-dave-problem.md",
+        "forging/ready/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "Quorum": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-dave-problem.md",
+        "forging/ready/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "Jeff": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-dave-problem.md"
+      ],
+      "auto_added": false
+    },
+    "marriage": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-elopement.md"
+      ],
+      "auto_added": false
+    },
+    "Carina": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-elopement.md"
+      ],
+      "auto_added": false
+    },
+    "business": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-forty-percent-ask.md"
+      ],
+      "auto_added": false
+    },
+    "CJ": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-forty-percent-ask.md"
+      ],
+      "auto_added": false
+    },
+    "brother": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-forty-percent-ask.md"
+      ],
+      "auto_added": false
+    },
+    "team": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-garage.md"
+      ],
+      "auto_added": false
+    },
+    "grief": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-last-flight.md",
+        "forging/ready/bk1-three-thirty-am.md"
+      ],
+      "auto_added": false
+    },
+    "pilot": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-last-flight.md"
+      ],
+      "auto_added": false
+    },
+    "flight": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-last-flight.md"
+      ],
+      "auto_added": false
+    },
+    "wings": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-last-flight.md"
+      ],
+      "auto_added": false
+    },
+    "success": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "hands": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "forging/ready/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "loss": {
+      "description": "Loss and grief, Chuck's death, transitions",
+      "color": "#ef4444",
+      "arc_focus": [
+        "fractured",
+        "forging"
+      ],
+      "related_themes": [
+        "grief",
+        "memory",
+        "legacy"
+      ],
+      "stories": [
+        "forging/ready/bk1-three-thirty-am.md"
+      ],
+      "auto_added": false
+    },
     "emotional-wall": {
       "description": "Core thesis: emotional constraint is a muscle that can be developed",
       "color": "#ec4899",
@@ -1046,467 +1507,6 @@
       "related_themes": [],
       "stories": [
         "_inbox/2026-04-14-the-fork-awareness.md"
-      ],
-      "auto_added": false
-    },
-    "time": {
-      "description": "Time as villain, speed obsession, efficiency, lost moments",
-      "color": "#6366f1",
-      "arc_focus": [
-        "all"
-      ],
-      "related_themes": [
-        "urgency",
-        "mortality",
-        "speed"
-      ],
-      "stories": [
-        "fractured/draft/bk1-the-delay.md"
-      ],
-      "auto_added": false
-    },
-    "speed": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/draft/bk1-the-delay.md"
-      ],
-      "auto_added": false
-    },
-    "surgery": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/draft/bk1-the-delay.md"
-      ],
-      "auto_added": false
-    },
-    "efficiency": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/draft/bk1-the-delay.md"
-      ],
-      "auto_added": false
-    },
-    "wooster": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/draft/bk1-the-delay.md"
-      ],
-      "auto_added": false
-    },
-    "identity": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/draft/bk1-the-bedroom.md",
-        "fractured/draft/bk1-the-delay.md",
-        "fractured/ready/bk1-150-credit-hours.md"
-      ],
-      "auto_added": false
-    },
-    "childhood": {
-      "description": "Early years, formative experiences, innocence",
-      "color": "#f59e0b",
-      "arc_focus": [
-        "forged"
-      ],
-      "related_themes": [
-        "origin",
-        "farm",
-        "father"
-      ],
-      "stories": [
-        "bk1-welcome-test.md",
-        "forged/draft/bk1-the-bedroom.md"
-      ],
-      "auto_added": false
-    },
-    "education": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/ready/bk1-150-credit-hours.md"
-      ],
-      "auto_added": false
-    },
-    "philosophy": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/ready/bk1-150-credit-hours.md"
-      ],
-      "auto_added": false
-    },
-    "Miami": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/ready/bk1-150-credit-hours.md"
-      ],
-      "auto_added": false
-    },
-    "recovery": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/ready/bk1-150-credit-hours.md"
-      ],
-      "auto_added": false
-    },
-    "nerd": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "fractured/ready/bk1-150-credit-hours.md"
-      ],
-      "auto_added": false
-    },
-    "brothers": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/draft/bk1-the-bedroom.md"
-      ],
-      "auto_added": false
-    },
-    "imagination": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/draft/bk1-the-bedroom.md"
-      ],
-      "auto_added": false
-    },
-    "home": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/draft/bk1-the-bedroom.md"
-      ],
-      "auto_added": false
-    },
-    "mother": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/draft/bk1-the-yard.md"
-      ],
-      "auto_added": false
-    },
-    "love": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/draft/bk1-the-yard.md",
-        "forging/ready/bk1-the-elopement.md"
-      ],
-      "auto_added": false
-    },
-    "gratitude": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/draft/bk1-the-yard.md"
-      ],
-      "auto_added": false
-    },
-    "marriage": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-elopement.md"
-      ],
-      "auto_added": false
-    },
-    "Carina": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-elopement.md"
-      ],
-      "auto_added": false
-    },
-    "Fielding": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-cold-call.md",
-        "forging/ready/bk1-the-dave-problem.md",
-        "forging/ready/bk1-the-forty-percent-ask.md",
-        "forging/ready/bk1-the-garage.md",
-        "forging/ready/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "team": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-garage.md"
-      ],
-      "auto_added": false
-    },
-    "Chuck": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/ready/bk1-chuck-at-175.md",
-        "forging/ready/bk1-the-last-flight.md"
-      ],
-      "auto_added": false
-    },
-    "grief": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-last-flight.md",
-        "forging/ready/bk1-three-thirty-am.md"
-      ],
-      "auto_added": false
-    },
-    "pilot": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-last-flight.md"
-      ],
-      "auto_added": false
-    },
-    "flight": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-last-flight.md"
-      ],
-      "auto_added": false
-    },
-    "wings": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-last-flight.md"
-      ],
-      "auto_added": false
-    },
-    "thrill": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/ready/bk1-chuck-at-175.md"
-      ],
-      "auto_added": false
-    },
-    "risk": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/ready/bk1-chuck-at-175.md"
-      ],
-      "auto_added": false
-    },
-    "motorcycles": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/ready/bk1-chuck-at-175.md"
-      ],
-      "auto_added": false
-    },
-    "accidents": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/ready/bk1-chuck-at-175.md"
-      ],
-      "auto_added": false
-    },
-    "shame": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forged/ready/bk1-the-van.md"
-      ],
-      "auto_added": false
-    },
-    "sales": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-cold-call.md"
-      ],
-      "auto_added": false
-    },
-    "oilfield": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-cold-call.md"
-      ],
-      "auto_added": false
-    },
-    "acquisition": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-dave-problem.md",
-        "forging/ready/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "Quorum": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-dave-problem.md",
-        "forging/ready/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "Jeff": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-dave-problem.md"
-      ],
-      "auto_added": false
-    },
-    "business": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-forty-percent-ask.md"
-      ],
-      "auto_added": false
-    },
-    "CJ": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-forty-percent-ask.md"
-      ],
-      "auto_added": false
-    },
-    "brother": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-forty-percent-ask.md"
-      ],
-      "auto_added": false
-    },
-    "success": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "hands": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "forging/ready/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "loss": {
-      "description": "Loss and grief, Chuck's death, transitions",
-      "color": "#ef4444",
-      "arc_focus": [
-        "fractured",
-        "forging"
-      ],
-      "related_themes": [
-        "grief",
-        "memory",
-        "legacy"
-      ],
-      "stories": [
-        "forging/ready/bk1-three-thirty-am.md"
       ],
       "auto_added": false
     },
