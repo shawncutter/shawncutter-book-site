@@ -147,9 +147,7 @@
         modal.classList.add('hidden');
         modal.classList.remove('flex');
     }
-    function isOpen() { return !!modal && !modal.classList.contains('hidden'); }
-
-    window.crossSearchAPI = { open, close, isOpen };
+    window.crossSearchAPI = { open, close };
 })();
 
 (function wireFindShortcuts() {

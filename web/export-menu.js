@@ -40,9 +40,13 @@
             const data = await res.json();
             if (!data.templates?.length || !templateEl) return;
             const current = templateEl.value;
-            templateEl.innerHTML = data.templates
-                .map(t => `<option value="${t.name}">${t.name}</option>`)
-                .join('');
+            templateEl.innerHTML = '';
+            for (const t of data.templates) {
+                const opt = document.createElement('option');
+                opt.value = t.name;
+                opt.textContent = t.name;
+                templateEl.appendChild(opt);
+            }
             if (current && data.templates.find(t => t.name === current)) {
                 templateEl.value = current;
             }
@@ -212,5 +216,4 @@
         });
     });
 
-    window.exportMenuAPI = { open, close, toggle, setActiveScope };
 })();

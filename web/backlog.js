@@ -26,6 +26,12 @@
         }
     }
 
+    function escapeHtml(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+        }[c]));
+    }
+
     async function loadBacklogData() {
         try {
             const res = await fetch('../LexDocs/_backlog.json');
@@ -105,17 +111,17 @@
             const statusLabels = { 'todo': 'To Do', 'in_progress': 'In Progress', 'done': 'Done' };
 
             html += `
-                <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center gap-4 hover:border-gray-600 cursor-pointer backlog-item" data-id="${item.id}">
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center gap-4 hover:border-gray-600 cursor-pointer backlog-item" data-id="${escapeHtml(item.id)}">
                     <div class="flex-1">
                         <div class="flex items-center gap-2">
-                            <span class="${item.status === 'done' ? 'line-through text-gray-500' : ''}">${item.title}</span>
-                            <span class="text-xs px-2 py-0.5 rounded ${statusColors[item.status]} border">${statusLabels[item.status]}</span>
+                            <span class="${item.status === 'done' ? 'line-through text-gray-500' : ''}">${escapeHtml(item.title)}</span>
+                            <span class="text-xs px-2 py-0.5 rounded ${statusColors[item.status]} border">${escapeHtml(statusLabels[item.status])}</span>
                         </div>
-                        ${item.category ? `<span class="text-xs text-gray-500">${item.category}</span>` : ''}
-                        ${item.description ? `<p class="text-sm text-gray-400 mt-1">${item.description}</p>` : ''}
+                        ${item.category ? `<span class="text-xs text-gray-500">${escapeHtml(item.category)}</span>` : ''}
+                        ${item.description ? `<p class="text-sm text-gray-400 mt-1">${escapeHtml(item.description)}</p>` : ''}
                     </div>
                     <div class="flex gap-2">
-                        <button class="backlog-status-btn px-2 py-1 text-xs rounded bg-gray-700 hover:bg-gray-600" data-id="${item.id}" data-action="cycle">
+                        <button class="backlog-status-btn px-2 py-1 text-xs rounded bg-gray-700 hover:bg-gray-600" data-id="${escapeHtml(item.id)}" data-action="cycle">
                             ⟳
                         </button>
                     </div>
