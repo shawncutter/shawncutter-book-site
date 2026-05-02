@@ -730,6 +730,10 @@ function fillMetadataFields(story) {
     setVal('meta-date-event', story.date_event || '');
     setVal('meta-medium-url', story.medium_url || '');
     setVal('meta-themes', (story.themes || []).join(', '));
+    // Sprint O — O2.1 schema fields
+    setVal('meta-people', (story.people || []).join(', '));
+    setVal('meta-locations', (story.locations || []).join(', '));
+    setVal('meta-related', (story.related_to || []).join(', '));
 }
 
 async function openStory(story) {
@@ -764,14 +768,19 @@ async function openStory(story) {
 }
 
 function buildFrontmatter(currentStory) {
+    const csvToArr = id => (document.getElementById(id)?.value || '').split(',').map(t => t.trim()).filter(Boolean);
+
     const metadata = {
         title: currentStory.title,
         arc: document.getElementById('meta-arc')?.value || 'forged',
         status: document.getElementById('meta-status')?.value || 'draft',
         date_event: document.getElementById('meta-date-event')?.value || '',
         medium_url: document.getElementById('meta-medium-url')?.value || '',
-        themes: (document.getElementById('meta-themes')?.value || '')
-            .split(',').map(t => t.trim()).filter(t => t)
+        themes: csvToArr('meta-themes'),
+        // Sprint O — O2.1 schema passthrough fields
+        people: csvToArr('meta-people'),
+        locations: csvToArr('meta-locations'),
+        related_to: csvToArr('meta-related'),
     };
 
     let fm = '---\n';
@@ -781,6 +790,9 @@ function buildFrontmatter(currentStory) {
     if (metadata.date_event) fm += `date_event: "${metadata.date_event}"\n`;
     if (metadata.medium_url) fm += `medium_url: "${metadata.medium_url}"\n`;
     if (metadata.themes.length) fm += `themes: [${metadata.themes.join(', ')}]\n`;
+    if (metadata.people.length) fm += `people: [${metadata.people.join(', ')}]\n`;
+    if (metadata.locations.length) fm += `locations: [${metadata.locations.join(', ')}]\n`;
+    if (metadata.related_to.length) fm += `related_to: [${metadata.related_to.join(', ')}]\n`;
     fm += `date_written: "${new Date().toISOString().split('T')[0]}"\n`;
     fm += '---\n\n';
     return fm;

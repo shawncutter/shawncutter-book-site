@@ -209,30 +209,24 @@
                 </div>
             </div>
 
-            <!-- Quick Actions -->
+            <!-- Quick Actions — live derivations from data (Sprint O, O1.1-O1.3) -->
             <div class="grid grid-cols-3 gap-6">
                 <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
                     <h4 class="font-bold mb-2">Next Steps</h4>
-                    <ul class="text-sm text-gray-400 space-y-1">
-                        <li>Fill FRACTURED faith exit scene</li>
-                        <li>Add 3 more FOUNDRY teaching moments</li>
-                        <li>Draft systems-thinking interludes</li>
+                    <ul class="text-sm text-gray-400 space-y-1" id="next-steps-list">
+                        <li class="text-gray-500 text-sm italic">Loading…</li>
                     </ul>
                 </div>
                 <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
                     <h4 class="font-bold mb-2">Timeline Gaps</h4>
-                    <ul class="text-sm text-gray-400 space-y-1">
-                        <li>1994-1995 (ages 14-15)</li>
-                        <li>2001-2002 (ages 21-22)</li>
-                        <li>2011-2014 (ages 31-34)</li>
+                    <ul class="text-sm text-gray-400 space-y-1" id="timeline-gaps-list">
+                        <li class="text-gray-500 text-sm italic">Loading…</li>
                     </ul>
                 </div>
                 <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
                     <h4 class="font-bold mb-2">Ready to Expand</h4>
-                    <ul class="text-sm text-gray-400 space-y-1">
-                        <li>40 Surgeries Journey (5 pieces)</li>
-                        <li>Chuck Cutter Stories (4 pieces)</li>
-                        <li>Fielding to Exit (4 pieces)</li>
+                    <ul class="text-sm text-gray-400 space-y-1" id="ready-expand-list">
+                        <li class="text-gray-500 text-sm italic">Loading…</li>
                     </ul>
                 </div>
             </div>
@@ -343,10 +337,11 @@
                 </select>
             </div>
             <div class="flex gap-4 mb-6">
-                <button class="status-filter px-4 py-2 bg-blue-600 rounded" data-status="all">All (88)</button>
+                <button class="status-filter px-4 py-2 bg-blue-600 rounded" data-status="all" id="stories-filter-all">All</button>
                 <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="published">Published</button>
                 <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="ready">Ready</button>
                 <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="draft">Draft</button>
+                <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="expanded">Expanded</button>
                 <button class="status-filter px-4 py-2 bg-gray-700 rounded hover:bg-gray-600" data-status="idea">Idea</button>
             </div>
             <div id="stories-container" class="grid gap-4">
@@ -386,71 +381,29 @@
 
         <!-- Arcs Section -->
         <section id="arcs" class="section hidden">
-            <h2 class="text-3xl font-bold mb-8">Arc Status</h2>
+            <h2 class="text-3xl font-bold mb-2">Arc Status</h2>
+            <p class="text-sm text-gray-500 mb-6">Live — derived from story index. Data updates after Rescan.</p>
             <div class="grid grid-cols-2 gap-6">
-                <!-- Forged -->
+                <!-- Arc cards — content rendered by dashboard-recommender.js -->
                 <div class="bg-gray-800 rounded-lg p-6 border-l-4 border-forged">
-                    <h3 class="text-xl font-bold text-forged mb-2">FORGED</h3>
-                    <p class="text-gray-400 italic mb-4">"What does brutality + love look like on a dairy farm?"</p>
-                    <p class="text-sm text-gray-400 mb-2">Tone: Cinematic, sensory, claustrophobic</p>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium mb-2">Key Scenes:</p>
-                        <ul class="text-sm text-gray-400 space-y-1">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Rock-picking / ice cube incident</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Genesis concert wrestling win</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 95-ft silo climb</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Farm chores and work ethic</li>
-                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> First day of farm ownership</li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-bold text-forged mb-1">FORGED</h3>
+                    <p class="text-gray-400 italic text-sm mb-4">"What does brutality + love look like on a dairy farm?"</p>
+                    <div id="arc-status-forged"><p class="text-sm text-gray-500 italic">Loading…</p></div>
                 </div>
-                <!-- Fractured -->
                 <div class="bg-gray-800 rounded-lg p-6 border-l-4 border-fractured">
-                    <h3 class="text-xl font-bold text-fractured mb-2">FRACTURED</h3>
-                    <p class="text-gray-400 italic mb-4">"How do you rebuild when faith, body, & identity crack?"</p>
-                    <p class="text-sm text-gray-400 mb-2">Tone: Philosophical, darker introspection</p>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium mb-2">Key Scenes:</p>
-                        <ul class="text-sm text-gray-400 space-y-1">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> The accident (1990-10-29)</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> First steps after hospital</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 40 surgeries journey</li>
-                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Faith exit moment</li>
-                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Depression depths</li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-bold text-fractured mb-1">FRACTURED</h3>
+                    <p class="text-gray-400 italic text-sm mb-4">"How do you rebuild when faith, body, & identity crack?"</p>
+                    <div id="arc-status-fractured"><p class="text-sm text-gray-500 italic">Loading…</p></div>
                 </div>
-                <!-- Forging -->
                 <div class="bg-gray-800 rounded-lg p-6 border-l-4 border-forging">
-                    <h3 class="text-xl font-bold text-forging mb-2">FORGING</h3>
-                    <p class="text-gray-400 italic mb-4">"How do you weaponize trauma into companies & pilots' wings?"</p>
-                    <p class="text-sm text-gray-400 mb-2">Tone: Strategic, Feynman-style explainer</p>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium mb-2">Key Scenes:</p>
-                        <ul class="text-sm text-gray-400 space-y-1">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Fielding Systems founding</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Night we moved oilfield to cloud</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Quorum acquisition</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> First flight with Dad</li>
-                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Term sheet signing day</li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-bold text-forging mb-1">FORGING</h3>
+                    <p class="text-gray-400 italic text-sm mb-4">"How do you weaponize trauma into companies & pilots' wings?"</p>
+                    <div id="arc-status-forging"><p class="text-sm text-gray-500 italic">Loading…</p></div>
                 </div>
-                <!-- Foundry -->
                 <div class="bg-gray-800 rounded-lg p-6 border-l-4 border-foundry">
-                    <h3 class="text-xl font-bold text-foundry mb-2">FOUNDRY</h3>
-                    <p class="text-gray-400 italic mb-4">"What legacy melts pain into service?"</p>
-                    <p class="text-sm text-gray-400 mb-2">Tone: Uplifting, mentor-to-reader</p>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium mb-2">Key Scenes:</p>
-                        <ul class="text-sm text-gray-400 space-y-1">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> EnergiAcres vision</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> This Starts Here manifesto</li>
-                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Teaching Gia about risk</li>
-                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Systems-thinking interludes</li>
-                            <li class="flex items-center"><span class="text-gray-500 mr-2">○</span> Mentor moments</li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-bold text-foundry mb-1">FOUNDRY</h3>
+                    <p class="text-gray-400 italic text-sm mb-4">"What legacy melts pain into service?"</p>
+                    <div id="arc-status-foundry"><p class="text-sm text-gray-500 italic">Loading…</p></div>
                 </div>
             </div>
         </section>
@@ -541,6 +494,27 @@
                 <div class="mt-4">
                     <label class="block text-xs text-gray-400 mb-1">Themes (comma separated)</label>
                     <input type="text" id="meta-themes" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="resilience, father, farm">
+                </div>
+                <!-- Sprint O — O2.1: People / Locations / Related Stories inputs -->
+                <div class="mt-3">
+                    <label class="block text-xs text-gray-400 mb-1">People (comma separated)</label>
+                    <input type="text" id="meta-people" list="meta-people-list" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="Chuck Cutter, Carina…">
+                    <datalist id="meta-people-list"></datalist>
+                </div>
+                <div class="mt-3">
+                    <label class="block text-xs text-gray-400 mb-1">Locations (comma separated)</label>
+                    <input type="text" id="meta-locations" list="meta-locations-list" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="West Salem farm, hospital…">
+                    <datalist id="meta-locations-list"></datalist>
+                </div>
+                <div class="mt-3">
+                    <label class="block text-xs text-gray-400 mb-1">Related Stories (filenames)</label>
+                    <input type="text" id="meta-related" list="meta-related-list" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="forged/ready/bk1-the-hilltop.md…">
+                    <datalist id="meta-related-list"></datalist>
+                </div>
+                <!-- Backlinks panel: stories connected to the open story -->
+                <div class="mt-4 hidden" id="backlinks-panel">
+                    <p class="text-xs text-gray-400 font-semibold mb-2">Connected Stories</p>
+                    <div id="backlinks-list" class="space-y-1 max-h-36 overflow-y-auto"></div>
                 </div>
             </div>
 
@@ -669,6 +643,23 @@
         </section>
 
         <!-- Expansion Modal -->
+        <!-- Person / Location detail modal (Sprint O — O2.2) -->
+        <div id="person-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+            <div class="bg-gray-800 border border-gray-700 rounded-lg w-full max-w-2xl max-h-[85vh] flex flex-col mx-4 shadow-xl">
+                <div class="p-5 border-b border-gray-700 flex items-start justify-between">
+                    <div>
+                        <h3 id="person-modal-name" class="text-xl font-bold text-white mb-0.5">Person</h3>
+                        <p id="person-modal-role" class="text-sm text-gray-400"></p>
+                    </div>
+                    <button id="person-modal-close" class="text-gray-400 hover:text-white text-2xl px-2 leading-none">&times;</button>
+                </div>
+                <div class="p-5 overflow-y-auto flex-1">
+                    <p id="person-modal-bio" class="text-sm text-gray-300 mb-4 italic hidden"></p>
+                    <div id="person-modal-stories" class="space-y-2"></div>
+                </div>
+            </div>
+        </div>
+
         <div id="expansion-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
             <div class="bg-gray-800 rounded-lg p-6 w-full max-w-4xl border border-gray-700 max-h-[90vh] overflow-y-auto">
                 <div class="flex justify-between items-start mb-4">
@@ -1014,8 +1005,10 @@
                 initTimelineSlider();
 
                 renderStories();
-
                 populateStorySelector();
+
+                // Re-render live dashboard cards now that all data is loaded.
+                if (window.dashboardRecommender) window.dashboardRecommender.renderAll();
 
                 renderTopics();
             } catch (e) {
@@ -1349,10 +1342,15 @@
             });
             document.querySelectorAll('.status-filter').forEach(btn => {
                 const status = btn.dataset.status;
-                if (statusCounts[status] !== undefined) {
-                    btn.textContent = `${status.charAt(0).toUpperCase() + status.slice(1)} (${statusCounts[status]})`;
+                const count = statusCounts[status] ?? statusCounts[status.toLowerCase()];
+                if (count !== undefined) {
+                    btn.textContent = status === 'all'
+                        ? `All (${count})`
+                        : `${status.charAt(0).toUpperCase() + status.slice(1)} (${count})`;
                 }
             });
+            // Trigger recommender once stories are loaded
+            if (window.dashboardRecommender) window.dashboardRecommender.renderAll();
 
             // Use filtering function to display
             filterAndDisplayStories();
@@ -1488,7 +1486,19 @@
 
             if (themeSort) {
                 themeSort.addEventListener('change', () => {
-                    // Could add sorting logic here in future
+                    const mode = themeSort.value;
+                    const container = document.getElementById('all-themes-container');
+                    if (!container) return;
+                    const cards = [...container.querySelectorAll(':scope > div')];
+                    cards.sort((a, b) => {
+                        const nameA = a.querySelector('h4')?.textContent?.trim().toLowerCase() || '';
+                        const nameB = b.querySelector('h4')?.textContent?.trim().toLowerCase() || '';
+                        const countA = parseInt(a.querySelector('h4 + * span, [class*="text-xs"][class*="font-bold"]')?.textContent || '0', 10) || 0;
+                        const countB = parseInt(b.querySelector('h4 + * span, [class*="text-xs"][class*="font-bold"]')?.textContent || '0', 10) || 0;
+                        if (mode === 'count') return countB - countA;
+                        return nameA.localeCompare(nameB);  // alphabetical (default)
+                    });
+                    cards.forEach(c => container.appendChild(c));
                 });
             }
 
@@ -1500,11 +1510,12 @@
                 const container = document.getElementById(`people-${arc}`);
 
                 let html = '';
-                arcPeople.forEach(([name, data]) => {
+                arcPeople.forEach(([slug, data]) => {
                     const count = data.stories ? data.stories.length : 0;
-                    html += `<div class="bg-gray-700 rounded px-2 py-1 cursor-pointer hover:bg-gray-600 text-xs">${data.name} <span class="text-gray-400">(${count})</span></div>`;
+                    // data-person-slug triggers person-modal.js click handler
+                    html += `<button class="bg-gray-700 rounded px-2 py-1 cursor-pointer hover:bg-gray-600 text-xs text-left w-full" data-person-slug="${slug}">${data.name} <span class="text-gray-400">(${count})</span></button>`;
                 });
-                container.innerHTML = html || `<p class="text-xs text-gray-500 italic">None</p>`;
+                container.innerHTML = html || `<p class="text-xs text-gray-500 italic">None tagged yet — add people: frontmatter to stories.</p>`;
             });
 
             // Render clusters
@@ -2018,23 +2029,21 @@
                     body: JSON.stringify({ event: newEvent, index: editingEventIdx })
                 });
 
+                const closeModal = () => {
+                    document.getElementById('timeline-modal').classList.add('hidden');
+                    document.getElementById('timeline-modal').classList.remove('flex');
+                };
                 if (res.ok) {
                     showSaveStatus('Timeline updated!', 'green');
-                    document.getElementById('timeline-modal').classList.add('hidden');
-                    document.getElementById('timeline-modal').classList.remove('flex');
+                    closeModal();
                     await loadData();
                 } else {
-                    showSaveStatus('Note: Timeline API not yet implemented - event saved locally', 'yellow');
-                    // Add to local data for display
-                    if (timelineData && timelineData.events) {
-                        timelineData.events.push(newEvent);
-                        timelineData.events.sort((a, b) => a.date.localeCompare(b.date));
-                    }
-                    document.getElementById('timeline-modal').classList.add('hidden');
-                    document.getElementById('timeline-modal').classList.remove('flex');
+                    const errData = await res.json().catch(() => ({}));
+                    showSaveStatus('Timeline save failed: ' + (errData.error || res.status), 'yellow');
+                    closeModal();
                 }
             } catch (e) {
-                showSaveStatus('Timeline saved locally only', 'yellow');
+                showSaveStatus('Timeline save error: ' + e.message, 'yellow');
                 document.getElementById('timeline-modal').classList.add('hidden');
                 document.getElementById('timeline-modal').classList.remove('flex');
             }
@@ -2522,6 +2531,14 @@
     <!-- D3 network graph + cluster cards (extracted in Wave B-4). Reads
          window.topicsData; calls window.openExpansionModal on cluster click. -->
     <script src="topics-graph.js"></script>
+
+    <!-- Live dashboard recommendations (Sprint O, O1.1-O1.3). Reads
+         window.allStories, window.timelineData, window.topicsData. -->
+    <script src="dashboard-recommender.js"></script>
+
+    <!-- Person modal + editor datalists + backlinks panel (Sprint O, O2.1-O2.4).
+         Reads window.topicsData.people/locations, window.allStories. -->
+    <script src="person-modal.js"></script>
 
     <!-- Export menu (S2.5). Word/PDF/Markdown/Medium × story/arc/manuscript.
          Uses window.editorAPI.currentStory for scope context. -->

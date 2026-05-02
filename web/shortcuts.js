@@ -186,8 +186,8 @@
             heading: 'Find',
             showInStatic: false,
             entries: [
-                { keys: ['Mod', 'F'], label: 'Find in document', hint: '(coming soon)' },
-                { keys: ['Mod', 'Shift', 'F'], label: 'Find across all stories', hint: '(coming soon)' }
+                { keys: ['Mod', 'F'], label: 'Find in document' },
+                { keys: ['Mod', 'Shift', 'F'], label: 'Find across all stories' }
             ]
         },
         {
