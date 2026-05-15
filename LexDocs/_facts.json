@@ -1,15 +1,6 @@
 {
   "open_questions": {
-    "forged": [
-      {
-        "group": "About Mom — Elizabeth \"Beth\" Cutter ✅ NAME CONFIRMED + SESSION 5 DETAIL",
-        "text": "**Beth's defining moment** — She needs a dedicated piece. Raw material now exists from Session 5. What's the ONE scene that captures her? The protector moment? The garden? The yard at 67?"
-      },
-      {
-        "group": "Wrestling",
-        "text": "**More match detail** — What did it feel like to beat Chad Wright specifically? Was Chuck there? What happened after? What happened to the four-peat plan — did the surgeries stop it?"
-      }
-    ],
+    "forged": [],
     "fractured": [
       {
         "group": "About The Surgical Years (1990–2000+)",
@@ -24,10 +15,6 @@
       {
         "group": "About Jeff & Mike ✅ SUBSTANTIALLY ANSWERED (Session 5)",
         "text": "**Were there others?** — Anyone else in the early Fielding days who mattered?"
-      },
-      {
-        "group": "About Chuck's Funeral ✅ ANSWERED (Sessions 5+6)",
-        "text": "**The eulogy** — **SESSION 6: Shawn will try to get the eulogy he gave at Chuck's funeral.** This could be an incredible primary document — the words he chose at 31 about his father. WATCH FOR THIS."
       }
     ],
     "foundry": [
@@ -144,10 +131,10 @@
     }
   ],
   "counts": {
-    "forged": 2,
+    "forged": 0,
     "fractured": 2,
-    "forging": 2,
+    "forging": 1,
     "foundry": 2,
-    "total": 8
+    "total": 5
   }
 }

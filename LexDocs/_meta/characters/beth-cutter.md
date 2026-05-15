@@ -29,12 +29,31 @@
 
 ### What She Endured
 - Chuck's intensity and dominance
-- Chuck's infidelity (Shawna)
+- Chuck's infidelity (Shawna) — and worse, with a woman who worked at **Country Acres Restaurant, the restaurant Beth's parents started, where Beth and her sisters had grown up working**. Not just an affair. An affair that bled across her family's livelihood.
 - Shawn's accident (October 29, 1990) — 40 surgeries over years
 - CJ and Shawn fighting constantly
 - Chuck's death (November 12, 2010)
 - Cedar Valley failure — the plan to retire her didn't work
 - She's STILL working. At 67.
+
+---
+
+## 🛡️ THE DEFINING SCENE — "YOU WON'T TOUCH THESE KIDS"
+*(Source: 2026-05-13 voice memo. Shawn was in 7th grade when the kids found out about Shawna — so this is roughly 1991-92, in the year after the October 1990 accident.)*
+
+When Beth figured out Chuck was cheating, she didn't confront him alone. **She loaded the kids into the car and drove past the other woman's house — Chuck's truck was parked outside.** Chuck saw her drive by.
+
+When he got home, he was furious. Not ashamed. Not apologetic. **Pissed at her for catching him.** Yelling around the house. The kids yelled back, telling him to be quiet. He turned toward the kids.
+
+**Beth stepped in front of them and said: "You won't touch these kids."**
+
+That sentence is the whole woman in one line. The protector. The Bechtel daughter on Bechtel land standing between her husband and her children on the worst day of her marriage. She didn't yell back. She drew a line and dared him to cross it.
+
+He didn't cross it.
+
+The kids found out about Shawna in 7th grade — by **listening in on a phone call** (shared landlines back then; you could pick up the other receiver and hear). Beth herself had found out immediately after the drive-by. The kids pieced it together later, eavesdropping.
+
+**This is Beth's scene.** Not the garden. Not the yard at 67. The car ride to find his truck, the drive-by, and the line she drew in her own living room.
 
 ### The Bechtel Heritage
 - **CRITICAL:** The farm is Beth's family, not Chuck's. Bechtel family heritage. Same farm since Ohio was a state.

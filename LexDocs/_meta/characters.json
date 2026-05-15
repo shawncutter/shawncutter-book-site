@@ -24,7 +24,7 @@
         "clothing_style",
         "writer_details"
       ],
-      "status": "ACTIVE — 12 characters with photo descriptions extracted (March 27, 2026)"
+      "status": "ACTIVE \u2014 12 characters with photo descriptions extracted (March 27, 2026)"
     }
   },
   "characters": {
@@ -77,11 +77,16 @@
       },
       "physical": {
         "scars": "40+ surgery scars. Self-harm scars on arm from high school. Scar from shattering left arm on 4-wheeler at 16.",
-        "handicap_placard": "Used one in college — Carina initially thought he was faking",
-        "description": "Lean, angular build. Strong jawline. As a teen: tall and wiry, blonde/light hair, clean-cut farm-kid look. By his 40s: shaved/bald head, lean and fit, light stubble, olive-toned skin from Florida sun. Big, wide smile — the kind that takes over his whole face. Favors black t-shirts, backwards caps, chunky glasses. High energy in how he carries himself — leans into photos, leans into conversations. In the graduation photo (late '90s) he's rail-thin in blue cap and gown, towering slightly over Beth. On a boat as a teen: bleached blonde hair, shirtless, lean but not yet filled out. Current era: clean lines, minimal — the black shirt and shaved head read as deliberate, like a man who stopped caring about vanity and started caring about velocity.",
+        "handicap_placard": "Used one in college \u2014 Carina initially thought he was faking",
+        "description": "Lean, angular build. Strong jawline. As a teen: tall and wiry, blonde/light hair, clean-cut farm-kid look. By his 40s: shaved/bald head, lean and fit, light stubble, olive-toned skin from Florida sun. Big, wide smile \u2014 the kind that takes over his whole face. Favors black t-shirts, backwards caps, chunky glasses. High energy in how he carries himself \u2014 leans into photos, leans into conversations. In the graduation photo (late '90s) he's rail-thin in blue cap and gown, towering slightly over Beth. On a boat as a teen: bleached blonde hair, shirtless, lean but not yet filled out. Current era: clean lines, minimal \u2014 the black shirt and shaved head read as deliberate, like a man who stopped caring about vanity and started caring about velocity.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/shawn_cutter/",
-        "photos": ["IMG_0026.jpg", "IMG_8567.jpeg", "IMG_9517.jpeg", "scan (108).jpg"]
+        "photos": [
+          "IMG_0026.jpg",
+          "IMG_8567.jpeg",
+          "IMG_9517.jpeg",
+          "scan (108).jpg"
+        ]
       },
       "personality": {
         "confirmed_traits": [
@@ -95,14 +100,25 @@
           "Compartmentalizer \u2014 learned to turn emotions off after trauma"
         ],
         "self_harm": {
-          "detail": "Cut himself a lot in high school to control pain. Still has visible scars on arm.",
-          "source": "Session 5",
+          "detail": "Cut himself in high school. Heaviest at age 15-16. Scars on arm AND stomach. Started cutting near other scars to hide it. Multiple drivers braided together: (1) controlling pain on his terms, (2) 'life force spilling out,' (3) knowing it would hurt his parents if they saw it \u2014 a message, not just an act, (4) anger at the world and everything around him. Trigger context: CJ had gone to a different school, so Shawn was isolated; he was facing the realization he was NOT going to be a wrestler and that the accident would impact him long-term. It stopped when peer reaction outweighed the relief \u2014 'too much flak from people around me that wasn't worth the value I was getting from it.'",
+          "source": "Sessions 5, 6, and 2026-05-13 voice memo",
           "confidence": "confirmed",
           "sensitivity": "HIGH \u2014 handle with care"
         },
         "emotional_wall": {
           "detail": "Couldn't feel intensity of holding Gia for first time. 'Spent so much time in rational head, not emotional brain.'",
           "source": "Session 5",
+          "confidence": "confirmed"
+        },
+        "management_philosophy": {
+          "detail": "Took the playbook from Elon Musk at Quorum: leave meetings that waste your time, call people out who aren't contributing, chew through ineffective resources, jump in and do the work yourself when others can't deliver. Anchor story: one Quorum engineer spent 300 hours on a data-import project Shawn had estimated at 30 (being generous) \u2014 Shawn came in and did most of it in 8. Went through 'more than a dozen' Quorum resources \u2014 some they thought were top resources \u2014 and 'chewed them up and spit them out.' Three-stage arc of self-reflection on this era: regret (Session 5d) \u2192 softening (Session 6, 'should have been more collaborative') \u2192 vindication (2026-05-13, 'AI now proves the playbook was right; the environment was wrong'). EnergiAcres / Terrasow is the org being built on the Read-2 playbook: AI strips the bullshit so engineers can show what they actually do.",
+          "source": "Sessions 5d, 6, and 2026-05-13 voice memo",
+          "confidence": "confirmed"
+        },
+        "beliefs": {
+          "label": "atheist with a metaphysics",
+          "detail": "Atheist. Studied a multitude of religions and philosophies 'to understand how human thought and progression made and why they tried to fill certain aspects of life with God and religion \u2014 and what it was used for then, and what it's used for now.' Where it landed: collective consciousness exists. Could be in a simulation right now. But when it's over, it's over. 'Enjoy the most that you can right now because it might be all that you get. That's actually what's beautiful about life is that it happens and then it's gone. Really make the most of it.' Atheist, but not the angry kind \u2014 the appreciative kind. Finite life as the source of meaning, not its absence.",
+          "source": "2026-05-13 voice memo (Session 8)",
           "confidence": "confirmed"
         }
       },
@@ -119,7 +135,34 @@
         "Physical description \u2014 what does Shawn look like?",
         "What happened in the 'gap years' 2007-2009 (apartments to Plant City)?",
         "The full accident story \u2014 morning to helicopter"
-      ]
+      ],
+      "career_pre_fielding": {
+        "tallan_inc": {
+          "label": "Tallan, Inc. \u2014 earlier employer (per 2026-05-13 voice memo: 'I learned that at Tallan')",
+          "company_facts": "Tallan, Inc. \u2014 technology consulting firm founded 1985. Microsoft National Solution Provider with multiple Gold Competencies. Custom application development, data management, .NET / Microsoft-stack work. Acquired by EY US in February 2023 \u2014 now part of EY's Microsoft Services Group. Historically HQ'd in CT/NY/Boston region; had multiple US offices.",
+          "shawn_lesson": "Same lesson as ByDesign: 'What are these people doing wrong that I'm gonna do in a different way when I'm running things?' Anti-template for Shawn's own management approach. Per Shawn (2026-05-13): 'I learned that at Tallan. I learned it by design. I'm still learning that today.'",
+          "source": "2026-05-13 voice memo + web research (Tallan/EY press releases, 2026-05-13)",
+          "confidence": "company existence confirmed; Shawn's tenure stated but role/dates not yet documented",
+          "open_questions": [
+            "Which Tallan office \u2014 was there a Tampa/FL location, or did Shawn work remotely / move?",
+            "When did Shawn work at Tallan \u2014 before or after ByDesign? Or concurrent?",
+            "What was his role at Tallan specifically?",
+            "Anyone at Tallan he stayed in touch with?"
+          ],
+          "mentor": "Mario Harik was Shawn's mentor at Tallan \u2014 Mario was CTO there. Mario later became CEO (now also Chairman) of XPO, Inc. \u2014 Fortune-500 LTL trucking. See mario_harik character entry."
+        },
+        "bydesign_technologies": {
+          "label": "ByDesign Technologies \u2014 Tampa, FL (the 'first FL/Tampa job')",
+          "company_facts": "ByDesign Technologies \u2014 founded 2000 in Tampa, FL by Jeffrey Ayscue. ASP/SaaS platform for MLM, direct-selling, and party-plan companies. Still operating in 2026 (Jeff Ayscue as Chairman, Daryl Wurzbacher as CEO). Per industry reporting: $6B+ in orders processed, $2B+ in commissions paid through the platform.",
+          "shawn_role": "Hardware, networking, servers, and .NET \u2014 hired for all of it. 'Worked my ass off.' Where he met Jeff Taynton (now CTO at Terrasow with Shawn). Per Session 6: stayed there 'a little over a year.' Also worked with Matt Jaff there.",
+          "source": "2026-05-13 voice memo + Session 5/6 + web research, 2026-05-13",
+          "confidence": "confirmed",
+          "open_questions": [
+            "Exact start/end dates at ByDesign",
+            "Why did Shawn leave?"
+          ]
+        }
+      }
     },
     "chuck_cutter": {
       "role": "father",
@@ -160,10 +203,21 @@
         "funeral": "Shawn spoke, CJ spoke, Butch Rogers (former accountant and pastor) spoke."
       },
       "physical": {
-        "description": "Stocky, barrel-chested, thick through the shoulders and arms — a man built by decades of oilfield work. Dark hair, always a full mustache (the signature). Tanned and weathered skin. Gold chain visible at the collar of his white t-shirts. Almost always in a ball cap — the pink 'Cutter Oil Co' cap with the pump jack logo is iconic. White pocket t-shirt with a pack of Marlboros in the breast pocket (visible in the photo holding baby Gia). Hairy chest. Big, thick hands. In the truck photo (dated 7/8/97): behind the wheel of a blue pickup, cap on, mustache, arm resting on the door — completely in his element. On the boat: shirtless, straw hat, phone to his ear, legs sprawled out — king of wherever he was sitting. With cattle: flannel shirt, green cap, standing next to a black Angus — the working version of Chuck. The graduation photo shows him at maybe 5'9\"-5'10\", solid, thick-necked, white short-sleeve shirt. In the close-up with the blonde woman: dark eyes, strong brow, mustache flecked with gray, the Cutter Oil cap, face that says 'I've been in the sun my whole life.' Holding Gia: softened. Ballcap on, white shirt, Marlboros in the pocket — but looking DOWN at this baby with an expression that breaks the whole tough-guy frame. That's the photo that proves he was getting softer.",
+        "description": "Built thick \u2014 stocky, broad shoulders, barrel chest, thick forearms, hairy chest. Approximately 5'10\"\u20135'11\" (Session 6 confirmation). Dark brown hair throughout life \u2014 long and shaggy in his teens (high-school graduation photo: shoulder-length brown hair, big smile, no mustache yet, cap and gown on a football field, ~1974), still long for his wedding to Beth (white tuxedo with black satin lapels, ruffled shirt, black bowtie, pink boutonniere, thin mustache just coming in). After that, the hair gets cut short and lives under a ball cap for the rest of his life \u2014 he was ashamed of going bald and hid it under the hat (Shawn trained himself to own it instead). The signature feature is the thick dark mustache, going gray by his late forties. Greenish-hazel eyes that stuck out \u2014 the eyes Shawn inherited. Strong jaw, prominent brow, thick neck. Tanned and weathered from oilfield work and, later, Florida sun. Big thick hands.\n\nUniform: a ball cap (the iconic pink 'Cutter Oil Co.' cap with the pump-jack logo, or the black Cutter Oil cap, or the yellow Cutter Oil cap, or a generic red cap \u2014 almost never without one). White cotton t-shirt or sleeveless cutoff, Marlboros in the breast pocket. Gold chain visible at the collar (sometimes with a pendant). Sunglasses hung off the neckline of a tank top. Jeans and work boots. Carhartt in winter.\n\nPHOTO INVENTORY (10 on-disk + 3 chat-shared awaiting upload):\n\u2022 scan (114).jpg \u2014 High school graduation (~1974, age 18): long shoulder-length brown hair, big smile, no mustache yet. The Chuck before he became Chuck.\n\u2022 scan (113).jpg \u2014 Wedding to Beth (late 1970s): white tuxedo with black satin lapels, ruffled white shirt, black bowtie, pink boutonniere, shoulder-length hair, thin mustache just appearing. Beth in full white lace gown and veil. They look incredibly young.\n\u2022 IMG_0033.jpg \u2014 Oilfield drilling rig at dusk: flare burning, three men silhouetted watching the crew, mud and fall trees. Cutter Oil at work \u2014 Chuck's world.\n\u2022 008.jpg and 010.jpg \u2014 At a job site July 6 & 8, 1997 (back-to-back days). Blue Chevy 2500 pickup, red ballcap, white sleeveless cutoff, mustache. Holding a stack of EASTERN well-logging booklets ('Gamma Ray \u2022 Neutron \u2022 Caliper \u2022 Compensated Density \u2022 Resistivity'). Shawn (age 17, white tee) loading the truck bed in the background. Father and son working together. Same week as the excavator photo of Shawn.\n\u2022 scan (90).jpg \u2014 On the farm: yellow Cutter Oil cap, blue plaid flannel, standing with a black Angus calf among Holsteins, white barn behind. The working-farm Chuck.\n\u2022 scan (171).jpg \u2014 Close-up with a curly-haired blonde woman (era: late 90s / early 2000s, ID TBD): pink 'Cutter Oil Co.' cap, white tank top, gold chain, mustache flecked with gray. Indoor setting, mounted fish on the wall.\n\u2022 IMG (2).jpg and IMG_0001.jpg \u2014 On a boat in Florida: straw cowboy hat with band, sunglasses, shirtless, gold chain with pendant, phone to ear (always working, always on a call). Pink-trimmed white speedboat. King of his domain.\n\u2022 IMG_0058.JPG \u2014 Holding baby Gia, May 2010: black Cutter Oil cap, white polo, Marlboros in the breast pocket, mustache fully gray. Looking DOWN at her with an expression that breaks the whole tough-guy frame. Six months before he died. THIS is the softening Shawn described.\n\nCHAT-SHARED PHOTOS (need upload to disk):\n\u2022 OFFICE / shirtless: standing in the home office, light-blue walls. Behind him: the BLACK LEATHER CHAIR (the chair where he sat overlooking the property \u2014 confirmed Session 6) and a wooden oil-derrick model on the desk. Multicolored cap with antlers (deer hunting?). Hairy chest, jeans, looking down at his hands (likely rolling a cigarette). This photo VISUALLY CONFIRMS the office scene Shawn described.\n\u2022 ELEVATOR / cigarette: Florida elevator (Florida Certificate of Operation visible on the wall), white tank top, gold chain, pink cap, sunglasses at chest. Cigarette in mouth directly under a 'NO SMOKING / NO FUMAR' sign \u2014 and he's POSING for it. Peak jokester.\n\u2022 LIMO / middle finger: in a limo with 'Cutter Oil Co.' cap, mustache, giving the middle finger to the camera. Blonde woman to his left, another man in plaid to his right. Confirms the jokester energy and the audacity.\n\nARC OF THE FACE: long-haired smiling kid in '74 \u2192 long-haired groom with the first mustache in the late 70s \u2192 mustachioed working man through the 80s and 90s, hat-and-Marlboros, oilfield and barn \u2192 softening grandfather holding Gia in 2010. Six months later, gone.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/chuck_cutter/",
-        "photos": ["010.jpg", "IMG (2).jpg", "IMG_0058.JPG", "scan (171).jpg", "scan (90).jpg"]
+        "photos": [
+          "008.jpg",
+          "010.jpg",
+          "IMG (2).jpg",
+          "IMG_0001.jpg",
+          "IMG_0033.jpg",
+          "IMG_0058.JPG",
+          "scan (90).jpg",
+          "scan (113).jpg",
+          "scan (114).jpg",
+          "scan (171).jpg"
+        ]
       },
       "arc_presence": [
         "forged",
@@ -200,7 +254,28 @@
         "Shawna \u2014 when, how long, how did Beth find out?",
         "What did Shawn SAY at the funeral?",
         "Chuck's relationship with CJ vs. Shawn \u2014 differences?"
-      ]
+      ],
+      "private_life": {
+        "infidelity": {
+          "with_whom_context": "Shawna's mother worked at Country Acres Restaurant \u2014 the restaurant Beth's parents started, where Beth and her sisters grew up working. The affair was with an employee at Beth's family's business. Not just a betrayal; a betrayal across the family livelihood.",
+          "the_catch": "Beth loaded the kids into the car and drove past the other woman's house. His truck was there. He saw her drive by. When he got home, he was pissed at HER for catching him. Started yelling around the house. The kids yelled at him to be quiet. He turned toward the kids. Beth stepped in front and said: 'You won't touch these kids.'",
+          "household_inside_vs_outside": "Shawna, looking in from outside, thought the Cutters were a good family with a real family life. The inside reality (Shawn, 2026-05-13): 'Pretty fucking terrible. A lot of work. A lot of yelling. Not a nice environment to be a part of a lot of the times.'",
+          "source": "2026-05-13 voice memo",
+          "confidence": "confirmed"
+        },
+        "silent_treatment": {
+          "detail": "Conditional, not blanket. The silence specifically when you asked for approval. Otherwise: 'He would definitely let you have it on what you're fucking doing wrong and point out everything that is wrong.' Worst of both worlds \u2014 withheld approval AND volunteered criticism. Shawn (2026-05-13) acknowledges he sees the same operating system surfacing in himself when tired of arguing with kids and wife: 'It's just easier to shut down. So in that sense, I kind of get where he was coming from.'",
+          "source": "2026-05-13 voice memo (Session 8)",
+          "confidence": "confirmed"
+        }
+      },
+      "death_and_aftermath": {
+        "eulogy_partial": {
+          "detail": "Shawn gave a eulogy at 31. The gist of his close (per 2026-05-13 memo): 'Work could come later \u2014 it wasn't just about work.' Shawn acknowledges with self-reproach: 'I don't think I held to that.' The afterlife of the eulogy is the irony \u2014 the son told the room what mattered, then went back to building for 16 more years.",
+          "source": "2026-05-13 voice memo (Session 8)",
+          "confidence": "partial \u2014 gist only, full text not yet recovered"
+        }
+      }
     },
     "beth_cutter": {
       "role": "mother",
@@ -242,10 +317,13 @@
       ],
       "critical_fact": "The farm-to-tech-to-farm arc goes through MOM'S lineage, not Chuck's. Bechtel family heritage.",
       "physical": {
-        "description": "Blonde, wavy/curly hair — long, past her shoulders, with natural volume. At 67, still looks strong and capable. Medium build, not frail — a woman who works outside. In the restaurant photo: white jacket over a tan turtleneck, pouring herself a drink, expression focused and composed — elegant but not fussy. At home outside the house (possibly the farm): blue dress, long blonde wavy hair loose, bracelet on her wrist, warm smile, standing near the car like she's about to go somewhere or just got back from something. The graduation photo (~1997) shows her with shorter, lighter blonde hair, beige/cream outfit, standing next to young Shawn — she comes up to about his shoulder. She carries herself with a quiet steadiness. Nothing flashy. The kind of woman who looks the same at a restaurant as she does in the garden.",
+        "description": "Blonde, wavy/curly hair \u2014 long, past her shoulders, with natural volume. At 67, still looks strong and capable. Medium build, not frail \u2014 a woman who works outside. In the restaurant photo: white jacket over a tan turtleneck, pouring herself a drink, expression focused and composed \u2014 elegant but not fussy. At home outside the house (possibly the farm): blue dress, long blonde wavy hair loose, bracelet on her wrist, warm smile, standing near the car like she's about to go somewhere or just got back from something. The graduation photo (~1997) shows her with shorter, lighter blonde hair, beige/cream outfit, standing next to young Shawn \u2014 she comes up to about his shoulder. She carries herself with a quiet steadiness. Nothing flashy. The kind of woman who looks the same at a restaurant as she does in the garden.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/beth_cutter/",
-        "photos": ["IMG_7809.jpeg", "IMG_9222.jpeg"]
+        "photos": [
+          "IMG_7809.jpeg",
+          "IMG_9222.jpeg"
+        ]
       },
       "arc_presence": [
         "forged",
@@ -281,7 +359,24 @@
         "Does Beth know about the book?",
         "Beth's relationship with Carina?",
         "What does Beth think about EnergiAcres?"
-      ]
+      ],
+      "defining_scenes": {
+        "the_protector": {
+          "label": "You won't touch these kids",
+          "detail": "When Beth figured out Chuck was cheating, she loaded the kids into the car and drove past the other woman's house \u2014 Chuck's truck was parked outside. He saw her drive by. When he got home, he was pissed at HER for catching him. Yelling around the house. The kids yelled back for him to be quiet. He turned toward the kids. Beth stepped in front of them and said: 'You won't touch these kids.' He didn't cross the line. This is the scene that captures her \u2014 not the garden, not the yard at 67.",
+          "source": "2026-05-13 voice memo",
+          "confidence": "confirmed",
+          "era": "~1991-92 (the year of the protector scene; kids discovered Shawna in 7th grade by listening in on a phone call)"
+        }
+      },
+      "family_business": {
+        "country_acres_restaurant": {
+          "detail": "Restaurant started by Beth's parents (Shawn's maternal grandparents \u2014 the Bechtels). Beth and her sisters all worked there growing up. The same restaurant where Shawna's mother worked when Chuck started the affair. Also: per existing notes, Shawn sold gourds at Country Acres as a kid \u2014 see bk1-forty-dollars-and-a-fork.md. The restaurant is a recurring family touchstone across multiple arc threads.",
+          "source": "2026-05-13 voice memo + existing references",
+          "confidence": "confirmed"
+        }
+      },
+      "occupation": "Bechtel family farm (working acreage at 67). Grew up working at Country Acres Restaurant (her parents' business) alongside her sisters."
     },
     "cj_cutter": {
       "role": "older_brother",
@@ -364,20 +459,24 @@
       "nicknames": [
         "Carina"
       ],
-      "spelling_note": "CARINA — spelled with a C, not a K",
+      "spelling_note": "CARINA \u2014 spelled with a C, not a K",
       "born": "July 8, 1981",
       "age_march_2026": 44,
-      "married": "July 8, 2006 — on her birthday. Las Vegas. Elvis package.",
+      "married": "July 8, 2006 \u2014 on her birthday. Las Vegas. Elvis package.",
       "location": "Tampa, FL area",
       "children": [
         "Gia (b. 2010)",
         "Tessa (b. 2012)"
       ],
       "physical": {
-        "description": "Long, straight blonde hair — lighter than Beth's, with a warm honey tone. Fair, clear complexion. Slim, tall build. In the bar selfie: cream ribbed sweater, soft smile, hair falling past her shoulders, face lit by warm ambient light — composed and pretty in an effortless way. Full-body in NYC: black dress with gold stitching detail, long blonde hair, slim figure, confident posture — she looks like she belongs in whatever city she's in. Beach photo with one of the girls: denim jacket over white top and pink/mauve shorts, baseball cap, bare feet in the sand at sunset — relaxed, happy, arm around her kid. She reads as someone who puts herself together well but doesn't make it the point.",
+        "description": "Long, straight blonde hair \u2014 lighter than Beth's, with a warm honey tone. Fair, clear complexion. Slim, tall build. In the bar selfie: cream ribbed sweater, soft smile, hair falling past her shoulders, face lit by warm ambient light \u2014 composed and pretty in an effortless way. Full-body in NYC: black dress with gold stitching detail, long blonde hair, slim figure, confident posture \u2014 she looks like she belongs in whatever city she's in. Beach photo with one of the girls: denim jacket over white top and pink/mauve shorts, baseball cap, bare feet in the sand at sunset \u2014 relaxed, happy, arm around her kid. She reads as someone who puts herself together well but doesn't make it the point.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/carina_cutter/",
-        "photos": ["IMG_2630.jpeg", "IMG_3397.jpeg", "IMG_9545.jpeg"]
+        "photos": [
+          "IMG_2630.jpeg",
+          "IMG_3397.jpeg",
+          "IMG_9545.jpeg"
+        ]
       },
       "how_they_met": {
         "detail": "At Miami University (Oxford, OH). She was friends with 'the townies' \u2014 local Oxford, OH-raised students. 'They essentially grew up in a cornfield, much like I did.'",
@@ -445,7 +544,7 @@
       "location": "Tampa, FL area",
       "key_facts": {
         "birth": {
-          "detail": "32 hours of labor. Baby stressed. Almost C-section. Shawn barely held her. Emotional wall — 'I don't think I felt the same intensity that I even feel right now.'",
+          "detail": "32 hours of labor. Baby stressed. Almost C-section. Shawn barely held her. Emotional wall \u2014 'I don't think I felt the same intensity that I even feel right now.'",
           "source": "Session 5",
           "confidence": "confirmed"
         },
@@ -455,16 +554,20 @@
           "confidence": "confirmed"
         },
         "the_book": {
-          "detail": "Gia does NOT know about the book. Everyone knows about the accident — 'probably tired of hearing it because it gets used when they want to ride a motorcycle or cross the road.'",
+          "detail": "Gia does NOT know about the book. Everyone knows about the accident \u2014 'probably tired of hearing it because it gets used when they want to ride a motorcycle or cross the road.'",
           "source": "Session 5",
           "confidence": "confirmed"
         }
       },
       "physical": {
-        "description": "Blonde hair — long, straight to slightly wavy, honey-toned like Carina's. Light freckles across the nose and cheeks. Brown eyes. Bright, full smile. At 15-16 she's growing into her features — in the beanie photo: pink 'Hagen Well Service' beanie, gray graphic hoodie, arms crossed, side braid, warm smile with a hint of mischief. In the close-up portrait: long straight blonde hair, delicate gold necklace, black t-shirt, freckles visible, natural and unaffected — she looks like she got Carina's coloring and Shawn's energy in the eyes. Night photo with Shawn by the waterfront: black graphic hoodie, hair pulled back, standing next to her dad — she's already almost as tall as him. She carries herself with a teenager's mix of confidence and not-yet-knowing.",
+        "description": "Blonde hair \u2014 long, straight to slightly wavy, honey-toned like Carina's. Light freckles across the nose and cheeks. Brown eyes. Bright, full smile. At 15-16 she's growing into her features \u2014 in the beanie photo: pink 'Hagen Well Service' beanie, gray graphic hoodie, arms crossed, side braid, warm smile with a hint of mischief. In the close-up portrait: long straight blonde hair, delicate gold necklace, black t-shirt, freckles visible, natural and unaffected \u2014 she looks like she got Carina's coloring and Shawn's energy in the eyes. Night photo with Shawn by the waterfront: black graphic hoodie, hair pulled back, standing next to her dad \u2014 she's already almost as tall as him. She carries herself with a teenager's mix of confidence and not-yet-knowing.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/gia_cutter/",
-        "photos": ["IMG_3056.jpeg", "IMG_3088.jpeg", "IMG_3361.jpeg"]
+        "photos": [
+          "IMG_3056.jpeg",
+          "IMG_3088.jpeg",
+          "IMG_3361.jpeg"
+        ]
       },
       "arc_presence": [
         "forging",
@@ -493,10 +596,12 @@
         "note": "Very little confirmed about Tessa individually. Born 2012, two years after Gia."
       },
       "physical": {
-        "description": "Darker hair than Gia — brown, pulled back. Braces. Athletic build — looks like she plays sports. Light eyes (possibly green or hazel). In the photo: pink athletic top, hair pulled back in a ponytail, standing outside in the Florida sun, big smile showing braces, small gold hoop earrings. She's younger and more compact than Gia — different energy, more grounded and direct in how she stands. Where Gia has Carina's willowy quality, Tessa reads as sturdier, more physical.",
+        "description": "Darker hair than Gia \u2014 brown, pulled back. Braces. Athletic build \u2014 looks like she plays sports. Light eyes (possibly green or hazel). In the photo: pink athletic top, hair pulled back in a ponytail, standing outside in the Florida sun, big smile showing braces, small gold hoop earrings. She's younger and more compact than Gia \u2014 different energy, more grounded and direct in how she stands. Where Gia has Carina's willowy quality, Tessa reads as sturdier, more physical.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/tessa_cutter/",
-        "photos": ["IMG_1563.jpeg"]
+        "photos": [
+          "IMG_1563.jpeg"
+        ]
       },
       "arc_presence": [
         "foundry"
@@ -511,7 +616,7 @@
     "kristin_anthony": {
       "role": "sister",
       "category": "extended_family",
-      "full_name": "Kristin Anthony (née Cutter)",
+      "full_name": "Kristin Anthony (n\u00e9e Cutter)",
       "nicknames": [
         "Kristin"
       ],
@@ -528,13 +633,19 @@
         "Kristin's relationship with Shawn now?",
         "Kristin's experience of Chuck, Beth, the farm?",
         "Would she participate in family recordings?",
-        "Who is in the 'Shawn Lisa and kids' photo from her folder — is Lisa another name or a different person?"
+        "Who is in the 'Shawn Lisa and kids' photo from her folder \u2014 is Lisa another name or a different person?"
       ],
       "physical": {
-        "description": "Long, wavy caramel-brown hair with honey highlights — similar coloring to Beth but darker, warmer. Brown eyes. Bright, wide smile. Olive-toned skin, slightly tanned. Fit, athletic build. In the professional headshot: hair in big loose waves, black top, warm confident expression — she looks polished and put-together. Office selfie with Shawn: gray athletic top with what appears to be an EnergiAcres/company logo, hair pulled back, sunglasses on top of her head, sitting at a desk — she looks like she works WITH Shawn. At a Cleveland Cavaliers game with her son: long brown hair, big smile, arm around the boy in a Cavs jersey. In the kitchen: long straight brown hair, white sweatshirt, holding a jar, laughing — genuinely warm energy. She has Chuck's coloring but Beth's warmth in her face.",
+        "description": "Long, wavy caramel-brown hair with honey highlights \u2014 similar coloring to Beth but darker, warmer. Brown eyes. Bright, wide smile. Olive-toned skin, slightly tanned. Fit, athletic build. In the professional headshot: hair in big loose waves, black top, warm confident expression \u2014 she looks polished and put-together. Office selfie with Shawn: gray athletic top with what appears to be an EnergiAcres/company logo, hair pulled back, sunglasses on top of her head, sitting at a desk \u2014 she looks like she works WITH Shawn. At a Cleveland Cavaliers game with her son: long brown hair, big smile, arm around the boy in a Cavs jersey. In the kitchen: long straight brown hair, white sweatshirt, holding a jar, laughing \u2014 genuinely warm energy. She has Chuck's coloring but Beth's warmth in her face.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/kristin_anthony/",
-        "photos": ["IMG_0168.JPG", "IMG_1545.jpeg", "IMG_6771.jpeg", "IMG_7596.jpeg", "Shawn Lisa and kids.jpeg"]
+        "photos": [
+          "IMG_0168.JPG",
+          "IMG_1545.jpeg",
+          "IMG_6771.jpeg",
+          "IMG_7596.jpeg",
+          "Shawn Lisa and kids.jpeg"
+        ]
       }
     },
     "josh_cutter": {
@@ -544,12 +655,17 @@
       "nicknames": [
         "Josh"
       ],
-      "born": "⚠️ Unknown — younger than Shawn",
+      "born": "1989",
       "key_facts": {
-        "note": "Younger brother. 'Different household dynamic' — grew up in a different era of Chuck. Very little confirmed.",
-        "works_with_shawn": "Wearing a 'Cutter' branded company t-shirt in kitchen photo — possibly involved in family business or EnergiAcres."
+        "note": "Younger brother. 'Different household dynamic' \u2014 grew up in a different era of Chuck. Very little confirmed.",
+        "works_with_shawn": "Wearing a 'Cutter' branded company t-shirt in kitchen photo \u2014 possibly involved in family business or EnergiAcres."
       },
-      "arc_presence": [],
+      "arc_presence": [
+        "forged",
+        "fractured",
+        "forging",
+        "foundry"
+      ],
       "open_questions": [
         "Josh's age / birth year?",
         "What era of Chuck did Josh experience?",
@@ -558,10 +674,27 @@
         "Is Josh involved in the business? (Cutter-branded shirt)"
       ],
       "physical": {
-        "description": "Stockier than Shawn — more compact, thicker through the chest and shoulders. Short dark brown hair, full beard/stubble. Big, warm smile. He looks more like Chuck's build than Shawn does — the shorter, thicker Cutter frame vs. Shawn's lean angular frame. In the selfie with Shawn: dark hair, dark stubble, wearing a black shirt — he's got a rounder face and heavier build. In the kitchen: standing in front of cherry wood cabinets, black 'Cutter' t-shirt, jeans, phone in both hands, grinning — stocky, strong, comfortable in his own skin. He reads as the physical bridge between Chuck and Shawn.",
+        "description": "Stockier than Shawn \u2014 more compact, thicker through the chest and shoulders. Short dark brown hair, full beard/stubble. Big, warm smile. He looks more like Chuck's build than Shawn does \u2014 the shorter, thicker Cutter frame vs. Shawn's lean angular frame. In the selfie with Shawn: dark hair, dark stubble, wearing a black shirt \u2014 he's got a rounder face and heavier build. In the kitchen: standing in front of cherry wood cabinets, black 'Cutter' t-shirt, jeans, phone in both hands, grinning \u2014 stocky, strong, comfortable in his own skin. He reads as the physical bridge between Chuck and Shawn.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/josh_cutter/",
-        "photos": ["IMG_0922.jpeg", "IMG_2413.jpeg"]
+        "photos": [
+          "IMG_0922.jpeg",
+          "IMG_2413.jpeg"
+        ]
+      },
+      "age_march_2026": 36,
+      "relationship": "Shawn's youngest full brother. 10 years younger. Was 1 year old when Shawn's accident happened \u2014 grew up inside the aftermath of October 29, 1990.",
+      "vital_stats": {
+        "birth_year": {
+          "value": "1989",
+          "source": "2026-05-13 voice memo",
+          "confidence": "confirmed"
+        },
+        "full_or_half": {
+          "value": "Full brother (Beth + Chuck)",
+          "source": "2026-05-13 voice memo",
+          "confidence": "confirmed"
+        }
       }
     },
     "jeff_taynton": {
@@ -571,7 +704,7 @@
       "nicknames": [
         "Jeff"
       ],
-      "spelling_note": "✅ CONFIRMED: Taynton (from photo folder name).",
+      "spelling_note": "\u2705 CONFIRMED: Taynton (from photo folder name).",
       "met_shawn": "At By Design Technologies \u2014 first Florida/Tampa job",
       "relationship": "Best friend, CTO at Fielding Systems, now at Terrasow with Shawn",
       "key_facts": {
@@ -600,14 +733,16 @@
       ],
       "open_questions": [
         "What was By Design Technologies?",
-        "The Tool concerts — specific memories?",
+        "The Tool concerts \u2014 specific memories?",
         "Jeff's perspective on the Fielding/Quorum journey?"
       ],
       "physical": {
-        "description": "Clean-cut, professional look. Short reddish-brown hair, neatly trimmed. Rectangular dark-framed glasses. Clean-shaven. Wearing a dark blazer over a light blue collared shirt in the headshot — the kind of guy who looks equally comfortable in a boardroom and a garage. Medium build, not heavy. His face reads as precise and attentive — CTO energy. The glasses and grooming suggest someone who values order and clarity.",
+        "description": "Clean-cut, professional look. Short reddish-brown hair, neatly trimmed. Rectangular dark-framed glasses. Clean-shaven. Wearing a dark blazer over a light blue collared shirt in the headshot \u2014 the kind of guy who looks equally comfortable in a boardroom and a garage. Medium build, not heavy. His face reads as precise and attentive \u2014 CTO energy. The glasses and grooming suggest someone who values order and clarity.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/jeff_taynton/",
-        "photos": ["IMG_0161.JPG"]
+        "photos": [
+          "IMG_0161.JPG"
+        ]
       }
     },
     "mike_huff": {
@@ -630,13 +765,15 @@
       "open_questions": [
         "Where is Mike now?",
         "What did Mike do at Fielding specifically?",
-        "Mike's personality — what was he like to work with?"
+        "Mike's personality \u2014 what was he like to work with?"
       ],
       "physical": {
-        "description": "Solid, stocky build. Dark hair under a black ball cap. Stubble/light beard. Wraparound sunglasses. Gray long-sleeve t-shirt with dark trim. In the fishing boat photo: he's looking at the camera with a steady, no-nonsense expression — not unfriendly, just focused. Fishing rods behind him. He reads as a practical, hands-on guy. The kind of person Jeff Taton would be best friends with from school — solid, reliable, not flashy.",
+        "description": "Solid, stocky build. Dark hair under a black ball cap. Stubble/light beard. Wraparound sunglasses. Gray long-sleeve t-shirt with dark trim. In the fishing boat photo: he's looking at the camera with a steady, no-nonsense expression \u2014 not unfriendly, just focused. Fishing rods behind him. He reads as a practical, hands-on guy. The kind of person Jeff Taton would be best friends with from school \u2014 solid, reliable, not flashy.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/mike_huff/",
-        "photos": ["IMG_5017.JPG"]
+        "photos": [
+          "IMG_5017.JPG"
+        ]
       }
     },
     "sasha_nelson": {
@@ -783,10 +920,12 @@
         "Is Andrew a founder too? What's his background?"
       ],
       "physical": {
-        "description": "Big — exactly as described. Tall, broad-shouldered, heavy build. In the bar photo (younger era): reddish-brown beard, thick brown/auburn hair, wearing a pink button-up shirt, holding a drink — he takes up space in the frame the way 'biggest kid in class' implies. Standing next to a younger Shawn (glasses, plaid shirt, slimmer) the size difference is obvious. He's the kind of big that isn't aggressive — more like a bear. Warm, genuine smile. The nerd friend who happens to be built like a lineman.",
+        "description": "Big \u2014 exactly as described. Tall, broad-shouldered, heavy build. In the bar photo (younger era): reddish-brown beard, thick brown/auburn hair, wearing a pink button-up shirt, holding a drink \u2014 he takes up space in the frame the way 'biggest kid in class' implies. Standing next to a younger Shawn (glasses, plaid shirt, slimmer) the size difference is obvious. He's the kind of big that isn't aggressive \u2014 more like a bear. Warm, genuine smile. The nerd friend who happens to be built like a lineman.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/andrew_palmer/",
-        "photos": ["pictures 073.jpg"]
+        "photos": [
+          "pictures 073.jpg"
+        ]
       }
     },
     "butch_rogers": {
@@ -882,16 +1021,22 @@
       "role": "friend_collaborator",
       "category": "mentors_friends",
       "full_name": "Augustine Bui",
-      "nicknames": ["Augustine"],
-      "relationship": "⚠️ Relationship to Shawn unconfirmed — appears to be a close friend based on selfie together. Multiple photos suggest significant presence in Shawn's current life.",
+      "nicknames": [
+        "Augustine"
+      ],
+      "relationship": "\u26a0\ufe0f Relationship to Shawn unconfirmed \u2014 appears to be a close friend based on selfie together. Multiple photos suggest significant presence in Shawn's current life.",
       "key_facts": {
-        "note": "NEW CHARACTER — added from photo folder. No voice memo or story material yet. Needs context from Shawn."
+        "note": "NEW CHARACTER \u2014 added from photo folder. No voice memo or story material yet. Needs context from Shawn."
       },
       "physical": {
-        "description": "Asian American man, appears to be in his 40s-50s. Dark hair graying at the temples. Warm, easy smile. Wears thick-rimmed dark glasses. In the trucker cap photo: 'Sun Valley Outfitters Ketchum Idaho' green trucker cap, neat mustache, navy blue button-up shirt, standing in what looks like a lodge or cabin with taxidermy on the wall — outdoorsy, stylish in a relaxed way. In the desert/festival photo: white t-shirt under a colorful traditional-patterned vest/jacket (possibly Hmong or Southeast Asian heritage clothing), sunglasses with yellow lenses — at what looks like Burning Man or a desert gathering. In the selfie with Shawn: white zip-up jacket, dark hair swept to the side, graying, warm expression — they're clearly comfortable together, both grinning. He reads as someone who matches Shawn's energy — adventurous, eclectic, not afraid of bold choices.",
+        "description": "Asian American man, appears to be in his 40s-50s. Dark hair graying at the temples. Warm, easy smile. Wears thick-rimmed dark glasses. In the trucker cap photo: 'Sun Valley Outfitters Ketchum Idaho' green trucker cap, neat mustache, navy blue button-up shirt, standing in what looks like a lodge or cabin with taxidermy on the wall \u2014 outdoorsy, stylish in a relaxed way. In the desert/festival photo: white t-shirt under a colorful traditional-patterned vest/jacket (possibly Hmong or Southeast Asian heritage clothing), sunglasses with yellow lenses \u2014 at what looks like Burning Man or a desert gathering. In the selfie with Shawn: white zip-up jacket, dark hair swept to the side, graying, warm expression \u2014 they're clearly comfortable together, both grinning. He reads as someone who matches Shawn's energy \u2014 adventurous, eclectic, not afraid of bold choices.",
         "photo_extracted": true,
         "photos_folder": "LexDocs/_meta/characters/photos/augustine_bui/",
-        "photos": ["IMG_0716.JPG", "IMG_4324.jpeg", "IMG_8366.jpeg"]
+        "photos": [
+          "IMG_0716.JPG",
+          "IMG_4324.jpeg",
+          "IMG_8366.jpeg"
+        ]
       },
       "arc_presence": [],
       "open_questions": [
@@ -901,6 +1046,89 @@
         "What role does Augustine play in Shawn's current life?",
         "Is Augustine involved in any of the businesses?"
       ]
+    },
+    "shawna": {
+      "role": "half-sister",
+      "category": "extended_family",
+      "full_name": "Shawna (last name unknown)",
+      "born": "~1980-1981 (18 months younger than Shawn per existing notes)",
+      "relationship": "Chuck's daughter from an affair. Her mother worked at Country Acres Restaurant \u2014 Beth's family's restaurant. The kids found out about Shawna in 7th grade by listening in on a phone call (shared landlines back then). Beth herself found out immediately after the protector-scene drive-by. Shawna appeared at different times when she needed money \u2014 a car, something big. No real ongoing relationship. The cruelest layer: she thought the Cutters were a good family with a real family life and wanted in to what she didn't know was a hard, yelling household.",
+      "shawn_view": "Felt bad for her. 'She didn't pick that situation.'",
+      "source": "Session 4 + 2026-05-13 voice memo",
+      "confidence": "confirmed",
+      "arc_presence": [
+        "forged"
+      ],
+      "open_questions": [
+        "Shawna's last name",
+        "Shawna's birth year exactly",
+        "Shawna's mother's name and how she and Chuck met at Country Acres",
+        "Beth's exact discovery \u2014 did she know before the drive-by or did the drive-by confirm it?",
+        "Where is Shawna now?"
+      ]
+    },
+    "zeb_edington": {
+      "role": "high school friend, trucker-story co-author",
+      "category": "mentors_friends",
+      "full_name": "Zeb Edington",
+      "born": "\u22481979 (Shawn's classmate)",
+      "died": "2017 \u2014 overdose",
+      "relationship": "Part of Shawn's high school rebellion crew (with Brad Wilhelmi, Todd Cornelius, Jamie Ziggler, Tony Borman). Zeb's dad was a real trucker, which seeded the years-long collaborative fiction Shawn and Zeb built: fake trucker personas (Shawn = Razor), CB-radio language, fabricated log books, made-up driving companies, multi-year evolving stories told at parties and in recordings. The trucker stories are the earliest evidence of Shawn as a builder of worlds \u2014 a startup before he had companies. Zeb was the co-author. He died of overdose in 2017.",
+      "source": "Sessions 7 (crew identification) + 2026-05-13 voice memo (trucker stories)",
+      "confidence": "confirmed",
+      "arc_presence": [
+        "fractured"
+      ],
+      "open_questions": [
+        "Zeb's exact birth year",
+        "How did Zeb die \u2014 circumstances, where, who told Shawn",
+        "Did the trucker recordings survive? Any tapes left?",
+        "What was Zeb's trucker name (Razor was Shawn's \u2014 what was his)?"
+      ]
+    },
+    "jeff_ayscue": {
+      "role": "ByDesign Technologies founder/owner \u2014 Shawn's boss at his pre-Fielding Tampa job",
+      "category": "professional",
+      "full_name": "Jeffrey L. Ayscue",
+      "nicknames": [
+        "Jeff Ayscue",
+        "Jeff Ascue (phonetic spelling Shawn used)"
+      ],
+      "title_then": "Founder, President & CEO \u2014 ByDesign Technologies (Tampa, FL)",
+      "title_now": "Chairman of the Board \u2014 ByDesign Technologies (Daryl Wurzbacher is current CEO)",
+      "company_founded": "2000 \u2014 ByDesign Technologies, Tampa FL. ASP/SaaS for MLM, direct-selling, and party-plan companies. The company is still operating in 2026; per industry sources processed $6B+ in orders and $2B+ in commissions.",
+      "relationship_to_shawn": "Owner of the place Shawn worked pre-Fielding. Hired Shawn for hardware, networking, servers, and .NET. Per Shawn (2026-05-13): 'A real tightass. He didn't even want to buy coffee to keep people busy.' The anti-template for Shawn's own management philosophy \u2014 the place could have been more and wasn't, because the operator wouldn't spend on his people. It's also where Shawn met Jeff Taynton, who would later become CTO at Fielding and is now with Shawn at Terrasow.",
+      "source": "2026-05-13 voice memo + web research (CorporationWiki, ByDesign press releases, 2026-05-13)",
+      "confidence": "name & role confirmed via public corporate records",
+      "arc_presence": [
+        "forging"
+      ],
+      "open_questions": [
+        "When exactly did Shawn work at ByDesign \u2014 start/end dates?",
+        "Did Shawn and Jeff Ayscue ever cross paths after Shawn left? Any reaction to Fielding's success?"
+      ]
+    },
+    "mario_harik": {
+      "role": "Shawn's mentor + friend at Tallan; now CEO/Chairman of XPO, Inc.",
+      "category": "mentors_friends",
+      "full_name": "Mario A. Harik",
+      "nicknames": [],
+      "relationship_to_shawn": "Shawn's mentor at Tallan, Inc. (the .NET/Microsoft consulting firm) \u2014 and a friend. Per Shawn (2026-05-13): 'Mario Harik was a mentor of mine at Tallan and friend. I definitely have stories from my time with him.' One of the formative professional relationships in Shawn's pre-Fielding career. Stories not yet captured \u2014 flagged for follow-up voice memo.",
+      "career_arc": "MIT (master's, engineering / IT) and American University of Beirut (undergrad, computer & communications engineering). Lebanese-American. Co-founder and chief architect at G3 Analyst (web/voice applications). CTO at Tallan, Inc. (where he mentored Shawn). CIO + SVP of R&D at Oakleaf Waste Management. Third hire at XPO when Brad Jacobs founded it in 2011 \u2014 ran the company in its earliest days. CIO \u2192 Chief Customer Officer (ran global sales) \u2192 ran the LTL business \u2192 succeeded Brad Jacobs as CEO of XPO. Chairman of XPO since December 2025. Under his 2024 leadership XPO delivered ~50% total shareholder return.",
+      "narrative_resonance": "Two threads converge here that the book can use: (1) Shawn was mentored by a man who went on to become a Fortune-500 CEO of a TRUCKING company \u2014 and Shawn's high-school self had pretended to be a trucker with Zeb (the Razor + Zeb stories). The kid who made up trucker fiction at parties grew up to work for the man who would actually run trucks at continental scale. (2) Mario's path (engineer \u2192 CTO \u2192 CIO \u2192 operator \u2192 CEO) is one model of the path Shawn is on \u2014 technical founder \u2192 operator \u2192 eventually the Cutter version of the same arc with EnergiAcres.",
+      "source": "2026-05-13 voice memo + web research (XPO investor relations, EY/Tallan, CIO.com, 2026-05-13)",
+      "confidence": "identity + career arc verified via public sources; mentorship relationship per Shawn's voice memo",
+      "arc_presence": [
+        "forging"
+      ],
+      "open_questions": [
+        "What years did Shawn work with Mario at Tallan?",
+        "Which Tallan office did they share?",
+        "Are Shawn and Mario still in touch?",
+        "The specific stories Shawn mentioned \u2014 record them (mentorship moments, projects, lessons, anecdotes)",
+        "Did Mario's later career (XPO, the LTL business especially) ever connect back into Shawn's world?",
+        "Is Mario aware of EnergiAcres / Fielding / the book?"
+      ]
     }
   },
   "character_relationships": {
@@ -908,7 +1136,7 @@
     "the_brothers": "CJ \u2194 Shawn \u2014 fighting, forts, the 40% ask, the blocking. Currently unresolved.",
     "the_marriage": "Shawn \u2194 Carina \u2014 handicap placard meeting, elopement, emotional wall, therapy, incrementally better.",
     "the_inheritance": "Shawn absorbed Chuck's operating system (intensity, work ethic, oilfield knowledge) but built on Beth's ground (the Bechtel farm).",
-    "the_engineers": "Jeff Taynton → Mike Huff → Sasha Nelson → Donny Kerr. Each represents a phase of Shawn's builder journey.",
+    "the_engineers": "Jeff Taynton \u2192 Mike Huff \u2192 Sasha Nelson \u2192 Donny Kerr. Each represents a phase of Shawn's builder journey.",
     "the_ghost": "Chuck's absence haunts Forging and Foundry. 'If Chuck could see EnergiAcres.'",
     "the_wall": "Shawn's emotional disconnection (from accident/trauma) affects every relationship \u2014 Carina, Gia, CJ, even professional ones (Sasha)."
   },
