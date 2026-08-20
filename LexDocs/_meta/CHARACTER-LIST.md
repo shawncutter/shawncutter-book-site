@@ -1,5 +1,5 @@
 # P2L Character Bible — Known Facts & Open Gaps
-*Last updated: March 27, 2026 | 21 characters across 4 arcs | 12 with photo descriptions*
+*Last updated: June 16, 2026 | 23 characters across 4 arcs | 12 with photo descriptions*
 
 Use this document to review, correct, and fill gaps for every character in the book. Each entry shows what we KNOW (✅), what's ASSUMED (⚠️), and what's MISSING. The fastest way to fill gaps is voice memos — prompts are included.
 
@@ -150,8 +150,9 @@ Use this document to review, correct, and fill gaps for every character in the b
 **Arcs:** Forging, Foundry
 
 **Known Facts:**
-- ✅ Spelling: CARINA with a C, not a K.
-- ✅ Met Shawn at Miami University (Oxford, OH). Friends with "the townies" — locals who grew up in a cornfield, like Shawn.
+- ✅ Spelling: CARINA with a C, not a K. Maiden name: **Jeep**.
+- ✅ Parents: **John Jeep** (PhD, still teaches at Miami University, Oxford OH) and **Lynda Hoffman Jeep** (PhD, now retired). Both earned their doctorates at the **University of Chicago**. Carina is the daughter of two academics.
+- ✅ Met Shawn at Miami University (Oxford, OH) — the same school where her father teaches. Friends with "the townies" — locals who grew up in a cornfield, like Shawn.
 - ✅ The handicap placard: thought Shawn was a jerk parking in a handicap spot. He was actually handicapped. Moped with a weed-eater motor.
 - ✅ Elopement: Las Vegas, July 8, 2006 (her birthday). Little White Wedding Chapel. Elvis package. Only Chris and Patty attended. Dress broke. Parents hated it. "Reception of swords" at Thanksgiving.
 - ✅ Daughters: Gia (b. 2010) and Tessa (b. 2012).
@@ -162,7 +163,7 @@ Use this document to review, correct, and fill gaps for every character in the b
 
 **Open Gaps:**
 - What does Carina do professionally?
-- Who are Chris and Patty (her parents)?
+- What was it like growing up as the daughter of two academics (John Jeep at Miami, Lynda a U-Chicago PhD)?
 - What was the move to Florida (2005) like for Carina?
 - Carina's experience of the emotional wall — from her side?
 - Feb 2022 ("hardest and most painful time") — Carina's perspective?
@@ -203,6 +204,33 @@ Use this document to review, correct, and fill gaps for every character in the b
 ---
 
 ## EXTENDED FAMILY
+
+---
+
+### JOHN JEEP — Father-in-Law (Carina's Father)
+**Arcs:** Forging, Foundry
+
+**Known Facts:**
+- ✅ Carina's father. PhD, earned at the **University of Chicago**.
+- ✅ Professor at **Miami University** (Oxford, OH) — **still teaching** as of 2026.
+- ✅ Married to Lynda Hoffman Jeep. Together they raised Carina in an academic household.
+- ✅ Shawn met Carina at Miami University, where John teaches. The Jeeps initially hated the 2006 Las Vegas elopement ("reception of swords" at Thanksgiving).
+
+**The Thread:** The quiet contrast at the heart of Shawn's marriage — a farm-kid-turned-founder marries into a family of University of Chicago PhDs. Forged-arc dirt curriculum meets Oxford, Ohio academia.
+
+**Open Gaps:** What does John teach (department/field)? Birth year/age? How did his relationship with Shawn evolve after the elopement? Specific stories/visits.
+
+---
+
+### LYNDA HOFFMAN JEEP — Mother-in-Law (Carina's Mother)
+**Arcs:** Forging, Foundry
+
+**Known Facts:**
+- ✅ Carina's mother. PhD, earned at the **University of Chicago**.
+- ✅ **Now retired** (formerly an academic) as of 2026.
+- ✅ Married to John Jeep. Like John, was not a fan of the Vegas elopement at the time.
+
+**Open Gaps:** What field was Lynda's PhD/career in before retirement? Birth year/age? How did her relationship with Shawn evolve after the elopement?
 
 ---
 

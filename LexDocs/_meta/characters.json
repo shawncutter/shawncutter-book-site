@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-03-23",
-    "total_characters": 21,
+    "last_updated": "2026-06-16",
+    "total_characters": 23,
     "categories": [
       "core_family",
       "extended_family",
@@ -459,7 +459,9 @@
       "nicknames": [
         "Carina"
       ],
+      "maiden_name": "Jeep",
       "spelling_note": "CARINA \u2014 spelled with a C, not a K",
+      "parents": "Father: John Jeep (PhD, professor at Miami University, Oxford OH). Mother: Lynda Hoffman Jeep (PhD, now retired). Both earned their doctorates at the University of Chicago. Shawn met Carina at Miami University, where her father teaches.",
       "born": "July 8, 1981",
       "age_march_2026": 44,
       "married": "July 8, 2006 \u2014 on her birthday. Las Vegas. Elvis package.",
@@ -489,7 +491,7 @@
         "confidence": "confirmed"
       },
       "the_elopement": {
-        "detail": "Las Vegas, 2006. Little White Wedding Chapel. Elvis package. Only Chris and Patty came. The dress broke (clasp/seam). Called parents from the limo. Parents hated it. Had a 'reception of swords' at Thanksgiving timeframe later that year.",
+        "detail": "Las Vegas, 2006. Little White Wedding Chapel. Elvis package. Only Chris and Patty came (Shawn's neighbors — NOT Carina's parents). The dress broke (clasp/seam). Called parents from the limo. Carina's parents (John & Lynda Jeep, both PhDs/academics) hated the elopement. Had a 'reception of swords' at Thanksgiving timeframe later that year.",
         "source": "Voice memo + Session 5",
         "confidence": "confirmed"
       },
@@ -528,7 +530,7 @@
       "open_questions": [
         "Physical description?",
         "What does Carina do professionally?",
-        "Carina's parents \u2014 who are Chris and Patty?",
+        "What was it like growing up as the daughter of two academics (a Miami professor and a U-Chicago PhD)?",
         "What was the move to Florida (2005) like for Carina?",
         "Carina's experience of the emotional wall \u2014 from her side?",
         "Feb 2022 ('hardest and most painful time') \u2014 Carina's perspective?",
@@ -1067,6 +1069,51 @@
         "Where is Shawna now?"
       ]
     },
+    "john_jeep": {
+      "role": "father-in-law (Carina's father)",
+      "category": "extended_family",
+      "full_name": "John Jeep",
+      "nicknames": [
+        "John"
+      ],
+      "education": "PhD, University of Chicago",
+      "occupation": "Professor at Miami University (Oxford, OH) \u2014 still teaching as of 2026.",
+      "relationship_to_shawn": "Shawn's father-in-law \u2014 Carina's father. An academic family: John still teaches at Miami University, the same school where Shawn met Carina. The Jeeps initially hated the 2006 Las Vegas elopement (the 'reception of swords' at Thanksgiving). One of the quiet contrasts of the book: Shawn the farm-kid-turned-founder marrying into a household of University of Chicago PhDs.",
+      "source": "Shawn (2026-06-16)",
+      "confidence": "confirmed",
+      "arc_presence": [
+        "forging",
+        "foundry"
+      ],
+      "open_questions": [
+        "What does John teach at Miami University (department/field)?",
+        "How did the relationship with Shawn evolve after the elopement?",
+        "Birth year / age?",
+        "Stories of Shawn's interactions with the Jeeps over the years."
+      ]
+    },
+    "lynda_hoffman_jeep": {
+      "role": "mother-in-law (Carina's mother)",
+      "category": "extended_family",
+      "full_name": "Lynda Hoffman Jeep",
+      "nicknames": [
+        "Lynda"
+      ],
+      "education": "PhD, University of Chicago",
+      "occupation": "Retired (formerly an academic). Now retired as of 2026.",
+      "relationship_to_shawn": "Shawn's mother-in-law \u2014 Carina's mother. PhD from the University of Chicago, now retired. Married to John Jeep; together they raised Carina in the orbit of Miami University. Like John, was not a fan of the Vegas elopement at the time.",
+      "source": "Shawn (2026-06-16)",
+      "confidence": "confirmed",
+      "arc_presence": [
+        "forging",
+        "foundry"
+      ],
+      "open_questions": [
+        "What field was Lynda's PhD / career in before retirement?",
+        "Birth year / age?",
+        "How did the relationship with Shawn evolve after the elopement?"
+      ]
+    },
     "zeb_edington": {
       "role": "high school friend, trucker-story co-author",
       "category": "mentors_friends",
@@ -1167,7 +1214,9 @@
       "donny_kerr",
       "butch_rogers",
       "tyson_and_perry",
-      "chris_and_patty"
+      "chris_and_patty",
+      "john_jeep",
+      "lynda_hoffman_jeep"
     ],
     "foundry": [
       "carina_cutter",
@@ -1175,7 +1224,9 @@
       "tessa_cutter",
       "beth_cutter",
       "andrew_palmer",
-      "jeff_taton"
+      "jeff_taton",
+      "john_jeep",
+      "lynda_hoffman_jeep"
     ]
   },
   "universal_gaps": [
