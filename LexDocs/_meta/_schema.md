@@ -7,10 +7,49 @@ All story files in LexDocs should include this YAML frontmatter at the top of th
 ```yaml
 ---
 title: "Story Title"
+kind: scene                    # scene | essay | capture | legacy | meta
 arc: forged                    # forged | fractured | forging | foundry
 status: draft                  # idea | draft | ready | published | expanded
 ---
 ```
+
+## Kind Definitions
+
+`kind` says what sort of document this is; `status` says how finished it is.
+Only `scene` is book prose. The folder a file lives in follows from its kind.
+
+| kind | Lives in | Meaning |
+|------|----------|---------|
+| `scene` | `book/<arc>/` | Memoir prose. The book. |
+| `essay` | `essays/` | EnergiAcres thesis / business writing. Not memoir. |
+| `capture` | `captures/` | Raw dumps and capture scaffolds, pre-scene. |
+| `legacy` | `archive/legacy-draft/` | Superseded prior book draft. Mine, don't publish. |
+| `meta` | `_meta/notes/` | Project admin: profiles, feedback, question lists. |
+
+`archive/` and any `_`-prefixed directory are skipped by `scan-stories.js`
+and `compile-manuscript.js`, so `legacy` and `meta` pieces stay out of the
+index and the manuscript entirely.
+
+## date_event Formats
+
+`date_event` is what puts a piece in book order, so the parser
+(`scripts/event-date.js`) accepts every shape the corpus actually uses:
+
+| Write it as | Means | Sorts as |
+|-------------|-------|----------|
+| `1990-10-29` | a known day | that day |
+| `1991-02` | a known month | the 1st of it |
+| `1985` | a known year | ahead of any dated piece in 1985 |
+| `~1985` | about 1985 — you don't recall exactly | same as `1985` |
+| `1999-2003` | a span, e.g. four years of college | where it starts, 1999 |
+| `1990/2000` | one event seen twice, years apart | the earlier, 1990 |
+| `""` | not anchored in time yet | the end of its arc |
+
+`circa 1985`, `c. 1985`, `about 1985` and `1985?` all work the same as
+`~1985`. Anything the parser cannot read — a backwards span like `2003-1999`,
+a month like `1999-20`, or prose like `spring 1985` — is **reported** by the
+compiler and sent to the end of its arc, never guessed at. If a piece is
+sitting at the back of its arc unexpectedly, that is the first thing to check.
 
 ## Full Schema
 
@@ -20,7 +59,7 @@ title: "Rolling Ohio Hills"
 arc: forged                    # forged | fractured | forging | foundry
 status: published              # idea | draft | ready | published | expanded
 medium_url: ""                 # URL when published to Medium
-date_event: "1990-10-29"       # When the event happened (YYYY-MM-DD or YYYY)
+date_event: "1990-10-29"       # When it happened — see "date_event Formats"
 date_written: "2024-09-28"     # When piece was written
 themes:                        # Key themes in this piece
   - accident

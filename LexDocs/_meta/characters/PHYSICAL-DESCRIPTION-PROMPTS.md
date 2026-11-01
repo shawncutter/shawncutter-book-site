@@ -29,8 +29,8 @@
 15. **Describe your daughters.** Not just physical — how they move, what they sound like, their energy. Who do they look like? Who do they act like?
 
 ## THE ENGINEERS
-16. **Sasha Nelson.** What did Sasha look like? At the desk, in a meeting, when he was locked into a problem?
-17. **Jeff Taton.** What does Jeff look like? How does he carry himself? Tool concert Jeff vs. CTO Jeff?
+16. **Sacha Nelson.** What did Sacha look like? At the desk, in a meeting, when he was locked into a problem?
+17. **Jeff Taynton.** What does Jeff look like? How does he carry himself? Tool concert Jeff vs. CTO Jeff?
 
 ---
 

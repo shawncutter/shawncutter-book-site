@@ -72,6 +72,8 @@ Build from: Painful Rebirth (rewritten in vignette voice), Phoenix Rises, depres
 
 Build from: Therapy/Loneliness/Clarity, 30-Year Echo, Rolling Ohio Hills, loss of faith material, grandpa's funeral, transition to college
 
+> **Status 2026-10-24 (daily P2L):** New dump-only RAW CAPTURE for the University of Akron early-internet / lab-access memory: `LexDocs/captures/bk1-akron-lab.md` (Plaud 2026-10-22, private / therapy-adjacent, Shawn to clear). Verbatim only: fast public-internet feeling at university; class A / student public addresses; "control over most of the computers in all of the labs of University of Akron"; "open up drives" / "type on the keyboard, and it would type for them." Not appended to ready `bk1-150-credit-hours.md` (different beat: scholarship / philosophy / Miami transfer). Year, what he actually did, whether anyone caught him, and the map to what he's building now stay PLACEHOLDER. Pending Claude edit / NotebookLM.
+
 ---
 
 ## STORIES TO RECLASSIFY

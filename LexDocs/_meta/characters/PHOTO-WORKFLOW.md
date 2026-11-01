@@ -80,6 +80,6 @@ For Chuck, a photo from 1985 and 2008 would show the "softening" — confirming 
 | 🟡 High | Carina | Key character from Forging onward |
 | 🟡 High | CJ | Shared bedroom, the fighting — need size contrast |
 | 🟡 High | Gia | Legacy thread — what does she look like? |
-| 🟢 Medium | Jeff Taton | The garage, the build years |
-| 🟢 Medium | Sasha Nelson | "The One Resource" piece needs him |
+| 🟢 Medium | Jeff Taynton | The garage, the build years |
+| 🟢 Medium | Sacha Nelson | "The One Resource" piece needs him |
 | ⚪ When available | Everyone else | Any photo adds dimension |

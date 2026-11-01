@@ -1,0 +1,2018 @@
+{
+  "meta": {
+    "created": "2026-05-31",
+    "last_run": "2026-08-14",
+    "shawn_preferences": {
+      "facts_before_feelings": "Prioritize concrete, factual questions (who/what/when/where, roles, jobs, scenes, events). Do NOT ask about the internal feelings/interior life of people until the factual layer is exhausted \u2014 those take Shawn too long to think about in the moment.",
+      "set": "2026-07-21"
+    }
+  },
+  "streak": {
+    "current": 0,
+    "best": 1,
+    "last_answered_date": "2026-08-14"
+  },
+  "questions": {
+    "ug-7e0f8128": {
+      "text": "No physical descriptions for ANY character. This is the #1 gap \u2014 readers need to SEE these people.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 43,
+      "last_asked": "2026-07-18",
+      "answered_date": "2026-07-18"
+    },
+    "ug-f4e74691": {
+      "text": "Beth's experience of the accident and surgeries is completely missing.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 22,
+      "last_asked": "2026-07-18",
+      "answered_date": "2026-07-18"
+    },
+    "ug-9fe74a16": {
+      "text": "CJ's interior life is unknown \u2014 we only have Shawn's perspective.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 29,
+      "last_asked": "2026-07-28",
+      "answered_date": "2026-07-28"
+    },
+    "ug-24992db0": {
+      "text": "Carina's professional life is unknown.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 3,
+      "last_asked": "2026-06-06",
+      "answered_date": "2026-06-06"
+    },
+    "ug-c2275942": {
+      "text": "Kristin and Josh are nearly blank.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-06-06",
+      "answered_date": "2026-06-06"
+    },
+    "ug-0985879a": {
+      "text": "Tessa has almost no individual detail.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 3,
+      "last_asked": "2026-06-06",
+      "answered_date": "2026-06-06"
+    },
+    "ug-6a0a2cf9": {
+      "text": "No Amish neighbor character (mentioned in Forged questions but unnamed).",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 43,
+      "last_asked": "2026-07-18",
+      "answered_date": "2026-07-18"
+    },
+    "cq-8810571d": {
+      "text": "Physical description \u2014 what does Shawn look like?",
+      "source": "Character: Shawn Cutter",
+      "character": "Shawn Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-3c24f1e4": {
+      "text": "What happened in the 'gap years' 2007-2009 (apartments to Plant City)?",
+      "source": "Character: Shawn Cutter",
+      "character": "Shawn Cutter",
+      "priority": 3,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-08-02"
+    },
+    "cq-bd557551": {
+      "text": "The full accident story \u2014 morning to helicopter",
+      "source": "Character: Shawn Cutter",
+      "character": "Shawn Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-fc951d92": {
+      "text": "Physical description \u2014 what did Chuck look like?",
+      "source": "Character: Chuck Cutter",
+      "character": "Chuck Cutter",
+      "priority": 2,
+      "status": "asked",
+      "times_asked": 4,
+      "last_asked": "2026-08-09",
+      "answered_date": null
+    },
+    "cq-9cb8a491": {
+      "text": "What was his laugh like?",
+      "source": "Character: Chuck Cutter",
+      "character": "Chuck Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-31",
+      "answered_date": "2026-08-02"
+    },
+    "cq-7947efd8": {
+      "text": "The motorcycle accident \u2014 when, what happened?",
+      "source": "Character: Chuck Cutter",
+      "character": "Chuck Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-06-06"
+    },
+    "cq-5143b14b": {
+      "text": "Chuck's parents / upbringing?",
+      "source": "Character: Chuck Cutter",
+      "character": "Chuck Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-30",
+      "answered_date": "2026-08-02"
+    },
+    "cq-171868e1": {
+      "text": "Shawna \u2014 when, how long, how did Beth find out?",
+      "source": "Character: Chuck Cutter",
+      "character": "Chuck Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-06-06"
+    },
+    "cq-ce28fa3c": {
+      "text": "What did Shawn SAY at the funeral?",
+      "source": "Character: Chuck Cutter",
+      "character": "Chuck Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-08-01",
+      "answered_date": "2026-08-02"
+    },
+    "cq-ac35e54c": {
+      "text": "Chuck's relationship with CJ vs. Shawn \u2014 differences?",
+      "source": "Character: Chuck Cutter",
+      "character": "Chuck Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-31",
+      "answered_date": "2026-08-02"
+    },
+    "cq-4b4d141e": {
+      "text": "Physical description?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-320140cf": {
+      "text": "How did Beth and Chuck meet?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-49278697": {
+      "text": "Beth during the accident \u2014 where was she, who told her?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-a7788add": {
+      "text": "Beth during 40 surgeries \u2014 what was that like as a mother?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-acdb2046": {
+      "text": "Beth's reaction to Shawna?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-766d022b": {
+      "text": "Exact birth year?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-377cc038": {
+      "text": "Does Beth know about the book?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-05c3477a": {
+      "text": "Beth's relationship with Carina?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-62431e9f": {
+      "text": "What does Beth think about EnergiAcres?",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-d65c61b8": {
+      "text": "CJ's birth year?",
+      "source": "Character: CJ Cutter",
+      "character": "CJ Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-e1330f0a": {
+      "text": "What does CJ look like?",
+      "source": "Character: CJ Cutter",
+      "character": "CJ Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-4b4609ad": {
+      "text": "Where does CJ live now?",
+      "source": "Character: CJ Cutter",
+      "character": "CJ Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-feeef73c": {
+      "text": "What happened from CJ's perspective?",
+      "source": "Character: CJ Cutter",
+      "character": "CJ Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-8b69fa89": {
+      "text": "The wrestling tournament \u2014 CJ got 2nd place the day Shawn came back",
+      "source": "Character: CJ Cutter",
+      "character": "CJ Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-ee74478d": {
+      "text": "Will CJ participate in family recordings? Unlikely but powerful if yes.",
+      "source": "Character: CJ Cutter",
+      "character": "CJ Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-da7cb613": {
+      "text": "Does the CJ thread resolve or stay open?",
+      "source": "Character: CJ Cutter",
+      "character": "CJ Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-57795d14": {
+      "text": "Physical description?",
+      "source": "Character: Carina Cutter",
+      "character": "Carina Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-30",
+      "answered_date": "2026-08-03"
+    },
+    "cq-53214d8c": {
+      "text": "What does Carina do professionally?",
+      "source": "Character: Carina Cutter",
+      "character": "Carina Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-30",
+      "answered_date": "2026-08-03"
+    },
+    "cq-5d982037": {
+      "text": "Carina's parents \u2014 who are Chris and Patty?",
+      "source": "Character: Carina Cutter",
+      "character": "Carina Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-06-06"
+    },
+    "cq-5c54907f": {
+      "text": "What was the move to Florida (2005) like for Carina?",
+      "source": "Character: Carina Cutter",
+      "character": "Carina Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-06-06"
+    },
+    "cq-d5298a46": {
+      "text": "Carina's experience of the emotional wall \u2014 from her side?",
+      "source": "Character: Carina Cutter",
+      "character": "Carina Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 4,
+      "last_asked": "2026-08-09",
+      "answered_date": "2026-08-14"
+    },
+    "cq-805a2a86": {
+      "text": "Feb 2022 ('hardest and most painful time') \u2014 Carina's perspective?",
+      "source": "Character: Carina Cutter",
+      "character": "Carina Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 5,
+      "last_asked": "2026-08-10",
+      "answered_date": "2026-08-14"
+    },
+    "cq-04d1cdc3": {
+      "text": "What specifically is 'incrementally better'?",
+      "source": "Character: Carina Cutter",
+      "character": "Carina Cutter",
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-06-06"
+    },
+    "cq-a747474d": {
+      "text": "Exact birth month?",
+      "source": "Character: Gia Cutter",
+      "character": "Gia Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-7f173a8a": {
+      "text": "What is Gia like now? Personality, interests?",
+      "source": "Character: Gia Cutter",
+      "character": "Gia Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-f96b3482": {
+      "text": "What does Gia know about the accident's full story?",
+      "source": "Character: Gia Cutter",
+      "character": "Gia Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-38a76fcc": {
+      "text": "When/if to bring her into the book process?",
+      "source": "Character: Gia Cutter",
+      "character": "Gia Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-211b465d": {
+      "text": "What does Shawn want her to carry forward?",
+      "source": "Character: Gia Cutter",
+      "character": "Gia Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-467933ad": {
+      "text": "What is Tessa like?",
+      "source": "Character: Tessa Cutter",
+      "character": "Tessa Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-43022445": {
+      "text": "How is Tessa different from Gia?",
+      "source": "Character: Tessa Cutter",
+      "character": "Tessa Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-68a76ed5": {
+      "text": "Does Tessa know about the book?",
+      "source": "Character: Tessa Cutter",
+      "character": "Tessa Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-e9eb01c8": {
+      "text": "Shawn as a father to Tessa specifically?",
+      "source": "Character: Tessa Cutter",
+      "character": "Tessa Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-fb34ddb1": {
+      "text": "What does Kristin remember about growing up?",
+      "source": "Character: Kristin Anthony",
+      "character": "Kristin Anthony",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-53ac8b12": {
+      "text": "Kristin's relationship with Shawn now?",
+      "source": "Character: Kristin Anthony",
+      "character": "Kristin Anthony",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-c39ad2a9": {
+      "text": "Kristin's experience of Chuck, Beth, the farm?",
+      "source": "Character: Kristin Anthony",
+      "character": "Kristin Anthony",
+      "priority": 2,
+      "status": "asked",
+      "times_asked": 3,
+      "last_asked": "2026-08-10",
+      "answered_date": null
+    },
+    "cq-c92e3bb0": {
+      "text": "Would she participate in family recordings?",
+      "source": "Character: Kristin Anthony",
+      "character": "Kristin Anthony",
+      "priority": 2,
+      "status": "asked",
+      "times_asked": 3,
+      "last_asked": "2026-08-11",
+      "answered_date": null
+    },
+    "cq-d0cc769a": {
+      "text": "Who is in the 'Shawn Lisa and kids' photo from her folder \u2014 is Lisa another name or a different person?",
+      "source": "Character: Kristin Anthony",
+      "character": "Kristin Anthony",
+      "priority": 2,
+      "status": "asked",
+      "times_asked": 3,
+      "last_asked": "2026-08-11",
+      "answered_date": null
+    },
+    "cq-9e53fea3": {
+      "text": "Josh's age / birth year?",
+      "source": "Character: Josh Cutter",
+      "character": "Josh Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-afea2f5d": {
+      "text": "What era of Chuck did Josh experience?",
+      "source": "Character: Josh Cutter",
+      "character": "Josh Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-c4c248d7": {
+      "text": "Josh's current relationship with Shawn?",
+      "source": "Character: Josh Cutter",
+      "character": "Josh Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-29c07d44": {
+      "text": "Would he participate in family recordings?",
+      "source": "Character: Josh Cutter",
+      "character": "Josh Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-a4692d00": {
+      "text": "Is Josh involved in the business? (Cutter-branded shirt)",
+      "source": "Character: Josh Cutter",
+      "character": "Josh Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-a69819b3": {
+      "text": "What was By Design Technologies?",
+      "source": "Character: Jeff Taynton",
+      "character": "Jeff Taynton",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-64affeab": {
+      "text": "The Tool concerts \u2014 specific memories?",
+      "source": "Character: Jeff Taynton",
+      "character": "Jeff Taynton",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-5629c57c": {
+      "text": "Jeff's perspective on the Fielding/Quorum journey?",
+      "source": "Character: Jeff Taynton",
+      "character": "Jeff Taynton",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-8dc7dbff": {
+      "text": "Where is Mike now?",
+      "source": "Character: Mike Huff",
+      "character": "Mike Huff",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-0f430849": {
+      "text": "What did Mike do at Fielding specifically?",
+      "source": "Character: Mike Huff",
+      "character": "Mike Huff",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-8df7bbfe": {
+      "text": "Mike's personality \u2014 what was he like to work with?",
+      "source": "Character: Mike Huff",
+      "character": "Mike Huff",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-bf6cdd64": {
+      "text": "What does Sasha look like?",
+      "source": "Character: Sasha Nelson",
+      "character": "Sasha Nelson",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-d5b235c5": {
+      "text": "The day Cognitive Land first worked \u2014 what happened?",
+      "source": "Character: Sasha Nelson",
+      "character": "Sasha Nelson",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-596c8dd9": {
+      "text": "What specifically made Sasha different from other engineers?",
+      "source": "Character: Sasha Nelson",
+      "character": "Sasha Nelson",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-39a6d83c": {
+      "text": "Where is Sasha now?",
+      "source": "Character: Sasha Nelson",
+      "character": "Sasha Nelson",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-c0577ccf": {
+      "text": "Have they reconnected at all?",
+      "source": "Character: Sasha Nelson",
+      "character": "Sasha Nelson",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-70df9f1b": {
+      "text": "What did Donny work on specifically?",
+      "source": "Character: Donny Kerr",
+      "character": "Donny Kerr",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-7ac0ade5": {
+      "text": "Where is Donny now?",
+      "source": "Character: Donny Kerr",
+      "character": "Donny Kerr",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-1fb86a6c": {
+      "text": "How was Donny different from Sasha?",
+      "source": "Character: Donny Kerr",
+      "character": "Donny Kerr",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-e2f7521a": {
+      "text": "Does Shawn still have a relationship with Donny?",
+      "source": "Character: Donny Kerr",
+      "character": "Donny Kerr",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-86612e3a": {
+      "text": "Where is Dave now?",
+      "source": "Character: Dave McCarty",
+      "character": "Dave McCarty",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-13b3ddd6": {
+      "text": "What happened to Dave after Quorum acquisition closed?",
+      "source": "Character: Dave McCarty",
+      "character": "Dave McCarty",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-ba788fe0": {
+      "text": "Who is Joe Norris \u2014 title, role at Quorum?",
+      "source": "Character: Joe Norris",
+      "character": "Joe Norris",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-b42b6846": {
+      "text": "Where were you when Joe called?",
+      "source": "Character: Joe Norris",
+      "character": "Joe Norris",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-eb1c9d11": {
+      "text": "What was said after the API question?",
+      "source": "Character: Joe Norris",
+      "character": "Joe Norris",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-88759a3b": {
+      "text": "What specifically did Andrew say that resonated?",
+      "source": "Character: Andrew Palmer",
+      "character": "Andrew Palmer",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-4b40cc64": {
+      "text": "Is Andrew a founder too? What's his background?",
+      "source": "Character: Andrew Palmer",
+      "character": "Andrew Palmer",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-fffbcd27": {
+      "text": "What did Butch say at the funeral?",
+      "source": "Character: Butch Rogers",
+      "character": "Butch Rogers",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-b322f4bb": {
+      "text": "How long had Butch known the Cutter family?",
+      "source": "Character: Butch Rogers",
+      "character": "Butch Rogers",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-63a52990": {
+      "text": "Is Butch still alive / in contact?",
+      "source": "Character: Butch Rogers",
+      "character": "Butch Rogers",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-91502962": {
+      "text": "Full names?",
+      "source": "Character: Tyson and Perry",
+      "character": "Tyson and Perry",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-2dc76ee3": {
+      "text": "Their roles at Quorum?",
+      "source": "Character: Tyson and Perry",
+      "character": "Tyson and Perry",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-0ab0dc97": {
+      "text": "What happened during the Tampa visit?",
+      "source": "Character: Tyson and Perry",
+      "character": "Tyson and Perry",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-6b205842": {
+      "text": "Who are Chris and Patty? Friends? Family?",
+      "source": "Character: Chris and Patty",
+      "character": "Chris and Patty",
+      "priority": 4,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-08-14"
+    },
+    "cq-d967a6a7": {
+      "text": "How do they know Shawn and Carina?",
+      "source": "Character: Chris and Patty",
+      "character": "Chris and Patty",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-6025bc4f": {
+      "text": "Last name?",
+      "source": "Character: Chris Smith and Patty Smith",
+      "character": "Chris Smith and Patty Smith",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-ecf2453e": {
+      "text": "How does Shawn know Augustine?",
+      "source": "Character: Augustine Bui",
+      "character": "Augustine Bui",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-148a1fff": {
+      "text": "What arc does Augustine belong to?",
+      "source": "Character: Augustine Bui",
+      "character": "Augustine Bui",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-f3a8d4a4": {
+      "text": "Is the desert photo from Burning Man? (Andrew Palmer connection?)",
+      "source": "Character: Augustine Bui",
+      "character": "Augustine Bui",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-21fdf601": {
+      "text": "What role does Augustine play in Shawn's current life?",
+      "source": "Character: Augustine Bui",
+      "character": "Augustine Bui",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-0feb1aa4": {
+      "text": "Is Augustine involved in any of the businesses?",
+      "source": "Character: Augustine Bui",
+      "character": "Augustine Bui",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "aq-3bbeec70": {
+      "text": "[About Mom \u2014 Elizabeth \"Beth\" Cutter \u2705 NAME CONFIRMED + SESSION 5 DETAIL] **Beth's defining moment** \u2014 She needs a dedicated piece. Raw material now exists from Session 5. What's the ONE scene that captures her? The protector moment? The garden? The yard at 67?",
+      "source": "Arc: Forged",
+      "character": null,
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 3,
+      "last_asked": "2026-08-02",
+      "answered_date": "2026-08-02"
+    },
+    "aq-238c1898": {
+      "text": "[Wrestling] **More match detail** \u2014 What did it feel like to beat Chad Wright specifically? Was Chuck there? What happened after? What happened to the four-peat plan \u2014 did the surgeries stop it?",
+      "source": "Arc: Forged",
+      "character": null,
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-28",
+      "answered_date": "2026-07-28"
+    },
+    "aq-297fb549": {
+      "text": "[About The Surgical Years (1990\u20132000+)] **Gamifying surgery** \u2014 You said you had to gamify it. What were the tricks?",
+      "source": "Arc: Fractured",
+      "character": null,
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 3,
+      "last_asked": "2026-08-02",
+      "answered_date": "2026-08-02"
+    },
+    "aq-795a4c77": {
+      "text": "[The Bridge Out] **The moment it shifted** \u2014 When did Fractured start becoming something else?",
+      "source": "Arc: Fractured",
+      "character": null,
+      "priority": 2,
+      "status": "asked",
+      "times_asked": 6,
+      "last_asked": "2026-08-11",
+      "answered_date": null
+    },
+    "aq-ca4e5866": {
+      "text": "[About Jeff & Mike \u2705 SUBSTANTIALLY ANSWERED (Session 5)] **Were there others?** \u2014 Anyone else in the early Fielding days who mattered?",
+      "source": "Arc: Forging",
+      "character": null,
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-06-06"
+    },
+    "aq-1e3365fe": {
+      "text": "[About Chuck's Funeral \u2705 ANSWERED (Sessions 5+6)] **The eulogy** \u2014 **SESSION 6: Shawn will try to get the eulogy he gave at Chuck's funeral.** This could be an incredible primary document \u2014 the words he chose at 31 about his father. WATCH FOR THIS.",
+      "source": "Arc: Forging",
+      "character": null,
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 3,
+      "last_asked": "2026-08-01",
+      "answered_date": "2026-08-02"
+    },
+    "aq-1f33e75f": {
+      "text": "[Cedar Valley Farms \u2705 SUBSTANTIALLY ANSWERED (Session 5)] **CVF in its prime** \u2014 Before the fracture. What was the good season? What did harvest look like when siblings were pulling together?",
+      "source": "Arc: Foundry",
+      "character": null,
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-28",
+      "answered_date": "2026-07-28"
+    },
+    "aq-d5a6c88e": {
+      "text": "[The Current Moment \u2705 SUBSTANTIALLY ANSWERED (Session 6)] **What do you know now that you didn't know 5 years ago?** \u2014 Not about business. About yourself.",
+      "source": "Arc: Foundry",
+      "character": null,
+      "priority": 2,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-06-06"
+    },
+    "vp-ef003b4b": {
+      "text": "\ud83c\udf99\ufe0f Describe Chuck. Not his biography \u2014 describe what it was like to be in a room with him. His voice. How he walked into the house after a day in the field.",
+      "source": "Voice memo: CHUCK CUTTER",
+      "character": "Chuck Cutter",
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 43,
+      "last_asked": "2026-07-18",
+      "answered_date": "2026-07-18"
+    },
+    "vp-74ab5795": {
+      "text": "\ud83c\udf99\ufe0f Tell me about Sasha Nelson. Not the tech \u2014 the person. What was it like to be in a room building something with him?",
+      "source": "Voice memo: SASHA NELSON",
+      "character": "Sasha Nelson",
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 3,
+      "last_asked": "2026-06-06",
+      "answered_date": "2026-06-06"
+    },
+    "vp-b24e391b": {
+      "text": "\ud83c\udf99\ufe0f Tell me about Augustine Bui. How'd you meet? What does he bring to your life that nobody else does?",
+      "source": "Voice memo: AUGUSTINE BUI",
+      "character": "Augustine Bui",
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 3,
+      "last_asked": "2026-06-06",
+      "answered_date": "2026-06-06"
+    },
+    "vp-eb967b1f": {
+      "text": "\ud83c\udf99\ufe0f The Drano boy. Tell me everything. What did the room look like? What could you hear? What did you think when you found out what happened to him?",
+      "source": "Voice memo: THE DRANO BOY",
+      "character": "The Drano Boy",
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 43,
+      "last_asked": "2026-07-18",
+      "answered_date": "2026-07-18"
+    },
+    "cq-4600360d": {
+      "text": "Where are Chris and Patty Smith now?",
+      "source": "Character: Chris Smith and Patty Smith",
+      "character": "Chris Smith and Patty Smith",
+      "priority": 4,
+      "status": "answered",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": "2026-08-14"
+    },
+    "cq-853c6569": {
+      "text": "How/when did Mark join (pre- or post-acquisition start date)?",
+      "source": "Character: Mark Friedel",
+      "character": "Mark Friedel",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-d8989f69": {
+      "text": "A specific Polar scene \u2014 a hard outage or call he made?",
+      "source": "Character: Mark Friedel",
+      "character": "Mark Friedel",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-9327823c": {
+      "text": "Where is Mark now? Relationship today?",
+      "source": "Character: Mark Friedel",
+      "character": "Mark Friedel",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-85bcf7da": {
+      "text": "Physical description?",
+      "source": "Character: Mark Friedel",
+      "character": "Mark Friedel",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-a7aa54a4": {
+      "text": "Interview Beth directly \u2014 her firsthand account of the accident/surgeries (Shawn gave the scene; she needs to give HERS)",
+      "source": "Character: Beth Cutter",
+      "character": "Beth Cutter",
+      "priority": 3,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-bee3d945": {
+      "text": "Physical description of Mr. Hall?",
+      "source": "Character: Mr. Hall",
+      "character": "Mr. Hall",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-c9cfba60": {
+      "text": "What did the two farms trade/share?",
+      "source": "Character: Mr. Hall",
+      "character": "Mr. Hall",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-af4b4d3a": {
+      "text": "Specific stories with Mr. Hall vs. Willy?",
+      "source": "Character: Mr. Hall",
+      "character": "Mr. Hall",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "ug-a4f827b3": {
+      "text": "Beth's experience of the accident and surgeries is completely missing.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "asked",
+      "times_asked": 18,
+      "last_asked": "2026-08-11",
+      "answered_date": null
+    },
+    "ug-6da5d603": {
+      "text": "CJ's interior life is unknown \u2014 we only have Shawn's perspective.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 7,
+      "last_asked": "2026-07-28",
+      "answered_date": "2026-07-28"
+    },
+    "ug-8433952e": {
+      "text": "Carina's professional life is unknown.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-21",
+      "answered_date": "2026-07-21"
+    },
+    "ug-b2bea950": {
+      "text": "Kristin and Josh are nearly blank.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 9,
+      "last_asked": "2026-08-02",
+      "answered_date": "2026-08-02"
+    },
+    "ug-5cfd14ca": {
+      "text": "Tessa has almost no individual detail.",
+      "source": "Universal gap",
+      "character": null,
+      "priority": 1,
+      "status": "answered",
+      "times_asked": 2,
+      "last_asked": "2026-07-21",
+      "answered_date": "2026-07-21"
+    },
+    "cq-fe6be293": {
+      "text": "RESOLVED (2026-07-28, Shawn's read): CJ's guilt = he sent Shawn on the trip. CJ's own account still unheard \u2014 needs a question set sent to him.",
+      "source": "Character: CJ Cutter",
+      "character": "CJ Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "aq-392f2dc7": {
+      "text": "[About Chuck's Funeral \u2705 ANSWERED (Sessions 5+6)] **The eulogy** \u2014 **SESSION 6: Shawn will try to get the eulogy he gave at Chuck's funeral.** This could be an incredible primary document \u2014 the words he chose at 31 about his father. WATCH FOR THIS. \u2014 \u2705 RESOLVED (Daily 5 2026-08-02): Shawn recalls the ending: 'Fuck it, just live for today' \u2014 about working too much and enjoying life before it's cut short. Full verbatim text still worth retrieving if a copy exists.",
+      "source": "Arc: Forging",
+      "character": null,
+      "priority": 2,
+      "status": "asked",
+      "times_asked": 4,
+      "last_asked": "2026-08-10",
+      "answered_date": null
+    },
+    "aq-6991c3a7": {
+      "text": "[About Mom \u2014 Elizabeth \"Beth\" Cutter \u2705 NAME CONFIRMED + SESSION 5 DETAIL] **Beth's defining moment** \u2014 She needs a dedicated piece. Raw material now exists from Session 5. What's the ONE scene that captures her? The protector moment? The garden? The yard at 67? \u2014 \u2705 RESOLVED (Daily 5 2026-08-02): Beth's defining trait = massive heart; provides to her own detriment.",
+      "source": "Arc: Forged",
+      "character": null,
+      "priority": 2,
+      "status": "asked",
+      "times_asked": 4,
+      "last_asked": "2026-08-11",
+      "answered_date": null
+    },
+    "aq-4be24431": {
+      "text": "[About The Surgical Years (1990\u20132000+)] **Gamifying surgery** \u2014 You said you had to gamify it. What were the tricks? \u2014 \u2705 RESOLVED (Daily 5 2026-08-02): equipment/pee-bottle contests to impress nurses + self-taught lowering of HR/BP and observing every sensation to beat boredom.",
+      "source": "Arc: Fractured",
+      "character": null,
+      "priority": 2,
+      "status": "asked",
+      "times_asked": 4,
+      "last_asked": "2026-08-10",
+      "answered_date": null
+    },
+    "cq-22c4b89e": {
+      "text": "Where did Gary land relative to the farm inheritance / Florida grandparents?",
+      "source": "Character: Gary Cutter",
+      "character": "Gary Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    },
+    "cq-b74aa66f": {
+      "text": "Any relationship between Shawn and Gary beyond the wagon story?",
+      "source": "Character: Gary Cutter",
+      "character": "Gary Cutter",
+      "priority": 4,
+      "status": "pending",
+      "times_asked": 0,
+      "last_asked": null,
+      "answered_date": null
+    }
+  },
+  "history": {
+    "2026-06-01": {
+      "asked": [
+        "ug-0985879a",
+        "ug-24992db0",
+        "ug-6a0a2cf9",
+        "vp-74ab5795",
+        "vp-b24e391b"
+      ],
+      "answered": []
+    },
+    "2026-06-02": {
+      "asked": [
+        "ug-7e0f8128",
+        "ug-9fe74a16",
+        "ug-c2275942",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-04": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-0985879a",
+        "ug-24992db0",
+        "vp-74ab5795",
+        "vp-b24e391b"
+      ],
+      "answered": []
+    },
+    "2026-06-05": {
+      "asked": [
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "ug-9fe74a16",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-06": {
+      "asked": [
+        "ug-c2275942",
+        "ug-0985879a",
+        "ug-24992db0",
+        "vp-74ab5795",
+        "vp-b24e391b"
+      ],
+      "answered": [
+        "ug-c2275942",
+        "ug-0985879a",
+        "ug-24992db0",
+        "vp-74ab5795",
+        "vp-b24e391b",
+        "cq-5d982037",
+        "cq-7947efd8",
+        "cq-171868e1",
+        "aq-d5a6c88e",
+        "cq-04d1cdc3",
+        "cq-5c54907f",
+        "aq-ca4e5866"
+      ]
+    },
+    "2026-06-07": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-08": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-09": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-10": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-11": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-12": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-13": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-14": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-15": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-16": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-17": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-18": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-19": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-20": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-21": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-22": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-23": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-24": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-25": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-26": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-27": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-28": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-29": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-06-30": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-01": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-02": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-03": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-04": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-05": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-06": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-07": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-08": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-09": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-10": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-11": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-12": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-13": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-14": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-15": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-16": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": []
+    },
+    "2026-07-18": {
+      "asked": [
+        "ug-f4e74691",
+        "ug-6a0a2cf9",
+        "ug-7e0f8128",
+        "vp-eb967b1f",
+        "vp-ef003b4b"
+      ],
+      "answered": [
+        "ug-6a0a2cf9",
+        "ug-f4e74691",
+        "vp-ef003b4b",
+        "vp-eb967b1f",
+        "ug-7e0f8128"
+      ]
+    },
+    "2026-07-19": {
+      "asked": [
+        "ug-5cfd14ca",
+        "ug-6da5d603",
+        "ug-8433952e",
+        "aq-1e3365fe",
+        "aq-1f33e75f"
+      ],
+      "answered": []
+    },
+    "2026-07-20": {
+      "asked": [
+        "ug-a4f827b3",
+        "ug-b2bea950",
+        "ug-9fe74a16",
+        "aq-238c1898",
+        "aq-297fb549"
+      ],
+      "answered": []
+    },
+    "2026-07-21": {
+      "asked": [
+        "ug-5cfd14ca",
+        "ug-6da5d603",
+        "ug-8433952e",
+        "aq-3bbeec70",
+        "aq-795a4c77"
+      ],
+      "answered": [
+        "ug-5cfd14ca",
+        "ug-8433952e"
+      ]
+    },
+    "2026-07-22": {
+      "asked": [
+        "ug-9fe74a16",
+        "ug-a4f827b3",
+        "ug-b2bea950",
+        "cq-5143b14b",
+        "cq-53214d8c"
+      ],
+      "answered": []
+    },
+    "2026-07-23": {
+      "asked": [
+        "ug-6da5d603",
+        "ug-9fe74a16",
+        "ug-a4f827b3",
+        "cq-57795d14",
+        "cq-805a2a86"
+      ],
+      "answered": []
+    },
+    "2026-07-24": {
+      "asked": [
+        "ug-b2bea950",
+        "ug-6da5d603",
+        "ug-9fe74a16",
+        "cq-9cb8a491",
+        "cq-ac35e54c"
+      ],
+      "answered": []
+    },
+    "2026-07-26": {
+      "asked": [
+        "ug-a4f827b3",
+        "ug-6da5d603",
+        "ug-9fe74a16",
+        "cq-ce28fa3c",
+        "cq-d5298a46"
+      ],
+      "answered": []
+    },
+    "2026-07-27": {
+      "asked": [
+        "ug-b2bea950",
+        "ug-6da5d603",
+        "ug-9fe74a16",
+        "cq-fc951d92",
+        "aq-1e3365fe"
+      ],
+      "answered": []
+    },
+    "2026-07-28": {
+      "asked": [
+        "ug-a4f827b3",
+        "ug-6da5d603",
+        "ug-9fe74a16",
+        "aq-1f33e75f",
+        "aq-238c1898"
+      ],
+      "answered": [
+        "ug-6da5d603",
+        "ug-9fe74a16",
+        "aq-1f33e75f",
+        "aq-238c1898"
+      ]
+    },
+    "2026-07-29": {
+      "asked": [
+        "ug-b2bea950",
+        "ug-a4f827b3",
+        "aq-297fb549",
+        "aq-3bbeec70",
+        "aq-795a4c77"
+      ],
+      "answered": []
+    },
+    "2026-07-30": {
+      "asked": [
+        "ug-a4f827b3",
+        "ug-b2bea950",
+        "cq-5143b14b",
+        "cq-53214d8c",
+        "cq-57795d14"
+      ],
+      "answered": []
+    },
+    "2026-07-31": {
+      "asked": [
+        "ug-a4f827b3",
+        "ug-b2bea950",
+        "cq-805a2a86",
+        "cq-9cb8a491",
+        "cq-ac35e54c"
+      ],
+      "answered": []
+    },
+    "2026-08-01": {
+      "asked": [
+        "ug-a4f827b3",
+        "ug-b2bea950",
+        "cq-ce28fa3c",
+        "cq-d5298a46",
+        "aq-1e3365fe"
+      ],
+      "answered": []
+    },
+    "2026-08-02": {
+      "asked": [
+        "ug-a4f827b3",
+        "ug-b2bea950",
+        "cq-fc951d92",
+        "aq-297fb549",
+        "aq-3bbeec70"
+      ],
+      "answered": [
+        "ug-b2bea950",
+        "cq-ce28fa3c",
+        "aq-1e3365fe",
+        "aq-297fb549",
+        "aq-3bbeec70",
+        "cq-5143b14b",
+        "cq-3c24f1e4",
+        "cq-9cb8a491",
+        "cq-ac35e54c"
+      ]
+    },
+    "2026-08-03": {
+      "asked": [
+        "ug-a4f827b3",
+        "aq-392f2dc7",
+        "aq-4be24431",
+        "aq-6991c3a7",
+        "cq-c39ad2a9"
+      ],
+      "answered": [
+        "cq-57795d14",
+        "cq-53214d8c"
+      ]
+    },
+    "2026-08-04": {
+      "asked": [
+        "ug-a4f827b3",
+        "cq-c92e3bb0",
+        "cq-d0cc769a",
+        "aq-795a4c77",
+        "cq-805a2a86"
+      ],
+      "answered": []
+    },
+    "2026-08-06": {
+      "asked": [
+        "ug-a4f827b3",
+        "cq-d5298a46",
+        "cq-fc951d92",
+        "aq-392f2dc7",
+        "aq-4be24431"
+      ],
+      "answered": []
+    },
+    "2026-08-07": {
+      "asked": [
+        "ug-a4f827b3",
+        "aq-6991c3a7",
+        "cq-c39ad2a9",
+        "aq-795a4c77",
+        "cq-805a2a86"
+      ],
+      "answered": []
+    },
+    "2026-08-08": {
+      "asked": [
+        "ug-a4f827b3",
+        "cq-c92e3bb0",
+        "cq-d0cc769a",
+        "aq-392f2dc7",
+        "aq-4be24431"
+      ],
+      "answered": []
+    },
+    "2026-08-09": {
+      "asked": [
+        "ug-a4f827b3",
+        "cq-d5298a46",
+        "cq-fc951d92",
+        "aq-6991c3a7",
+        "aq-795a4c77"
+      ],
+      "answered": []
+    },
+    "2026-08-10": {
+      "asked": [
+        "ug-a4f827b3",
+        "cq-805a2a86",
+        "cq-c39ad2a9",
+        "aq-392f2dc7",
+        "aq-4be24431"
+      ],
+      "answered": []
+    },
+    "2026-08-11": {
+      "asked": [
+        "ug-a4f827b3",
+        "cq-c92e3bb0",
+        "cq-d0cc769a",
+        "aq-6991c3a7",
+        "aq-795a4c77"
+      ],
+      "answered": []
+    },
+    "2026-08-14": {
+      "asked": [],
+      "answered": [
+        "cq-d5298a46",
+        "cq-805a2a86",
+        "cq-6b205842",
+        "cq-4600360d"
+      ]
+    }
+  }
+}

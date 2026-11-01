@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "created": "2026-05-09",
+    "owner": "shawn@energiacres.com",
+    "cadence": "weekly",
+    "publish_day": "Tuesday",
+    "publish_time": "07:00 ET",
+    "amplification": {
+      "linkedin": "Tuesday 12:00 ET (5h after Medium drop)",
+      "x": "Tuesday 09:00 ET (2h after Medium drop)"
+    },
+    "rotation_strategy": "F-F-F-F arc rotation across all four arcs (forged → fractured → forging → foundry)",
+    "current_arc_inventory": {
+      "ready": { "forged": 6, "fractured": 1, "forging": 8, "foundry": 0 },
+      "near_ready_drafts": { "forged": 2, "fractured": 4, "forging": 2, "foundry": 2 }
+    },
+    "critical_gaps": [
+      "Promote 3 fractured drafts to ready before Week 6",
+      "Promote 2 foundry drafts to ready before Week 4",
+      "Resolve 3 known duplicate-file pairs (forty-percent-ask, permit-ledger, private-infra)"
+    ]
+  },
+  "schedule": [
+    {
+      "week": 1,
+      "publish_date": "2026-05-12",
+      "arc": "forged",
+      "file": "book/forged/bk1-chuck-at-175.md",
+      "title": "Chuck at 175",
+      "word_count": 801,
+      "status": "ready",
+      "hook": "Father mythology - the motorcycle accident as backdrop",
+      "linkedin_angle": "What I learned about risk from my father at 175mph",
+      "x_angle": "My dad survived a 175mph wreck. What he taught me about risk after stuck with me.",
+      "actions": ["polish opening line", "verify medium_url field empty", "schedule Postiz amplification"]
+    },
+    {
+      "week": 2,
+      "publish_date": "2026-05-19",
+      "arc": "fractured",
+      "file": "book/fractured/bk1-150-credit-hours.md",
+      "title": "150 Credit Hours",
+      "word_count": 814,
+      "status": "ready",
+      "hook": "Identity-shift through education during recovery",
+      "linkedin_angle": "How I rebuilt my identity through 150 credit hours after my accident",
+      "x_angle": "After the accident, I had to become someone new. Education was the scaffolding.",
+      "actions": ["final pass", "schedule"]
+    },
+    {
+      "week": 3,
+      "publish_date": "2026-05-26",
+      "arc": "forging",
+      "file": "book/forging/bk1-the-cold-call.md",
+      "title": "The Cold Call",
+      "word_count": 767,
+      "status": "ready",
+      "hook": "Oilfield sales origin - building Fielding from a cold call",
+      "linkedin_angle": "The cold call that started a software company",
+      "x_angle": "One cold call. Twelve years. One acquisition.",
+      "actions": ["final pass", "schedule"]
+    },
+    {
+      "week": 4,
+      "publish_date": "2026-06-02",
+      "arc": "foundry",
+      "file": "book/foundry/bk1-counting-shawns.md",
+      "title": "Counting Shawns",
+      "word_count": 1165,
+      "status": "draft → needs promotion",
+      "hook": "Father's philosophy question reframes legacy",
+      "linkedin_angle": "My dad asked me 'what's your philosophy?' I didn't have an answer until now.",
+      "x_angle": "What's your philosophy? Dad asked. I'm still answering.",
+      "actions": ["RUN /refine", "promote to ready", "final polish", "schedule"],
+      "deadline_for_ready": "2026-05-30"
+    },
+    {
+      "week": 5,
+      "publish_date": "2026-06-09",
+      "arc": "forged",
+      "file": "book/forged/bk1-the-hilltop.md",
+      "title": "The Hilltop",
+      "word_count": 1317,
+      "status": "ready",
+      "hook": "Immersive farm wrestling memory",
+      "linkedin_angle": "What a hilltop wrestling match taught me about leadership",
+      "x_angle": "Some of the best lessons happened on a hilltop, not in a boardroom.",
+      "actions": ["final pass", "schedule"]
+    },
+    {
+      "week": 6,
+      "publish_date": "2026-06-16",
+      "arc": "fractured",
+      "file": "book/fractured/bk1-the-delay.md",
+      "title": "The Delay",
+      "word_count": 1399,
+      "status": "draft → needs promotion",
+      "hook": "Why I eat fast - meditation on speed-from-trauma",
+      "linkedin_angle": "Why I eat fast - and what it taught me about high performance",
+      "x_angle": "Trauma made me fast. It also made me brittle.",
+      "actions": ["RUN /refine", "promote to ready", "final polish", "schedule"],
+      "deadline_for_ready": "2026-06-13"
+    },
+    {
+      "week": 7,
+      "publish_date": "2026-06-23",
+      "arc": "forging",
+      "file": "book/forging/bk1-the-garage.md",
+      "title": "The Garage",
+      "word_count": 841,
+      "status": "ready",
+      "hook": "Classic founder-origin - Fielding's first team",
+      "linkedin_angle": "The garage where Fielding Systems started - and what I'd do differently",
+      "x_angle": "Started in a garage. Sold for 8 figures. Here's what mattered.",
+      "actions": ["final pass", "schedule"]
+    },
+    {
+      "week": 8,
+      "publish_date": "2026-06-30",
+      "arc": "foundry",
+      "file": "book/foundry/bk1-the-fork-i-almost-missed.md",
+      "title": "The Fork I Almost Missed",
+      "word_count": 808,
+      "status": "draft → needs promotion",
+      "hook": "Awareness of the path almost-not-taken",
+      "linkedin_angle": "The fork in the road I almost walked past - and how I caught it",
+      "x_angle": "Most forks in the road don't have signs. You have to look up.",
+      "actions": ["RUN /refine", "promote to ready", "final polish", "schedule"],
+      "deadline_for_ready": "2026-06-27"
+    },
+    {
+      "week": 9,
+      "publish_date": "2026-07-07",
+      "arc": "forged",
+      "file": "book/forged/bk1-the-van.md",
+      "title": "The Van",
+      "word_count": 955,
+      "status": "ready",
+      "hook": "'That's not a metaphor' - accident scene with shame",
+      "linkedin_angle": "The accident that became my origin story - and what it cost me",
+      "x_angle": "Forty surgeries started with one moment in a van. Not a metaphor.",
+      "actions": ["final pass", "schedule"]
+    },
+    {
+      "week": 10,
+      "publish_date": "2026-07-14",
+      "arc": "fractured",
+      "file": "book/fractured/bk1-rolling-ohio-hills.md",
+      "title": "Rolling Ohio Hills",
+      "word_count": 852,
+      "status": "draft → needs promotion",
+      "hook": "Sensory accident-day setup",
+      "linkedin_angle": "October 29, 1990 - the day my father drove the rolling Ohio hills",
+      "x_angle": "Rolling Ohio hills. October 1990. The morning before everything changed.",
+      "actions": ["RUN /refine", "promote to ready", "final polish", "schedule"],
+      "deadline_for_ready": "2026-07-11"
+    },
+    {
+      "week": 11,
+      "publish_date": "2026-07-21",
+      "arc": "forging",
+      "file": "book/forging/bk1-three-thirty-am.md",
+      "title": "3:30 AM",
+      "word_count": 1013,
+      "status": "ready",
+      "hook": "Grief masterclass opening",
+      "linkedin_angle": "What 3:30 AM taught me about grief and entrepreneurship",
+      "x_angle": "3:30 AM. Phone rings. The world breaks.",
+      "actions": ["final pass", "schedule"]
+    },
+    {
+      "week": 12,
+      "publish_date": "2026-07-28",
+      "arc": "forged",
+      "file": "book/forged/bk1-the-yard.md",
+      "title": "The Yard",
+      "word_count": 769,
+      "status": "draft → needs promotion",
+      "hook": "Vivid mother portrait - love, family",
+      "linkedin_angle": "The yard where my mother taught me what work meant",
+      "x_angle": "Mom in the yard. Hands in the dirt. Lessons I carry every day.",
+      "actions": ["RUN /refine", "promote to ready", "final polish", "schedule"],
+      "deadline_for_ready": "2026-07-25"
+    }
+  ],
+  "promotion_pipeline": {
+    "must_promote_by_week": {
+      "4": ["book/foundry/bk1-counting-shawns.md"],
+      "6": ["book/fractured/bk1-the-delay.md"],
+      "8": ["book/foundry/bk1-the-fork-i-almost-missed.md"],
+      "10": ["book/fractured/bk1-rolling-ohio-hills.md"],
+      "12": ["book/forged/bk1-the-yard.md"]
+    },
+    "duplicate_cleanup_required": [
+      {
+        "keep": "book/forging/bk1-the-forty-percent-ask.md",
+        "remove_or_merge": "captures/bk1-fractured--forging---the-forty-percent-ask.md"
+      },
+      {
+        "files": ["bk1-the-permit-ledger-if-it-isnt-dated-and-owned.md", "bk1-the-permit-ledger-turning-maybe-into-dates.md"],
+        "action": "merge or delete weaker"
+      },
+      {
+        "files": ["bk1-private-infra-first-build-without-grants.md", "bk1-private-infra-first-building-without-grants.md"],
+        "action": "merge or delete weaker"
+      }
+    ],
+    "merge_candidates": [
+      {
+        "files": ["book/forged/bk1-i-didnt-look.md", "book/fractured/bk1-rolling-ohio-hills.md"],
+        "rationale": "Both circle accident day 1990-10-29; combined could yield single 1400w piece",
+        "decision": "keep separate - they hit different angles"
+      },
+      {
+        "files": ["book/forging/bk1-mud-and-motherboards.md", "book/forging/bk1-moving-the-oilfield-to-the-cloud.md"],
+        "rationale": "Near-duplicate framing of oilfield-to-cloud moment",
+        "decision": "MERGE into one 1500w piece - schedule for Week 13+"
+      }
+    ]
+  }
+}

@@ -13,6 +13,10 @@
     ],
     "forging": [
       {
+        "group": "Timeline & Founding",
+        "text": "⚠️ **ATV arm-pins age/year (Shawn chat 2026-10-31):** \"Pins in my arm happened when I was 16. I was also Riding ATV\". Age → **16** per Shawn. Born Dec 30, 1979 → age 16 = Dec 1995–Dec 1996; repo capture (ARM-1997 / short-stories) says **fall 1997** (= age 17). **Year unconfirmed** (1996 if 16, unless he says otherwise). Also: left-leg ankle pins — \"I have pins in my left leg from shattered ankle.\" (same chat); which accident is open (repo links left-foot rebuild to ACC-1990)."
+      },
+      {
         "group": "About Jeff & Mike ✅ SUBSTANTIALLY ANSWERED (Session 5)",
         "text": "**Were there others?** — Anyone else in the early Fielding days who mattered?"
       }
@@ -48,7 +52,7 @@
       "session": "Session 3",
       "date": "March 21, 2026",
       "facts": [
-        "Corrections batch:: Born 1979 | Fielding founded 2009, built 2009-2015, Quorum 2015-Dec 2018 | House = ranch style, ~4,000 sq ft, wide, surrounded by forest | Cessna 182 confirmed | Dave McCarty story REWRITTEN: went around Dave + maintained face, Dave making triple what anyone else made, Jeff Taton was CTO and frustrated by comp imbalance, restructured deal terms | Jeff Taton confirmed as CTO | \"Twelve years\" corrected to \"six years\" in Quorum bed piece",
+        "Corrections batch:: Born 1979 | Fielding founded 2009, built 2009-2015, Quorum 2015-Dec 2018 | House = ranch style, ~4,000 sq ft, wide, surrounded by forest | Cessna 182 confirmed | Dave McCarty story REWRITTEN: went around Dave + maintained face, Dave making triple what anyone else made, Jeff Taynton was CTO and frustrated by comp imbalance, restructured deal terms | Jeff Taynton confirmed as CTO | \"Twelve years\" corrected to \"six years\" in Quorum bed piece",
         "Dave McCarty deeper detail:: Dave was content with status quo because company was growing fast, had pipeline of customers, and had been GIVEN equity — if growth continued he'd make more money. Key learning: people who are given equity don't appreciate it the same way. Shawn made this mistake multiple times before wising up. Now handles equity differently at EnergiAcres — moved slower but avoids people who don't align with values. Dave was great at sales and Shawn learned a lot from him — Dave explained things, Shawn asked tons of questions, wanted to learn everything about sales, also saw his own mistakes."
       ]
     },
@@ -112,7 +116,7 @@
       "session": "Session 5d",
       "date": "March 23, 2026",
       "facts": [
-        "EARLY SUCCESS TRAP:: Fielding → Quorum created false belief of continued success. \"That's just not the way life works. It's much more cyclical.\" | **FOUNDER ENERGY:** \"Only enough founder energy for one focus at a time. I had to learn that the hard way.\" | **PHASE 2 LABS MISTAKE:** Strategy was outsource/allocate across 3-4 projects (\"they wouldn't need me every day\"). Didn't set himself up for it. Should have studied other founders. \"I had to learn while digging out of a hole. I wouldn't recommend doing that.\" | **THE SERIES A GAP:** Got acquired before Series A → went straight to Series D (Quorum). Never went through A→B→C→D founder progression. Missed organizational learning. \"I didn't appreciate what was built. And that's on me.\" | **QUORUM HARD ASS:** Regrets being a hard ass — was at a different state of mind, hadn't proven himself yet. Once Quorum sold again → validation. | **QUORUM ~$1B EXIT:** \"Close to a billion-dollar exit, and I helped do that.\" Major validation. | **COGNITIVE LAND + SASHA NELSON:** Best engineer, best person, smartest, \"stretched me the most.\" Built Cognitive Land at Quorum — \"what is now GPT.\" AI-first platform ingesting land/lease agreements, learning from user corrections, capturing tacit knowledge. \"Pretty gnarly shit, we were bleeding edge.\" Quorum only gave him ONE resource. Sasha left over Quorum frustration. Shawn \"really fucked up that relationship\" getting busy with startups. \"Should have spent time researching with Sasha — we would have found our way.\" | **DONNY KERR:** Replaced Sasha. Another amazing engineer. | **ROLE MODELS:** Jobs, Gates, Musk — studied deeply over the years."
+        "EARLY SUCCESS TRAP:: Fielding → Quorum created false belief of continued success. \"That's just not the way life works. It's much more cyclical.\" | **FOUNDER ENERGY:** \"Only enough founder energy for one focus at a time. I had to learn that the hard way.\" | **PHASE 2 LABS MISTAKE:** Strategy was outsource/allocate across 3-4 projects (\"they wouldn't need me every day\"). Didn't set himself up for it. Should have studied other founders. \"I had to learn while digging out of a hole. I wouldn't recommend doing that.\" | **THE SERIES A GAP:** Got acquired before Series A → went straight to Series D (Quorum). Never went through A→B→C→D founder progression. Missed organizational learning. \"I didn't appreciate what was built. And that's on me.\" | **QUORUM HARD ASS:** Regrets being a hard ass — was at a different state of mind, hadn't proven himself yet. Once Quorum sold again → validation. | **QUORUM ~$1B EXIT:** \"Close to a billion-dollar exit, and I helped do that.\" Major validation. | **COGNITIVE LAND + SASHA NELSON:** Best engineer, best person, smartest, \"stretched me the most.\" Built Cognitive Land at Quorum — \"what is now GPT.\" AI-first platform ingesting land/lease agreements, learning from user corrections, capturing tacit knowledge. \"Pretty gnarly shit, we were bleeding edge.\" Quorum only gave him ONE resource. Sacha left over Quorum frustration. Shawn \"really fucked up that relationship\" getting busy with startups. \"Should have spent time researching with Sacha — we would have found our way.\" | **DONNY KERR:** Replaced Sacha. Another amazing engineer. | **ROLE MODELS:** Jobs, Gates, Musk — studied deeply over the years."
       ]
     },
     {
@@ -133,8 +137,8 @@
   "counts": {
     "forged": 0,
     "fractured": 2,
-    "forging": 1,
+    "forging": 2,
     "foundry": 2,
-    "total": 5
+    "total": 6
   }
 }

@@ -148,7 +148,7 @@
 |---|---|---|---|
 | **Kristin Anthony** | Sister (3yr younger) | Childhood perspective, family dynamics, what she saw | Medium |
 | **Josh** | Younger brother | Different era of Chuck, grew up in different household dynamic | Medium |
-| **Jeff Taton** | CTO at Fielding, friend, Tool concerts | The build years, the garage, what Shawn was like as a founder | High |
+| **Jeff Taynton** | CTO at Fielding, friend, Tool concerts | The build years, the garage, what Shawn was like as a founder | High |
 | **Mike Huff** | 4th hire at Fielding, Jeff's friend | Early Fielding days, the team, the equity story | Medium |
 | **Andrew Palmer** | Friend, therapy supporter | Who Shawn is outside of work, the therapy journey | High |
 
@@ -158,6 +158,8 @@
 
 | Person | Questions Created | Sent | Recorded | Processed |
 |---|---|---|---|---|
+| Kristen | ✅ 13 questions (in `ohio-family-recordings.md`, 2026-06-09) | ❌ | ❌ | ❌ |
+| Josh | ✅ 12 questions (in `ohio-family-recordings.md`, 2026-06-09) | ❌ | ❌ | ❌ |
 | Beth | ✅ 17 questions | ❌ | ❌ | ❌ |
 | CJ | ✅ 12 questions | ❌ | ❌ | ❌ |
 | Carina | ✅ 15 questions | ❌ | ❌ | ❌ |

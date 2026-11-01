@@ -18,7 +18,7 @@
 
 **Shawn Cutter** | Born 1979 | Chester/West Salem, Ohio → Tampa, FL
 - AI Engineer, founder of EnergiAcres (energy + food + compute convergence)
-- 40+ surgeries from childhood accident (age 11, hit by car on ATV)
+- 40+ surgeries from childhood accident (age 10, Oct 29 1990, hit by car on ATV; turned 11 that December. Resolved in `_meta/CHARACTER-LIST.md`, Session 8)
 - Self-harm in high school (cutting — still has visible scars)
 - ENTJ, Capricorn, Gen X. Systems thinker. Studies Jobs, Gates, Musk deeply.
 - Direct communicator. "Cannot suffer fools." Needs operators.
@@ -59,7 +59,7 @@
 - 40+ surgeries. Latissimus dorsi from back to rebuild foot. Skin grafts from right leg.
 - First steps: parents' bedroom, "brain told my legs to move, and it didn't happen, and I fell over."
 - Told pastor at 10 God doesn't exist. Pastor never came back.
-- ATV crash at 17: shattered left arm, 5 pins and a plate. Had to come clean with parents.
+- ATV arm crash at **age 16** (Shawn chat 2026-10-31; year unconfirmed — prior notes said fall 1997 / age 17): shattered left arm, 5 pins and a plate. Had to come clean with parents. Separate: pins in left leg from shattered ankle (same chat; which accident open — repo links left-foot rebuild to Oct 29 1990).
 - Self-harm in high school: "Cut myself a lot so I could control the pain."
 - Piercings: nipple rings, tongue — hidden for over a year. Dad found out at Grandpa Cutter's funeral (2001).
 - Court 6 months after accident. Shawn testified. Insurance money for bills only — parents didn't ask for more.
@@ -73,12 +73,28 @@
 - Moved to Florida 2005. Apartments until 2007. Plant City house 2009.
 - Met Carina at Miami of Ohio. "The townies." Handicap placard + moped with weed-eater motor.
 - Elopement: Las Vegas, 7/8/2006 (Carina's birthday). Little White Wedding Chapel. Elvis package. Chris and Patty only guests. Dress broke. Parents hated it. "Reception of swords" at Thanksgiving.
-- **Fielding Systems** founded 2009 in Plant City garage. Two IKEA desks. Jeff Taton (CTO, met at By Design Technologies, Tool fans) and Mike Huff (Jeff's friend, 4th hire). Cutter Oil was first customer.
+- **Fielding Systems** founded 2009 in Plant City garage. Two IKEA desks. Jeff Taynton (CTO, met at By Design Technologies, Tool fans) and Mike Huff (Jeff's friend, 4th hire). Cutter Oil was first customer.
+  - **Shawn's title: Founder / CEO** (his choice 2026-10-31).
+  - **Products, one a year** (Shawn 2026-10-31): **FieldVisor 2009** (field data
+    capture + production) → **ScadaVisor 2010** (SCADA and measurement) →
+    **FieldVisor Mobile 2011** (the hosted service's mobile app) →
+    **VisorBridge 2012** (their own communication/polling engine — "the heart of
+    the SCADA communication… multi-threaded. Distributed application across
+    multiple data center regions"). There was no polling engine before VisorBridge.
+  - **Cloud framing:** Azure reached general availability 2010-02-01, the same
+    year ScadaVisor shipped. Say it with the dates, not as "first of its kind" —
+    see `codes.FIELD` gaps and `captures/bk1-fielding-products-visor-platform.md`.
+  - **App Store:** Shawn — no oil and gas app in the App Store before **'11**
+    (year corrected by him 2026-10-31), making FieldVisor Mobile the first.
+    Research found no verifiable earlier oil-and-gas release. Print it as the
+    first **operational / field** oil-and-gas app: industry *magazine* apps of
+    uncertain date exist, and a 2008 consumer fuel-price app does, so the
+    narrower claim is the one that holds.
 - Cold calls worked because Shawn spoke oilfield — day rates, AFEs, standby pay. Chuck's language.
 - CJ asked for 40% of Fielding (end of 2009). Shawn had written all the code.
 - **Quorum Software** acquired Fielding March 23, 2015. Joe Norris called, API qualifying question, Tyson & Perry flew to Tampa. Announcement March 25 (Wednesday) at Aria in Las Vegas. "High room." ~2,000 people.
 - Dave McCarty: made triple everyone else, got weird during acquisition. Great at sales but "on his period one week out of the month."
-- **Cognitive Land** at Quorum: proto-GPT for land/lease agreements. Built with Sasha Nelson ("best engineer, best person, smartest, stretched me the most"). One resource. Bleeding edge AI/ML. Sasha left over Quorum frustration. Donny Kerr replaced him.
+- **Cognitive Land** at Quorum: proto-GPT for land/lease agreements. Built with Sacha Nelson ("best engineer, best person, smartest, stretched me the most"). One resource. Bleeding edge AI/ML. Sacha left over Quorum frustration. Donny Kerr replaced him.
 - Shawn regrets being a "hard ass" at Quorum — hadn't proven himself yet.
 - **Quorum sold again for close to $1 billion.** "I helped do that." Major validation.
 - Skipped Series A→D founder progression. "Didn't appreciate what was built."
@@ -133,10 +149,10 @@ Each polished piece follows this pattern:
 | **Carina Cutter** | Wife (b. 7/8/1981) | Met at Miami of Ohio. Handicap placard story. Therapy 2023. |
 | **Gia Cutter** | Daughter (b. 2010) | Doesn't know about book. Emotional wall at birth. |
 | **Tessa Cutter** | Daughter (b. 2012) | Sparse detail. |
-| **Jeff Taton** | CTO, friend | By Design Tech → Fielding CTO → now Terrasow. Tool fan. |
+| **Jeff Taynton** | CTO, friend | By Design Tech → Fielding CTO → now Terrasow. Tool fan. |
 | **Mike Huff** | 4th hire | Jeff's friend. Life-changing equity. |
-| **Sasha Nelson** | Best engineer | Cognitive Land (proto-GPT). Left over Quorum frustration. Relationship lost. |
-| **Donny Kerr** | Engineer | Replaced Sasha. "Another amazing engineer." |
+| **Sacha Nelson** | Best engineer | Cognitive Land (proto-GPT). Left over Quorum frustration. Relationship lost. |
+| **Donny Kerr** | Engineer | Replaced Sacha. "Another amazing engineer." |
 | **Dave McCarty** | Antagonist | Triple pay. Got weird during acquisition. The equity lesson. |
 | **Andrew Palmer** | Best friend | Sci-fi nerd. Burning Man. Cancer survivor. Therapy supporter. |
 | **Joe Norris** | Quorum acquirer | The call that changed everything. API question. |
@@ -153,6 +169,7 @@ Each polished piece follows this pattern:
 5. **The CJ Thread** — Fighting → forts → the rock → "sales mode" → 40% ask → blocking. Currently unresolved.
 6. **The Founder Lesson** — Fielding (garage) → Quorum ($1B) → Phase 2 Labs (spread too thin) → EnergiAcres (one thing, done right).
 7. **The Beth Thread** — The quiet one who kept the room standing. Cedar Valley was supposed to retire her. She's still working at 67.
+8. **The Philosophy Thread** — The accident taught him to walk backward through cause and effect until the turtles ran out. The turn: from first causes to the vastness of shared experience. Philosophy as understanding the mind — bridging the collective consciousness. The switch, the edge, energy-is-everything: positions that feed the Foundry closing. (See `LexDocs/_meta/PHILOSOPHY-BRIEF.md`; extends the locked Consciousness Brief, does not reopen it.)
 
 ---
 

@@ -2,8 +2,19 @@
   "metadata": {
     "birth_year": 1979,
     "birth_date": "1979-12-30",
-    "last_updated": "2026-04-07",
-    "total_events": 44
+    "last_updated": "2026-10-31",
+    "total_events": 45,
+    "canon_corrections": [
+      {
+        "date": "2026-10-03",
+        "correction": "Childhood home is West Salem, Ohio (Bechtel family farm), not Iowa. Earlier timeline entry incorrectly stated Iowa; corrected per Shawn's 2026-10-03 clarification."
+      },
+      {
+        "date": "2026-10-31",
+        "correction": "Ported two events the live timeline was missing from _meta/_timeline.json, which nothing in the codebase reads. Ages corrected on the way in: that file computes age as year minus 1979, ignoring the 1979-12-30 birthday, so it runs one year high \u2014 \u201cParents buy the farm\u201d 12\u219211, \u201cCutter Oil #2 in Ohio\u201d 31\u219230. Its third candidate, \u201cChairman/Co-Founder Cedar Valley Farms\u201d (age 41), was NOT ported: the live timeline already has Cedar Valley Farms at 2020 with the correct age 40."
+      }
+    ],
+    "birth_date_confirmed": "Shawn chat 2026-10-30: \"Born 12/30/1979\""
   },
   "events": [
     {
@@ -12,7 +23,7 @@
       "title": "Born",
       "arc": "forged",
       "category": "milestone",
-      "description": "Shawn Cutter born",
+      "description": "Shawn Cutter born December 30, 1979 (confirmed Shawn chat 2026-10-30: \"Born 12/30/1979\")",
       "related_stories": []
     },
     {
@@ -30,8 +41,10 @@
       "title": "Farm Life Begins",
       "arc": "forged",
       "category": "location",
-      "description": "Growing up on Cutter family farm in Iowa",
-      "related_stories": ["bk1-welcome-test.md"]
+      "description": "Growing up on Bechtel family farm in West Salem, Ohio",
+      "related_stories": [
+        "bk1-welcome-test.md"
+      ]
     },
     {
       "date": "1980-01-01",
@@ -61,13 +74,25 @@
       "related_stories": []
     },
     {
+      "date": "1990/1991",
+      "age": 11,
+      "title": "Parents buy the great-grandparents\u2019 farm \u2014 grain to cattle",
+      "arc": "forged",
+      "category": "family",
+      "description": "The family bought great-grandma Bechtel\u2019s farm and the operation shifted from grain only to dairy beef cattle; the West Salem farm was sold to buy it. Shawn\u2019s own dictation: \u201cWhen i was 11, we purchased my great grandparents farm and that was the shift of the farm from grain only to dairy beef cattle.\u201d YEAR UNRESOLVED: _meta/characters.json dates the Bechtel purchase to 1990; _meta/_timeline.json and Shawn\u2019s \u201cage 11\u201d point to 1991 (he turned 11 on 1990-12-30). Not picked here.",
+      "related_stories": [
+        "bk1-farm-roots-shawn-dictation.md"
+      ]
+    },
+    {
       "date": "1990-10-29",
       "age": 10,
       "title": "The Accident",
       "arc": "fractured",
       "category": "trauma",
       "description": "Life-changing accident on October 29, 1990",
-      "related_stories": []
+      "related_stories": [],
+      "note": "Shawn confirmed chat 2026-10-30: \"I was hit by car at age 10\""
     },
     {
       "date": "1990-11-01",
@@ -97,6 +122,25 @@
       "related_stories": []
     },
     {
+      "date": "1996?",
+      "age": 16,
+      "title": "ATV arm crash \u2014 left arm pins",
+      "arc": "fractured",
+      "category": "trauma",
+      "description": "Pins in arm from ATV crash at age 16. Shawn chat 2026-10-31: \"Pins in my arm happened when I was 16. I was also Riding ATV\". Year unconfirmed (1996 if 16; prior capture said fall 1997 / age 17).",
+      "related_stories": [],
+      "note": "Separate from left-leg ankle pins (same chat)."
+    },
+    {
+      "date": "unconfirmed",
+      "age": null,
+      "title": "Left-leg pins from shattered ankle",
+      "arc": "fractured",
+      "category": "health",
+      "description": "Shawn chat 2026-10-31: \"I have pins in my left leg from shattered ankle.\" Which accident is open; repo links left-foot rebuild to 1990-10-29 \u2014 confirm with Shawn.",
+      "related_stories": []
+    },
+    {
       "date": "2000-01-01",
       "age": 20,
       "title": "Early Career Exploration",
@@ -106,12 +150,12 @@
       "related_stories": []
     },
     {
-      "date": "2003-01-01",
-      "age": 23,
-      "title": "Fielding Systems Era Begins",
+      "date": "2009",
+      "age": 29,
+      "title": "Fielding Systems officially started",
       "arc": "forging",
-      "category": "career",
-      "description": "Starting work in technology, building systems",
+      "category": "business",
+      "description": "Fielding Systems officially started in 2009 (year-only; no month). Source Shawn chat 2026-10-30: \"Fielding officially started in 2009. I was not full time on it until 2010\". Derived age from birth 1979-12-30: 29 for nearly all of 2009 (unless Dec 30-31).",
       "related_stories": []
     },
     {
@@ -120,7 +164,7 @@
       "title": "Career Building Phase",
       "arc": "forging",
       "category": "milestone",
-      "description": "Forging arc begins — career building and identity formation",
+      "description": "Forging arc begins \u2014 career building and identity formation",
       "related_stories": []
     },
     {
@@ -148,7 +192,49 @@
       "arc": "fractured",
       "category": "health",
       "description": "Final surgery on left arm from 1990 accident. Closes surgical intervention period",
+      "related_stories": [],
+      "note": "Arm pins from separate ATV crash at age 16 (Shawn chat 2026-10-31); year of crash unconfirmed."
+    },
+    {
+      "date": "2009",
+      "age": 29,
+      "title": "FieldVisor ships \u2014 field data capture + production",
+      "arc": "forging",
+      "category": "project",
+      "description": "First Fielding Systems product: field data capture and production reporting. Same year Fielding officially started; Shawn was not yet full time. Shawn chat 2026-10-31.",
+      "related_stories": [
+        "bk1-fielding-products-visor-platform.md",
+        "bk1-the-garage.md"
+      ]
+    },
+    {
+      "date": "2010",
+      "age": 30,
+      "title": "Fielding Systems full time",
+      "arc": "forging",
+      "category": "career",
+      "description": "Shawn not full time on Fielding until 2010 (year-only; no month). Source Shawn chat 2026-10-30: \"Fielding officially started in 2009. I was not full time on it until 2010\". Derived age from birth 1979-12-30: 30 for nearly all of 2010.",
       "related_stories": []
+    },
+    {
+      "date": "2010",
+      "age": 30,
+      "title": "Cutter Oil = #2 oil producer in Ohio",
+      "arc": "forging",
+      "category": "business",
+      "description": "Cutter Oil became the #2 oil producer in the state of Ohio. Ported 2026-10-31 from _meta/_timeline.json, which no code reads; age corrected from 31 to 30 (born 1979-12-30, so 30 for all of 2010 but the last two days).",
+      "related_stories": []
+    },
+    {
+      "date": "2010",
+      "age": 30,
+      "title": "ScadaVisor ships \u2014 SCADA and measurement",
+      "arc": "forging",
+      "category": "project",
+      "description": "Second product: remote SCADA monitoring, field automation and measurement. Same year Shawn went full time on Fielding, and the year Windows Azure reached general availability (2010-02-01). Shawn chat 2026-10-31.",
+      "related_stories": [
+        "bk1-fielding-products-visor-platform.md"
+      ]
     },
     {
       "date": "2010-11-12",
@@ -158,6 +244,53 @@
       "category": "loss",
       "description": "Father Chuck Cutter passes away",
       "related_stories": []
+    },
+    {
+      "date": "2011",
+      "age": 31,
+      "title": "FieldVisor Mobile ships",
+      "arc": "forging",
+      "category": "project",
+      "description": "Mobile app for the hosted service, built by a third-party firm. It reached the App Store but \u201cdidn\u2019t run worth a crap\u201d (Shawn 2026-10-31), and the 20 MB App Store cellular ceiling was one of its limitations. Shawn pulled the contract and had it rebuilt in-house in 2012. He also says there was no oil and gas app in the App Store before \u201911, which makes this the first \u2014 print it as the first operational / field app.",
+      "related_stories": [
+        "bk1-fielding-products-visor-platform.md",
+        "bk1-pocket-computers-and-cold-thumbs.md"
+      ]
+    },
+    {
+      "date": "2012",
+      "age": 32,
+      "title": "VisorBridge ships \u2014 their own polling engine",
+      "arc": "forging",
+      "category": "project",
+      "description": "The communication and polling engine: \u201cthe heart of the SCADA communication\u2026 multi-threaded. Distributed application across multiple data center regions.\u201d There was no polling engine before it. Shawn chat 2026-10-31.",
+      "related_stories": [
+        "bk1-fielding-products-visor-platform.md"
+      ]
+    },
+    {
+      "date": "2012",
+      "age": 32,
+      "title": "Three weeks to rebuild the mobile app in-house",
+      "arc": "forging",
+      "category": "project",
+      "description": "Three weeks from a public-company deliverable, Shawn pulled the mobile app from the third-party firm and had his own team rebuild it in three weeks \u2014 \u201cwe made the call. I made the call\u201d \u2014 then 90 days keeping it running, including compression work to hold the footprint under 15 MB against a 20 MB ceiling. Shawn chat 2026-10-31.",
+      "related_stories": [
+        "bk1-three-weeks-to-a-mobile-app.md",
+        "bk1-pocket-computers-and-cold-thumbs.md"
+      ]
+    },
+    {
+      "date": "2013",
+      "age": 33,
+      "title": "Penn Virginia rollout \u2014 first major enterprise customer",
+      "arc": "forging",
+      "category": "business",
+      "description": "First major enterprise rollout, an enterprise FieldVisor customer (NOT VisorBridge \u2014 that went to Gulfport). \u201cA major rollout. And really tested us.\u201d Three weeks out, the mobile app was pulled from an outsourced firm in Israel and rebuilt in-house in three weeks, then 90 days keeping it running. Won through Harry Harpold over more than a year. Shawn chat 2026-10-31.",
+      "related_stories": [
+        "bk1-three-weeks-to-a-mobile-app.md",
+        "bk1-fielding-customer-ladder.md"
+      ]
     },
     {
       "date": "2015-01-01",
@@ -228,7 +361,7 @@
       "title": "Forging Arc Concludes",
       "arc": "forging",
       "category": "milestone",
-      "description": "Forging arc ends — career building phase complete",
+      "description": "Forging arc ends \u2014 career building phase complete",
       "related_stories": []
     },
     {
@@ -237,7 +370,7 @@
       "title": "EnergiAcres & Foundry Begin",
       "arc": "foundry",
       "category": "milestone",
-      "description": "Foundry arc begins — legacy building focus",
+      "description": "Foundry arc begins \u2014 legacy building focus",
       "related_stories": []
     },
     {
@@ -292,6 +425,15 @@
       "arc": "foundry",
       "category": "writing",
       "description": "Feedback system with Carina goes live for collaborative editing",
+      "related_stories": []
+    },
+    {
+      "date": "2026-10-28",
+      "age": 46,
+      "title": "Bought the Franks farm with Josh \u2014 Ever Root Land LLC",
+      "arc": "foundry",
+      "category": "business",
+      "description": "Shawn chat 2026-10-31, verbatim: \u201cI purchased the Franks farm with my brother Josh Cutter - Ever Root Land LLC. we purchases on 10/28/26\u201d. Josh Cutter: brother, born 1989 (CHARACTER-LIST). Spelling of \u201cFranks\u201d and the exact LLC styling are as Shawn wrote them, unconfirmed. Acreage, location and purpose not stated.",
       "related_stories": []
     },
     {

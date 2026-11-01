@@ -195,7 +195,7 @@
     async function saveBacklogItem() {
         const title = document.getElementById('backlog-item-title').value.trim();
         if (!title) {
-            alert('Please enter a title');
+            notify('Please enter a title', 'yellow');
             return;
         }
 

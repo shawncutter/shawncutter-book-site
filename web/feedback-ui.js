@@ -174,7 +174,7 @@ const feedbackUI = {
         const paragraphId = document.getElementById('feedback-paragraph').value;
 
         if (!type || !content || !paragraphId) {
-            alert('Please fill in all fields');
+            window.showSaveStatus?.('Please fill in all fields', 'yellow');
             return;
         }
 
@@ -204,7 +204,7 @@ const feedbackUI = {
             }
         } catch (e) {
             console.error('Failed to add feedback:', e);
-            alert('Error adding feedback');
+            window.showSaveStatus?.('Error adding feedback', 'red');
         }
     },
 
@@ -227,7 +227,7 @@ const feedbackUI = {
             }
         } catch (e) {
             console.error('Failed to resolve feedback:', e);
-            alert('Error resolving feedback');
+            window.showSaveStatus?.('Error resolving feedback', 'red');
         }
     }
 };

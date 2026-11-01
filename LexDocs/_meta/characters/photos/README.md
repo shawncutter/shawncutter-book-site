@@ -23,7 +23,7 @@ photos/
 ├── jeff_taton/         ← CTO / Friend
 ├── mike_huff/          ← 4th hire at Fielding
 ├── sasha_nelson/       ← Engineer (Cognitive Land)
-├── donny_kerr/         ← Engineer (replaced Sasha)
+├── donny_kerr/         ← Engineer (replaced Sacha)
 ├── dave_mccarty/       ← Fielding/Quorum
 ├── andrew_palmer/      ← Friend / therapy supporter
 └── butch_rogers/       ← Family friend / pastor

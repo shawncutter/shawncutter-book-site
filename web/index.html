@@ -600,7 +600,7 @@
                 </div>
                 <div class="mt-3">
                     <label class="block text-xs text-gray-400 mb-1">Related Stories (filenames)</label>
-                    <input type="text" id="meta-related" list="meta-related-list" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="forged/ready/bk1-the-hilltop.md…">
+                    <input type="text" id="meta-related" list="meta-related-list" class="w-full bg-gray-700 rounded px-3 py-2 text-sm" placeholder="bk1-the-hilltop.md…">
                     <datalist id="meta-related-list"></datalist>
                 </div>
                 <!-- Backlinks panel: stories connected to the open story -->
@@ -616,8 +616,8 @@
             </div>
             <span id="editor-filename" class="hidden">filename.md</span>
 
-            <!-- Save Status -->
-            <div id="save-status" class="fixed bottom-4 right-4 px-4 py-2 rounded bg-gray-800 border border-gray-700 text-sm hidden">
+            <!-- Save Status — shared toast for saves, validation, and fetch errors -->
+            <div id="save-status" role="status" aria-live="polite" aria-atomic="true" class="fixed bottom-4 right-4 px-4 py-2 rounded bg-gray-800 border border-gray-700 text-sm hidden">
                 Saved
             </div>
         </section>
@@ -1883,7 +1883,7 @@
             const content = document.getElementById('new-content').value.trim();
 
             if (!title) {
-                alert('Please enter a title');
+                showSaveStatus('Please enter a title', 'yellow');
                 return;
             }
 
@@ -1905,10 +1905,10 @@
                     // Rescan and reload
                     await rescanStories();
                 } else {
-                    alert('Error: ' + data.error);
+                    showSaveStatus('Error: ' + data.error, 'red');
                 }
             } catch (e) {
-                alert('Error creating story: ' + e.message);
+                showSaveStatus('Error creating story: ' + e.message, 'red');
             }
         });
 
@@ -2576,7 +2576,7 @@
             const stories = storiesStr ? storiesStr.split(',').map(s => s.trim()) : [];
 
             if (!date || !title) {
-                alert('Please enter date and title');
+                showSaveStatus('Please enter date and title', 'yellow');
                 return;
             }
 
@@ -2812,7 +2812,7 @@
                 document.getElementById('facts-content').classList.remove('hidden');
             } catch (e) {
                 console.error('Error loading facts:', e);
-                alert('Error loading facts and questions: ' + e.message);
+                showSaveStatus('Error loading facts: ' + e.message, 'red');
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = '<span>↺</span> Refresh from Files';
