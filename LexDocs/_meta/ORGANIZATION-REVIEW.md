@@ -2286,3 +2286,88 @@ directories.
 
 Verified: 235 tests, 234 pass, 1 skipped, 0 fail; 114 pieces, 0 frontmatter
 errors; 98 codes, 116/116 mapped; manuscript unchanged at 62 scenes.
+
+### Kai removed (2026-10-31)
+
+Shawn: "remove kai tools." Four things went, and one deliberately stayed.
+
+**Removed:**
+
+- `CLAUDE.md`'s `## Code Analysis` section, which told every agent to "prefer the
+  Kai MCP tools (`kai_diff`, `kai_context`, `kai_callers`, `kai_callees`,
+  `kai_impact`) over raw Read/Grep/git-diff". Those tools were not available in
+  this session and the whole of today's work was done with Read, Grep and Bash —
+  so the instruction was pointing agents at tooling they could not reach.
+- `kai.modules.yaml` — an empty template (`modules: []`), referenced nowhere.
+- `.github/workflows/kai-sync.yml` — ran on every push to `main`, installed Kai
+  with `curl -sSL https://get.kaicontext.com | sh`, then `kai capture` and
+  `kai push` using a `KAI_TOKEN` secret.
+- the dead `.kai` line in `.gitignore`. No local `.kai` cache exists.
+
+**Kept:** `.gstack/security-reports/2026-05-05-135924.json`, which is a **dated
+audit artifact** and should not be edited. It is also the find of the day on this
+task — that report had already flagged this exact workflow:
+
+> **MEDIUM — curl | sh supply chain risk in CI workflow.** "The Kai sync workflow
+> pipes a remote shell script directly to sh without verification… If
+> get.kaicontext.com is compromised or DNS-hijacked, arbitrary code runs in the CI
+> environment."
+
+Its recommendation was to pin the installer and verify a checksum. **Deleting the
+workflow resolves the finding outright**, which is the stronger remedy. That
+workflow had been running on every push to `main`, including every push made
+today.
+
+**Two things for Shawn, neither of which can be done from here:**
+
+1. **Revoke the `KAI_TOKEN` secret** in the GitHub repository settings. The
+   workflow is gone, so nothing uses it, but the secret still exists and still
+   grants whatever it granted.
+2. Consider whether any Kai-side hosted graph of this repository should be
+   deleted at kaicontext.com. Every push to `main` was captured there.
+
+**Checked before removing:** `.github/workflows/deploy.yml`, not `kai-sync.yml`,
+is what makes the nightly "chore: regenerate index and facts" commit — the
+automation whose non-determinism was fixed an hour ago. It is untouched, as is
+`deploy-site.yml`.
+
+Verified after removal: 235 tests, 234 pass, 1 skipped, 0 fail; 114 pieces, 0
+frontmatter errors; 98 codes, 116/116 mapped.
+
+### The determinism fix was incomplete — CI was shallow-cloning (2026-10-31)
+
+A second push rejection, a second Action run, and a result worth reporting
+honestly: the fix cut the churn from **1,254 lines to 150**, not to zero.
+
+**Diagnosis.** Of the 114 pieces, **75 differed only in `modified`** and **zero
+differed in any other field** — so the path-sort half of the fix worked exactly
+as intended, and all remaining churn was the date. Cause:
+`.github/workflows/deploy.yml` uses `actions/checkout@v4` with no `fetch-depth`,
+which defaults to a **shallow clone of depth 1**. `scan-stories.js` now derives
+`modified` from `git log`, and at depth 1 git log sees one commit — so every file
+not touched by that single commit silently fell through to the mtime fallback,
+which in CI is the checkout date.
+
+The fallback I added for robustness was quietly masking the failure. It did its
+job and hid the problem at the same time.
+
+**Fixed:** `fetch-depth: 0` on that checkout, with the reason in a comment beside
+it.
+
+**Reproduced and then proved, in both directions:**
+
+- `git clone --depth 1` of this repo → **1 commit visible**, and all 114 pieces
+  dated `2026-10-31`, the checkout date. Exactly what CI was writing.
+- full `git clone` → **257 commits visible**, and four real dates:
+  `2026-10-27`, `2026-10-30`, `2026-10-31`, `2026-11-01`.
+
+**And I should be straight about my own verification.** The previous entry said
+"proved rather than assumed". What I actually proved was local determinism,
+independence from mtime, and that it survives having no git at all. I did **not**
+test a shallow clone — the single environment the bug lived in. The gap was that
+I verified on my own machine rather than on the machine that caused the problem,
+which is the same mistake in a different costume as the four wrong inferences
+logged above.
+
+Verified after the fix: 235 tests, 234 pass, 1 skipped, 0 fail; 114 pieces, 0
+frontmatter errors; 98 codes, 116/116 mapped.
