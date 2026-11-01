@@ -321,7 +321,7 @@
 - **FIELD-CUSTOMERS** — The Israeli company that had the mobile build before Fielding took it in-house — generic or named? Third party, nothing on file.
 - **FIELD-CUSTOMERS** — Who built the three-week app (Jeff Taynton? Mike Huff?), and one problem from the 90 days.
 - **FIELD-CUSTOMERS** — Minor: he described the three weeks as “3 weeks out… deliver it for public company”, but the build is 2012 and the rollout 2013. Likely the mobile deliverable was due 2012 with the enterprise rollout completing 2013. Not asserted.
-- **FIELD-CUSTOMERS** — The third-party company that built the first app — generic or named? It built an app that “didn’t run worth a crap” for a named public-company account, which is harder to attach to a real firm than a neutral fact.
+- **FIELD-CUSTOMERS** — Open, lower stakes: is “a company out of Israel” generic enough for prose? Country + project + year is narrower than it looks to anyone who was in oilfield software then; “an offshore development shop” reads the same and identifies nobody. Shawn’s call.
 - **QRM-EMP** — B6 first badge-in day (empty)
 - **QRM-EMP** — B9 the day he decided to leave (partial)
 - **CVF** — 'Good Dirt' — CVF in its prime is not captured

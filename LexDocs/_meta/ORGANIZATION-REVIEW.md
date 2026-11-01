@@ -2215,3 +2215,74 @@ public companies — it built something that "didn't run worth a crap".
 
 Verified: 235 tests, 234 pass, 1 skipped, 0 fail; 114 pieces, 0 frontmatter
 errors; 98 codes, 116/116 mapped; manuscript unchanged at 62 scenes.
+
+### The third-party mobile firm stays generic (2026-10-31)
+
+Shawn: **keep generic.** The company that built the first FieldVisor Mobile is not
+to be named in published prose. Recorded as a resolved conflict on
+`FIELD-CUSTOMERS`.
+
+**The asymmetry with the customers is deliberate and worth stating.** Penn
+Virginia, Gulfport and Harry Harpold were all cleared for print; this vendor is
+not. Naming a customer is neutral — it says someone bought the software. Naming a
+vendor next to "didn't run worth a crap" is an allegation about a business that
+has no voice in this book and was not asked. Same decision, different stakes,
+different answer.
+
+The captures keep every detail he gave, verbatim, because that is what a capture
+is for. **The constraint is on prose.**
+
+One smaller question logged rather than decided: whether "a company out of Israel"
+is itself generic enough for the page. Country plus project plus year is narrower
+than it looks to anyone who was in oilfield software at the time, and "an offshore
+development shop" carries the same meaning for a reader while identifying nobody.
+His call, and lower stakes than the name itself.
+
+Verified: 235 tests, 234 pass, 1 skipped, 0 fail; 114 pieces, 0 frontmatter
+errors; 98 codes, 116/116 mapped; manuscript unchanged at 62 scenes.
+
+### `_index.json` was non-deterministic — two bugs, found by a push collision (2026-10-31)
+
+A push to `main` was rejected: a **GitHub Action** ("chore: regenerate index and
+facts", 2026-11-01 00:04 UTC) had regenerated `_index.json` and rewritten
+**1,254 of its lines**. Merging it conflicted. The conflict was worth more than
+the inconvenience, because it exposed two real defects in `scan-stories.js`.
+
+**Bug 1 — the sort key was filesystem state.** `stories.sort((a, b) =>
+b.modified.localeCompare(a.modified))` ordered the index by **mtime**. A fresh CI
+checkout sets every file's mtime to checkout time, so in CI the sort was
+effectively arbitrary while locally it was real edit order. Same 114 pieces, two
+different orderings, a ~1,250-line diff of pure noise, and a guaranteed conflict
+every time CI and a laptop took turns. **Fixed:** sort by `file` path, the only
+reproducible key. The one order-dependent consumer — `build-story-map.js` picking
+an example row with `.find()` — now gets a stable example too, removing a second
+churn source.
+
+**Bug 2 — the `modified` field was wrong in CI, not just unstable.** It came from
+`stats.mtime`, so the nightly Action recorded **all 114 pieces as modified on the
+day it ran**. 112 of 114 values disagreed with the local tree. The field is
+currently **write-only** — nothing in `web/`, `server.js`, `scripts/` or `tests/`
+reads it — but CLAUDE.md lists "Recent edits on dashboard" as a Quick Win, and
+wrong data is worse than none for a feature that is going to be built.
+**Fixed:** `modified` now comes from **git** — the file's last commit date, via a
+single `git log --name-only` pass for the whole corpus. Uncommitted files fall
+back to mtime, which for them is the honest answer, and the whole thing is
+wrapped so that a missing git, a shallow clone or no repository at all falls back
+to mtime rather than failing.
+
+**Proved rather than assumed.** Regenerating twice gives a byte-identical file;
+`touch`-ing three tracked files and regenerating **still** gives the identical
+file, where before it changed the hash. Verified it also runs with no `.git`
+present at all. The working diff for this change is **16 lines** of
+`_index.json`, against the 1,254 the Action produced.
+
+Note for whoever reads the history: the Action's `cb912bf` and everything before
+it carries the old mtime-derived dates, so `modified` values in commits before
+today should not be trusted.
+
+A scratch copy used for the no-git test is left at `/tmp/nogit-test` — removing
+it needs your approval, since `/tmp` is one of this session's working
+directories.
+
+Verified: 235 tests, 234 pass, 1 skipped, 0 fail; 114 pieces, 0 frontmatter
+errors; 98 codes, 116/116 mapped; manuscript unchanged at 62 scenes.

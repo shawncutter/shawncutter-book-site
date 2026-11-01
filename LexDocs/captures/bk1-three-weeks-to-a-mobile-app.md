@@ -163,6 +163,17 @@ happened at **3 a.m.** He said the work sat with a company in Israel; whether th
 company had built a PhoneGap app in Visual Studio is a different claim. Do not
 merge the two accounts.
 
+## Naming: the third-party firm stays generic
+
+Shawn, 2026-10-31: **keep generic.** The company that built the first mobile app
+is **not** to be named in the book. Decided separately from Penn Virginia and
+Gulfport, and the asymmetry is the point: naming a customer is neutral, naming a
+vendor beside "didn't run worth a crap" is an allegation about a business that has
+no say here.
+
+The verbatim quotes above keep every detail he gave, because this capture is the
+record. The constraint is on **prose**.
+
 ## Capture prompts
 
 1. **The 2012 build vs the 2013 rollout.** Was the mobile deliverable due in 2012
@@ -176,6 +187,9 @@ merge the two accounts.
 4. **The Israeli company** — keep them generic, or do you want them named? They
    are a third party and nothing about them is on file.
 5. **The 90 days.** One problem you remember by name.
-6. **The third-party company** — keep them generic, or name them? They built an
-   app that "didn't run worth a crap" for a named public-company rollout, which is
-   a harder thing to put next to a real firm's name than a neutral fact.
+6. **One thing left on the third party, now that they stay generic:** is "a
+   company out of Israel" itself generic enough? Country plus project plus year is
+   narrower than it looks to anyone who was in oilfield software then. "An
+   offshore development shop" carries the same meaning for the reader and
+   identifies nobody. Your call — the verbatim quote above keeps the detail either
+   way, this is only about what reaches prose.

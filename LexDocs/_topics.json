@@ -7,6 +7,458 @@
     "total_clusters": 6
   },
   "themes": {
+    "father": {
+      "description": "Chuck Cutter, relationship, influence, legacy",
+      "color": "#f59e0b",
+      "arc_focus": [
+        "forged",
+        "fractured"
+      ],
+      "related_themes": [
+        "family",
+        "loss",
+        "memory"
+      ],
+      "stories": [
+        "book/forged/bk-expanded-comedic-stories.md",
+        "book/forged/bk-idle-hands-and-constructive-work-lessons-from.md",
+        "book/forged/bk-stories-of-side-hustles.md",
+        "book/forged/bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
+        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
+        "book/forged/bk1-chuck-at-175.md",
+        "book/forged/bk1-chuck-at-sixty-seconds.md",
+        "book/forged/bk1-forty-dollars-and-a-fork.md",
+        "book/forged/bk1-i-didnt-look.md",
+        "book/forged/bk1-operator-in-command.md",
+        "book/forged/bk1-riding-shotgun.md",
+        "book/forged/bk1-silo-steps-no-handle.md",
+        "book/forged/bk1-the-hilltop.md",
+        "book/forged/bk1-the-van.md",
+        "book/forged/bk1-the-wooster-steer.md",
+        "book/forged/bk1-three-months.md",
+        "book/forging/bk1-blackout-on-two-grids.md",
+        "book/forging/bk1-forging---we-priced-it-like-a-well-not-a-web.md",
+        "book/forging/bk1-the-last-flight.md",
+        "book/forging/bk1-three-thirty-am.md",
+        "book/foundry/bk1-counting-shawns.md",
+        "book/foundry/bk1-disney-every-month.md",
+        "book/foundry/bk1-knuckles--knowing.md",
+        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
+        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
+        "book/foundry/bk1-the-quiet-quit-of-legacy.md",
+        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
+        "book/fractured/bk1-five-thousand-dollars.md",
+        "book/fractured/bk1-it-will-go-down.md",
+        "book/fractured/bk1-october-29.md",
+        "book/fractured/bk1-rolling-ohio-hills.md",
+        "captures/bk-dad-121122.md",
+        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
+        "captures/bk1-cannot-suffer-fools.md",
+        "captures/bk1-energiaacres-capital-light.md",
+        "captures/bk1-farm-engineer-and-orphan-steel.md",
+        "captures/bk1-farm-roots-shawn-dictation.md",
+        "captures/bk1-fielding-customer-ladder.md",
+        "captures/bk1-letter-to-gia.md",
+        "captures/bk1-the-switch-that-never-turned-off.md",
+        "essays/bk1-minimums-and-non-negotiables.md",
+        "essays/essay-03-turtles-all-the-way-down-longform.md"
+      ],
+      "auto_added": false
+    },
+    "farm": {
+      "description": "West Salem, Ohio farm childhood, Bechtel family farm life",
+      "color": "#f59e0b",
+      "arc_focus": [
+        "forged"
+      ],
+      "related_themes": [
+        "childhood",
+        "midwest",
+        "origin"
+      ],
+      "stories": [
+        "book/forged/bk-expanded-comedic-stories.md",
+        "book/forged/bk-idle-hands-and-constructive-work-lessons-from.md",
+        "book/forged/bk-stories-of-side-hustles.md",
+        "book/forged/bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
+        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
+        "book/forged/bk1-chuck-at-sixty-seconds.md",
+        "book/forged/bk1-forty-dollars-and-a-fork.md",
+        "book/forged/bk1-gate-latch-hog-logic.md",
+        "book/forged/bk1-i-didnt-look.md",
+        "book/forged/bk1-motel-whiteboard-mvp.md",
+        "book/forged/bk1-password-cracker-crash.md",
+        "book/forged/bk1-senior-skip-day.md",
+        "book/forged/bk1-silo-steps-no-handle.md",
+        "book/forged/bk1-the-black-snake.md",
+        "book/forged/bk1-the-clothesline.md",
+        "book/forged/bk1-the-hilltop.md",
+        "book/forged/bk1-the-wooster-steer.md",
+        "book/forged/bk1-the-yard.md",
+        "book/forging/bk1-blackout-on-two-grids.md",
+        "book/forging/bk1-dont-throw-out-the-baby.md",
+        "book/forging/bk1-founder-employee.md",
+        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
+        "book/forging/bk1-mud-and-motherboards.md",
+        "book/forging/bk1-pocket-computers-and-cold-thumbs.md",
+        "book/foundry/bk1-counting-shawns.md",
+        "book/foundry/bk1-knuckles--knowing.md",
+        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
+        "book/foundry/bk1-the-quiet-quit-of-legacy.md",
+        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
+        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
+        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
+        "book/fractured/bk1-october-29.md",
+        "book/fractured/bk1-rolling-ohio-hills.md",
+        "captures/bk-dad-121122.md",
+        "captures/bk-from-farm-to-startup-the-journey-of-building-.md",
+        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
+        "captures/bk1-cedar-valley-the-call.md",
+        "captures/bk1-energiaacres-vision-origin.md",
+        "captures/bk1-farm-engineer-and-orphan-steel.md",
+        "captures/bk1-farm-roots-shawn-dictation.md",
+        "captures/bk1-franks-farm-ever-root-land.md",
+        "captures/bk1-lake-charles.md",
+        "captures/bk1-m1neral-stepping-out.md",
+        "captures/bk1-still-my-north-star.md",
+        "captures/bk1-the-mansfield-walk.md",
+        "captures/bk1-the-switch-that-never-turned-off.md",
+        "captures/bk1-we-have-this-gas.md",
+        "essays/bk1-designing-for-generations.md",
+        "essays/bk1-january-heat-compost-steam.md",
+        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
+        "essays/bk1-minimums-and-non-negotiables.md",
+        "essays/bk1-neighbor-circuit.md",
+        "essays/bk1-neighbor-dividend-power-food-and-quiet-hou.md",
+        "essays/bk1-pads-we-can-ship-in-six-months-standard-block.md",
+        "essays/bk1-private-infra-first-build-without-grants.md",
+        "essays/bk1-speed-is-a-system-utilities--workforce-move.md",
+        "essays/bk1-the-permit-ledger-if-it-isnt-dated-and-owned.md",
+        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
+        "essays/bk1-why-gasbacked-compute-now.md",
+        "essays/essay-03-turtles-all-the-way-down-longform.md",
+        "essays/speed-is-all-that-matters.md"
+      ],
+      "auto_added": false
+    },
+    "technology": {
+      "description": "Tech career, Fielding Systems, software, innovation",
+      "color": "#3b82f6",
+      "arc_focus": [
+        "forging",
+        "foundry"
+      ],
+      "related_themes": [
+        "career",
+        "innovation",
+        "systems-thinking"
+      ],
+      "stories": [
+        "book/forged/bk-expanded-comedic-stories.md",
+        "book/forged/bk-idle-hands-and-constructive-work-lessons-from.md",
+        "book/forged/bk-stories-of-side-hustles.md",
+        "book/forged/bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
+        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
+        "book/forged/bk1-gate-latch-hog-logic.md",
+        "book/forged/bk1-motel-whiteboard-mvp.md",
+        "book/forged/bk1-password-cracker-crash.md",
+        "book/forged/bk1-senior-skip-day.md",
+        "book/forged/bk1-silo-steps-no-handle.md",
+        "book/forging/bk1-blackout-on-two-grids.md",
+        "book/forging/bk1-dont-throw-out-the-baby.md",
+        "book/forging/bk1-forging---we-priced-it-like-a-well-not-a-web.md",
+        "book/forging/bk1-founder-employee.md",
+        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
+        "book/forging/bk1-mud-and-motherboards.md",
+        "book/forging/bk1-pocket-computers-and-cold-thumbs.md",
+        "book/forging/bk1-when-equity-didnt-move-the-needle.md",
+        "book/foundry/bk1-counting-shawns.md",
+        "book/foundry/bk1-knuckles--knowing.md",
+        "book/foundry/bk1-scars-as-data.md",
+        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
+        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
+        "book/foundry/bk1-the-quiet-quit-of-legacy.md",
+        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
+        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
+        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
+        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
+        "book/fractured/bk1-rolling-ohio-hills.md",
+        "book/fractured/bk1-the-30-year-echo.md",
+        "book/fractured/bk1-therapy-loneliness-and-clarity.md",
+        "book/fractured/bk1-unbirthday-real-work-mansfield-meeting-rec.md",
+        "captures/2026-10-31-muse-philosophy-chat.md",
+        "captures/bk-dad-121122.md",
+        "captures/bk-from-farm-to-startup-the-journey-of-building-.md",
+        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
+        "captures/bk1-akron-lab.md",
+        "captures/bk1-cannot-suffer-fools.md",
+        "captures/bk1-cedar-valley-the-call.md",
+        "captures/bk1-cognitive-land.md",
+        "captures/bk1-energiaacres-capital-light.md",
+        "captures/bk1-energiaacres-vision-origin.md",
+        "captures/bk1-farm-engineer-and-orphan-steel.md",
+        "captures/bk1-farm-roots-shawn-dictation.md",
+        "captures/bk1-fielding-customer-ladder.md",
+        "captures/bk1-fielding-products-visor-platform.md",
+        "captures/bk1-fractured--forging---the-forty-percent-ask.md",
+        "captures/bk1-fuck-meetings.md",
+        "captures/bk1-lake-charles.md",
+        "captures/bk1-letter-to-gia.md",
+        "captures/bk1-m1neral-stepping-out.md",
+        "captures/bk1-martin-quorum-reframe.md",
+        "captures/bk1-still-my-north-star.md",
+        "captures/bk1-the-mansfield-walk.md",
+        "captures/bk1-the-switch-that-never-turned-off.md",
+        "captures/bk1-three-weeks-to-a-mobile-app.md",
+        "captures/bk1-today.md",
+        "captures/bk1-we-have-this-gas.md",
+        "essays/bk1-boring-wins-winters-plug-it-in-then-sleep.md",
+        "essays/bk1-designing-for-generations.md",
+        "essays/bk1-digital-twin-before-theater-logs-labeled-a.md",
+        "essays/bk1-january-heat-compost-steam.md",
+        "essays/bk1-jobs-delta-energy-campus-vs-data-center-alo.md",
+        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
+        "essays/bk1-mansfield-proof-of-speed.md",
+        "essays/bk1-minimums-and-non-negotiables.md",
+        "essays/bk1-neighbor-circuit.md",
+        "essays/bk1-neighbor-dividend-power-food-and-quiet-hou.md",
+        "essays/bk1-pads-we-can-ship-in-six-months-standard-block.md",
+        "essays/bk1-pads-we-can-ship-in-six-months.md",
+        "essays/bk1-private-infra-first-build-without-grants.md",
+        "essays/bk1-private-infra-first-building-without-grants.md",
+        "essays/bk1-removing-the-blockers-location-location-lo.md",
+        "essays/bk1-speed-is-a-system-utilities--workforce-move.md",
+        "essays/bk1-the-ai-race-is-an-energy-race.md",
+        "essays/bk1-the-compute-block-pads-at-100200-mw-built-.md",
+        "essays/bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
+        "essays/bk1-the-permit-ledger-if-it-isnt-dated-and-owned.md",
+        "essays/bk1-the-permit-ledger-turning-maybe-into-dates.md",
+        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
+        "essays/bk1-why-gasbacked-compute-now.md",
+        "essays/essay-03-turtles-all-the-way-down-longform.md",
+        "essays/speed-is-all-that-matters.md"
+      ],
+      "auto_added": false
+    },
+    "family": {
+      "description": "Family relationships, siblings, parents, children",
+      "color": "#f59e0b",
+      "arc_focus": [
+        "all"
+      ],
+      "related_themes": [
+        "relationships",
+        "legacy",
+        "connection"
+      ],
+      "stories": [
+        "book/forged/bk-expanded-comedic-stories.md",
+        "book/forged/bk-stories-of-side-hustles.md",
+        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
+        "book/forged/bk1-chuck-at-175.md",
+        "book/forged/bk1-chuck-at-sixty-seconds.md",
+        "book/forged/bk1-forty-dollars-and-a-fork.md",
+        "book/forged/bk1-gate-latch-hog-logic.md",
+        "book/forged/bk1-i-didnt-look.md",
+        "book/forged/bk1-the-hilltop.md",
+        "book/forged/bk1-the-van.md",
+        "book/forged/bk1-the-yard.md",
+        "book/forging/bk1-blackout-on-two-grids.md",
+        "book/forging/bk1-founder-employee.md",
+        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
+        "book/forging/bk1-mud-and-motherboards.md",
+        "book/forging/bk1-the-elopement.md",
+        "book/forging/bk1-the-forty-percent-ask.md",
+        "book/forging/bk1-the-garage.md",
+        "book/forging/bk1-the-last-flight.md",
+        "book/forging/bk1-three-thirty-am.md",
+        "book/foundry/bk1-counting-shawns.md",
+        "book/foundry/bk1-disney-every-month.md",
+        "book/foundry/bk1-knuckles--knowing.md",
+        "book/foundry/bk1-scars-as-data.md",
+        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
+        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
+        "book/foundry/bk1-the-fork-i-almost-missed.md",
+        "book/foundry/bk1-the-quiet-quit-of-legacy.md",
+        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
+        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
+        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
+        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
+        "book/fractured/bk1-rolling-ohio-hills.md",
+        "book/fractured/bk1-the-30-year-echo.md",
+        "book/fractured/bk1-therapy-loneliness-and-clarity.md",
+        "book/fractured/bk1-unbirthday-real-work-mansfield-meeting-rec.md",
+        "captures/bk-dad-121122.md",
+        "captures/bk-from-farm-to-startup-the-journey-of-building-.md",
+        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
+        "captures/bk1-akron-lab.md",
+        "captures/bk1-cannot-suffer-fools.md",
+        "captures/bk1-cedar-valley-the-call.md",
+        "captures/bk1-cognitive-land.md",
+        "captures/bk1-energiaacres-capital-light.md",
+        "captures/bk1-energiaacres-vision-origin.md",
+        "captures/bk1-farm-engineer-and-orphan-steel.md",
+        "captures/bk1-farm-roots-shawn-dictation.md",
+        "captures/bk1-fielding-customer-ladder.md",
+        "captures/bk1-fractured--forging---the-forty-percent-ask.md",
+        "captures/bk1-franks-farm-ever-root-land.md",
+        "captures/bk1-lake-charles.md",
+        "captures/bk1-letter-to-gia.md",
+        "captures/bk1-martin-quorum-reframe.md",
+        "captures/bk1-still-my-north-star.md",
+        "captures/bk1-the-mansfield-walk.md",
+        "captures/bk1-the-switch-that-never-turned-off.md",
+        "captures/bk1-today.md",
+        "captures/bk1-we-have-this-gas.md",
+        "essays/bk1-designing-for-generations.md",
+        "essays/bk1-digital-twin-before-theater-logs-labeled-a.md",
+        "essays/bk1-jobs-delta-energy-campus-vs-data-center-alo.md",
+        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
+        "essays/bk1-minimums-and-non-negotiables.md",
+        "essays/bk1-neighbor-dividend-power-food-and-quiet-hou.md",
+        "essays/bk1-pads-we-can-ship-in-six-months-standard-block.md",
+        "essays/bk1-removing-the-blockers-location-location-lo.md",
+        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
+        "essays/bk1-why-gasbacked-compute-now.md",
+        "essays/essay-03-turtles-all-the-way-down-longform.md",
+        "essays/speed-is-all-that-matters.md"
+      ],
+      "auto_added": false
+    },
+    "accident": {
+      "description": "October 29, 1990 — childhood accident, 40 surgeries",
+      "color": "#ef4444",
+      "arc_focus": [
+        "fractured"
+      ],
+      "related_themes": [
+        "trauma",
+        "time",
+        "survival"
+      ],
+      "stories": [
+        "book/forged/bk-idle-hands-and-constructive-work-lessons-from.md",
+        "book/forged/bk1-i-didnt-look.md",
+        "book/forged/bk1-operator-in-command.md",
+        "book/forged/bk1-password-cracker-crash.md",
+        "book/forged/bk1-the-van.md",
+        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
+        "book/forging/bk1-mud-and-motherboards.md",
+        "book/forging/bk1-pocket-computers-and-cold-thumbs.md",
+        "book/foundry/bk1-counting-shawns.md",
+        "book/foundry/bk1-disney-every-month.md",
+        "book/foundry/bk1-scars-as-data.md",
+        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
+        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
+        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
+        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
+        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
+        "book/fractured/bk1-five-thousand-dollars.md",
+        "book/fractured/bk1-october-29.md",
+        "book/fractured/bk1-the-delay.md",
+        "book/fractured/bk1-unbirthday-real-work-mansfield-meeting-rec.md",
+        "captures/2026-10-31-muse-philosophy-chat.md",
+        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
+        "captures/bk1-akron-lab.md",
+        "captures/bk1-farm-roots-shawn-dictation.md",
+        "captures/bk1-fielding-products-visor-platform.md",
+        "captures/bk1-letter-to-gia.md",
+        "captures/bk1-the-switch-that-never-turned-off.md",
+        "essays/bk1-digital-twin-before-theater-logs-labeled-a.md",
+        "essays/bk1-minimums-and-non-negotiables.md",
+        "essays/bk1-the-ai-race-is-an-energy-race.md",
+        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
+        "essays/essay-03-turtles-all-the-way-down-longform.md"
+      ],
+      "auto_added": false
+    },
+    "resilience": {
+      "description": "Overcoming adversity, survival, bouncing back",
+      "color": "#10b981",
+      "arc_focus": [
+        "fractured",
+        "forging"
+      ],
+      "related_themes": [
+        "perseverance",
+        "survival",
+        "strength"
+      ],
+      "stories": [
+        "book/forged/bk-stories-of-side-hustles.md",
+        "book/forged/bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
+        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
+        "book/forged/bk1-chuck-at-175.md",
+        "book/forged/bk1-chuck-at-sixty-seconds.md",
+        "book/forged/bk1-forty-dollars-and-a-fork.md",
+        "book/forged/bk1-gate-latch-hog-logic.md",
+        "book/forged/bk1-i-didnt-look.md",
+        "book/forged/bk1-motel-whiteboard-mvp.md",
+        "book/forged/bk1-operator-in-command.md",
+        "book/forged/bk1-password-cracker-crash.md",
+        "book/forged/bk1-senior-skip-day.md",
+        "book/forged/bk1-silo-steps-no-handle.md",
+        "book/forged/bk1-the-hilltop.md",
+        "book/forged/bk1-the-van.md",
+        "book/forged/bk1-the-yard.md",
+        "book/forging/bk1-blackout-on-two-grids.md",
+        "book/forging/bk1-dont-throw-out-the-baby.md",
+        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
+        "book/forging/bk1-mud-and-motherboards.md",
+        "book/forging/bk1-pocket-computers-and-cold-thumbs.md",
+        "book/forging/bk1-the-cold-call.md",
+        "book/forging/bk1-the-dave-problem.md",
+        "book/forging/bk1-the-elopement.md",
+        "book/forging/bk1-the-forty-percent-ask.md",
+        "book/forging/bk1-the-garage.md",
+        "book/forging/bk1-the-last-flight.md",
+        "book/forging/bk1-the-quorum-bed.md",
+        "book/forging/bk1-three-thirty-am.md",
+        "book/foundry/bk1-counting-shawns.md",
+        "book/foundry/bk1-disney-every-month.md",
+        "book/foundry/bk1-foundry-2024-cofounder-conflict.md",
+        "book/foundry/bk1-knuckles--knowing.md",
+        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
+        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
+        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
+        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
+        "book/fractured/bk1-150-credit-hours.md",
+        "book/fractured/bk1-october-29.md",
+        "book/fractured/bk1-rolling-ohio-hills.md",
+        "book/fractured/bk1-the-30-year-echo.md",
+        "book/fractured/bk1-the-delay.md",
+        "book/fractured/bk1-unbirthday-real-work-mansfield-meeting-rec.md",
+        "captures/bk-from-farm-to-startup-the-journey-of-building-.md",
+        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
+        "captures/bk1-energiaacres-vision-origin.md",
+        "captures/bk1-farm-engineer-and-orphan-steel.md",
+        "captures/bk1-farm-roots-shawn-dictation.md",
+        "captures/bk1-fielding-products-visor-platform.md",
+        "captures/bk1-fractured--forging---the-forty-percent-ask.md",
+        "captures/bk1-lake-charles.md",
+        "captures/bk1-letter-to-gia.md",
+        "captures/bk1-m1neral-stepping-out.md",
+        "captures/bk1-the-switch-that-never-turned-off.md",
+        "captures/bk1-we-have-this-gas.md",
+        "essays/bk1-designing-for-generations.md",
+        "essays/bk1-january-heat-compost-steam.md",
+        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
+        "essays/bk1-mansfield-proof-of-speed.md",
+        "essays/bk1-minimums-and-non-negotiables.md",
+        "essays/bk1-neighbor-circuit.md",
+        "essays/bk1-neighbor-dividend-power-food-and-quiet-hou.md",
+        "essays/bk1-pads-we-can-ship-in-six-months-standard-block.md",
+        "essays/bk1-private-infra-first-build-without-grants.md",
+        "essays/bk1-removing-the-blockers-location-location-lo.md",
+        "essays/bk1-speed-is-a-system-utilities--workforce-move.md",
+        "essays/bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
+        "essays/bk1-the-permit-ledger-if-it-isnt-dated-and-owned.md",
+        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
+        "essays/essay-03-turtles-all-the-way-down-longform.md",
+        "essays/speed-is-all-that-matters.md"
+      ],
+      "auto_added": false
+    },
     "systems-thinking": {
       "description": "Engineering mindset, problem-solving, systems design",
       "color": "#3b82f6",
@@ -164,389 +616,6 @@
       ],
       "auto_added": false
     },
-    "technology": {
-      "description": "Tech career, Fielding Systems, software, innovation",
-      "color": "#3b82f6",
-      "arc_focus": [
-        "forging",
-        "foundry"
-      ],
-      "related_themes": [
-        "career",
-        "innovation",
-        "systems-thinking"
-      ],
-      "stories": [
-        "book/forged/bk-expanded-comedic-stories.md",
-        "book/forged/bk-idle-hands-and-constructive-work-lessons-from.md",
-        "book/forged/bk-stories-of-side-hustles.md",
-        "book/forged/bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
-        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
-        "book/forged/bk1-gate-latch-hog-logic.md",
-        "book/forged/bk1-motel-whiteboard-mvp.md",
-        "book/forged/bk1-password-cracker-crash.md",
-        "book/forged/bk1-senior-skip-day.md",
-        "book/forged/bk1-silo-steps-no-handle.md",
-        "book/forging/bk1-blackout-on-two-grids.md",
-        "book/forging/bk1-dont-throw-out-the-baby.md",
-        "book/forging/bk1-forging---we-priced-it-like-a-well-not-a-web.md",
-        "book/forging/bk1-founder-employee.md",
-        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
-        "book/forging/bk1-mud-and-motherboards.md",
-        "book/forging/bk1-pocket-computers-and-cold-thumbs.md",
-        "book/forging/bk1-when-equity-didnt-move-the-needle.md",
-        "book/foundry/bk1-counting-shawns.md",
-        "book/foundry/bk1-knuckles--knowing.md",
-        "book/foundry/bk1-scars-as-data.md",
-        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
-        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
-        "book/foundry/bk1-the-quiet-quit-of-legacy.md",
-        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
-        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
-        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
-        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
-        "book/fractured/bk1-rolling-ohio-hills.md",
-        "book/fractured/bk1-the-30-year-echo.md",
-        "book/fractured/bk1-therapy-loneliness-and-clarity.md",
-        "book/fractured/bk1-unbirthday-real-work-mansfield-meeting-rec.md",
-        "captures/2026-10-31-muse-philosophy-chat.md",
-        "captures/bk-dad-121122.md",
-        "captures/bk-from-farm-to-startup-the-journey-of-building-.md",
-        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
-        "captures/bk1-akron-lab.md",
-        "captures/bk1-cannot-suffer-fools.md",
-        "captures/bk1-cedar-valley-the-call.md",
-        "captures/bk1-cognitive-land.md",
-        "captures/bk1-energiaacres-capital-light.md",
-        "captures/bk1-energiaacres-vision-origin.md",
-        "captures/bk1-farm-engineer-and-orphan-steel.md",
-        "captures/bk1-farm-roots-shawn-dictation.md",
-        "captures/bk1-fielding-customer-ladder.md",
-        "captures/bk1-fielding-products-visor-platform.md",
-        "captures/bk1-fractured--forging---the-forty-percent-ask.md",
-        "captures/bk1-fuck-meetings.md",
-        "captures/bk1-lake-charles.md",
-        "captures/bk1-letter-to-gia.md",
-        "captures/bk1-m1neral-stepping-out.md",
-        "captures/bk1-martin-quorum-reframe.md",
-        "captures/bk1-still-my-north-star.md",
-        "captures/bk1-the-mansfield-walk.md",
-        "captures/bk1-the-switch-that-never-turned-off.md",
-        "captures/bk1-three-weeks-to-a-mobile-app.md",
-        "captures/bk1-today.md",
-        "captures/bk1-we-have-this-gas.md",
-        "essays/bk1-boring-wins-winters-plug-it-in-then-sleep.md",
-        "essays/bk1-designing-for-generations.md",
-        "essays/bk1-digital-twin-before-theater-logs-labeled-a.md",
-        "essays/bk1-january-heat-compost-steam.md",
-        "essays/bk1-jobs-delta-energy-campus-vs-data-center-alo.md",
-        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
-        "essays/bk1-mansfield-proof-of-speed.md",
-        "essays/bk1-minimums-and-non-negotiables.md",
-        "essays/bk1-neighbor-circuit.md",
-        "essays/bk1-neighbor-dividend-power-food-and-quiet-hou.md",
-        "essays/bk1-pads-we-can-ship-in-six-months-standard-block.md",
-        "essays/bk1-pads-we-can-ship-in-six-months.md",
-        "essays/bk1-private-infra-first-build-without-grants.md",
-        "essays/bk1-private-infra-first-building-without-grants.md",
-        "essays/bk1-removing-the-blockers-location-location-lo.md",
-        "essays/bk1-speed-is-a-system-utilities--workforce-move.md",
-        "essays/bk1-the-ai-race-is-an-energy-race.md",
-        "essays/bk1-the-compute-block-pads-at-100200-mw-built-.md",
-        "essays/bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
-        "essays/bk1-the-permit-ledger-if-it-isnt-dated-and-owned.md",
-        "essays/bk1-the-permit-ledger-turning-maybe-into-dates.md",
-        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
-        "essays/bk1-why-gasbacked-compute-now.md",
-        "essays/essay-03-turtles-all-the-way-down-longform.md",
-        "essays/speed-is-all-that-matters.md"
-      ],
-      "auto_added": false
-    },
-    "resilience": {
-      "description": "Overcoming adversity, survival, bouncing back",
-      "color": "#10b981",
-      "arc_focus": [
-        "fractured",
-        "forging"
-      ],
-      "related_themes": [
-        "perseverance",
-        "survival",
-        "strength"
-      ],
-      "stories": [
-        "book/forged/bk-stories-of-side-hustles.md",
-        "book/forged/bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
-        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
-        "book/forged/bk1-chuck-at-175.md",
-        "book/forged/bk1-chuck-at-sixty-seconds.md",
-        "book/forged/bk1-forty-dollars-and-a-fork.md",
-        "book/forged/bk1-gate-latch-hog-logic.md",
-        "book/forged/bk1-i-didnt-look.md",
-        "book/forged/bk1-motel-whiteboard-mvp.md",
-        "book/forged/bk1-operator-in-command.md",
-        "book/forged/bk1-password-cracker-crash.md",
-        "book/forged/bk1-senior-skip-day.md",
-        "book/forged/bk1-silo-steps-no-handle.md",
-        "book/forged/bk1-the-hilltop.md",
-        "book/forged/bk1-the-van.md",
-        "book/forged/bk1-the-yard.md",
-        "book/forging/bk1-blackout-on-two-grids.md",
-        "book/forging/bk1-dont-throw-out-the-baby.md",
-        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
-        "book/forging/bk1-mud-and-motherboards.md",
-        "book/forging/bk1-pocket-computers-and-cold-thumbs.md",
-        "book/forging/bk1-the-cold-call.md",
-        "book/forging/bk1-the-dave-problem.md",
-        "book/forging/bk1-the-elopement.md",
-        "book/forging/bk1-the-forty-percent-ask.md",
-        "book/forging/bk1-the-garage.md",
-        "book/forging/bk1-the-last-flight.md",
-        "book/forging/bk1-the-quorum-bed.md",
-        "book/forging/bk1-three-thirty-am.md",
-        "book/foundry/bk1-counting-shawns.md",
-        "book/foundry/bk1-disney-every-month.md",
-        "book/foundry/bk1-foundry-2024-cofounder-conflict.md",
-        "book/foundry/bk1-knuckles--knowing.md",
-        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
-        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
-        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
-        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
-        "book/fractured/bk1-150-credit-hours.md",
-        "book/fractured/bk1-october-29.md",
-        "book/fractured/bk1-rolling-ohio-hills.md",
-        "book/fractured/bk1-the-30-year-echo.md",
-        "book/fractured/bk1-the-delay.md",
-        "book/fractured/bk1-unbirthday-real-work-mansfield-meeting-rec.md",
-        "captures/bk-from-farm-to-startup-the-journey-of-building-.md",
-        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
-        "captures/bk1-energiaacres-vision-origin.md",
-        "captures/bk1-farm-engineer-and-orphan-steel.md",
-        "captures/bk1-farm-roots-shawn-dictation.md",
-        "captures/bk1-fielding-products-visor-platform.md",
-        "captures/bk1-fractured--forging---the-forty-percent-ask.md",
-        "captures/bk1-lake-charles.md",
-        "captures/bk1-letter-to-gia.md",
-        "captures/bk1-m1neral-stepping-out.md",
-        "captures/bk1-the-switch-that-never-turned-off.md",
-        "captures/bk1-we-have-this-gas.md",
-        "essays/bk1-designing-for-generations.md",
-        "essays/bk1-january-heat-compost-steam.md",
-        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
-        "essays/bk1-mansfield-proof-of-speed.md",
-        "essays/bk1-minimums-and-non-negotiables.md",
-        "essays/bk1-neighbor-circuit.md",
-        "essays/bk1-neighbor-dividend-power-food-and-quiet-hou.md",
-        "essays/bk1-pads-we-can-ship-in-six-months-standard-block.md",
-        "essays/bk1-private-infra-first-build-without-grants.md",
-        "essays/bk1-removing-the-blockers-location-location-lo.md",
-        "essays/bk1-speed-is-a-system-utilities--workforce-move.md",
-        "essays/bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
-        "essays/bk1-the-permit-ledger-if-it-isnt-dated-and-owned.md",
-        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
-        "essays/essay-03-turtles-all-the-way-down-longform.md",
-        "essays/speed-is-all-that-matters.md"
-      ],
-      "auto_added": false
-    },
-    "surgeries": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forged/bk1-gate-latch-hog-logic.md",
-        "book/forged/bk1-the-van.md",
-        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
-        "book/forging/bk1-when-equity-didnt-move-the-needle.md",
-        "book/foundry/bk1-counting-shawns.md",
-        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
-        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
-        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
-        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
-        "book/fractured/bk1-it-will-go-down.md",
-        "book/fractured/bk1-rolling-ohio-hills.md",
-        "book/fractured/bk1-the-30-year-echo.md",
-        "book/fractured/bk1-therapy-loneliness-and-clarity.md",
-        "captures/2026-10-31-muse-philosophy-chat.md",
-        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
-        "captures/bk1-cedar-valley-the-call.md",
-        "captures/bk1-farm-engineer-and-orphan-steel.md",
-        "captures/bk1-fielding-customer-ladder.md",
-        "captures/bk1-fielding-products-visor-platform.md",
-        "captures/bk1-lake-charles.md",
-        "captures/bk1-the-switch-that-never-turned-off.md",
-        "essays/bk1-jobs-delta-energy-campus-vs-data-center-alo.md",
-        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
-        "essays/bk1-removing-the-blockers-location-location-lo.md",
-        "essays/bk1-speed-is-a-system-utilities--workforce-move.md",
-        "essays/bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
-        "essays/essay-03-turtles-all-the-way-down-longform.md"
-      ],
-      "auto_added": false
-    },
-    "farm": {
-      "description": "West Salem, Ohio farm childhood, Bechtel family farm life",
-      "color": "#f59e0b",
-      "arc_focus": [
-        "forged"
-      ],
-      "related_themes": [
-        "childhood",
-        "midwest",
-        "origin"
-      ],
-      "stories": [
-        "book/forged/bk-expanded-comedic-stories.md",
-        "book/forged/bk-idle-hands-and-constructive-work-lessons-from.md",
-        "book/forged/bk-stories-of-side-hustles.md",
-        "book/forged/bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
-        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
-        "book/forged/bk1-chuck-at-sixty-seconds.md",
-        "book/forged/bk1-forty-dollars-and-a-fork.md",
-        "book/forged/bk1-gate-latch-hog-logic.md",
-        "book/forged/bk1-i-didnt-look.md",
-        "book/forged/bk1-motel-whiteboard-mvp.md",
-        "book/forged/bk1-password-cracker-crash.md",
-        "book/forged/bk1-senior-skip-day.md",
-        "book/forged/bk1-silo-steps-no-handle.md",
-        "book/forged/bk1-the-black-snake.md",
-        "book/forged/bk1-the-clothesline.md",
-        "book/forged/bk1-the-hilltop.md",
-        "book/forged/bk1-the-wooster-steer.md",
-        "book/forged/bk1-the-yard.md",
-        "book/forging/bk1-blackout-on-two-grids.md",
-        "book/forging/bk1-dont-throw-out-the-baby.md",
-        "book/forging/bk1-founder-employee.md",
-        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
-        "book/forging/bk1-mud-and-motherboards.md",
-        "book/forging/bk1-pocket-computers-and-cold-thumbs.md",
-        "book/foundry/bk1-counting-shawns.md",
-        "book/foundry/bk1-knuckles--knowing.md",
-        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
-        "book/foundry/bk1-the-quiet-quit-of-legacy.md",
-        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
-        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
-        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
-        "book/fractured/bk1-october-29.md",
-        "book/fractured/bk1-rolling-ohio-hills.md",
-        "captures/bk-dad-121122.md",
-        "captures/bk-from-farm-to-startup-the-journey-of-building-.md",
-        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
-        "captures/bk1-cedar-valley-the-call.md",
-        "captures/bk1-energiaacres-vision-origin.md",
-        "captures/bk1-farm-engineer-and-orphan-steel.md",
-        "captures/bk1-farm-roots-shawn-dictation.md",
-        "captures/bk1-franks-farm-ever-root-land.md",
-        "captures/bk1-lake-charles.md",
-        "captures/bk1-m1neral-stepping-out.md",
-        "captures/bk1-still-my-north-star.md",
-        "captures/bk1-the-mansfield-walk.md",
-        "captures/bk1-the-switch-that-never-turned-off.md",
-        "captures/bk1-we-have-this-gas.md",
-        "essays/bk1-designing-for-generations.md",
-        "essays/bk1-january-heat-compost-steam.md",
-        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
-        "essays/bk1-minimums-and-non-negotiables.md",
-        "essays/bk1-neighbor-circuit.md",
-        "essays/bk1-neighbor-dividend-power-food-and-quiet-hou.md",
-        "essays/bk1-pads-we-can-ship-in-six-months-standard-block.md",
-        "essays/bk1-private-infra-first-build-without-grants.md",
-        "essays/bk1-speed-is-a-system-utilities--workforce-move.md",
-        "essays/bk1-the-permit-ledger-if-it-isnt-dated-and-owned.md",
-        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
-        "essays/bk1-why-gasbacked-compute-now.md",
-        "essays/essay-03-turtles-all-the-way-down-longform.md",
-        "essays/speed-is-all-that-matters.md"
-      ],
-      "auto_added": false
-    },
-    "family": {
-      "description": "Family relationships, siblings, parents, children",
-      "color": "#f59e0b",
-      "arc_focus": [
-        "all"
-      ],
-      "related_themes": [
-        "relationships",
-        "legacy",
-        "connection"
-      ],
-      "stories": [
-        "book/forged/bk-expanded-comedic-stories.md",
-        "book/forged/bk-stories-of-side-hustles.md",
-        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
-        "book/forged/bk1-chuck-at-175.md",
-        "book/forged/bk1-chuck-at-sixty-seconds.md",
-        "book/forged/bk1-forty-dollars-and-a-fork.md",
-        "book/forged/bk1-gate-latch-hog-logic.md",
-        "book/forged/bk1-i-didnt-look.md",
-        "book/forged/bk1-the-hilltop.md",
-        "book/forged/bk1-the-van.md",
-        "book/forged/bk1-the-yard.md",
-        "book/forging/bk1-blackout-on-two-grids.md",
-        "book/forging/bk1-founder-employee.md",
-        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
-        "book/forging/bk1-mud-and-motherboards.md",
-        "book/forging/bk1-the-elopement.md",
-        "book/forging/bk1-the-forty-percent-ask.md",
-        "book/forging/bk1-the-garage.md",
-        "book/forging/bk1-the-last-flight.md",
-        "book/forging/bk1-three-thirty-am.md",
-        "book/foundry/bk1-counting-shawns.md",
-        "book/foundry/bk1-disney-every-month.md",
-        "book/foundry/bk1-knuckles--knowing.md",
-        "book/foundry/bk1-scars-as-data.md",
-        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
-        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
-        "book/foundry/bk1-the-fork-i-almost-missed.md",
-        "book/foundry/bk1-the-quiet-quit-of-legacy.md",
-        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
-        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
-        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
-        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
-        "book/fractured/bk1-rolling-ohio-hills.md",
-        "book/fractured/bk1-the-30-year-echo.md",
-        "book/fractured/bk1-therapy-loneliness-and-clarity.md",
-        "book/fractured/bk1-unbirthday-real-work-mansfield-meeting-rec.md",
-        "captures/bk-dad-121122.md",
-        "captures/bk-from-farm-to-startup-the-journey-of-building-.md",
-        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
-        "captures/bk1-akron-lab.md",
-        "captures/bk1-cannot-suffer-fools.md",
-        "captures/bk1-cedar-valley-the-call.md",
-        "captures/bk1-cognitive-land.md",
-        "captures/bk1-energiaacres-capital-light.md",
-        "captures/bk1-energiaacres-vision-origin.md",
-        "captures/bk1-farm-engineer-and-orphan-steel.md",
-        "captures/bk1-farm-roots-shawn-dictation.md",
-        "captures/bk1-fielding-customer-ladder.md",
-        "captures/bk1-fractured--forging---the-forty-percent-ask.md",
-        "captures/bk1-franks-farm-ever-root-land.md",
-        "captures/bk1-lake-charles.md",
-        "captures/bk1-letter-to-gia.md",
-        "captures/bk1-martin-quorum-reframe.md",
-        "captures/bk1-still-my-north-star.md",
-        "captures/bk1-the-mansfield-walk.md",
-        "captures/bk1-the-switch-that-never-turned-off.md",
-        "captures/bk1-today.md",
-        "captures/bk1-we-have-this-gas.md",
-        "essays/bk1-designing-for-generations.md",
-        "essays/bk1-digital-twin-before-theater-logs-labeled-a.md",
-        "essays/bk1-jobs-delta-energy-campus-vs-data-center-alo.md",
-        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
-        "essays/bk1-minimums-and-non-negotiables.md",
-        "essays/bk1-neighbor-dividend-power-food-and-quiet-hou.md",
-        "essays/bk1-pads-we-can-ship-in-six-months-standard-block.md",
-        "essays/bk1-removing-the-blockers-location-location-lo.md",
-        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
-        "essays/bk1-why-gasbacked-compute-now.md",
-        "essays/essay-03-turtles-all-the-way-down-longform.md",
-        "essays/speed-is-all-that-matters.md"
-      ],
-      "auto_added": false
-    },
     "wrestling": {
       "description": "",
       "color": null,
@@ -587,144 +656,6 @@
       ],
       "auto_added": false
     },
-    "accident": {
-      "description": "October 29, 1990 — childhood accident, 40 surgeries",
-      "color": "#ef4444",
-      "arc_focus": [
-        "fractured"
-      ],
-      "related_themes": [
-        "trauma",
-        "time",
-        "survival"
-      ],
-      "stories": [
-        "book/forged/bk-idle-hands-and-constructive-work-lessons-from.md",
-        "book/forged/bk1-i-didnt-look.md",
-        "book/forged/bk1-operator-in-command.md",
-        "book/forged/bk1-password-cracker-crash.md",
-        "book/forged/bk1-the-van.md",
-        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
-        "book/forging/bk1-mud-and-motherboards.md",
-        "book/forging/bk1-pocket-computers-and-cold-thumbs.md",
-        "book/foundry/bk1-counting-shawns.md",
-        "book/foundry/bk1-disney-every-month.md",
-        "book/foundry/bk1-scars-as-data.md",
-        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
-        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
-        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
-        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
-        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
-        "book/fractured/bk1-five-thousand-dollars.md",
-        "book/fractured/bk1-october-29.md",
-        "book/fractured/bk1-the-delay.md",
-        "book/fractured/bk1-unbirthday-real-work-mansfield-meeting-rec.md",
-        "captures/2026-10-31-muse-philosophy-chat.md",
-        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
-        "captures/bk1-akron-lab.md",
-        "captures/bk1-farm-roots-shawn-dictation.md",
-        "captures/bk1-fielding-products-visor-platform.md",
-        "captures/bk1-letter-to-gia.md",
-        "captures/bk1-the-switch-that-never-turned-off.md",
-        "essays/bk1-digital-twin-before-theater-logs-labeled-a.md",
-        "essays/bk1-minimums-and-non-negotiables.md",
-        "essays/bk1-the-ai-race-is-an-energy-race.md",
-        "essays/bk1-this-starts-here-a-genx-technologist-energ.md",
-        "essays/essay-03-turtles-all-the-way-down-longform.md"
-      ],
-      "auto_added": false
-    },
-    "father": {
-      "description": "Chuck Cutter, relationship, influence, legacy",
-      "color": "#f59e0b",
-      "arc_focus": [
-        "forged",
-        "fractured"
-      ],
-      "related_themes": [
-        "family",
-        "loss",
-        "memory"
-      ],
-      "stories": [
-        "book/forged/bk-expanded-comedic-stories.md",
-        "book/forged/bk-idle-hands-and-constructive-work-lessons-from.md",
-        "book/forged/bk-stories-of-side-hustles.md",
-        "book/forged/bk-the-power-of-grit-how-farming-taught-me-to-pe.md",
-        "book/forged/bk1-a-fall-from-grace-the-pumpkin-patch-incident.md",
-        "book/forged/bk1-chuck-at-175.md",
-        "book/forged/bk1-chuck-at-sixty-seconds.md",
-        "book/forged/bk1-forty-dollars-and-a-fork.md",
-        "book/forged/bk1-i-didnt-look.md",
-        "book/forged/bk1-operator-in-command.md",
-        "book/forged/bk1-riding-shotgun.md",
-        "book/forged/bk1-silo-steps-no-handle.md",
-        "book/forged/bk1-the-hilltop.md",
-        "book/forged/bk1-the-van.md",
-        "book/forged/bk1-the-wooster-steer.md",
-        "book/forged/bk1-three-months.md",
-        "book/forging/bk1-blackout-on-two-grids.md",
-        "book/forging/bk1-forging---we-priced-it-like-a-well-not-a-web.md",
-        "book/forging/bk1-the-last-flight.md",
-        "book/forging/bk1-three-thirty-am.md",
-        "book/foundry/bk1-counting-shawns.md",
-        "book/foundry/bk1-disney-every-month.md",
-        "book/foundry/bk1-knuckles--knowing.md",
-        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
-        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
-        "book/foundry/bk1-the-quiet-quit-of-legacy.md",
-        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
-        "book/fractured/bk1-five-thousand-dollars.md",
-        "book/fractured/bk1-it-will-go-down.md",
-        "book/fractured/bk1-october-29.md",
-        "book/fractured/bk1-rolling-ohio-hills.md",
-        "captures/bk-dad-121122.md",
-        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
-        "captures/bk1-cannot-suffer-fools.md",
-        "captures/bk1-energiaacres-capital-light.md",
-        "captures/bk1-farm-engineer-and-orphan-steel.md",
-        "captures/bk1-farm-roots-shawn-dictation.md",
-        "captures/bk1-fielding-customer-ladder.md",
-        "captures/bk1-letter-to-gia.md",
-        "captures/bk1-the-switch-that-never-turned-off.md",
-        "essays/bk1-minimums-and-non-negotiables.md",
-        "essays/essay-03-turtles-all-the-way-down-longform.md"
-      ],
-      "auto_added": false
-    },
-    "cj": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/fractured/bk1-october-29.md"
-      ],
-      "auto_added": false
-    },
-    "mother": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forged/bk1-the-yard.md",
-        "book/fractured/bk1-five-thousand-dollars.md",
-        "book/fractured/bk1-it-will-go-down.md",
-        "book/fractured/bk1-october-29.md"
-      ],
-      "auto_added": false
-    },
-    "chaos": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/fractured/bk1-october-29.md"
-      ],
-      "auto_added": false
-    },
     "faith": {
       "description": "",
       "color": null,
@@ -739,108 +670,6 @@
         "book/fractured/bk1-the-30-year-echo.md",
         "essays/bk1-boring-wins-winters-plug-it-in-then-sleep.md",
         "essays/bk1-this-starts-here-a-genx-technologist-energ.md"
-      ],
-      "auto_added": false
-    },
-    "Fielding": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-cold-call.md",
-        "book/forging/bk1-the-dave-problem.md",
-        "book/forging/bk1-the-forty-percent-ask.md",
-        "book/forging/bk1-the-garage.md",
-        "book/forging/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "acquisition": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-dave-problem.md",
-        "book/forging/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "Quorum": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-dave-problem.md",
-        "book/forging/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "Jeff": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-dave-problem.md"
-      ],
-      "auto_added": false
-    },
-    "team": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-garage.md",
-        "book/foundry/bk1-foundry-2024-cofounder-conflict.md"
-      ],
-      "auto_added": false
-    },
-    "success": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "hands": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-quorum-bed.md"
-      ],
-      "auto_added": false
-    },
-    "depression": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/foundry/bk1-scars-as-data.md",
-        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
-        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
-        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
-        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
-        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
-        "book/fractured/bk1-therapy-loneliness-and-clarity.md",
-        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
-        "captures/bk1-akron-lab.md",
-        "captures/bk1-energiaacres-vision-origin.md",
-        "captures/bk1-letter-to-gia.md",
-        "captures/bk1-martin-quorum-reframe.md",
-        "captures/bk1-still-my-north-star.md",
-        "captures/bk1-we-have-this-gas.md",
-        "essays/bk1-minimums-and-non-negotiables.md",
-        "essays/essay-03-turtles-all-the-way-down-longform.md"
       ],
       "auto_added": false
     },
@@ -894,6 +723,42 @@
       "stories": [
         "book/forged/bk1-chuck-at-175.md",
         "book/forged/bk1-three-months.md"
+      ],
+      "auto_added": false
+    },
+    "surgeries": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forged/bk1-gate-latch-hog-logic.md",
+        "book/forged/bk1-the-van.md",
+        "book/forging/bk1-moving-the-oilfield-to-the-cloud.md",
+        "book/forging/bk1-when-equity-didnt-move-the-needle.md",
+        "book/foundry/bk1-counting-shawns.md",
+        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
+        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
+        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
+        "book/fractured/bk-the-surgeons-revelation-a-teenagers-shatter.md",
+        "book/fractured/bk1-it-will-go-down.md",
+        "book/fractured/bk1-rolling-ohio-hills.md",
+        "book/fractured/bk1-the-30-year-echo.md",
+        "book/fractured/bk1-therapy-loneliness-and-clarity.md",
+        "captures/2026-10-31-muse-philosophy-chat.md",
+        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
+        "captures/bk1-cedar-valley-the-call.md",
+        "captures/bk1-farm-engineer-and-orphan-steel.md",
+        "captures/bk1-fielding-customer-ladder.md",
+        "captures/bk1-fielding-products-visor-platform.md",
+        "captures/bk1-lake-charles.md",
+        "captures/bk1-the-switch-that-never-turned-off.md",
+        "essays/bk1-jobs-delta-energy-campus-vs-data-center-alo.md",
+        "essays/bk1-jobs-delta-energy-campus-vs-pure-data-cente.md",
+        "essays/bk1-removing-the-blockers-location-location-lo.md",
+        "essays/bk1-speed-is-a-system-utilities--workforce-move.md",
+        "essays/bk1-the-microgrid-is-a-neighborhood-mansfield-vi.md",
+        "essays/essay-03-turtles-all-the-way-down-longform.md"
       ],
       "auto_added": false
     },
@@ -1149,6 +1014,19 @@
       ],
       "auto_added": false
     },
+    "mother": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forged/bk1-the-yard.md",
+        "book/fractured/bk1-five-thousand-dollars.md",
+        "book/fractured/bk1-it-will-go-down.md",
+        "book/fractured/bk1-october-29.md"
+      ],
+      "auto_added": false
+    },
     "love": {
       "description": "",
       "color": null,
@@ -1178,6 +1056,331 @@
       "related_themes": [],
       "stories": [
         "book/forged/bk1-three-months.md"
+      ],
+      "auto_added": false
+    },
+    "sales": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-cold-call.md"
+      ],
+      "auto_added": false
+    },
+    "Fielding": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-cold-call.md",
+        "book/forging/bk1-the-dave-problem.md",
+        "book/forging/bk1-the-forty-percent-ask.md",
+        "book/forging/bk1-the-garage.md",
+        "book/forging/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "oilfield": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-cold-call.md"
+      ],
+      "auto_added": false
+    },
+    "acquisition": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-dave-problem.md",
+        "book/forging/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "Quorum": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-dave-problem.md",
+        "book/forging/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "Jeff": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-dave-problem.md"
+      ],
+      "auto_added": false
+    },
+    "marriage": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-elopement.md"
+      ],
+      "auto_added": false
+    },
+    "Carina": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-elopement.md"
+      ],
+      "auto_added": false
+    },
+    "business": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-forty-percent-ask.md"
+      ],
+      "auto_added": false
+    },
+    "CJ": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-forty-percent-ask.md"
+      ],
+      "auto_added": false
+    },
+    "brother": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-forty-percent-ask.md"
+      ],
+      "auto_added": false
+    },
+    "team": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-garage.md",
+        "book/foundry/bk1-foundry-2024-cofounder-conflict.md"
+      ],
+      "auto_added": false
+    },
+    "grief": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-last-flight.md",
+        "book/forging/bk1-three-thirty-am.md"
+      ],
+      "auto_added": false
+    },
+    "pilot": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-last-flight.md"
+      ],
+      "auto_added": false
+    },
+    "flight": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-last-flight.md"
+      ],
+      "auto_added": false
+    },
+    "wings": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-last-flight.md"
+      ],
+      "auto_added": false
+    },
+    "success": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "hands": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/forging/bk1-the-quorum-bed.md"
+      ],
+      "auto_added": false
+    },
+    "loss": {
+      "description": "Loss and grief, Chuck's death, transitions",
+      "color": "#ef4444",
+      "arc_focus": [
+        "fractured",
+        "forging"
+      ],
+      "related_themes": [
+        "grief",
+        "memory",
+        "legacy"
+      ],
+      "stories": [
+        "book/forging/bk1-three-thirty-am.md"
+      ],
+      "auto_added": false
+    },
+    "emotional-wall": {
+      "description": "Core thesis: emotional constraint is a muscle that can be developed",
+      "color": "#ec4899",
+      "arc_focus": [
+        "all"
+      ],
+      "related_themes": [
+        "vulnerability",
+        "growth",
+        "authenticity"
+      ],
+      "stories": [
+        "book/foundry/bk1-disney-every-month.md",
+        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
+        "book/foundry/bk1-the-fork-i-almost-missed.md"
+      ],
+      "auto_added": false
+    },
+    "legacy": {
+      "description": "Building lasting impact, leaving a mark, inheritance",
+      "color": "#10b981",
+      "arc_focus": [
+        "foundry"
+      ],
+      "related_themes": [
+        "family",
+        "authenticity",
+        "impact"
+      ],
+      "stories": [
+        "book/foundry/bk1-disney-every-month.md",
+        "book/foundry/bk1-the-fork-i-almost-missed.md"
+      ],
+      "auto_added": false
+    },
+    "equity": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/foundry/bk1-foundry-2024-cofounder-conflict.md"
+      ],
+      "auto_added": false
+    },
+    "betrayal": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/foundry/bk1-foundry-2024-cofounder-conflict.md"
+      ],
+      "auto_added": false
+    },
+    "depression": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/foundry/bk1-scars-as-data.md",
+        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
+        "book/foundry/bk1-the-day-i-stopped-recruiting-my-family.md",
+        "book/fractured/bk-breaking-barriers-my-battle-with-depression-a.md",
+        "book/fractured/bk-how-87-stitches-and-a-broken-bone-prepared-me-.md",
+        "book/fractured/bk-how-to-turn-40-surgeries-into-a-factory-for-gr.md",
+        "book/fractured/bk1-therapy-loneliness-and-clarity.md",
+        "captures/bk-roads-less-traveled-overcoming-adversity-and-.md",
+        "captures/bk1-akron-lab.md",
+        "captures/bk1-energiaacres-vision-origin.md",
+        "captures/bk1-letter-to-gia.md",
+        "captures/bk1-martin-quorum-reframe.md",
+        "captures/bk1-still-my-north-star.md",
+        "captures/bk1-we-have-this-gas.md",
+        "essays/bk1-minimums-and-non-negotiables.md",
+        "essays/essay-03-turtles-all-the-way-down-longform.md"
+      ],
+      "auto_added": false
+    },
+    "muscle-thesis": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md"
+      ],
+      "auto_added": false
+    },
+    "awareness": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/foundry/bk1-the-fork-i-almost-missed.md"
+      ],
+      "auto_added": false
+    },
+    "counterfactual": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/foundry/bk1-the-fork-i-almost-missed.md"
+      ],
+      "auto_added": false
+    },
+    "seeds": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/foundry/bk1-the-fork-i-almost-missed.md"
       ],
       "auto_added": false
     },
@@ -1291,6 +1494,26 @@
       ],
       "auto_added": false
     },
+    "cj": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/fractured/bk1-october-29.md"
+      ],
+      "auto_added": false
+    },
+    "chaos": {
+      "description": "",
+      "color": null,
+      "arc_focus": [],
+      "related_themes": [],
+      "stories": [
+        "book/fractured/bk1-october-29.md"
+      ],
+      "auto_added": false
+    },
     "time": {
       "description": "Time as villain, speed obsession, efficiency, lost moments",
       "color": "#6366f1",
@@ -1344,229 +1567,6 @@
       "related_themes": [],
       "stories": [
         "book/fractured/bk1-the-delay.md"
-      ],
-      "auto_added": false
-    },
-    "sales": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-cold-call.md"
-      ],
-      "auto_added": false
-    },
-    "oilfield": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-cold-call.md"
-      ],
-      "auto_added": false
-    },
-    "marriage": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-elopement.md"
-      ],
-      "auto_added": false
-    },
-    "Carina": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-elopement.md"
-      ],
-      "auto_added": false
-    },
-    "business": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-forty-percent-ask.md"
-      ],
-      "auto_added": false
-    },
-    "CJ": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-forty-percent-ask.md"
-      ],
-      "auto_added": false
-    },
-    "brother": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-forty-percent-ask.md"
-      ],
-      "auto_added": false
-    },
-    "grief": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-last-flight.md",
-        "book/forging/bk1-three-thirty-am.md"
-      ],
-      "auto_added": false
-    },
-    "pilot": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-last-flight.md"
-      ],
-      "auto_added": false
-    },
-    "flight": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-last-flight.md"
-      ],
-      "auto_added": false
-    },
-    "wings": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/forging/bk1-the-last-flight.md"
-      ],
-      "auto_added": false
-    },
-    "loss": {
-      "description": "Loss and grief, Chuck's death, transitions",
-      "color": "#ef4444",
-      "arc_focus": [
-        "fractured",
-        "forging"
-      ],
-      "related_themes": [
-        "grief",
-        "memory",
-        "legacy"
-      ],
-      "stories": [
-        "book/forging/bk1-three-thirty-am.md"
-      ],
-      "auto_added": false
-    },
-    "emotional-wall": {
-      "description": "Core thesis: emotional constraint is a muscle that can be developed",
-      "color": "#ec4899",
-      "arc_focus": [
-        "all"
-      ],
-      "related_themes": [
-        "vulnerability",
-        "growth",
-        "authenticity"
-      ],
-      "stories": [
-        "book/foundry/bk1-disney-every-month.md",
-        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md",
-        "book/foundry/bk1-the-fork-i-almost-missed.md"
-      ],
-      "auto_added": false
-    },
-    "legacy": {
-      "description": "Building lasting impact, leaving a mark, inheritance",
-      "color": "#10b981",
-      "arc_focus": [
-        "foundry"
-      ],
-      "related_themes": [
-        "family",
-        "authenticity",
-        "impact"
-      ],
-      "stories": [
-        "book/foundry/bk1-disney-every-month.md",
-        "book/foundry/bk1-the-fork-i-almost-missed.md"
-      ],
-      "auto_added": false
-    },
-    "equity": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/foundry/bk1-foundry-2024-cofounder-conflict.md"
-      ],
-      "auto_added": false
-    },
-    "betrayal": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/foundry/bk1-foundry-2024-cofounder-conflict.md"
-      ],
-      "auto_added": false
-    },
-    "muscle-thesis": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/foundry/bk1-the-day-i-couldnt-hide-anymore.md"
-      ],
-      "auto_added": false
-    },
-    "awareness": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/foundry/bk1-the-fork-i-almost-missed.md"
-      ],
-      "auto_added": false
-    },
-    "counterfactual": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/foundry/bk1-the-fork-i-almost-missed.md"
-      ],
-      "auto_added": false
-    },
-    "seeds": {
-      "description": "",
-      "color": null,
-      "arc_focus": [],
-      "related_themes": [],
-      "stories": [
-        "book/foundry/bk1-the-fork-i-almost-missed.md"
       ],
       "auto_added": false
     },

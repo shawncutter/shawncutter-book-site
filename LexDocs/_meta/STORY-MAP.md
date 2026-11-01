@@ -12,7 +12,7 @@ and what to draw from. Derived entirely from `_index.json` + `_topics.json`.
 
 ```
 CODE|YEAR|FLG|THEMES             |PATH
-1dS|1987|...|sur,wre,far,sta    |book/forged/bk1-gate-latch-hog-logic.md   <- a real row from section 5
+1rM|1982|..a|ris,thri,acci,chuc |book/forged/bk1-chuck-at-175.md   <- a real row from section 5
 
 CODE    3 chars, no separator: arc + status + size
 YEAR    date_event year, or ---- when the piece is not anchored in time
@@ -40,7 +40,7 @@ actually tells you what a piece is about.
 |-----|-------|--------|--------|-------|---------------|---------------|
 | `1` forged | 1980–1990 | Farm childhood, early formation | 33 | ~24K | 23 / 8 / 2 / 0 | 27 / 6 |
 | `2` fractured | 1990–2003 | Accident, surgeries, identity crisis | 16 | ~17K | 5 / 8 / 3 / 0 | 15 / 1 |
-| `3` forging | 2003–2021 | Career building, Fielding Systems | 27 | ~26K | 11 / 13 / 2 / 1 | 19 / 8 |
+| `3` forging | 2003–2021 | Career building, Fielding Systems | 27 | ~26K | 11 / 12 / 3 / 1 | 19 / 8 |
 | `4` foundry | 2022–now | EnergiAcres, legacy building | 38 | ~47K | 11 / 16 / 10 / 1 | 38 / 0 |
 
 Status spread: `d` draft 99 · `r` ready 15
@@ -237,7 +237,7 @@ are *not* a shortlist. Treat them as a starting pool, not a chapter plan.
 3dX|2009|.wa|sur,acc,sta,res    |captures/bk1-fielding-products-visor-platform.md
 3rM|2010|...|los,gri,fat,fam    |book/forging/bk1-three-thirty-am.md
 3dS|2011|...|fai,acc,far,sta    |book/forging/bk1-pocket-computers-and-cold-thumbs.md
-3dM|2012|.w.|sta,sys,tec        |captures/bk1-three-weeks-to-a-mobile-app.md
+3dL|2012|.w.|sta,sys,tec        |captures/bk1-three-weeks-to-a-mobile-app.md
 3dM|2015|...|far,sta,fam,sys    |book/forging/bk1-founder-employee.md
 3rM|2015|...|jef,acq,quo,fie    |book/forging/bk1-the-dave-problem.md
 3rS|2015|...|han,suc,acq,quo    |book/forging/bk1-the-quorum-bed.md
@@ -300,7 +300,7 @@ are *not* a shortlist. Treat them as a starting pool, not a chapter plan.
 
 ## 6. What to draw from
 
-- **Publish to Medium** → `M` pieces (800–1500w): **45** total, of which **10** are already `r` ready. (15 pieces are `r` ready at any size.)
+- **Publish to Medium** → `M` pieces (800–1500w): **44** total, of which **10** are already `r` ready. (15 pieces are `r` ready at any size.)
 - **Expand into a chapter** → pair `S` seeds (**50**) sharing a tail theme; chapters want 3000–5000w.
 - **Already chapter-scale** → **2** `X` pieces; these need cutting, not expanding.
 - **Do not rewrite blind** → **19** pieces carry `w` (`rewrite_status`). Read that field first; it usually fences a beat that was deliberately killed.
