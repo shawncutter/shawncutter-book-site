@@ -2371,3 +2371,42 @@ logged above.
 
 Verified after the fix: 235 tests, 234 pass, 1 skipped, 0 fail; 114 pieces, 0
 frontmatter errors; 98 codes, 116/116 mapped.
+
+### The `modified` date, third attempt — and the one that is actually correct (2026-10-31)
+
+The `fetch-depth: 0` fix got CI full history, but verifying against git showed
+the *derivation* was still wrong. Three bulk-pass variants were tried, each wrong
+in a different way:
+
+1. **`--name-only`** (the first implementation) omits file lists for **merge
+   commits**, and this repo's history is mostly merges — every daily PR. Files
+   whose last change arrived in a merge were invisible and fell through to the
+   mtime fallback. `captures/bk1-today.md` (last touched by merge `e8f8b8c`) and
+   `essays/speed-is-all-that-matters.md` (whose only appearance was under its
+   pre-restructure path `_essays/`) were both missed.
+2. **`--diff-merges=first-parent`** surfaced them and **over-attributed**: a merge
+   was credited with changing every file it carried, pushing dates later than the
+   real edits and collapsing the whole corpus to **two** distinct dates.
+3. **Bulk pass plus per-file lookups for the stragglers** still disagreed with git
+   on **6 of 114** — because a merge that resolves a conflict genuinely does
+   change the file, and the bulk pass had already answered for those.
+
+**What it is now:** one `git log -1 --format=%cs -- <path>` per file. That is
+git's own answer to "when did this file last change", merges included where they
+really touched it. **0 of 114 now disagree with git.** It costs ~2.7s for the
+corpus, which is the right trade for a script run on demand, and the function is
+a third the length of the clever version.
+
+The reasoning for all three rejected variants is in the function's comment, so
+nobody optimises it back into being wrong.
+
+**Verified:** 0/114 disagreements with `git log -1`; regenerating after
+`touch`-ing tracked files gives a byte-identical file; 235 tests, 234 pass, 1
+skipped, 0 fail; 114 pieces, 0 frontmatter errors; 98 codes, 116/116 mapped.
+
+**The honest shape of this task:** a push rejection exposed a churn bug; the first
+fix halved the wrong thing and I claimed it proved; the second fix got CI history
+but kept a wrong derivation; the third is correct and simpler than either. Three
+iterations because each verification was narrower than the problem — local runs,
+then CI history, and only at the end the actual question, "does this match what
+git says for every file."
